@@ -3,8 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Drawing.Text;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Template.Utilities
@@ -23,7 +23,7 @@ namespace Template.Utilities
             bitmap?.MakeTransparent();
 
             var banner = CopyRegionIntoImage(bitmap, background);
-            banner = DrawTextToImage(banner, $"{user.Username}#{user.Discriminator} joined the server", $"Member #{user.Guild.MemberCount}");
+            banner = DrawTextToImage(banner, $"{user.Username}#{user.Discriminator} joined the server", $"Member #{user.Guild.MemberCount}", background.Height / 2);
 
             string path = $"{Guid.NewGuid()}.png";
             banner.Save(path);
@@ -58,10 +58,10 @@ namespace Template.Utilities
             return bitmap;
         }
 
-        private Image ClipImageToCircle(Image image)
+        private Image ClipImageToCircle(Image image, int imageRadius = 0)
         {
             Image destination = new Bitmap(image.Width, image.Height, image.PixelFormat);
-            var radius = image.Width / 2;
+            var radius = imageRadius > 0 ? imageRadius : image.Width / 2;
             var x = image.Width / 2;
             var y = image.Height / 2;
 
@@ -84,39 +84,45 @@ namespace Template.Utilities
             return destination;
         }
 
-        private Image CopyRegionIntoImage(Image source, Image destination)
+        private Image CopyRegionIntoImage(Image source, Image destination, int offset = -100)
         {
             using var grD = Graphics.FromImage(destination);
-            var x = (destination.Width / 2) - 110;
-            var y = (destination.Height / 2) - 155;
+            var x = (source.Width / 2) + offset;
+            var y = (source.Height / 2) - 100;
 
-            grD.DrawImage(source, x, y, 220, 220);
+            grD.DrawImage(source, x, y, source.Width, source.Height);
             return destination; 
         }
 
-        private Image DrawTextToImage(Image image, string header, string subheader)
+        private Image DrawTextToImage(Image image, string header, string subheader, int yOffset, int textOffset = 0, string textColor = "#FFFFFF", int fontSize = 38, string subColor = "#CCCCCC")
         {
-            var roboto = new Font("Roboto", 30, FontStyle.Regular);
-            var robotoSmall = new Font("Roboto", 23, FontStyle.Regular);
+            var myFont = new PrivateFontCollection();
+            
 
-            var brushWhite = new SolidBrush(Color.White);
-            var brushGrey = new SolidBrush(ColorTranslator.FromHtml("#B3B3B3"));
+            var roboto = new Font("Exocet", fontSize, FontStyle.Regular);
+            var robotoSmall = new Font("Exocet", fontSize, FontStyle.Regular);
 
-            var headerX = image.Width / 2;
-            var headerY = (image.Height / 2) + 115;
+            var brushWhite = new SolidBrush(ColorTranslator.FromHtml(textColor));
+            var brushGrey = new SolidBrush(ColorTranslator.FromHtml(subColor));
 
-            var subheaderX = image.Width / 2;
-            var subheaderY = (image.Height / 2) + 160;
+            var headerX = 35;
+            var headerY = yOffset + textOffset;
+
+            var subheaderX = 35 + (header.Length * fontSize);
+            var subheaderY = yOffset + textOffset;
 
             var drawFormat = new StringFormat
             {
-                LineAlignment = StringAlignment.Center,
-                Alignment = StringAlignment.Center
+                LineAlignment = StringAlignment.Near,
+                Alignment = StringAlignment.Near
             };
 
             using var GrD = Graphics.FromImage(image);
             GrD.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAliasGridFit;
-            GrD.DrawString(header, roboto, brushWhite, headerX, headerY, drawFormat);
+            if (header != "")
+            {
+                GrD.DrawString(header, roboto, brushWhite, headerX, headerY, drawFormat);
+            }
             GrD.DrawString(subheader, robotoSmall, brushGrey, subheaderX, subheaderY, drawFormat);
 
             var img = new Bitmap(image);
@@ -138,5 +144,137 @@ namespace Template.Utilities
             var stream = await response.Content.ReadAsStreamAsync();
             return Image.FromStream(stream);
         }
+
+        public async Task<string> CreateRunewordImageAsync(List<Tuple<string,int,int>> affixes, string name, string slots, string runes, string url = "https://cdn.discordapp.com/attachments/881552119784681493/881598049397391380/oie_DeJvaQZt4aAb.PNG")
+        {
+            int imageRadius = 200;
+            var helm = await FetchImageAsync("https://diablo2.wiki.fextralife.com/file/Diablo-2/skull_cap_helm_armor_diablo2_wiki_guide_196px.png");
+            var shield = await FetchImageAsync("https://diablo2.wiki.fextralife.com/file/Diablo-2/buckler_shields_diablo2_wiki_guide_100x150px.png");
+            var background = await FetchImageAsync(url);
+
+            List<string> theSlots = new List<string>
+            {
+                "Helm",
+                "Shield"
+            };
+            var headerFontSize = 60;
+            var subFontSize = 38;
+            int biggestSizeAffixText = 0;
+
+            foreach(var thisAffix in affixes)
+            {
+                int textSize = (thisAffix.Item1.Length + thisAffix.Item2.ToString().Length + thisAffix.Item3.ToString().Length);
+                biggestSizeAffixText = Math.Max(biggestSizeAffixText, textSize);
+            }
+
+            var width = ( Math.Max((((name.Length + runes.Length) * headerFontSize) + 20), biggestSizeAffixText * subFontSize));
+            var height = headerFontSize + 20 + (affixes.Count * (subFontSize + 15));
+
+            var size = new Size(width, height);
+
+            Image banner = CropToRunewordBanner(background, size);
+
+            // Need to loop for each type provided, separated by ,'s. Provide size of image as offset for next iteration
+            int slotOffset = -100;
+            //foreach (var thisSlot in theSlots)
+            //{
+            //    if (slots.Contains(thisSlot))
+            //    {
+            //        Bitmap bitmap;
+            //        switch (thisSlot)
+            //        {
+            //            case "Helm":
+            //                helm = ClipImageToCircle(helm, imageRadius);
+            //                bitmap = helm as Bitmap;
+            //                bitmap?.MakeTransparent();
+            //
+            //                banner = CopyRegionIntoImage(bitmap, tryThis, slotOffset);
+            //
+            //                break;
+            //            case "Shield":
+            //                shield = ClipImageToCircle(shield, imageRadius);
+            //                bitmap = shield as Bitmap;
+            //                bitmap?.MakeTransparent();
+            //
+            //                banner = CopyRegionIntoImage(bitmap, tryThis, slotOffset);
+            //                break;
+            //            default:
+            //                break;
+            //        }
+            //        slotOffset += 200;
+            //    }
+            //}
+
+            banner = DrawTextToImage(banner, $"{name}", $"{runes}",10, 0, "#7F5200", headerFontSize, "#ab3d0e");
+
+            
+            //foreach (var thisSlot in slotList)
+            //{
+            //    banner = CopyRegionIntoImage(thisSlot, banner, slotOffset);
+            //    slotOffset -= imageRadius * 2;
+            //}
+
+            var offset = 100;
+            foreach (var thisAffix in affixes)
+            {
+                string textColor = "#FFFFFF";
+                if(thisAffix.Item3 != 0)
+                {
+                    textColor = "#4169E1";
+
+                    banner = DrawTextToImage(banner, $"{thisAffix.Item2}-{thisAffix.Item3}", $"{thisAffix.Item1}", 10, offset, textColor);
+                    offset += subFontSize + 10;
+                    continue;
+                }
+                if (thisAffix.Item2 != 0)
+                {
+                    banner = DrawTextToImage(banner, $"{thisAffix.Item2}", $"{thisAffix.Item1}", 10, offset, textColor);
+                    offset += subFontSize + 10;
+                    continue;
+                }
+                banner = DrawTextToImage(banner, $"", $"{thisAffix.Item1}", 10, offset, textColor);
+                offset += subFontSize + 10;
+            }
+            string path = $"{Guid.NewGuid()}.png";
+            background.Save(path);
+            return await Task.FromResult(path);
+        }
+
+        private static Bitmap CropToRunewordBanner(Image image, Size size)
+        {
+            Image destination = new Bitmap(image.Width, image.Height, image.PixelFormat);
+            var originalWidth = image.Width;
+            var originalHeight = image.Height;
+            var destinationSize = size;
+
+            var heightRatio = (float)originalHeight / destinationSize.Height;
+            var widthRatio = (float)originalWidth / destinationSize.Width;
+
+            var ratio = Math.Min(heightRatio, widthRatio);
+
+            var heightScale = Convert.ToInt32(destinationSize.Height * ratio);
+            var widthScale = Convert.ToInt32(destinationSize.Width * ratio);
+
+            var startX = (originalWidth - widthScale) / 2;
+            var startY = (originalHeight - heightScale) / 2;
+
+            var sourceRectangle = new Rectangle(startX, startY, widthScale, heightScale);
+            var bitmap = new Bitmap(destinationSize.Width, destinationSize.Height);
+            var destinationRectangle = new Rectangle(0, 0, bitmap.Width, bitmap.Height);
+
+            using var g = Graphics.FromImage(bitmap);
+
+            Brush brush = new TextureBrush(destination);
+            Pen thisPen = new Pen(brush);
+
+            g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+            g.FillRectangle(brush,destinationRectangle);
+            //g.DrawRectangle(thisPen, destinationRectangle);
+
+            g.DrawImage(image, destinationRectangle, sourceRectangle, GraphicsUnit.Pixel);
+
+            return bitmap;
+        }
     }
 }
+
