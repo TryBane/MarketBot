@@ -31,7 +31,19 @@ namespace Template.Modules
             await Context.Channel.SendFileAsync(path);
             File.Delete(path);
         }
-
+        /*
+        [Command("runeword name")]
+        public async Task ImageAsync()
+        {
+            var name = "Runeword Name (level requirement)";
+            var slots = "Type 1, Type 2, Type 3";
+            var runes = "Rune 1 + Rune 2 + Rune 3";
+            
+            var affixes = new List<Tuple<string, int, int>>();
+            affixes.Add(Tuple.Create("Type in Affix here including any % symbol at the front", First (or only) number, Second (if any) number));
+            affixes.Add(Tuple.Create("Type in another Affix here including any % symbol at the front", First (or only) number, Second (if any) number));
+        }
+        */
 
         [Command("dream")]
         public async Task ImageAsync()
