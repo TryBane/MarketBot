@@ -37,7 +37,7 @@ namespace Template.Modules
         public async Task ImageAsync()
         {
             var name = "Dream (65)";
-            var slots = "Katar, Mace, Orb, Polearm, Scepter, Spear, Staff, Sword, Wand";
+            var slots = "Helm, Shield";
             var runes = "Io + Jah + Pul";
 
             var affixes = new List<Tuple<string, int, int>>();
