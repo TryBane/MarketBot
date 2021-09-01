@@ -40,7 +40,6 @@ namespace Template.Services
         public override async Task InitializeAsync(CancellationToken cancellationToken)
         {
             _client.MessageReceived += OnMessageReceived;
-            _client.UserJoined += OnUserJoined;
 
             var newTask = new Task(async () => await MuteHandler());
             newTask.Start();
@@ -91,37 +90,6 @@ namespace Template.Services
             await Task.Delay(1 * 60 * 1000);
             await MuteHandler();
         }
-
-        private async Task OnUserJoined(SocketGuildUser arg)
-        {
-            var newTask = new Task(async () => await HandleUserJoined(arg));
-            newTask.Start();
-        }
-
-        private async Task HandleUserJoined(SocketGuildUser arg)
-        {
-            var roles = await _serverHelper.GetAutoRolesAsync(arg.Guild);
-            if (roles.Count > 0)
-                await arg.AddRolesAsync(roles);
-
-            var channelId = await _servers.GetWelcomeAsync(arg.Guild.Id);
-            if (channelId == 0)
-                return;
-
-            var channel = arg.Guild.GetTextChannel(channelId);
-            if(channel == null)
-            {
-                await _servers.ClearWelcomeAsync(arg.Guild.Id);
-                return;
-            }
-
-            var background = await _servers.GetBackgroundAsync(arg.Guild.Id);
-            string path = await _images.CreateImageAsync(arg, background);
-
-            await channel.SendFileAsync(path, null);
-            System.IO.File.Delete(path);
-        }
-
         private async Task OnMessageReceived(SocketMessage arg)
         {
             if (!(arg is SocketUserMessage message)) return;

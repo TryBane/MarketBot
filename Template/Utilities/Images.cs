@@ -11,53 +11,6 @@ namespace Template.Utilities
 {
     public class Images
     {
-        public async Task<string> CreateImageAsync(SocketGuildUser user, string url = "https://images.unsplash.com/photo-1602408959965-cbde35cfab50?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=933&q=80")
-        {
-            var avatar = await FetchImageAsync(user.GetAvatarUrl(size: 2048, format: Discord.ImageFormat.Png) ?? user.GetDefaultAvatarUrl());
-            var background = await FetchImageAsync(url);
-
-            background = CropToBanner(background);
-            avatar = ClipImageToCircle(avatar);
-
-            var bitmap = avatar as Bitmap;
-            bitmap?.MakeTransparent();
-
-            var banner = CopyRegionIntoImage(bitmap, background);
-            banner = DrawTextToImage(banner, $"{user.Username}#{user.Discriminator} joined the server", $"Member #{user.Guild.MemberCount}", background.Height / 2);
-
-            string path = $"{Guid.NewGuid()}.png";
-            banner.Save(path);
-            return await Task.FromResult(path);
-        }
-
-        private static Bitmap CropToBanner(Image image)
-        {
-            var originalWidth = image.Width;
-            var originalHeight = image.Height;
-            var destinationSize = new Size(1100, 450);
-
-            var heightRatio = (float)originalHeight / destinationSize.Height;
-            var widthRatio = (float)originalWidth / destinationSize.Width;
-
-            var ratio = Math.Min(heightRatio, widthRatio);
-
-            var heightScale = Convert.ToInt32(destinationSize.Height * ratio);
-            var widthScale = Convert.ToInt32(destinationSize.Width * ratio);
-
-            var startX = (originalWidth - widthScale) / 2;
-            var startY = (originalHeight - heightScale) / 2;
-
-            var sourceRectangle = new Rectangle(startX, startY, widthScale, heightScale);
-            var bitmap = new Bitmap(destinationSize.Width, destinationSize.Height);
-            var destinationRectangle = new Rectangle(0, 0, bitmap.Width, bitmap.Height);
-
-            using var g = Graphics.FromImage(bitmap);
-            g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
-            g.DrawImage(image, destinationRectangle, sourceRectangle, GraphicsUnit.Pixel);
-
-            return bitmap;
-        }
-
         private Image ClipImageToCircle(Image image, int imageRadius = 0)
         {
             Image destination = new Bitmap(image.Width, image.Height, image.PixelFormat);
@@ -84,13 +37,18 @@ namespace Template.Utilities
             return destination;
         }
 
-        private Image CopyRegionIntoImage(Image source, Image destination, int offset = -100)
+        private Image CopyRegionIntoImage(Image source, Image destination, int offset = 0, int imageRadius = 200)
         {
             using var grD = Graphics.FromImage(destination);
-            var x = (source.Width / 2) + offset;
-            var y = (source.Height / 2) - 100;
+            var x = offset;
+            var y = 0;
+            var sourRect = new Rectangle(0, 0, source.Width, source.Height);
+            Rectangle destRect;
 
-            grD.DrawImage(source, x, y, source.Width, source.Height);
+            destRect = new Rectangle(x, y, (int)(imageRadius * source.Width / source.Height), imageRadius);
+
+            grD.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+            grD.DrawImage(source, destRect, sourRect,GraphicsUnit.Pixel);
             return destination; 
         }
 
@@ -108,7 +66,7 @@ namespace Template.Utilities
             var headerX = 35;
             var headerY = yOffset + textOffset;
 
-            var subheaderX = 35 + (header.Length * fontSize);
+            var subheaderX = (float)(35 + ((header.Length * fontSize) * .8));
             var subheaderY = yOffset + textOffset;
 
             var drawFormat = new StringFormat
@@ -144,18 +102,48 @@ namespace Template.Utilities
             var stream = await response.Content.ReadAsStreamAsync();
             return Image.FromStream(stream);
         }
+        private async Task<string> CopyImage(string link, int radius, Image theBanner, int theOffset)
+        {
+            var image = await FetchImageAsync(link);
+            image = ClipImageToCircle(image, radius);
+            var bitmap = image as Bitmap;
+            bitmap?.MakeTransparent();
+
+            theBanner = CopyRegionIntoImage(bitmap, theBanner, theOffset, radius);
+            return "0";
+        }
 
         public async Task<string> CreateRunewordImageAsync(List<Tuple<string,int,int>> affixes, string name, string slots, string runes, string url = "https://cdn.discordapp.com/attachments/881552119784681493/881598049397391380/oie_DeJvaQZt4aAb.PNG")
         {
-            int imageRadius = 200;
-            var helm = await FetchImageAsync("https://diablo2.wiki.fextralife.com/file/Diablo-2/skull_cap_helm_armor_diablo2_wiki_guide_196px.png");
-            var shield = await FetchImageAsync("https://diablo2.wiki.fextralife.com/file/Diablo-2/buckler_shields_diablo2_wiki_guide_100x150px.png");
+            int imageRadius = 196;
+
             var background = await FetchImageAsync(url);
 
+            List<Image> slotList = new List<Image>();
             List<string> theSlots = new List<string>
             {
                 "Helm",
-                "Shield"
+                "Shield",
+                "Armor",
+                "Head",
+
+                "Axe",
+                "Bow",
+                "Club",
+                "Crossbow",
+                "Dagger",
+                "Hammer",
+                "Javelin",
+                "Katar",
+                "Mace",
+                "Orb",
+                "Polearm",
+                "Scepter",
+                "Spear",
+                "Staff",
+                "Sword",
+                "Wand",
+                "All Weapons"
             };
             var headerFontSize = 60;
             var subFontSize = 38;
@@ -167,54 +155,121 @@ namespace Template.Utilities
                 biggestSizeAffixText = Math.Max(biggestSizeAffixText, textSize);
             }
 
-            var width = ( Math.Max((((name.Length + runes.Length) * headerFontSize) + 20), biggestSizeAffixText * subFontSize));
-            var height = headerFontSize + 20 + (affixes.Count * (subFontSize + 15));
+            var width = (int) Math.Max(((name.Length + runes.Length) * headerFontSize * .65) + 35, (biggestSizeAffixText * subFontSize * .65) + 35);
+            var height = headerFontSize + imageRadius + (affixes.Count * (subFontSize + 10)) + 40;
 
             var size = new Size(width, height);
 
             Image banner = CropToRunewordBanner(background, size);
 
+            int slotOffset = 0;
             // Need to loop for each type provided, separated by ,'s. Provide size of image as offset for next iteration
-            int slotOffset = -100;
-            //foreach (var thisSlot in theSlots)
-            //{
-            //    if (slots.Contains(thisSlot))
-            //    {
-            //        Bitmap bitmap;
-            //        switch (thisSlot)
-            //        {
-            //            case "Helm":
-            //                helm = ClipImageToCircle(helm, imageRadius);
-            //                bitmap = helm as Bitmap;
-            //                bitmap?.MakeTransparent();
-            //
-            //                banner = CopyRegionIntoImage(bitmap, tryThis, slotOffset);
-            //
-            //                break;
-            //            case "Shield":
-            //                shield = ClipImageToCircle(shield, imageRadius);
-            //                bitmap = shield as Bitmap;
-            //                bitmap?.MakeTransparent();
-            //
-            //                banner = CopyRegionIntoImage(bitmap, tryThis, slotOffset);
-            //                break;
-            //            default:
-            //                break;
-            //        }
-            //        slotOffset += 200;
-            //    }
-            //}
+            foreach (var thisSlot in theSlots)
+            {
+                if (slots.Contains(thisSlot))
+                {
+                    switch (thisSlot)
+                    {
+                        // Armors
+                        case "Helm":
+                            await CopyImage("https://diablo2.wiki.fextralife.com/file/Diablo-2/full_helm_armor_diablo2_wiki_guide_196px.png", imageRadius, banner, slotOffset);
+                            slotOffset += imageRadius - 40;
+                            break;
+                        case "Shield":
+                            await CopyImage("https://diablo2.wiki.fextralife.com/file/Diablo-2/buckler_shields_diablo2_wiki_guide_100x150px.png", imageRadius, banner, slotOffset);
+                            slotOffset += (imageRadius * 2 / 3);
+                            break;
+                        case "Armor":
+                            await CopyImage("https://diablo2.wiki.fextralife.com/file/Diablo-2/leather_armor_diablo2_wiki_guide_196px.png", imageRadius, banner, slotOffset);
+                            slotOffset += (imageRadius * 3 / 5);
+                            break;
+                        case "Head":
+                            await CopyImage("https://diablo2.wiki.fextralife.com/file/Diablo-2/unraveller_head_shrunken_heads_diablo2_wiki_guide2.png", imageRadius, banner, slotOffset);
+                            slotOffset += (imageRadius / 5 * 2);
+                            break;
 
-            banner = DrawTextToImage(banner, $"{name}", $"{runes}",10, 0, "#7F5200", headerFontSize, "#ab3d0e");
+                        // Weapons
+                        case "Axe":
+                            await CopyImage("https://diablo2.wiki.fextralife.com/file/Diablo-2/axe_weapons_diablo_2_resurrected_wiki_guide.png", imageRadius, banner, slotOffset);
+                            slotOffset += (int)(imageRadius / 2.5);
+                            break;
+                        case "Bow":
+                            await CopyImage("https://diablo2.wiki.fextralife.com/file/Diablo-2/hunters_bow_weapons_diablo_2_resurrected_wiki_guide.png", imageRadius, banner, slotOffset);
+                            slotOffset += (imageRadius * 2 / 5);
+                            break;
+                        case "Club":
+                            await CopyImage("https://diablo2.wiki.fextralife.com/file/Diablo-2/club_weapons_diablo_2_wiki_guide_125px.png", imageRadius, banner, slotOffset);
+                            slotOffset += imageRadius / 4;
+                            break;
+                        case "Crossbow":
+                            await CopyImage("https://diablo2.wiki.fextralife.com/file/Diablo-2/crossbow_weapons_diablo_2_resurrected_wiki_guide.png", imageRadius, banner, slotOffset);
+                            slotOffset += imageRadius / 2;
+                            break;
+                        case "Dagger":
+                            await CopyImage("https://diablo2.wiki.fextralife.com/file/Diablo-2/dagger_weapons_diablo_2_resurrected_wiki_guide.png", imageRadius, banner, slotOffset);
+                            slotOffset += imageRadius / 4;
+                            break;
+                        case "Hammer":
+                            await CopyImage("https://diablo2.wiki.fextralife.com/file/Diablo-2/maul_weapons_diablo_2_wiki_guide_125px.png", imageRadius, banner, slotOffset);
+                            slotOffset += imageRadius / 3;
+                            break;
+                        case "Javelin":
+                            await CopyImage("https://diablo2.wiki.fextralife.com/file/Diablo-2/pilum_weapons_diablo_2_resurrected_wiki_guide.png", imageRadius, banner, slotOffset);
+                            slotOffset += imageRadius / 10;
+                            break;
+                        case "Katar":
+                            await CopyImage("https://diablo2.wiki.fextralife.com/file/Diablo-2/katar_diablo_2_wiki_guide_196px.png", imageRadius, banner, slotOffset);
+                            slotOffset += imageRadius / 3;
+                            break;
+                        case "Mace":
+                            await CopyImage("https://diablo2.wiki.fextralife.com/file/Diablo-2/morning_star_weapon_diablo_2_resurrected_wiki_guide_125px.png", imageRadius, banner, slotOffset);
+                            slotOffset += imageRadius / 4;
+                            break;
+                        case "Orb":
+                            await CopyImage("https://diablo2.wiki.fextralife.com/file/Diablo-2/sacred_globe_diablo_2_wiki_guide_196px.png", imageRadius, banner, slotOffset);
+                            slotOffset += imageRadius / 3;
+                            break;
+                        case "Polearm":
+                            await CopyImage("https://diablo2.wiki.fextralife.com/file/Diablo-2/voulge_weapons_diablo_2_resurrected_wiki_guide_196px.png", imageRadius, banner, slotOffset);
+                            slotOffset += imageRadius / 3;
+                            break;
+                        case "Scepter":
+                            await CopyImage("https://diablo2.wiki.fextralife.com/file/Diablo-2/grand_scepter_weapons_diablo_2_resurrected_wiki_guide_196xp.png", imageRadius, banner, slotOffset);
+                            slotOffset += imageRadius / 3;
+                            break;
+                        case "Spear":
+                            await CopyImage("https://diablo2.wiki.fextralife.com/file/Diablo-2/brandistock_weapons_diablo_2_resurrected_wiki_guide_201px.png", imageRadius, banner, slotOffset);
+                            slotOffset += imageRadius / 4;
+                            break;
+                        case "Staff":
+                            await CopyImage("https://diablo2.wiki.fextralife.com/file/Diablo-2/long_staff_diablo_2_wiki_guide_125px.png", imageRadius, banner, slotOffset);
+                            slotOffset += imageRadius / 6;
+                            break;
+                        case "Sword":
+                            await CopyImage("https://diablo2.wiki.fextralife.com/file/Diablo-2/crystal_sword_diablo_2_wiki_guide196px.png", imageRadius, banner, slotOffset);
+                            slotOffset += imageRadius / 3;
+                            break;
+                        case "Wand":
+                            await CopyImage("https://diablo2.wiki.fextralife.com/file/Diablo-2/bone_wand_diablo_2_wiki_guide_125px.png", imageRadius, banner, slotOffset);
+                            break;
+                        case "All Weapons":
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            }
 
-            
+            var offset = 160;
+            banner = DrawTextToImage(banner, $"{name}", $"{runes}",10, offset, "#7F5200", headerFontSize, "#ab3d0e");
+
             //foreach (var thisSlot in slotList)
             //{
             //    banner = CopyRegionIntoImage(thisSlot, banner, slotOffset);
             //    slotOffset -= imageRadius * 2;
             //}
 
-            var offset = 100;
+            offset += 100;
             foreach (var thisAffix in affixes)
             {
                 string textColor = "#FFFFFF";
@@ -236,13 +291,12 @@ namespace Template.Utilities
                 offset += subFontSize + 10;
             }
             string path = $"{Guid.NewGuid()}.png";
-            background.Save(path);
+            banner.Save(path);
             return await Task.FromResult(path);
         }
 
         private static Bitmap CropToRunewordBanner(Image image, Size size)
         {
-            Image destination = new Bitmap(image.Width, image.Height, image.PixelFormat);
             var originalWidth = image.Width;
             var originalHeight = image.Height;
             var destinationSize = size;
@@ -264,14 +318,13 @@ namespace Template.Utilities
 
             using var g = Graphics.FromImage(bitmap);
 
-            Brush brush = new TextureBrush(destination);
-            Pen thisPen = new Pen(brush);
+            Brush brush = new TextureBrush(image);
+            Pen pen = new Pen(brush);
 
             g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
-            g.FillRectangle(brush,destinationRectangle);
-            //g.DrawRectangle(thisPen, destinationRectangle);
-
-            g.DrawImage(image, destinationRectangle, sourceRectangle, GraphicsUnit.Pixel);
+            //g.DrawImage(image, destinationRectangle, sourceRectangle, GraphicsUnit.Pixel);
+            g.FillRectangle(brush, destinationRectangle);
+            g.DrawRectangle(pen, destinationRectangle);
 
             return bitmap;
         }
