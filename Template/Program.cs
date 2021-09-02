@@ -62,8 +62,6 @@ namespace Template
                     .AddDbContext<TutorialContext>()
                     .AddSingleton<Servers>()
                     .AddSingleton<Images>()
-                    .AddSingleton<Ranks>()
-                    .AddSingleton<AutoRoles>()
                     .AddSingleton<ServerHelper>();
                 })
                 .UseConsoleLifetime();
