@@ -52,7 +52,7 @@ namespace Template.Utilities
             return destination; 
         }
 
-        private Image DrawTextToImage(Image image, string header, string subheader, int yOffset, int textOffset = 0, string textColor = "#FFFFFF", int fontSize = 38, string subColor = "#CCCCCC")
+        private Image DrawTextToImage(Image image, string header, string subheader, int yOffset, List<string> types, int textOffset = 0, string textColor = "#FFFFFF", int fontSize = 38, string subColor = "#CCCCCC")
         {
             var myFont = new PrivateFontCollection();
             
@@ -62,11 +62,23 @@ namespace Template.Utilities
 
             var brushWhite = new SolidBrush(ColorTranslator.FromHtml(textColor));
             var brushGrey = new SolidBrush(ColorTranslator.FromHtml(subColor));
+            var brushGreen = new SolidBrush(ColorTranslator.FromHtml("#00FF00"));
+
+            bool shouldBeGreen = false;
+
+            foreach (var type in types)
+            {
+                if (subheader.Contains(type))
+                {
+                    shouldBeGreen = true;
+                    break;
+                }
+            }
 
             var headerX = 35;
             var headerY = yOffset + textOffset;
 
-            var subheaderX = (float)(35 + ((header.Length * fontSize) * .8));
+            var subheaderX = (float)(35 + ((header.Length * fontSize) * .7));
             var subheaderY = yOffset + textOffset;
 
             var drawFormat = new StringFormat
@@ -79,9 +91,23 @@ namespace Template.Utilities
             GrD.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAliasGridFit;
             if (header != "")
             {
-                GrD.DrawString(header, roboto, brushWhite, headerX, headerY, drawFormat);
+                if (shouldBeGreen)
+                {
+                    GrD.DrawString(header, roboto, brushGreen, headerX, headerY, drawFormat);
+                }
+                else
+                {
+                    GrD.DrawString(header, roboto, brushWhite, headerX, headerY, drawFormat);
+                }
             }
-            GrD.DrawString(subheader, robotoSmall, brushGrey, subheaderX, subheaderY, drawFormat);
+            if (shouldBeGreen)
+            {
+                GrD.DrawString(subheader, robotoSmall, brushGreen, subheaderX, subheaderY, drawFormat);
+            }
+            else
+            {
+                GrD.DrawString(subheader, robotoSmall, brushGrey, subheaderX, subheaderY, drawFormat);
+            }
 
             var img = new Bitmap(image);
             return img;
@@ -155,7 +181,7 @@ namespace Template.Utilities
                 biggestSizeAffixText = Math.Max(biggestSizeAffixText, textSize);
             }
 
-            var width = (int) Math.Max(((name.Length + runes.Length) * headerFontSize * .65) + 35, (biggestSizeAffixText * subFontSize * .65) + 35);
+            var width = (int) Math.Max(((name.Length + runes.Length) * headerFontSize * .7) + 35, (biggestSizeAffixText * subFontSize * .7) + 35);
             var height = headerFontSize + imageRadius + (affixes.Count * (subFontSize + 10)) + 40;
 
             var size = new Size(width, height);
@@ -261,7 +287,7 @@ namespace Template.Utilities
             }
 
             var offset = 160;
-            banner = DrawTextToImage(banner, $"{name}", $"{runes}",10, offset, "#7F5200", headerFontSize, "#ab3d0e");
+            banner = DrawTextToImage(banner, $"{name}", $"{runes}",10, theSlots, offset, "#7F5200", headerFontSize, "#ab3d0e");
 
             //foreach (var thisSlot in slotList)
             //{
@@ -277,17 +303,17 @@ namespace Template.Utilities
                 {
                     textColor = "#4169E1";
 
-                    banner = DrawTextToImage(banner, $"{thisAffix.Item2}-{thisAffix.Item3}", $"{thisAffix.Item1}", 10, offset, textColor);
+                    banner = DrawTextToImage(banner, $"{thisAffix.Item2}-{thisAffix.Item3}", $"{thisAffix.Item1}", 10, theSlots, offset, textColor);
                     offset += subFontSize + 10;
                     continue;
                 }
                 if (thisAffix.Item2 != 0)
                 {
-                    banner = DrawTextToImage(banner, $"{thisAffix.Item2}", $"{thisAffix.Item1}", 10, offset, textColor);
+                    banner = DrawTextToImage(banner, $"{thisAffix.Item2}", $"{thisAffix.Item1}", 10, theSlots, offset, textColor);
                     offset += subFontSize + 10;
                     continue;
                 }
-                banner = DrawTextToImage(banner, $"", $"{thisAffix.Item1}", 10, offset, textColor);
+                banner = DrawTextToImage(banner, $"", $"{thisAffix.Item1}", 10, theSlots, offset, textColor);
                 offset += subFontSize + 10;
             }
             string path = $"{Guid.NewGuid()}.png";
