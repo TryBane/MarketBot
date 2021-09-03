@@ -408,10 +408,11 @@ namespace Template.Modules
         }
 
         [Command("Dragon")]
-        public async Task DragonImageAsync()
+        public async Task DragonImageAsync([Remainder] string args = null)
         {
+
             var name = "Dragon(61)";
-            var slots = "Armor, Shield";
+            string slots;
             var runes = "Sur + Lo + Sol";
 
             var affixes = new List<Tuple<string, int, int>>();
@@ -424,61 +425,38 @@ namespace Template.Modules
             affixes.Add(Tuple.Create(" To Strength (Based on Character Level)", 0, 37));
             affixes.Add(Tuple.Create("% To Maximum Lightning Resist", 5, 0));
             affixes.Add(Tuple.Create("Damage Reduced by 7", 0, 0));
-            affixes.Add(Tuple.Create("% Increase Maximum Mana (Armor)", 5, 0));
-            affixes.Add(Tuple.Create(" To Mana (Shield)", 50, 0));
 
-            await CreateRunewordImage(affixes, name, slots, runes);
-        }
-
-        [Command("Dragon Armor")]
-        public async Task DragonArmorImageAsync()
-        {
-            var name = "Dragon(61)";
-            var slots = "Armor";
-            var runes = "Sur + Lo + Sol";
-            
-            var affixes = new List<Tuple<string, int, int>>();
-            affixes.Add(Tuple.Create("% Chance to Cast Level 18 Venom When Struck", 20, 0));
-            affixes.Add(Tuple.Create("% Chance To Cast Level 15 Hydra On Striking", 12, 0));
-            affixes.Add(Tuple.Create("Level 14 Holy Fire Aura When Equipped", 0, 0));
-            affixes.Add(Tuple.Create(" Defense", 360, 0));
-            affixes.Add(Tuple.Create(" Defense Vs. Missile", 230, 0));
-            affixes.Add(Tuple.Create(" To All Attributes", 3, 5));
-            affixes.Add(Tuple.Create(" To Strength (Based on Character Level)", 0, 37));
-            affixes.Add(Tuple.Create("% To Maximum Lightning Resist", 5, 0));
-            affixes.Add(Tuple.Create("Damage Reduced by 7", 0, 0));
-            affixes.Add(Tuple.Create("% Increase Maximum Mana", 5, 0));
-
-            await CreateRunewordImage(affixes, name, slots, runes);
-        }
-
-        [Command("Dragon Shield")]
-        public async Task DragonShieldImageAsync()
-        {
-            var name = "Dragon(61)";
-            var slots = "Shield";
-            var runes = "Sur + Lo + Sol";
-
-            var affixes = new List<Tuple<string, int, int>>();
-            affixes.Add(Tuple.Create("% Chance to Cast Level 18 Venom When Struck", 20, 0));
-            affixes.Add(Tuple.Create("% Chance To Cast Level 15 Hydra On Striking", 12, 0));
-            affixes.Add(Tuple.Create("Level 14 Holy Fire Aura When Equipped", 0, 0));
-            affixes.Add(Tuple.Create(" Defense", 360, 0));
-            affixes.Add(Tuple.Create(" Defense Vs. Missile", 230, 0));
-            affixes.Add(Tuple.Create(" To All Attributes", 3, 5));
-            affixes.Add(Tuple.Create(" To Strength (Based on Character Level)", 0, 37));
-            affixes.Add(Tuple.Create("% To Maximum Lightning Resist", 5, 0));
-            affixes.Add(Tuple.Create("Damage Reduced by 7", 0, 0));
-            affixes.Add(Tuple.Create(" To Mana", 50, 0));
+            if (args == null)
+            {
+                slots = "Armor, Shield";
+                affixes.Add(Tuple.Create("% Increase Maximum Mana (Armor)", 5, 0));
+                affixes.Add(Tuple.Create(" To Mana (Shield)", 50, 0));
+            }
+            else if (args.ToLower() == "armor")
+            {
+                slots = "Armor";
+                affixes.Add(Tuple.Create("% Increase Maximum Mana", 5, 0));
+            }
+            else if (args.ToLower() == "shield")
+            {
+                slots = "Shield";
+                affixes.Add(Tuple.Create(" To Mana", 50, 0));
+            }
+            else
+            {
+                slots = "Armor, Shield";
+                affixes.Add(Tuple.Create("% Increase Maximum Mana (Armor)", 5, 0));
+                affixes.Add(Tuple.Create(" To Mana (Shield)", 50, 0));
+            }
 
             await CreateRunewordImage(affixes, name, slots, runes);
         }
 
         [Command("Dream")]
-        public async Task DreamImageAsync()
+        public async Task DreamImageAsync([Remainder] string args = null)
         {
             var name = "Dream(65)";
-            var slots = "Helm, Shield";
+            string slots;
             var runes = "io + Jah + Pul";
 
             var affixes = new List<Tuple<string, int, int>>();
@@ -488,52 +466,30 @@ namespace Template.Modules
             affixes.Add(Tuple.Create("% Enhanced Defense", 30, 0));
             affixes.Add(Tuple.Create(" Defense", 150, 220));
             affixes.Add(Tuple.Create(" To Vitality", 10, 0));
-            affixes.Add(Tuple.Create("% Increase Maximum Life (Helm)", 5, 0));
-            affixes.Add(Tuple.Create("% Increase Maximum Life (Shield)", 50, 0));
-            affixes.Add(Tuple.Create(" To Mana (Based on Character Level)", 0, 61));
-            affixes.Add(Tuple.Create(" All Resistances", 5, 20));
-            affixes.Add(Tuple.Create("% Better Chance of Getting Magic Items", 12, 25));
 
-            await CreateRunewordImage(affixes, name, slots, runes);
-        }
+            if (args == null)
+            {
+                slots = "Helm, Shield";
+                affixes.Add(Tuple.Create("% Increase Maximum Life (Helm)", 5, 0));
+                affixes.Add(Tuple.Create(" Increase Maximum Life (Shield)", 50, 0));
+            }
+            else if (args.ToLower() == "helm")
+            {
+                slots = "Helm";
+                affixes.Add(Tuple.Create("% Increase Maximum Life", 5, 0));
+            }
+            else if (args.ToLower() == "shield")
+            {
+                slots = "Shield";
+                affixes.Add(Tuple.Create(" Increase Maximum Life", 50, 0));
+            }
+            else
+            {
+                slots = "Helm, Shield";
+                affixes.Add(Tuple.Create("% Increase Maximum Life (Helm)", 5, 0));
+                affixes.Add(Tuple.Create(" Increase Maximum Life (Shield)", 50, 0));
+            }
 
-        [Command("Dream Helm")]
-        public async Task DreamHelmImageAsync()
-        {
-            var name = "Dream(65)";
-            var slots = "Helm";
-            var runes = "io + Jah + Pul";
-
-            var affixes = new List<Tuple<string, int, int>>();
-            affixes.Add(Tuple.Create("% Chance to cast level 15 Confuse when struck", 10, 0));
-            affixes.Add(Tuple.Create("Level 15 Holy Shock Aura when equipped", 0, 0));
-            affixes.Add(Tuple.Create("% Faster Hit Recover", 20, 30));
-            affixes.Add(Tuple.Create("% Enhanced Defense", 30, 0));
-            affixes.Add(Tuple.Create(" Defense", 150, 220));
-            affixes.Add(Tuple.Create(" To Vitality", 10, 0));
-            affixes.Add(Tuple.Create("% Increase Maximum Life", 5, 0));
-            affixes.Add(Tuple.Create(" To Mana (Based on Character Level)", 0, 61));
-            affixes.Add(Tuple.Create(" All Resistances", 5, 20));
-            affixes.Add(Tuple.Create("% Better Chance of Getting Magic Items", 12, 25));
-
-            await CreateRunewordImage(affixes, name, slots, runes);
-        }
-
-        [Command("Dream Shield")]
-        public async Task DreamShieldImageAsync()
-        {
-            var name = "Dream(65)";
-            var slots = "Shield";
-            var runes = "io + Jah + Pul";
-
-            var affixes = new List<Tuple<string, int, int>>();
-            affixes.Add(Tuple.Create("% Chance to cast level 15 Confuse when struck", 10, 0));
-            affixes.Add(Tuple.Create("Level 15 Holy Shock Aura when equipped", 0, 0));
-            affixes.Add(Tuple.Create("% Faster Hit Recover", 20, 30));
-            affixes.Add(Tuple.Create("% Enhanced Defense", 30, 0));
-            affixes.Add(Tuple.Create(" Defense", 150, 220));
-            affixes.Add(Tuple.Create(" To Vitality", 10, 0));
-            affixes.Add(Tuple.Create("% Increase Maximum Life", 50, 0));
             affixes.Add(Tuple.Create(" To Mana (Based on Character Level)", 0, 61));
             affixes.Add(Tuple.Create(" All Resistances", 5, 20));
             affixes.Add(Tuple.Create("% Better Chance of Getting Magic Items", 12, 25));
