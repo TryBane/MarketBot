@@ -51,21 +51,23 @@ namespace Template.Modules
             var runes = "";
             
             var affixes = new List<Tuple<string, int, int>>();
-            affixes.Add(Tuple.Create("", ));
-            affixes.Add(Tuple.Create("", ));
-            affixes.Add(Tuple.Create("", ));
-            affixes.Add(Tuple.Create("", ));
-            affixes.Add(Tuple.Create("", ));
-            affixes.Add(Tuple.Create("", ));
-            affixes.Add(Tuple.Create("", ));
-            affixes.Add(Tuple.Create("", ));
-            affixes.Add(Tuple.Create("", ));
-            affixes.Add(Tuple.Create("", ));
-            affixes.Add(Tuple.Create("", ));
-            affixes.Add(Tuple.Create("", ));
+            affixes.Add(Tuple.Create("", , ));
+            affixes.Add(Tuple.Create("", , ));
+            affixes.Add(Tuple.Create("", , ));
+            affixes.Add(Tuple.Create("", , ));
+            affixes.Add(Tuple.Create("", , ));
+            affixes.Add(Tuple.Create("", , ));
+            affixes.Add(Tuple.Create("", , ));
+            affixes.Add(Tuple.Create("", , ));
+            affixes.Add(Tuple.Create("", , ));
+            affixes.Add(Tuple.Create("", , ));
+            affixes.Add(Tuple.Create("", , ));
+            affixes.Add(Tuple.Create("", , ));
+
+            await CreateRunewordImage(affixes, name, slots, runes);
         }
         */
-               
+
         [Command("Ancients Pledge")]
         [Alias("AP")]
         public async Task AncientsPledgeImageAsync()
@@ -81,7 +83,6 @@ namespace Template.Modules
             affixes.Add(Tuple.Create("% Fire Resist", 48, 0));
             affixes.Add(Tuple.Create("% Poison Resist", 48, 0));
             affixes.Add(Tuple.Create("% Damage Taken Goes to Mana", 10, 0));
-
 
             await CreateRunewordImage(affixes, name, slots, runes);
         }
