@@ -145,7 +145,6 @@ namespace Template.Utilities
 
             var background = await FetchImageAsync(url);
 
-            List<Image> slotList = new List<Image>();
             List<string> theSlots = new List<string>
             {
                 "Helm",
@@ -169,11 +168,72 @@ namespace Template.Utilities
                 "Staff",
                 "Sword",
                 "Wand",
-                "All Weapons"
             };
+            List<string> meleeWeapons = new List<string>()
+            {
+                "Axe",
+                "Club",
+                "Dagger",
+                "Hammer",
+                "Katar",
+                "Mace",
+                "Polearm",
+                "Scepter",
+                "Spear",
+                "Staff",
+                "Sword",
+                "Wand"
+            };
+            List<string> slot2Weapons = new List<string>();
+            List<string> slot3Weapons = new List<string>();
+            List<string> slot4Weapons = new List<string>();
+            List<string> slot5Weapons = new List<string>();
+            List<string> slot6Weapons = new List<string>();
+
+            List<string> itemSlots = new List<string>();
+
+            foreach( var thisSlot in theSlots )
+            {
+                if(slots.Contains(thisSlot))
+                {
+                    itemSlots.Add(thisSlot);
+                }
+            }
+
+            if(itemSlots.Count == 0)
+            {
+                if(slots.Contains("All Weapons"))
+                {
+
+                }
+
+                if(slots.Contains("Melee Weapons"))
+                {
+
+                }
+
+                if(slots.Contains("Missile Weapons"))
+                {
+
+                }
+            }
             var headerFontSize = 60;
             var subFontSize = 38;
             int biggestSizeAffixText = 0;
+
+            if(slots.Contains("All Weapons"))
+            {
+                foreach(var aWeapon in theSlots)
+                {
+                    if( aWeapon != "Helm" &&
+                        aWeapon != "Shield" && 
+                        aWeapon != "Armor" && 
+                        aWeapon != "Head")
+                    {
+                        slots += ", " + aWeapon;
+                    }
+                }
+            }
 
             foreach(var thisAffix in affixes)
             {

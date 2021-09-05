@@ -121,11 +121,11 @@ namespace Template.Modules
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("% Increased Attack Speed", 15, 0));
             affixes.Add(Tuple.Create("% Enhanced Damage", 120, 0));
-            affixes.Add(Tuple.Create(" to Attack Rating", 200, 0));
+            affixes.Add(Tuple.Create(" To Attack Rating", 200, 0));
             affixes.Add(Tuple.Create(" Cold Damage", 3, 14));
             affixes.Add(Tuple.Create("% Chance of Crushing Blow", 40, 0));
             affixes.Add(Tuple.Create(" Knockback", 0, 0));
-            affixes.Add(Tuple.Create(" to Vitality", 10, 0));
+            affixes.Add(Tuple.Create(" To Vitality", 10, 0));
             affixes.Add(Tuple.Create(" Magic Damage Reduced By 2", 0, 0));
             affixes.Add(Tuple.Create(" Level 4 Corpse Explosion (12 Charges)", 0, 0));
 
@@ -158,7 +158,7 @@ namespace Template.Modules
             var runes = "Ral + Ohm + Sur + Eth";
             
             var affixes = new List<Tuple<string, int, int>>();
-            affixes.Add(Tuple.Create("To Thorns Aura When Equipped", 15, 21));
+            affixes.Add(Tuple.Create(" To Thorns Aura When Equipped", 15, 21));
             affixes.Add(Tuple.Create("% Faster Hit Recovery", 50, 0));
             affixes.Add(Tuple.Create("% To Poison Skill Damage", 25, 50));
             affixes.Add(Tuple.Create(" To Defense", 300, 0));
@@ -177,7 +177,7 @@ namespace Template.Modules
         public async Task BrandImageAsync()
         {
             var name = "Brand(65)";
-            var slots = "Missile Weapon";
+            var slots = "Missile Weapons";
             var runes = "Jah + Lo + Mal + Gul";
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -227,7 +227,7 @@ namespace Template.Modules
         public async Task CtaImageAsync()
         {
             var name = "Call To Arms(57)";
-            var slots = "Weapons";
+            var slots = "All Weapons";
             var runes = "Amn + Ral + Mal + Ist + Ohm";
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -535,7 +535,7 @@ namespace Template.Modules
             affixes.Add(Tuple.Create(" Poison Damage Over 5 Seconds", 75, 0));
             affixes.Add(Tuple.Create("% Life Stolen Per Hit", 7, 0));
             affixes.Add(Tuple.Create("Prevent Monster Heal", 0, 0));
-            affixes.Add(Tuple.Create("To All Attributes", 5, 10));
+            affixes.Add(Tuple.Create(" To All Attributes", 5, 10));
             affixes.Add(Tuple.Create(" To Mana After Each Kill", 2, 0));
             affixes.Add(Tuple.Create("Reduces All Vendor Prices 15%", 0, 0));
 
@@ -633,7 +633,7 @@ namespace Template.Modules
         public async Task FaithImageAsync()
         {
             var name = "Faith(65)";
-            var slots = "Missile Weapon";
+            var slots = "Missile Weapons";
             var runes = "Ohm + Jah + Lem + Eld";
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -736,7 +736,7 @@ namespace Template.Modules
          }
          
             [Command("Grief")]
-        public async Task ImageAsync()
+        public async Task GriefImageAsync()
         {
             var name = "Grief(59)";
             var slots = "Sword, Axe";
@@ -745,22 +745,23 @@ namespace Template.Modules
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("% Chance To Cast Level 15 Venom On Striking", 35, 0));
             affixes.Add(Tuple.Create("% Increased Attack Speed", 30, 40));
-            affixes.Add(Tuple.Create("Damage", 340, 400));
+            affixes.Add(Tuple.Create(" Damage", 340, 400));
             affixes.Add(Tuple.Create("Ignore Target's Defense", 0, 0));
             affixes.Add(Tuple.Create("% Target Defense", -25, 0));
             affixes.Add(Tuple.Create("% Damage To Demons (Based on Character Level)", 1, 185));
-            affixes.Add(Tuple.Create("Adds 5-30 Fire Damage", 0, 0));
-            affixes.Add(Tuple.Create("To Enemy Poison Resistance", -20, 25));
+            affixes.Add(Tuple.Create(" Fire Damage", 5, 30));
+            affixes.Add(Tuple.Create(" To Enemy Poison Resistance", -20, 25));
             affixes.Add(Tuple.Create("% Deadly Strike", 20, 0));
-            affixes.Add(Tuple.Create("Prevent Monster Heal", , ));
-            affixes.Add(Tuple.Create("To Mana After Each Kill", 2, 0));
-            affixes.Add(Tuple.Create("Life After Each Kill", 10, 15));
+            affixes.Add(Tuple.Create("Prevent Monster Heal", 0, 0));
+            affixes.Add(Tuple.Create(" To Mana After Each Kill", 2, 0));
+            affixes.Add(Tuple.Create(" Life After Each Kill", 10, 15));
 
             await CreateRunewordImage(affixes, name, slots, runes);
         }
         
         [Command("Hand of Justice")]
-        public async Task ImageAsync()
+        [Alias("hoj")]
+        public async Task HandOfJusticeImageAsync()
         {
             var name = "Hand of Justice(67)";
             var slots = "All Weapons";
@@ -783,7 +784,7 @@ namespace Template.Modules
         }
         
         [Command("Harmony")]
-        public async Task ImageAsync()
+        public async Task HarmonyImageAsync()
         {
             var name = "Harmony(39)";
             var slots = "Missile Weapons";
@@ -792,16 +793,16 @@ namespace Template.Modules
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("Level 10 Vigor Aura When Equipped", 0, 0));
             affixes.Add(Tuple.Create("% Enhanced Damage", 200, 275));
-            affixes.Add(Tuple.Create("To Minimum Damage", 9, 0));
-            affixes.Add(Tuple.Create("To Maximum Damage", 9, 0));
-            affixes.Add(Tuple.Create("Adds 55-160 Fire Damage", 0, 0));
-            affixes.Add(Tuple.Create("Adds 55-160 Lightning Damage", 0, 0));
-            affixes.Add(Tuple.Create("Adds 55-160 Cold Damage", 0, 0));
-            affixes.Add(Tuple.Create("To Valkyrie", 2, 6));
-            affixes.Add(Tuple.Create("To Dexterity", 10, 0));
+            affixes.Add(Tuple.Create(" To Minimum Damage", 9, 0));
+            affixes.Add(Tuple.Create(" To Maximum Damage", 9, 0));
+            affixes.Add(Tuple.Create(" Fire Damage", 55, 160));
+            affixes.Add(Tuple.Create(" Lightning Damage", 55, 160));
+            affixes.Add(Tuple.Create(" Cold Damage", 55, 160));
+            affixes.Add(Tuple.Create(" To Valkyrie", 2, 6));
+            affixes.Add(Tuple.Create(" To Dexterity", 10, 0));
             affixes.Add(Tuple.Create("Regenerate Mana 20%", 0, 0));
-            affixes.Add(Tuple.Create("To Mana After Each Kill", 2, 0));
-            affixes.Add(Tuple.Create("To Light Radius", 2, 0));
+            affixes.Add(Tuple.Create(" To Mana After Each Kill", 2, 0));
+            affixes.Add(Tuple.Create(" To Light Radius", 2, 0));
             affixes.Add(Tuple.Create("Level 20 Revive (25 Charges)", 0, 0));
 
             await CreateRunewordImage(affixes, name, slots, runes);
@@ -809,23 +810,23 @@ namespace Template.Modules
         
         [Command("Heart of the Oak")]
         [Alias("Hoto")]
-        public async Task ImageAsync()
+        public async Task HeartOfTheOakImageAsync()
         {
             var name = "Heart of the Oak(55)";
             var slots = "Staff, Mace";
             var runes = "Ko + Vex + Pul + Thul";
             
             var affixes = new List<Tuple<string, int, int>>();
-            affixes.Add(Tuple.Create("To All Skills", 3, 0));
+            affixes.Add(Tuple.Create(" To All Skills", 3, 0));
             affixes.Add(Tuple.Create("% Faster Cast Rate", 40, 0));
             affixes.Add(Tuple.Create("% Damage To Demons", 75, 0));
-            affixes.Add(Tuple.Create("To Attack Rating Against Demons", 100, 0));
-            affixes.Add(Tuple.Create("Adds 3-14 Cold Damage", 0, 0));
+            affixes.Add(Tuple.Create(" To Attack Rating Against Demons", 100, 0));
+            affixes.Add(Tuple.Create(" Cold Damage", 3, 14));
             affixes.Add(Tuple.Create("% Mana Stolen Per Hit", 7, 0));
-            affixes.Add(Tuple.Create("To Dexterity", 10, 0));
-            affixes.Add(Tuple.Create("Replenish Life", 20, 0));
+            affixes.Add(Tuple.Create(" To Dexterity", 10, 0));
+            affixes.Add(Tuple.Create(" Replenish Life", 20, 0));
             affixes.Add(Tuple.Create("% Increase Maximum Mana", 15, 0));
-            affixes.Add(Tuple.Create("All Resistances", 30, 40));
+            affixes.Add(Tuple.Create(" All Resistances", 30, 40));
             affixes.Add(Tuple.Create("Level 4 Oak Sage (25 Charges)", 0, 0));
             affixes.Add(Tuple.Create("Level 14 Raven (60 Charges)", 0, 0));
 
@@ -833,7 +834,8 @@ namespace Template.Modules
         }
         
         [Command("Holy Thunder")]
-        public async Task ImageAsync()
+        [Alias("HT")]
+        public async Task HolyThunderImageAsync()
         {
             var name = "Holy Thunder(23)";
             var slots = "Scepter";
@@ -841,44 +843,44 @@ namespace Template.Modules
             
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("% Enhanced Damage", 60, 0));
-            affixes.Add(Tuple.Create("to Maximum Damage", 10, 0));
+            affixes.Add(Tuple.Create(" To Maximum Damage", 10, 0));
             affixes.Add(Tuple.Create("% Target Defense", -25, 0));
-            affixes.Add(Tuple.Create("Adds 5-30 Fire Damage", 0, 0));
-            affixes.Add(Tuple.Create("Adds 21-110 Lightning Damage", 0, 0));
-            affixes.Add(Tuple.Create("Poison Damage over 5 secs", 75, 0));
-            affixes.Add(Tuple.Create("to Holy Shock (Paladin Only)", 3, 0));
+            affixes.Add(Tuple.Create(" Fire Damage", 5, 30));
+            affixes.Add(Tuple.Create(" Lightning Damage", 21, 110));
+            affixes.Add(Tuple.Create(" Poison Damage over 5 secs", 75, 0));
+            affixes.Add(Tuple.Create(" To Holy Shock (Paladin Only)", 3, 0));
             affixes.Add(Tuple.Create("% to Maximum Lightning Resist", 5, 0));
-            affixes.Add(Tuple.Create("Lightning Resist", 60, 0));
+            affixes.Add(Tuple.Create(" Lightning Resist", 60, 0));
             affixes.Add(Tuple.Create("Level 7 Chain Lightning (60 charges)", 0, 0));
 
             await CreateRunewordImage(affixes, name, slots, runes);
         }
         
          [Command("Honor")]
-        public async Task ImageAsync()
+        public async Task HonorImageAsync()
         {
             var name = "Honor(27)";
             var slots = "All Melee Weapons";
             var runes = "Amn + El + Ith + Tir + Sol";
             
             var affixes = new List<Tuple<string, int, int>>();
-            affixes.Add(Tuple.Create("to all skills", 1, 0));
+            affixes.Add(Tuple.Create(" To all skills", 1, 0));
             affixes.Add(Tuple.Create("% Enhanced Damage", 160, 0));
-            affixes.Add(Tuple.Create("to Minimum Damage", 9, 0));
-            affixes.Add(Tuple.Create("to Maximum Damage", 9, 0));
-            affixes.Add(Tuple.Create("Attack Rating", 250, 0));
+            affixes.Add(Tuple.Create(" To Minimum Damage", 9, 0));
+            affixes.Add(Tuple.Create(" To Maximum Damage", 9, 0));
+            affixes.Add(Tuple.Create(" Attack Rating", 250, 0));
             affixes.Add(Tuple.Create("% Life Stolen per Hit", 7, 0));
             affixes.Add(Tuple.Create("% Deadly Strike", 25, 0));
-            affixes.Add(Tuple.Create("to Strength", 10, 0));
-            affixes.Add(Tuple.Create("Replenish life", 10, 0));
-            affixes.Add(Tuple.Create("to Mana after each Kill", 2, 0));
-            affixes.Add(Tuple.Create("to Light Radius", 1, 0));
+            affixes.Add(Tuple.Create(" To Strength", 10, 0));
+            affixes.Add(Tuple.Create(" Replenish life", 10, 0));
+            affixes.Add(Tuple.Create(" To Mana after each Kill", 2, 0));
+            affixes.Add(Tuple.Create(" To Light Radius", 1, 0));
 
             await CreateRunewordImage(affixes, name, slots, runes);
         }
         
         [Command("Ice")]
-        public async Task ImageAsync()
+        public async Task IceImageAsync()
         {
             var name = "Ice(65)";
             var slots = "Missile Weapons";
@@ -895,13 +897,13 @@ namespace Template.Modules
             affixes.Add(Tuple.Create("% Life Stolen Per Hit", 7, 0));
             affixes.Add(Tuple.Create("% To Enemy Cold Resistance", -20, 0));
             affixes.Add(Tuple.Create("% Deadly Strike", 20, 0));
-            affixes.Add(Tuple.Create("Extra Gold From Monsters (Based on Character Level)", 3, 309));
+            affixes.Add(Tuple.Create(" Extra Gold From Monsters (Based on Character Level)", 3, 309));
 
             await CreateRunewordImage(affixes, name, slots, runes);
         }
         
         [Command("Infinity")]
-        public async Task ImageAsync()
+        public async Task InfinityImageAsync()
         {
             var name = "Infinity(63)";
             var slots = "Polearm";
@@ -915,7 +917,7 @@ namespace Template.Modules
             affixes.Add(Tuple.Create("% To Enemy Lightning Resistance", -45, 55));
             affixes.Add(Tuple.Create("% Chance of Crushing Blow", 40, 0));
             affixes.Add(Tuple.Create("Prevent Monster Heal", 0, 0));
-            affixes.Add(Tuple.Create("To Vitality (Based on Character Level)", 0, 49));
+            affixes.Add(Tuple.Create(" To Vitality (Based on Character Level)", 0, 49));
             affixes.Add(Tuple.Create("% Better Chance of Getting Magic Items", 30, 0));
             affixes.Add(Tuple.Create("Level 21 Cyclone Armor (30 Charges)", 0, 0));
 
@@ -923,7 +925,7 @@ namespace Template.Modules
         }
         
         [Command("Insight")]
-        public async Task ImageAsync()
+        public async Task InsightImageAsync()
         {
             var name = "Insight(27)";
             var slots = "Polearm, Staff";
@@ -933,20 +935,21 @@ namespace Template.Modules
             affixes.Add(Tuple.Create("Meditation Aura When Equipped", 12, 17));
             affixes.Add(Tuple.Create("% Faster Cast Rate", 35, 0));
             affixes.Add(Tuple.Create("% Enhanced Damage", 200, 260));
-            affixes.Add(Tuple.Create("To Minimum Damage", 9, 0));
+            affixes.Add(Tuple.Create(" To Minimum Damage", 9, 0));
             affixes.Add(Tuple.Create("% Bonus to Attack Rating", 180, 250));
-            affixes.Add(Tuple.Create("Adds 5-30 Fire Damage", 0, 0));
+            affixes.Add(Tuple.Create(" Fire Damage", 5, 30));
             affixes.Add(Tuple.Create("Poison Damage Over 5 Seconds", 75, 0));
-            affixes.Add(Tuple.Create("To Critical Strike", 1, 6));
-            affixes.Add(Tuple.Create("To All Attributes", 5, 0));
-            affixes.Add(Tuple.Create("To Mana After Each Kill", 2, 0));
+            affixes.Add(Tuple.Create(" To Critical Strike", 1, 6));
+            affixes.Add(Tuple.Create(" To All Attributes", 5, 0));
+            affixes.Add(Tuple.Create(" To Mana After Each Kill", 2, 0));
             affixes.Add(Tuple.Create("% Better Chance of Getting Magic Items", 23, 0));
             
             await CreateRunewordImage(affixes, name, slots, runes);
         }
         
         [Command("Kings Grace")]
-        public async Task ImageAsync()
+        [Alias("KG")]
+        public async Task KingsGraceImageAsync()
         {
             var name = "King's Grace(25)";
             var slots = "Sword, Scepter";
@@ -954,20 +957,21 @@ namespace Template.Modules
             
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("% Enhanced Damage", 100, 0));
-            affixes.Add(Tuple.Create("To Attack Rating", 150, 0));
+            affixes.Add(Tuple.Create(" To Attack Rating", 150, 0));
             affixes.Add(Tuple.Create("% Damage to Demons", 100, 0));
-            affixes.Add(Tuple.Create("to Attack Rating against Demons", 100, 0));
+            affixes.Add(Tuple.Create(" To Attack Rating against Demons", 100, 0));
             affixes.Add(Tuple.Create("% Damage to Undead", 50, 0));
-            affixes.Add(Tuple.Create("to Attack Rating against Undead", 100, 0));
-            affixes.Add(Tuple.Create("Adds 5-30 Fire Damage", 0, 0));
-            affixes.Add(Tuple.Create("Adds 3-14 Cold damage", 0, 0));
+            affixes.Add(Tuple.Create(" To Attack Rating against Undead", 100, 0));
+            affixes.Add(Tuple.Create(" Fire Damage", 5, 30));
+            affixes.Add(Tuple.Create(" Cold damage", 3, 14));
             affixes.Add(Tuple.Create("% Life stolen per hit", 7, 0));
 
             await CreateRunewordImage(affixes, name, slots, runes);
         }
         
         [Command("Kingslayer")]
-        public async Task ImageAsync()
+        [Alias("King Slayer","KS")]
+        public async Task KingslayerImageAsync()
         {
             var name = "Kingslayer(53)";
             var slots = "Sword, Axe";
@@ -980,16 +984,17 @@ namespace Template.Modules
             affixes.Add(Tuple.Create("% Bonus To Attack Rating", 20, 0));
             affixes.Add(Tuple.Create("% Chance of Crushing Blow", 33, 0));
             affixes.Add(Tuple.Create("% Chance of Open Wounds", 50, 0));
-            affixes.Add(Tuple.Create("To Vengeance", 1, 0));
+            affixes.Add(Tuple.Create(" To Vengeance", 1, 0));
             affixes.Add(Tuple.Create("Prevent Monster Heal", 0, 0));
-            affixes.Add(Tuple.Create("To Strength", 10, 0));
+            affixes.Add(Tuple.Create(" To Strength", 10, 0));
             affixes.Add(Tuple.Create("% Extra Gold From Monsters", 40, 0));
 
             await CreateRunewordImage(affixes, name, slots, runes);
         }
         
         [Command("Last Wish")]
-        public async Task ImageAsync()
+        [Alias("LW")]
+        public async Task LastWishImageAsync()
         {
             var name = "Last Wish(65)";
             var slots = "Axe, Hammer, Sword";
@@ -1011,7 +1016,8 @@ namespace Template.Modules
         }
         
         [Command("Lawbringer")]
-        public async Task ImageAsync()
+        [Alias("LB")]
+        public async Task LawBringerImageAsync()
         {
             var name = "Lawbringer(43)";
             var slots = "Hammer, Scepter, Sword";
@@ -1019,41 +1025,42 @@ namespace Template.Modules
             
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("% Chance To Cast Level 15 Decrepify On Striking", 20, 0));
-            affixes.Add(Tuple.Create("Sanctuary Aura When Equipped", 16, 18));
+            affixes.Add(Tuple.Create(" Sanctuary Aura When Equipped", 16, 18));
             affixes.Add(Tuple.Create("% Target Defense", -50, 0));
-            affixes.Add(Tuple.Create("Adds 150-210 Fire Damage", 0, 0));
-            affixes.Add(Tuple.Create("Adds 130-180 Cold Damage", 0, 0));
+            affixes.Add(Tuple.Create(" Fire Damage", 150, 210));
+            affixes.Add(Tuple.Create(" Cold Damage", 130, 180));
             affixes.Add(Tuple.Create("% Life Stolen Per Hit", 7, 0));
             affixes.Add(Tuple.Create("Slain Monsters Rest In Peace", 0, 0));
-            affixes.Add(Tuple.Create("Defense Vs. Missile", 200, 250));
-            affixes.Add(Tuple.Create("To Dexterity", 10, 0));
+            affixes.Add(Tuple.Create(" Defense Vs. Missile", 200, 250));
+            affixes.Add(Tuple.Create(" To Dexterity", 10, 0));
             affixes.Add(Tuple.Create("% Extra Gold From Monsters", 75, 0));
 
             await CreateRunewordImage(affixes, name, slots, runes);
         }
         
         [Command("Leaf")]
-        public async Task ImageAsync()
+        public async Task LeafImageAsync()
         {
             var name = "Leaf(19)";
             var slots = "Staff";
             var runes = "Tir + Ral";
             
             var affixes = new List<Tuple<string, int, int>>();
-            affixes.Add(Tuple.Create("to Fire Skills", 3, 0));
-            affixes.Add(Tuple.Create("Adds 5-30 Fire Damage", 0, 0));
-            affixes.Add(Tuple.Create("to Inferno (Sorceress Only", 3, 0));
-            affixes.Add(Tuple.Create("to Warmth (Sorceress Only)", 3, 0));
-            affixes.Add(Tuple.Create("to Fire Bolt (Sorceress Only)", 3, 0));
-            affixes.Add(Tuple.Create("Defence (Based on Character Level)", 2, 198));
+            affixes.Add(Tuple.Create(" To Fire Skills", 3, 0));
+            affixes.Add(Tuple.Create(" Fire Damage", 5, 30));
+            affixes.Add(Tuple.Create(" To Inferno (Sorceress Only", 3, 0));
+            affixes.Add(Tuple.Create(" To Warmth (Sorceress Only)", 3, 0));
+            affixes.Add(Tuple.Create(" To Fire Bolt (Sorceress Only)", 3, 0));
+            affixes.Add(Tuple.Create(" Defence (Based on Character Level)", 2, 198));
             affixes.Add(Tuple.Create("% Cold Resist", 33, 0));
-            affixes.Add(Tuple.Create("To Mana after each Kill", 2, 0));
+            affixes.Add(Tuple.Create(" To Mana after each Kill", 2, 0));
 
             await CreateRunewordImage(affixes, name, slots, runes);
         }
         
         [Command("Lionheart")]
-        public async Task ImageAsync()
+        [Alias("LH")]
+        public async Task LionheartImageAsync()
         {
             var name = "Lionheart(41)";
             var slots = "Armor";
@@ -1061,37 +1068,37 @@ namespace Template.Modules
             
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("% Enhanced Damage", 20, 0));
-            affixes.Add(Tuple.Create("To Strength", 25, 0));
-            affixes.Add(Tuple.Create("To Dexterity", 15, 0));
-            affixes.Add(Tuple.Create("To Vitality", 20, 0));
-            affixes.Add(Tuple.Create("To Energy", 10, 0));
-            affixes.Add(Tuple.Create("To Life", 50, 0));
-            affixes.Add(Tuple.Create("All Resistances", 30, 0));
+            affixes.Add(Tuple.Create(" To Strength", 25, 0));
+            affixes.Add(Tuple.Create(" To Dexterity", 15, 0));
+            affixes.Add(Tuple.Create(" To Vitality", 20, 0));
+            affixes.Add(Tuple.Create(" To Energy", 10, 0));
+            affixes.Add(Tuple.Create(" To Life", 50, 0));
+            affixes.Add(Tuple.Create(" All Resistances", 30, 0));
             affixes.Add(Tuple.Create("% Requirements", 15, 0));
 
             await CreateRunewordImage(affixes, name, slots, runes);
         }
         
         [Command("Lore")]
-        public async Task ImageAsync()
+        public async Task LoreImageAsync()
         {
             var name = "Lore(27)";
             var slots = "Helm";
             var runes = "Ort + Sol";
             
             var affixes = new List<Tuple<string, int, int>>();
-            affixes.Add(Tuple.Create("to All Skills", 1, 0));
-            affixes.Add(Tuple.Create("to Energy", 10, 0));
+            affixes.Add(Tuple.Create(" To All Skills", 1, 0));
+            affixes.Add(Tuple.Create(" To Energy", 10, 0));
             affixes.Add(Tuple.Create("% Lightning Resist", 30, 0));
-            affixes.Add(Tuple.Create("Damage Reduced by 7", 0, 0));
-            affixes.Add(Tuple.Create("to Mana after each Kill", 2, 0));
-            affixes.Add(Tuple.Create("to Light Radius", 2, 0));
+            affixes.Add(Tuple.Create(" Damage Taken", -7, 0));
+            affixes.Add(Tuple.Create(" To Mana after each Kill", 2, 0));
+            affixes.Add(Tuple.Create(" To Light Radius", 2, 0));
 
             await CreateRunewordImage(affixes, name, slots, runes);
         }
         
         [Command("Malice")]
-        public async Task ImageAsync()
+        public async Task MaliceImageAsync()
         {
             var name = "Malice(15)";
             var slots = "All Melee Weapons";
@@ -1099,63 +1106,63 @@ namespace Template.Modules
             
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("% Enhanced Damage", 33, 0));
-            affixes.Add(Tuple.Create("to Maximum Damage", 9, 0));
+            affixes.Add(Tuple.Create(" To Maximum Damage", 9, 0));
             affixes.Add(Tuple.Create("% Target Defense", 25, 0));
-            affixes.Add(Tuple.Create("to Attack Rating", 50, 0));
+            affixes.Add(Tuple.Create(" To Attack Rating", 50, 0));
             affixes.Add(Tuple.Create("% Chance of Open wounds", 100, 0));
             affixes.Add(Tuple.Create("Prevent Monster Heal", 0, 0));
-            affixes.Add(Tuple.Create("to Monster Defense Per Hit", -100, 0));
-            affixes.Add(Tuple.Create("Drain Life", -5, 0));
+            affixes.Add(Tuple.Create(" To Monster Defense Per Hit", -100, 0));
+            affixes.Add(Tuple.Create(" Drain Life", -5, 0));
 
             await CreateRunewordImage(affixes, name, slots, runes);
         }
         
         [Command("Melody")]
-        public async Task ImageAsync()
+        public async Task MelodyImageAsync()
         {
             var name = "Melody(39)";
             var slots = "Missile Weapons";
             var runes = "Shael + Ko + Nef";
             
             var affixes = new List<Tuple<string, int, int>>();
-            affixes.Add(Tuple.Create("To Bow and Crossbow Skills (Amazon Only)", 3, 0));
+            affixes.Add(Tuple.Create(" To Bow and Crossbow Skills (Amazon Only)", 3, 0));
             affixes.Add(Tuple.Create("% Increased Attack Speed", 20, 0));
             affixes.Add(Tuple.Create("% Enhanced Damage", 50, 0));
             affixes.Add(Tuple.Create("% Damage To Undead", 300, 0));
-            affixes.Add(Tuple.Create("To Slow Missiles (Amazon Only)", 3, 0));
-            affixes.Add(Tuple.Create("To Dodge (Amazon Only)", 3, 0));
-            affixes.Add(Tuple.Create("To Critical Strike (Amazon Only)", 3, 0));
+            affixes.Add(Tuple.Create(" To Slow Missiles (Amazon Only)", 3, 0));
+            affixes.Add(Tuple.Create(" To Dodge (Amazon Only)", 3, 0));
+            affixes.Add(Tuple.Create(" To Critical Strike (Amazon Only)", 3, 0));
             affixes.Add(Tuple.Create("Knockback", 0, 0));
-            affixes.Add(Tuple.Create("To Dexterity", 10, 0));
+            affixes.Add(Tuple.Create(" To Dexterity", 10, 0));
 
             await CreateRunewordImage(affixes, name, slots, runes);
         }
         
         [Command("Memory")]
-        public async Task ImageAsync()
+        public async Task MemoryImageAsync()
         {
             var name = "Memory(37)";
             var slots = "Staff";
             var runes = "Lum + io + Sol + Eth";
             
             var affixes = new List<Tuple<string, int, int>>();
-            affixes.Add(Tuple.Create("To Sorceress Skill Levels", 3, 0));
+            affixes.Add(Tuple.Create(" To Sorceress Skill Levels", 3, 0));
             affixes.Add(Tuple.Create("% Faster Cast Rate", 33, 0));
-            affixes.Add(Tuple.Create("To Minimum Damage", 9, 0));
+            affixes.Add(Tuple.Create(" To Minimum Damage", 9, 0));
             affixes.Add(Tuple.Create("% Target Defence", -25, 0));
-            affixes.Add(Tuple.Create("To Energy Shield (Sorceress Only)", 3, 0));
-            affixes.Add(Tuple.Create("To Static Field (Sorceress Only)", 2, 0));
+            affixes.Add(Tuple.Create(" To Energy Shield (Sorceress Only)", 3, 0));
+            affixes.Add(Tuple.Create(" To Static Field (Sorceress Only)", 2, 0));
             affixes.Add(Tuple.Create("% Enhanced Defense", 50, 0));
-            affixes.Add(Tuple.Create("Vitality", 10, 0));
-            affixes.Add(Tuple.Create("Energy", 10, 0));
+            affixes.Add(Tuple.Create(" To Vitality", 10, 0));
+            affixes.Add(Tuple.Create(" To Energy", 10, 0));
             affixes.Add(Tuple.Create("% Increase Maximum Mana", 20, 0));
-            affixes.Add(Tuple.Create("Magic Damage Reduced By 7", 0, 0));
+            affixes.Add(Tuple.Create(" Magic Damage Taken", -7, 0));
 
             await CreateRunewordImage(affixes, name, slots, runes);
         }
         
         [Command("Myth")]
-        public async Task ImageAsync()
+        public async Task MythImageAsync()
         {
             var name = "Myth(25)";
             var slots = "Armor";
@@ -1164,17 +1171,17 @@ namespace Template.Modules
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("% Chance To Cast Level 1 Howl When Struck", 3, 0));
             affixes.Add(Tuple.Create("% Chance To Cast Level 1 Taunt On Striking", 10, 0));
-            affixes.Add(Tuple.Create("To Barbarian Skill Levels", 2, 0));
-            affixes.Add(Tuple.Create("Defense Vs. Missile", 30, 0));
-            affixes.Add(Tuple.Create("Replenish Life", 10, 0));
-            affixes.Add(Tuple.Create("Attacker Takes Damage of 14", 0, 0));
+            affixes.Add(Tuple.Create(" To Barbarian Skill Levels", 2, 0));
+            affixes.Add(Tuple.Create(" Defense Vs. Missile", 30, 0));
+            affixes.Add(Tuple.Create(" Replenish Life", 10, 0));
+            affixes.Add(Tuple.Create(" Damage Dealt to Attacker", 14, 0));
             affixes.Add(Tuple.Create("% Requirements", -15, 0));
 
             await CreateRunewordImage(affixes, name, slots, runes);
         }
         
         [Command("Nadir")]
-        public async Task ImageAsync()
+        public async Task NadirImageAsync()
         {
             var name = "Nadir(13)";
             var slots = "Helm";
@@ -1182,19 +1189,19 @@ namespace Template.Modules
             
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("% Enhanced Defense", 50, 0));
-            affixes.Add(Tuple.Create("Defense", 10, 0));
-            affixes.Add(Tuple.Create("Defense vs. Missile", 30, 0));
-            affixes.Add(Tuple.Create("to Strength", 5, 0));
-            affixes.Add(Tuple.Create("to Mana after each Kill", 2, 0));
+            affixes.Add(Tuple.Create(" Defense", 10, 0));
+            affixes.Add(Tuple.Create(" Defense vs. Missile", 30, 0));
+            affixes.Add(Tuple.Create(" To Strength", 5, 0));
+            affixes.Add(Tuple.Create(" To Mana after each Kill", 2, 0));
             affixes.Add(Tuple.Create("% Extra Gold from Monsters", -33, 0));
-            affixes.Add(Tuple.Create("to Light Radius", -3, 0));
+            affixes.Add(Tuple.Create(" To Light Radius", -3, 0));
             affixes.Add(Tuple.Create("Level 13 Cloak of Shadows (9 charges)", 0, 0));
 
             await CreateRunewordImage(affixes, name, slots, runes);
         }
         
         [Command("Oath")]
-        public async Task ImageAsync()
+        public async Task OathImageAsync()
         {
             var name = "Oath(59)";
             var slots = "Axe, Mace, Sword";
@@ -1206,10 +1213,10 @@ namespace Template.Modules
             affixes.Add(Tuple.Create("% Increased Attack Speed", 50, 0));
             affixes.Add(Tuple.Create("% Enhanced Damage", 210, 340));
             affixes.Add(Tuple.Create("% Damage To Demons", 75, 0));
-            affixes.Add(Tuple.Create("To Attack Rating Against Demons", 100, 0));
+            affixes.Add(Tuple.Create(" To Attack Rating Against Demons", 100, 0));
             affixes.Add(Tuple.Create("Prevent Monster Heal", 0, 0));
-            affixes.Add(Tuple.Create("To Energy", 10, 0));
-            affixes.Add(Tuple.Create("Magic Absorb", 10, 15));
+            affixes.Add(Tuple.Create(" To Energy", 10, 0));
+            affixes.Add(Tuple.Create(" Magic Absorb", 10, 15));
             affixes.Add(Tuple.Create("Level 16 Heart of Wolverine (20 Charges)", 0, 0));
             affixes.Add(Tuple.Create("Level 17 Iron Golem (14 Charges)", 0, 0));
 
@@ -1217,7 +1224,7 @@ namespace Template.Modules
         }
         
         [Command("Obedience")]
-        public async Task ImageAsync()
+        public async Task ObedienceImageAsync()
         {
             var name = "Obedience(41)";
             var slots = "Polearm";
@@ -1228,12 +1235,12 @@ namespace Template.Modules
             affixes.Add(Tuple.Create("% Faster Hit Recovery", 40, 0));
             affixes.Add(Tuple.Create("% Enhanced Damage", 370, 0));
             affixes.Add(Tuple.Create("% Target Defense", -25, 0));
-            affixes.Add(Tuple.Create("Adds 3-14 Cold Damage", 0, 0));
+            affixes.Add(Tuple.Create(" Cold Damage", 3, 14));
             affixes.Add(Tuple.Create("% To Enemy Fire Resistance", -25, 0));
             affixes.Add(Tuple.Create("% Chance of Crushing Blow", 40, 0));
-            affixes.Add(Tuple.Create("Defense", 200, 300));
-            affixes.Add(Tuple.Create("To Strength", 10, 0));
-            affixes.Add(Tuple.Create("To Dexterity", 10, 0));
+            affixes.Add(Tuple.Create(" Defense", 200, 300));
+            affixes.Add(Tuple.Create(" To Strength", 10, 0));
+            affixes.Add(Tuple.Create(" To Dexterity", 10, 0));
             affixes.Add(Tuple.Create("% All Resistances", 20, 30));
             affixes.Add(Tuple.Create("% Requirements", -20, 0));
 
@@ -1241,7 +1248,7 @@ namespace Template.Modules
         }
         
         [Command("Passion")]
-        public async Task ImageAsync()
+        public async Task PassionImageAsync()
         {
             var name = "Passion(43)";
             var slots = "All Weapons";
@@ -1252,10 +1259,10 @@ namespace Template.Modules
             affixes.Add(Tuple.Create("% Enhanced Damage", 160, 220));
             affixes.Add(Tuple.Create("% Bonus To Attack Rating", 50, 80));
             affixes.Add(Tuple.Create("% Damage To Undead", 75, 0));
-            affixes.Add(Tuple.Create("To Attack Rating Against Undead", 50, 0));
+            affixes.Add(Tuple.Create(" To Attack Rating Against Undead", 50, 0));
             affixes.Add(Tuple.Create("Adds 1-50 Lightning Damage", 0, 0));
-            affixes.Add(Tuple.Create("To Berserk", 1, 0));
-            affixes.Add(Tuple.Create("To Zeal", 1, 0));
+            affixes.Add(Tuple.Create(" To Berserk", 1, 0));
+            affixes.Add(Tuple.Create(" To Zeal", 1, 0));
             affixes.Add(Tuple.Create("Hit Blinds Target +10", 0, 0));
             affixes.Add(Tuple.Create("% Hit Causes Monster To Flee", 25, 0));
             affixes.Add(Tuple.Create("% Extra Gold From Monsters", 75, 0));
@@ -1265,7 +1272,7 @@ namespace Template.Modules
         }
         
         [Command("Peace")]
-        public async Task ImageAsync()
+        public async Task PeaceImageAsync()
         {
             var name = "Peace(29)";
             var slots = "Armor";
@@ -1274,17 +1281,17 @@ namespace Template.Modules
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("% Chance To Cast Level 5 Slow Missiles When Struck", 5, 0));
             affixes.Add(Tuple.Create("% Chance To Cast level 15 Valkyrie On Striking", 2, 0));
-            affixes.Add(Tuple.Create("To Amazon Skill Levels", 2, 0));
+            affixes.Add(Tuple.Create(" To Amazon Skill Levels", 2, 0));
             affixes.Add(Tuple.Create("% Faster Hit Recovery", 20, 0));
-            affixes.Add(Tuple.Create("To Critical Strike", 2, 0));
+            affixes.Add(Tuple.Create(" To Critical Strike", 2, 0));
             affixes.Add(Tuple.Create("% Cold Resist", 30, 0));
-            affixes.Add(Tuple.Create("Attacker Takes Damage of 14", 0, 0));
+            affixes.Add(Tuple.Create(" Damage Dealt To Attacker", 14, 0));
 
             await CreateRunewordImage(affixes, name, slots, runes);
         }
         
         [Command("Phoenix")]
-        public async Task ImageAsync()
+        public async Task PhoenixImageAsync()
         {
             var name = "Phoenix(65)";
             var slots = "Weapon, Shield";
@@ -1293,15 +1300,15 @@ namespace Template.Modules
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("% Chance To Cast level 40 Blaze When You Level-up", 100, 0));
             affixes.Add(Tuple.Create("% Chance To Cast Level 22 Firestorm On Striking", 40, 0));
-            affixes.Add(Tuple.Create("Redemption Aura When Equipped", 10, 15));
+            affixes.Add(Tuple.Create(" Redemption Aura When Equipped", 10, 15));
             affixes.Add(Tuple.Create("% Enhanced Damage", 350, 400));
             affixes.Add(Tuple.Create("% To Enemy Fire Resistance", -28, 0));
-            affixes.Add(Tuple.Create("Defense Vs. Missile", 350, 400));
-            affixes.Add(Tuple.Create("Fire Absorb", 15, 21));
-            affixes.Add(Tuple.Create("Ignores Target's Defense(Weapons)", , 0));
-            affixes.Add(Tuple.Create("% Mana Stolen Per Hit(Weapons)", 14, 0));
-            affixes.Add(Tuple.Create("% Deadly Strike(Weapons)", 20, 0));
-            affixes.Add(Tuple.Create("To Life(Shields)", 50, 0));
+            affixes.Add(Tuple.Create(" Defense Vs. Missile", 350, 400));
+            affixes.Add(Tuple.Create(" Fire Absorb", 15, 21));
+            affixes.Add(Tuple.Create("Ignores Target's Defense(All Weapons)", 0, 0));
+            affixes.Add(Tuple.Create("% Mana Stolen Per Hit(All Weapons)", 14, 0));
+            affixes.Add(Tuple.Create("% Deadly Strike(All Weapons)", 20, 0));
+            affixes.Add(Tuple.Create(" To Life(Shields)", 50, 0));
             affixes.Add(Tuple.Create("% To Maximum Lightning Resist(Shields)", 5, 0));
             affixes.Add(Tuple.Create("% To Maximum Fire Resist(Shields)", 10, 0));
 
@@ -1309,7 +1316,7 @@ namespace Template.Modules
         }
         
         [Command("Pride")]
-        public async Task ImageAsync()
+        public async Task PrideImageAsync()
         {
             var name = "Pride(67)";
             var slots = "Polearm";
@@ -1317,22 +1324,22 @@ namespace Template.Modules
             
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("% Chance To Cast Level 17 Fire Wall When Struck", 25, 0));
-            affixes.Add(Tuple.Create("Concentration Aura When Equipped", 16, 20));
+            affixes.Add(Tuple.Create(" Concentration Aura When Equipped", 16, 20));
             affixes.Add(Tuple.Create("% Bonus To Attack Rating", 260, 300));
             affixes.Add(Tuple.Create("% Damage To Demons (Based on Character Level)", 1, 99));
-            affixes.Add(Tuple.Create("Adds 50-280 Lightning Damage", 0, 0));
+            affixes.Add(Tuple.Create(" Lightning Damage", 50, 280));
             affixes.Add(Tuple.Create("% Deadly Strike", 20, 0));
             affixes.Add(Tuple.Create("Hit Blinds Target", 0, 0));
             affixes.Add(Tuple.Create("Freezes Target +3", 0, 0));
-            affixes.Add(Tuple.Create("To Vitality", 10, 0));
-            affixes.Add(Tuple.Create("Replenish Life", 8, 0));
+            affixes.Add(Tuple.Create(" To Vitality", 10, 0));
+            affixes.Add(Tuple.Create(" Replenish Life", 8, 0));
             affixes.Add(Tuple.Create("% Extra Gold From Monsters (Based on Character Level)", 1, 185));
 
             await CreateRunewordImage(affixes, name, slots, runes);
         }
         
         [Command("Principle")]
-        public async Task ImageAsync()
+        public async Task PrincipleImageAsync()
         {
             var name = "Principle(55)";
             var slots = "Armor";
@@ -1340,9 +1347,9 @@ namespace Template.Modules
             
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("% Chance To Cast Level 5 Holy Bolt On Striking", 100, 0));
-            affixes.Add(Tuple.Create("To Paladin Skill Levels", 2, 0));
+            affixes.Add(Tuple.Create(" To Paladin Skill Levels", 2, 0));
             affixes.Add(Tuple.Create("% Damage to Undead", 50, 0));
-            affixes.Add(Tuple.Create("to Life", 100, 150));
+            affixes.Add(Tuple.Create(" To Life", 100, 150));
             affixes.Add(Tuple.Create("% Slower Stamina Drain", 15, 0));
             affixes.Add(Tuple.Create("% To Maximum Poison Resist", 5, 0));
             affixes.Add(Tuple.Create("% Fire Resist", 30, 0));
@@ -1351,7 +1358,7 @@ namespace Template.Modules
         }
         
         [Command("Prudence")]
-        public async Task ImageAsync()
+        public async Task PrudenceImageAsync()
         {
             var name = "Prudence(49)";
             var slots = "Armor";
@@ -1360,18 +1367,18 @@ namespace Template.Modules
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("% Faster Hit Recovery", 25, 0));
             affixes.Add(Tuple.Create("% Enhanced Defense", 140, 170));
-            affixes.Add(Tuple.Create("All Resistances", 25, 35));
-            affixes.Add(Tuple.Create("Damage Reduced by 3", 0, 0));
-            affixes.Add(Tuple.Create("Magic Damage Reduced by 17", 0, 0));
-            affixes.Add(Tuple.Create("To Mana After Each Kill", 2, 0));
-            affixes.Add(Tuple.Create("To Light Radius", 1, 0));
+            affixes.Add(Tuple.Create(" All Resistances", 25, 35));
+            affixes.Add(Tuple.Create(" Damage Reduced", -3, 0));
+            affixes.Add(Tuple.Create(" Magic Damage Taken", -17, 0));
+            affixes.Add(Tuple.Create(" To Mana After Each Kill", 2, 0));
+            affixes.Add(Tuple.Create(" To Light Radius", 1, 0));
             affixes.Add(Tuple.Create("Repairs Durability 1 In 4 Seconds", 0, 0));
 
             await CreateRunewordImage(affixes, name, slots, runes);
         }
         
         [Command("Radiance")]
-        public async Task ImageAsync()
+        public async Task RadianceImageAsync()
         {
             var name = "Radiance(27)";
             var slots = "Helm";
@@ -1379,20 +1386,20 @@ namespace Template.Modules
             
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("% Enhanced Defense", 75, 0));
-            affixes.Add(Tuple.Create("Defense vs. Missiles", 30, 0));
-            affixes.Add(Tuple.Create("to Vitality", 10, 0));
-            affixes.Add(Tuple.Create("to Energy", 10, 0));
-            affixes.Add(Tuple.Create("to Mana", 33, 0));
-            affixes.Add(Tuple.Create("Damage Reduced by 7", 0, 0));
-            affixes.Add(Tuple.Create("Magic Damage Reduced by 3", 0, 0));
+            affixes.Add(Tuple.Create(" Defense vs. Missiles", 30, 0));
+            affixes.Add(Tuple.Create(" To Vitality", 10, 0));
+            affixes.Add(Tuple.Create(" To Energy", 10, 0));
+            affixes.Add(Tuple.Create(" To Mana", 33, 0));
+            affixes.Add(Tuple.Create(" Damage Taken", -7, 0));
+            affixes.Add(Tuple.Create(" Magic Damage Taken", -3, 0));
             affixes.Add(Tuple.Create("% Damage Taken Goes to Mana", 15, 0));
-            affixes.Add(Tuple.Create("to Light Radius", 5, 0));
+            affixes.Add(Tuple.Create(" To Light Radius", 5, 0));
             
             await CreateRunewordImage(affixes, name, slots, runes);
         }
         
         [Command("Rain")]
-        public async Task ImageAsync()
+        public async Task RainImageAsync()
         {
             var name = "Rain(49)";
             var slots = "Armor";
@@ -1401,17 +1408,17 @@ namespace Template.Modules
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("% Chance To Cast Level 15 Cyclone Armor When Struck", 5, 0));
             affixes.Add(Tuple.Create("% Chance To Cast Level 15 Twister On Striking", 5, 0));
-            affixes.Add(Tuple.Create("To Druid Skills", 2, 0));
-            affixes.Add(Tuple.Create("To Mana", 100, 150));
+            affixes.Add(Tuple.Create(" To Druid Skills", 2, 0));
+            affixes.Add(Tuple.Create(" To Mana", 100, 150));
             affixes.Add(Tuple.Create("% Lightning Resist", 30, 0));
-            affixes.Add(Tuple.Create("Magic Damage Reduced By 7", 0, 0));
+            affixes.Add(Tuple.Create(" Magic Damage Taken", -7, 0));
             affixes.Add(Tuple.Create("% Damage Taken Goes to Mana", 15, 0));
 
             await CreateRunewordImage(affixes, name, slots, runes);
         }
         
         [Command("Rhyme")]
-        public async Task ImageAsync()
+        public async Task RhymeImageAsync()
         {
             var name = "Rhyme(29)";
             var slots = "Shield";
@@ -1421,7 +1428,7 @@ namespace Template.Modules
             affixes.Add(Tuple.Create("% Faster Block Rate", 40, 0));
             affixes.Add(Tuple.Create("% Increased Chance of Blocking", 20, 0));
             affixes.Add(Tuple.Create("% Regenerate Mana", 15, 0));
-            affixes.Add(Tuple.Create("All Resistances", 25, 0));
+            affixes.Add(Tuple.Create(" All Resistances", 25, 0));
             affixes.Add(Tuple.Create("Cannot be Frozen", 0, 0));
             affixes.Add(Tuple.Create("% Extra Gold from Monsters", 50, 0));
             affixes.Add(Tuple.Create("% Better Chance of Getting Magic Items", 25, 0));
@@ -1430,7 +1437,7 @@ namespace Template.Modules
         }
         
         [Command("Rift")]
-        public async Task ImageAsync()
+        public async Task RiftImageAsync()
         {
             var name = "Rift(53)";
             var slots = "Polearm, Scepter";
@@ -1440,10 +1447,10 @@ namespace Template.Modules
             affixes.Add(Tuple.Create("% Chance To Cast Level 16 Tornado On Striking", 20, 0));
             affixes.Add(Tuple.Create("% Chance To Cast Level 21 Frozen Orb On Attack", 16, 0));
             affixes.Add(Tuple.Create("% Bonus To Attack Rating", 20, 0));
-            affixes.Add(Tuple.Create("Adds 160-250 Magic Damage", 0, 0));
-            affixes.Add(Tuple.Create("Adds 60-180 Fire Damage", 0, 0));
-            affixes.Add(Tuple.Create("To All Attributes", 5, 10));
-            affixes.Add(Tuple.Create("To Dexterity", 10, 0));
+            affixes.Add(Tuple.Create(" Magic Damage", 160, 250));
+            affixes.Add(Tuple.Create(" Fire Damage", 60, 180));
+            affixes.Add(Tuple.Create(" To All Attributes", 5, 10));
+            affixes.Add(Tuple.Create(" To Dexterity", 10, 0));
             affixes.Add(Tuple.Create("% Damage Taken Goes To Mana", 38, 0));
             affixes.Add(Tuple.Create("% Extra Gold From Monsters", 75, 0));
             affixes.Add(Tuple.Create("Level 15 Iron Maiden (40 Charges)", 0, 0));
@@ -1453,7 +1460,7 @@ namespace Template.Modules
         }
         
         [Command("Sanctuary")]
-        public async Task ImageAsync()
+        public async Task SanctuaryImageAsync()
         {
             var name = "Sanctuary(49)";
             var slots = "Shield";
@@ -1464,34 +1471,34 @@ namespace Template.Modules
             affixes.Add(Tuple.Create("% Faster Block Rate", 20, 0));
             affixes.Add(Tuple.Create("% Increased Chance of Blocking", 20, 0));
             affixes.Add(Tuple.Create("% Enhanced Defense", 130, 160));
-            affixes.Add(Tuple.Create("Defense vs. Missile", 250, 0));
-            affixes.Add(Tuple.Create("To Dexterity", 20, 0));
-            affixes.Add(Tuple.Create("All Resistances", 50, 70));
-            affixes.Add(Tuple.Create("Magic Damage Reduced By 7", 0, 0));
+            affixes.Add(Tuple.Create(" Defense vs. Missile", 250, 0));
+            affixes.Add(Tuple.Create(" To Dexterity", 20, 0));
+            affixes.Add(Tuple.Create(" All Resistances", 50, 70));
+            affixes.Add(Tuple.Create("Magic Damage Taken", -7, 0));
             affixes.Add(Tuple.Create("Level 12 Slow Missiles (60 Charges)", 0, 0));
 
             await CreateRunewordImage(affixes, name, slots, runes);
         }
         
         [Command("Silence")]
-        public async Task ImageAsync()
+        public async Task SilenceImageAsync()
         {
             var name = "Silence(55)";
             var slots = "Weapon";
             var runes = "Dol + Eld + Hel + Ist + Tir + Vex";
             
             var affixes = new List<Tuple<string, int, int>>();
-            affixes.Add(Tuple.Create("to All Skills", 2, 0));
+            affixes.Add(Tuple.Create(" To All Skills", 2, 0));
             affixes.Add(Tuple.Create("% Increased Attack Speed", 20, 0));
             affixes.Add(Tuple.Create("% Faster Hit Recovery", 20, 0));
             affixes.Add(Tuple.Create("% Enhanced Damage", 200, 0));
             affixes.Add(Tuple.Create("% Damage To Undead", 75, 0));
-            affixes.Add(Tuple.Create("to Attack Rating Against Undead", 50, 0));
+            affixes.Add(Tuple.Create(" To Attack Rating Against Undead", 50, 0));
             affixes.Add(Tuple.Create("% Mana Stolen Per Hit", 11, 0));
             affixes.Add(Tuple.Create("Hit Blinds Target +33", 0, 0));
             affixes.Add(Tuple.Create("Hit Causes Monster to Flee 25%", 0, 0));
-            affixes.Add(Tuple.Create("All Resistances", 75, 0));
-            affixes.Add(Tuple.Create("to Mana After Each Kill", 2, 0));
+            affixes.Add(Tuple.Create(" All Resistances", 75, 0));
+            affixes.Add(Tuple.Create(" To Mana After Each Kill", 2, 0));
             affixes.Add(Tuple.Create("% Better Chance of Getting Magic Items", 30, 0));
             affixes.Add(Tuple.Create("% Requirements", -20, 0));
 
@@ -1499,7 +1506,7 @@ namespace Template.Modules
         }
         
         [Command("Smoke")]
-        public async Task ImageAsync()
+        public async Task SmokeImageAsync()
         {
             var name = "Smoke(37)";
             var slots = "Armor";
@@ -1508,65 +1515,65 @@ namespace Template.Modules
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("% Faster Hit Recovery", 20, 0));
             affixes.Add(Tuple.Create("% Enhanced Defense", 75, 0));
-            affixes.Add(Tuple.Create("Defense vs. Missiles", 280, 0));
-            affixes.Add(Tuple.Create("to Energy", 10, 0));
-            affixes.Add(Tuple.Create("All Resistances", 50, 0));
-            affixes.Add(Tuple.Create("to Light Radius", -1, 0));
+            affixes.Add(Tuple.Create(" Defense vs. Missiles", 280, 0));
+            affixes.Add(Tuple.Create(" To Energy", 10, 0));
+            affixes.Add(Tuple.Create(" All Resistances", 50, 0));
+            affixes.Add(Tuple.Create(" To Light Radius", -1, 0));
             affixes.Add(Tuple.Create("Level 6 Weaken (18 charges)", 0, 0));
 
             await CreateRunewordImage(affixes, name, slots, runes);
         }
         
         [Command("Spirit")]
-        public async Task ImageAsync()
+        public async Task SpiritImageAsync()
         {
             var name = "Spirit(25)";
             var slots = "Shield, Sword";
             var runes = "Tal + Thul + Ort + Amn";
             
             var affixes = new List<Tuple<string, int, int>>();
-            affixes.Add(Tuple.Create("To All Skills", 2, 0));
+            affixes.Add(Tuple.Create(" To All Skills", 2, 0));
             affixes.Add(Tuple.Create("% Faster Cast Rate", 25, 35));
             affixes.Add(Tuple.Create("% Faster Hit Recovery", 55, 0));
-            affixes.Add(Tuple.Create("Defense Vs. Missile", 250, 0));
-            affixes.Add(Tuple.Create("To Vitality", 22, 0));
-            affixes.Add(Tuple.Create("To Mana", 89, 112));
-            affixes.Add(Tuple.Create("Magic Absorb", 3, 8));
+            affixes.Add(Tuple.Create(" Defense Vs. Missile", 250, 0));
+            affixes.Add(Tuple.Create(" To Vitality", 22, 0));
+            affixes.Add(Tuple.Create(" To Mana", 89, 112));
+            affixes.Add(Tuple.Create(" Magic Absorb", 3, 8));
             affixes.Add(Tuple.Create("% Cold Resist(Shield)", 35, 0));
             affixes.Add(Tuple.Create("% Lightning Resist(Shield)", 35, 0));
             affixes.Add(Tuple.Create("% Poison Resist(Shield)", 35, 0));
-            affixes.Add(Tuple.Create("Attacker Takes Damage of 14(Shield)", 0, 0));
-            affixes.Add(Tuple.Create("Adds 1-50 Lightning Damage(Sword)", 0, 0));
-            affixes.Add(Tuple.Create("Adds 3-14 Cold Damage(Sword)", 0, 0));
-            affixes.Add(Tuple.Create("Poison Damage Over 5 Seconds(Sword)", 75, 0));
-            affixes.Add(Tuple.Create("% Life Stolen Per Hit(Sword)", 7, 0));
+            affixes.Add(Tuple.Create(" Damage Dealt to Attacker (Shield)", 14, 0));
+            affixes.Add(Tuple.Create(" Adds 1-50 Lightning Damage (Sword)", 1, 50));
+            affixes.Add(Tuple.Create(" Adds 3-14 Cold Damage (Sword)", 3, 14));
+            affixes.Add(Tuple.Create(" Poison Damage Over 5 Seconds (Sword)", 75, 0));
+            affixes.Add(Tuple.Create("% Life Stolen Per Hit (Sword)", 7, 0));
 
             await CreateRunewordImage(affixes, name, slots, runes);
         }
         
         [Command("Splendor")]
-        public async Task ImageAsync()
+        public async Task SplendorImageAsync()
         {
             var name = "Splendor(37)";
             var slots = "Shield";
             var runes = "Eth + Lum";
             
             var affixes = new List<Tuple<string, int, int>>();
-            affixes.Add(Tuple.Create("To All Skills", 1, 0));
+            affixes.Add(Tuple.Create(" To All Skills", 1, 0));
             affixes.Add(Tuple.Create("% Faster Cast Rate", 10, 0));
             affixes.Add(Tuple.Create("% Faster Block Rate", 20, 0));
             affixes.Add(Tuple.Create("% Enhanced Defense", 60, 100));
-            affixes.Add(Tuple.Create("To Energy", 10, 0));
+            affixes.Add(Tuple.Create(" To Energy", 10, 0));
             affixes.Add(Tuple.Create("% Regenerate Mana", 15, 0));
             affixes.Add(Tuple.Create("% Extra Gold From Monsters", 50, 0));
             affixes.Add(Tuple.Create("% Better Chance of Getting Magic Items", 20, 0));
-            affixes.Add(Tuple.Create("To Light Radius", 3, 0));
+            affixes.Add(Tuple.Create(" To Light Radius", 3, 0));
 
             await CreateRunewordImage(affixes, name, slots, runes);
         }
         
         [Command("Stealth")]
-        public async Task ImageAsync()
+        public async Task StealthImageAsync()
         {
             var name = "Stealth(17)";
             var slots = "Armor";
@@ -1576,17 +1583,17 @@ namespace Template.Modules
             affixes.Add(Tuple.Create("% Faster Run/Walk", 25, 0));
             affixes.Add(Tuple.Create("% Faster Casting Rate", 25, 0));
             affixes.Add(Tuple.Create("% Faster Hit Recovery", 25, 0));
-            affixes.Add(Tuple.Create("to Dexterity", 6, 0));
+            affixes.Add(Tuple.Create(" To Dexterity", 6, 0));
             affixes.Add(Tuple.Create("% Regenerate Mana", 15, 0));
-            affixes.Add(Tuple.Create("Maximum Stamina", 15, 0));
+            affixes.Add(Tuple.Create(" Maximum Stamina", 15, 0));
             affixes.Add(Tuple.Create("% Poison Resist", 30, 0));
-            affixes.Add(Tuple.Create("Magic Damage Reduced by 3", 0, 0));
+            affixes.Add(Tuple.Create(" Magic Damage Taken", -3, 0));
 
             await CreateRunewordImage(affixes, name, slots, runes);
         }
         
         [Command("Steel")]
-        public async Task ImageAsync()
+        public async Task SteelImageAsync()
         {
             var name = "Steel(13)";
             var slots = "Sword, Axe, Mace";
@@ -1595,18 +1602,18 @@ namespace Template.Modules
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("% Increased Attack Speed", 25, 0));
             affixes.Add(Tuple.Create("% Enhanced Damage", 20, 0));
-            affixes.Add(Tuple.Create("to Minimum Damage", 3, 0));
-            affixes.Add(Tuple.Create("to Maximum Damage", 3, 0));
-            affixes.Add(Tuple.Create("to Attack Rating", 50, 0));
+            affixes.Add(Tuple.Create(" To Minimum Damage", 3, 0));
+            affixes.Add(Tuple.Create(" To Maximum Damage", 3, 0));
+            affixes.Add(Tuple.Create(" To Attack Rating", 50, 0));
             affixes.Add(Tuple.Create("% Chance of Open Wounds", 50, 0));
-            affixes.Add(Tuple.Create("to Mana after each Kill", 2, 0));
-            affixes.Add(Tuple.Create("o Light Radius", 1, 0));
+            affixes.Add(Tuple.Create(" To Mana after each Kill", 2, 0));
+            affixes.Add(Tuple.Create(" To Light Radius", 1, 0));
 
             await CreateRunewordImage(affixes, name, slots, runes);
         }
         
         [Command("Stone")]
-        public async Task ImageAsync()
+        public async Task StoneImageAsync()
         {
             var name = "Stone(47)";
             var slots = "Armor";
@@ -1615,11 +1622,11 @@ namespace Template.Modules
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("% Faster Hit Recovery", 60, 0));
             affixes.Add(Tuple.Create("% Enhanced Defense", 250, 290));
-            affixes.Add(Tuple.Create("Defense Vs. Missile", 300, 0));
-            affixes.Add(Tuple.Create("To Strength", 16, 0));
-            affixes.Add(Tuple.Create("To Vitality", 16, 0));
-            affixes.Add(Tuple.Create("To Energy", 10, 0));
-            affixes.Add(Tuple.Create("All Resistances", 15, 0));
+            affixes.Add(Tuple.Create(" Defense Vs. Missile", 300, 0));
+            affixes.Add(Tuple.Create(" To Strength", 16, 0));
+            affixes.Add(Tuple.Create(" To Vitality", 16, 0));
+            affixes.Add(Tuple.Create(" To Energy", 10, 0));
+            affixes.Add(Tuple.Create(" All Resistances", 15, 0));
             affixes.Add(Tuple.Create("Level 16 Molten Boulder (80 Charges)", 0, 0));
             affixes.Add(Tuple.Create("Level 16 Clay Golem (16 Charges)", 0, 0));
 
@@ -1627,7 +1634,7 @@ namespace Template.Modules
         }
         
         [Command("Strength")]
-        public async Task ImageAsync()
+        public async Task StrengthImageAsync()
         {
             var name = "Strength(25)";
             var slots = "Melee Weapons";
@@ -1637,15 +1644,15 @@ namespace Template.Modules
             affixes.Add(Tuple.Create("% Enhanced Damage", 35, 0));
             affixes.Add(Tuple.Create("% Life stolen per hit", 7, 0));
             affixes.Add(Tuple.Create("% Chance of Crushing Blow", 25, 0));
-            affixes.Add(Tuple.Create("to Strength", 20, 0));
-            affixes.Add(Tuple.Create("to Vitality", 10, 0));
-            affixes.Add(Tuple.Create("to Mana after each Kill", 2, 0));
+            affixes.Add(Tuple.Create(" To Strength", 20, 0));
+            affixes.Add(Tuple.Create(" To Vitality", 10, 0));
+            affixes.Add(Tuple.Create(" To Mana after each Kill", 2, 0));
 
             await CreateRunewordImage(affixes, name, slots, runes);
         }
         
         [Command("Treachery")]
-        public async Task ImageAsync()
+        public async Task TreacheryImageAsync()
         {
             var name = "Treachery(43)";
             var slots = "Armor";
@@ -1654,7 +1661,7 @@ namespace Template.Modules
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("% Chance To Cast Level 15 Fade When Struck", 5, 0));
             affixes.Add(Tuple.Create("% Chance To Cast level 15 Venom On Striking", 25, 0));
-            affixes.Add(Tuple.Create("To Assassin Skills", 2, 0));
+            affixes.Add(Tuple.Create(" To Assassin Skills", 2, 0));
             affixes.Add(Tuple.Create("% Increased Attack Speed", 45, 0));
             affixes.Add(Tuple.Create("% Faster Hit Recovery", 20, 0));
             affixes.Add(Tuple.Create("% Cold Resist", 30, 0));
@@ -1664,7 +1671,7 @@ namespace Template.Modules
         }
         
         [Command("Venom")]
-        public async Task ImageAsync()
+        public async Task VenomImageAsync()
         {
             var name = "Venom(49)";
             var slots = "All Weapons";
@@ -1672,7 +1679,7 @@ namespace Template.Modules
             
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("Ignore Target's Defense", 0, 0));
-            affixes.Add(Tuple.Create("Poison Damage Over 6 Seconds", 273, 0));
+            affixes.Add(Tuple.Create(" Poison Damage Over 6 Seconds", 273, 0));
             affixes.Add(Tuple.Create("% Mana Stolen Per Hit", 7, 0));
             affixes.Add(Tuple.Create("Prevent Monster Heal", 0, 0));
             affixes.Add(Tuple.Create("Hit Causes Monster To Flee 25%", 0, 0));
@@ -1683,7 +1690,8 @@ namespace Template.Modules
         }
         
         [Command("Voice of Reason")]
-        public async Task ImageAsync()
+        [Alias("vor")]
+        public async Task VoiceOfReasonImageAsync()
         {
             var name = "Voice of Reason(43)";
             var slots = "Mace, Sword";
@@ -1692,30 +1700,30 @@ namespace Template.Modules
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("% Chance To Cast Level 13 Frozen Orb On Striking", 15, 0));
             affixes.Add(Tuple.Create("% Chance To Cast Level 20 Ice Blast On Striking", 18, 0));
-            affixes.Add(Tuple.Create("To Attack Rating", 50, 0));
+            affixes.Add(Tuple.Create(" To Attack Rating", 50, 0));
             affixes.Add(Tuple.Create("% Damage To Demons", 220, 350));
             affixes.Add(Tuple.Create("% Damage To Undead", 355, 375));
-            affixes.Add(Tuple.Create("To Attack Rating Against Undead", 50, 0));
-            affixes.Add(Tuple.Create("Adds 100-220 Cold Damage", 0, 0));
+            affixes.Add(Tuple.Create(" To Attack Rating Against Undead", 50, 0));
+            affixes.Add(Tuple.Create(" Cold Damage", 100, 220));
             affixes.Add(Tuple.Create("% To Enemy Cold Resistance", -24, 0));
-            affixes.Add(Tuple.Create("To Dexterity", 10, 0));
+            affixes.Add(Tuple.Create(" To Dexterity", 10, 0));
             affixes.Add(Tuple.Create("Cannot Be Frozen", 0, 0));
             affixes.Add(Tuple.Create("% Extra Gold From Monsters", 75, 0));
-            affixes.Add(Tuple.Create("To Light Radius", 1, 0));
+            affixes.Add(Tuple.Create(" To Light Radius", 1, 0));
 
             await CreateRunewordImage(affixes, name, slots, runes);
         }
         
         [Command("Wealth")]
-        public async Task ImageAsync()
+        public async Task WealthImageAsync()
         {
             var name = "Wealth(43)";
             var slots = "Armor";
             var runes = "Lem + Ko + Tir";
             
             var affixes = new List<Tuple<string, int, int>>();
-            affixes.Add(Tuple.Create("to Dexterity", 10, 0));
-            affixes.Add(Tuple.Create("to Mana After Each Kill", 2, 0));
+            affixes.Add(Tuple.Create(" To Dexterity", 10, 0));
+            affixes.Add(Tuple.Create(" To Mana After Each Kill", 2, 0));
             affixes.Add(Tuple.Create("% Extra Gold From Monsters", 300, 0));
             affixes.Add(Tuple.Create("% Better Chance of Getting Magic Items", 100, 0));
 
@@ -1723,28 +1731,28 @@ namespace Template.Modules
         }
         
         [Command("White")]
-        public async Task ImageAsync()
+        public async Task WhiteImageAsync()
         {
             var name = "White(35)";
             var slots = "Wand";
             var runes = "Dol + io";
             
             var affixes = new List<Tuple<string, int, int>>();
-            affixes.Add(Tuple.Create("To Poison and Bone Skills (Necromancer Only)", 3, 0));
+            affixes.Add(Tuple.Create(" To Poison and Bone Skills (Necromancer Only)", 3, 0));
             affixes.Add(Tuple.Create("% Faster Cast Rate", 20, 0));
-            affixes.Add(Tuple.Create("To Bone Spear (Necromancer Only)", 3, 0));
-            affixes.Add(Tuple.Create("To Skeleton Mastery (Necromancer Only)", 4, 0));
-            affixes.Add(Tuple.Create("To Bone Armor (Necromancer Only)", 3, 0));
+            affixes.Add(Tuple.Create(" To Bone Spear (Necromancer Only)", 3, 0));
+            affixes.Add(Tuple.Create(" To Skeleton Mastery (Necromancer Only)", 4, 0));
+            affixes.Add(Tuple.Create(" To Bone Armor (Necromancer Only)", 3, 0));
             affixes.Add(Tuple.Create("Hit causes monster to flee 25%", 0, 0));
-            affixes.Add(Tuple.Create("to vitality", 10, 0));
-            affixes.Add(Tuple.Create("to mana", 13, 0));
-            affixes.Add(Tuple.Create("Magic Damage Reduced by 4", 0, 0));
+            affixes.Add(Tuple.Create(" To vitality", 10, 0));
+            affixes.Add(Tuple.Create(" To mana", 13, 0));
+            affixes.Add(Tuple.Create(" Magic Damage Taken", -4, 0));
 
             await CreateRunewordImage(affixes, name, slots, runes);
         }
         
         [Command("Wind")]
-        public async Task ImageAsync()
+        public async Task WindImageAsync()
         {
             var name = "Wind(61)";
             var slots = "Melee Weapons";
@@ -1757,16 +1765,16 @@ namespace Template.Modules
             affixes.Add(Tuple.Create("% Faster Hit Recovery", 15, 0));
             affixes.Add(Tuple.Create("% Enhanced Damage", 120, 160));
             affixes.Add(Tuple.Create("% Target Defense", -50, 0));
-            affixes.Add(Tuple.Create("To Attack Rating", 50, 0));
+            affixes.Add(Tuple.Create(" To Attack Rating", 50, 0));
             affixes.Add(Tuple.Create("Hit Blinds Target", 0, 0));
-            affixes.Add(Tuple.Create("To Light Radius", 1, 0));
+            affixes.Add(Tuple.Create(" To Light Radius", 1, 0));
             affixes.Add(Tuple.Create("Level 13 Twister (127 Charges)", 0, 0));
 
             await CreateRunewordImage(affixes, name, slots, runes);
         }
         
         [Command("Wrath")]
-        public async Task ImageAsync()
+        public async Task WrathImageAsync()
         {
             var name = "Wrath(63)";
             var slots = "Missile Weapons";
@@ -1776,20 +1784,20 @@ namespace Template.Modules
             affixes.Add(Tuple.Create("% Chance To Cast Level 1 Decrepify On Striking", 30, 0));
             affixes.Add(Tuple.Create("% Chance To Cast Level 10 Life Tap On Striking", 5, 0));
             affixes.Add(Tuple.Create("% Damage To Demons", 375, 0));
-            affixes.Add(Tuple.Create("To Attack Rating Against Demons", 100, 0));
+            affixes.Add(Tuple.Create(" To Attack Rating Against Demons", 100, 0));
             affixes.Add(Tuple.Create("% Damage To Undead", 250, 300));
-            affixes.Add(Tuple.Create("Adds 85-120 Magic Damage", 0, 0));
-            affixes.Add(Tuple.Create("Adds 41-240 Lightning Damage", 0, 0));
+            affixes.Add(Tuple.Create(" Magic Damage", 85, 120));
+            affixes.Add(Tuple.Create(" Lightning Damage", 41, 240));
             affixes.Add(Tuple.Create("% Chance of Crushing Blow", 20, 0));
             affixes.Add(Tuple.Create("Prevent Monster Heal", 0, 0));
-            affixes.Add(Tuple.Create("To Energy", 10, 0));
+            affixes.Add(Tuple.Create(" To Energy", 10, 0));
             affixes.Add(Tuple.Create("Cannot Be Frozen", 0, 0));
 
             await CreateRunewordImage(affixes, name, slots, runes);
         }
         
         [Command("Zephyr")]
-        public async Task ImageAsync()
+        public async Task ZephyrImageAsync()
         {
             var name = "Zephyr(21)";
             var slots = "Missile Weapons";
@@ -1801,9 +1809,9 @@ namespace Template.Modules
             affixes.Add(Tuple.Create("% Increased Attack Speed", 25, 0));
             affixes.Add(Tuple.Create("% Enhanced Damage", 33, 0));
             affixes.Add(Tuple.Create("% Target Defense", -25, 0));
-            affixes.Add(Tuple.Create("to Attack Rating", 66, 0));
-            affixes.Add(Tuple.Create("Adds 1-50 lightning damage", 0, 0));
-            affixes.Add(Tuple.Create("Defense", 25, 0));
+            affixes.Add(Tuple.Create(" To Attack Rating", 66, 0));
+            affixes.Add(Tuple.Create(" lightning damage", 1, 50));
+            affixes.Add(Tuple.Create(" Defense", 25, 0));
 
             await CreateRunewordImage(affixes, name, slots, runes);
         }                           
