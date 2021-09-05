@@ -52,7 +52,7 @@ namespace Template.Utilities
             return destination; 
         }
 
-        private Image DrawTextToImage(Image image, string header, string subheader, int yOffset, List<string> types, int textOffset = 0, string textColor = "#FFFFFF", int fontSize = 38, string subColor = "#CCCCCC")
+        private Image DrawTextToImage(Image image, string header, string subheader, int yOffset, List<string> types = null, int textOffset = 0, int xOffset = 0, string textColor = "#FFFFFF", int fontSize = 38, string subColor = "#CCCCCC")
         {
             var myFont = new PrivateFontCollection();
             
@@ -62,23 +62,24 @@ namespace Template.Utilities
 
             var brushWhite = new SolidBrush(ColorTranslator.FromHtml(textColor));
             var brushGrey = new SolidBrush(ColorTranslator.FromHtml(subColor));
-            var brushGreen = new SolidBrush(ColorTranslator.FromHtml("#00FF00"));
+            var brushGreen = new SolidBrush(ColorTranslator.FromHtml("#009900"));
 
             bool shouldBeGreen = false;
 
+            if(types != null)
             foreach (var type in types)
             {
-                if (subheader.Contains(type))
+                    if (subheader.Contains($"({type})"))
                 {
                     shouldBeGreen = true;
                     break;
                 }
             }
 
-            var headerX = 35;
+            var headerX = 35 + xOffset;
             var headerY = yOffset + textOffset;
 
-            var subheaderX = (float)(35 + ((header.Length * fontSize) * .7));
+            var subheaderX = (float)(headerX + ((header.Length * fontSize) * .7));
             var subheaderY = yOffset + textOffset;
 
             var drawFormat = new StringFormat
@@ -128,6 +129,7 @@ namespace Template.Utilities
             var stream = await response.Content.ReadAsStreamAsync();
             return Image.FromStream(stream);
         }
+
         private async Task<string> CopyImage(string link, int radius, Image theBanner, int theOffset)
         {
             var image = await FetchImageAsync(link);
@@ -347,7 +349,7 @@ namespace Template.Utilities
             }
 
             var offset = 160;
-            banner = DrawTextToImage(banner, $"{name}", $"{runes}",10, theSlots, offset, "#7F5200", headerFontSize, "#ab3d0e");
+            banner = DrawTextToImage(banner, $"{name}", $"{runes}",10, theSlots, offset, 0, "#7F5200", headerFontSize, "#ab3d0e");
 
             //foreach (var thisSlot in slotList)
             //{
@@ -363,17 +365,17 @@ namespace Template.Utilities
                 {
                     textColor = "#4169E1";
 
-                    banner = DrawTextToImage(banner, $"{thisAffix.Item2}-{thisAffix.Item3}", $"{thisAffix.Item1}", 10, theSlots, offset, textColor);
+                    banner = DrawTextToImage(banner, $"{thisAffix.Item2}-{thisAffix.Item3}", $"{thisAffix.Item1}", 10, theSlots, offset, 0, textColor);
                     offset += subFontSize + 10;
                     continue;
                 }
                 if (thisAffix.Item2 != 0)
                 {
-                    banner = DrawTextToImage(banner, $"{thisAffix.Item2}", $"{thisAffix.Item1}", 10, theSlots, offset, textColor);
+                    banner = DrawTextToImage(banner, $"{thisAffix.Item2}", $"{thisAffix.Item1}", 10, theSlots, offset, 0, textColor);
                     offset += subFontSize + 10;
                     continue;
                 }
-                banner = DrawTextToImage(banner, $"", $"{thisAffix.Item1}", 10, theSlots, offset, textColor);
+                banner = DrawTextToImage(banner, $"", $"{thisAffix.Item1}", 10, theSlots, offset, 0, textColor);
                 offset += subFontSize + 10;
             }
             string path = $"{Guid.NewGuid()}.png";
@@ -413,6 +415,69 @@ namespace Template.Utilities
             g.DrawRectangle(pen, destinationRectangle);
 
             return bitmap;
+        }
+
+        public async Task<string> CreateUniqueImageAsync(List<Tuple<string,int,int>> affixes, string name, List<string> requirements, string imageLink, string url = "https://cdn.discordapp.com/attachments/881552119784681493/881598049397391380/oie_DeJvaQZt4aAb.PNG")
+        {
+            var background = await FetchImageAsync(url);
+
+            var headerFontSize = 60;
+            var subFontSize = 38;
+            int biggestSizeAffixText = 0;
+
+            foreach (var thisAffix in affixes)
+            {
+                int textSize = (thisAffix.Item1.Length + thisAffix.Item2.ToString().Length + thisAffix.Item3.ToString().Length);
+                biggestSizeAffixText = Math.Max(biggestSizeAffixText, textSize);
+            }
+
+            var imageOffset = 200;
+            var width = (int)Math.Max((name.Length * headerFontSize * .7) + 35 + imageOffset, (biggestSizeAffixText * subFontSize * .7) + 35 + imageOffset);
+            var height = headerFontSize + (affixes.Count * (subFontSize + 10)) + 60;
+
+            var size = new Size(width, height);
+
+            Image banner = CropToRunewordBanner(background, size);
+
+            await CopyImage(imageLink, height, banner, 0);
+
+            var offset = 0;
+
+            banner = DrawTextToImage(banner, $"{name}", $"", 10, null, offset, imageOffset, "#7F5200", headerFontSize, "#ab3d0e");
+
+            offset += 100;
+
+            foreach(var requirement in requirements)
+            {
+                string requirementColor = "#DD0000";
+                banner = DrawTextToImage(banner, requirement, "", 10, null, offset, imageOffset, requirementColor);
+                offset += subFontSize + 10;
+            }
+
+            foreach (var thisAffix in affixes)
+            {
+                string textColor = "#FFFFFF";
+                if (thisAffix.Item3 != 0)
+                {
+                    textColor = "#4169E1";
+
+                    banner = DrawTextToImage(banner, $"{thisAffix.Item2}-{thisAffix.Item3}", $"{thisAffix.Item1}", 10, null, offset, imageOffset, textColor);
+                    offset += subFontSize + 10;
+                    continue;
+                }
+                if (thisAffix.Item2 != 0)
+                {
+                    banner = DrawTextToImage(banner, $"{thisAffix.Item2}", $"{thisAffix.Item1}", 10, null, offset, imageOffset, textColor);
+                    offset += subFontSize + 10;
+                    continue;
+                }
+                banner = DrawTextToImage(banner, $"", $"{thisAffix.Item1}", 10, null, offset, imageOffset, textColor);
+                offset += subFontSize + 10;
+            }
+
+            string path = $"{Guid.NewGuid()}.png";
+            banner.Save(path);
+            return await Task.FromResult(path);
         }
     }
 }
