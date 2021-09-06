@@ -21,10 +21,24 @@ namespace Template.Modules
             _images = images;
             _serverHelper = serverHelper;
         }
-        private async Task CreateSetImage(List<Tuple<string, int, int>> affixes, List<Tuple<string, int, int, string>> setBonuses, string name, List<string> requirements, string setPieces, string imageLink)
+        private async Task CreateSetImage(List<Tuple<string, int, int>> affixes, List<Tuple<string, int, int, string>> setBonuses, string name, List<string> requirements, string setPieces, string imageLink, string numOfPieces = null)
         {
             string path = await _images.CreateSetImageAsync(affixes, setBonuses, name, requirements, imageLink);
-            await Context.Channel.SendFileAsync(path,setPieces);
+
+            if (numOfPieces == null)
+            {
+                await Context.Channel.SendFileAsync(path, setPieces);
+            }
+            else if( (Int32.Parse(numOfPieces) > 0) )
+            {
+                string replacement = setPieces.Replace("***", "");
+
+                await Context.Channel.SendFileAsync(path, replacement);
+            }
+            else
+            {
+                await Context.Channel.SendFileAsync(path);
+            }
             File.Delete(path);
         }
         private string ParseSetPieces(string name, string setName)
@@ -122,15 +136,14 @@ namespace Template.Modules
         [Command("Berserker's Arsenal")]
         public async Task ImageBerserkersArsenalAsync()
         {
-            await ImageBerserkersHeadgearAsync();
-            await ImageBerserkerHauberkAsync();
-            await ImageBerserkersHatchetkAsync();
-
+            await ImageBerserkersHeadgearAsync("3");
+            await ImageBerserkerHauberkAsync("0");
+            await ImageBerserkersHatchetkAsync("0");
         }
 
         [Command("Berserker's Headgear")]
         [Alias("BHG")]
-        public async Task ImageBerserkersHeadgearAsync()
+        public async Task ImageBerserkersHeadgearAsync([Remainder] string args = null)
         {
             var name = "Berserker's Headgear(3)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/berserkers_headgear_helm_armor_diablo2_wiki_guide_196px.png";
@@ -155,12 +168,12 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
 
         [Command("Berserker's Hauberk")]
         [Alias("BHK")]
-        public async Task ImageBerserkerHauberkAsync()
+        public async Task ImageBerserkerHauberkAsync([Remainder] string args = null)
         {
             var name = "Berserker's Hauberk(3)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/splint_mail_armor_diablo2_wiki_guide_196px.png";
@@ -184,12 +197,12 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
 
         [Command("Berserker's Hatchet")]
         [Alias("BH")]
-        public async Task ImageBerserkersHatchetkAsync()
+        public async Task ImageBerserkersHatchetkAsync([Remainder] string args = null)
         {
             var name = "Berserker's Hatchet(3)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/double_axe_weapons_diablo_2_resurrected_wiki_guide_196px.png";
@@ -215,7 +228,7 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
     }
 }

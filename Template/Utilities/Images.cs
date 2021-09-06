@@ -580,15 +580,10 @@ namespace Template.Utilities
 
             var isPartial = false;
             var isComplete = false;
-            string additionalText = " Set Items";
             foreach (var thisBonus in setBonuses)
             {
                 string textColor = "#FFFFFF";
-                if(isPartial)
-                {
-                    additionalText = " Items";
-                }
-                string bonusText = $"({thisBonus.Item4}{additionalText})";
+                string bonusText = $"({thisBonus.Item4})";
 
                 if (isComplete)
                 {
