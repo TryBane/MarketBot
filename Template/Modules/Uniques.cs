@@ -22,7 +22,7 @@ namespace Template.Modules
             _serverHelper = serverHelper;
         }
 
-        public async Task CreateUniqueImage(List<Tuple<string, int, int>> affixes, string name, List<string> requirements, string imageLink)
+        private async Task CreateUniqueImage(List<Tuple<string, int, int>> affixes, string name, List<string> requirements, string imageLink)
         {
             string path = await _images.CreateUniqueImageAsync(affixes, name, requirements, imageLink);
             await Context.Channel.SendFileAsync(path);

@@ -25,7 +25,7 @@ namespace Template.Modules
             _serverHelper = serverHelper;
         }
 
-        public async Task CreateRunewordImage(List<Tuple<string, int,int>> affixes, string name, string slots, string runes )
+        private async Task CreateRunewordImage(List<Tuple<string, int,int>> affixes, string name, string slots, string runes )
         {
             string path = await _images.CreateRunewordImageAsync(affixes, name, slots, runes);
             await Context.Channel.SendFileAsync(path);

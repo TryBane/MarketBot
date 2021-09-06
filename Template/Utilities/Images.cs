@@ -52,7 +52,7 @@ namespace Template.Utilities
             return destination; 
         }
 
-        private Image DrawTextToImage(Image image, string header, string subheader, int yOffset, List<string> types = null, int textOffset = 0, int xOffset = 0, string textColor = "#FFFFFF", int fontSize = 38, string subColor = "#CCCCCC")
+        private Image DrawTextToImage(Image image, string header, string subheader, int yOffset, List<string> types = null, int textOffset = 0, int xOffset = 0, string textColor = "#FFFFFF", int fontSize = 38, string subColor = "#CCCCCC", string thirdText = null, string tertiaryColor = "#00AF00")
         {
             var myFont = new PrivateFontCollection();
             
@@ -63,6 +63,7 @@ namespace Template.Utilities
             var brushWhite = new SolidBrush(ColorTranslator.FromHtml(textColor));
             var brushGrey = new SolidBrush(ColorTranslator.FromHtml(subColor));
             var brushGreen = new SolidBrush(ColorTranslator.FromHtml("#009900"));
+            var brushThird = new SolidBrush(ColorTranslator.FromHtml(tertiaryColor));
 
             bool shouldBeGreen = false;
 
@@ -76,11 +77,19 @@ namespace Template.Utilities
                 }
             }
 
-            var headerX = 35 + xOffset;
+            using var GrD = Graphics.FromImage(image);
+            GrD.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAliasGridFit;
+
+            var headerX = 35;
             var headerY = yOffset + textOffset;
 
-            var subheaderX = (float)(headerX + ((header.Length * fontSize) * .7));
+            var subheaderX = headerX + xOffset + (GrD.MeasureString(header,roboto).Width * .85f);
             var subheaderY = yOffset + textOffset;
+
+            if (xOffset > 50)
+            {
+                headerX += xOffset;
+            }
 
             var drawFormat = new StringFormat
             {
@@ -88,8 +97,6 @@ namespace Template.Utilities
                 Alignment = StringAlignment.Near
             };
 
-            using var GrD = Graphics.FromImage(image);
-            GrD.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAliasGridFit;
             if (header != "")
             {
                 if (shouldBeGreen)
@@ -108,6 +115,10 @@ namespace Template.Utilities
             else
             {
                 GrD.DrawString(subheader, robotoSmall, brushGrey, subheaderX, subheaderY, drawFormat);
+                if (thirdText != null)
+                {
+                    GrD.DrawString(thirdText, robotoSmall, brushThird, subheaderX + (GrD.MeasureString(subheader, roboto).Width * .96f) , subheaderY, drawFormat);
+                }
             }
 
             var img = new Bitmap(image);
@@ -130,7 +141,7 @@ namespace Template.Utilities
             return Image.FromStream(stream);
         }
 
-        private async Task<string> CopyImage(string link, int radius, Image theBanner, int theOffset)
+        private async Task<int> CopyImage(string link, int radius, Image theBanner, int theOffset)
         {
             var image = await FetchImageAsync(link);
             image = ClipImageToCircle(image, radius);
@@ -138,7 +149,7 @@ namespace Template.Utilities
             bitmap?.MakeTransparent();
 
             theBanner = CopyRegionIntoImage(bitmap, theBanner, theOffset, radius);
-            return "0";
+            return image.Width;
         }
 
         public async Task<string> CreateRunewordImageAsync(List<Tuple<string,int,int>> affixes, string name, string slots, string runes, string url = "https://cdn.discordapp.com/attachments/881552119784681493/881598049397391380/oie_DeJvaQZt4aAb.PNG")
@@ -221,30 +232,29 @@ namespace Template.Utilities
             }
             var headerFontSize = 60;
             var subFontSize = 38;
-            int biggestSizeAffixText = 0;
+            var biggestSizeAffixText = 0f;
+            var headerHeight = 0f;
+            var textHeight = 0f;
 
-            if(slots.Contains("All Weapons"))
             {
-                foreach(var aWeapon in theSlots)
+                var roboto = new Font("Exocet", headerFontSize, FontStyle.Regular);
+                var robotoSmall = new Font("Exocet", subFontSize, FontStyle.Regular);
+                using var GrD = Graphics.FromImage(background);
+                GrD.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAliasGridFit;
+
+                headerHeight = GrD.MeasureString("This Text Baby", roboto).Height;
+                textHeight = GrD.MeasureString("This Text Baby", robotoSmall).Height;
+
+                foreach (var thisAffix in affixes)
                 {
-                    if( aWeapon != "Helm" &&
-                        aWeapon != "Shield" && 
-                        aWeapon != "Armor" && 
-                        aWeapon != "Head")
-                    {
-                        slots += ", " + aWeapon;
-                    }
+                    var textSize = GrD.MeasureString((thisAffix.Item1 + thisAffix.Item2.ToString() + thisAffix.Item3.ToString()), robotoSmall).Width;
+                    biggestSizeAffixText = Math.Max(biggestSizeAffixText, textSize);
                 }
-            }
 
-            foreach(var thisAffix in affixes)
-            {
-                int textSize = (thisAffix.Item1.Length + thisAffix.Item2.ToString().Length + thisAffix.Item3.ToString().Length);
-                biggestSizeAffixText = Math.Max(biggestSizeAffixText, textSize);
+                biggestSizeAffixText = Math.Max(biggestSizeAffixText, (GrD.MeasureString(name + runes, roboto).Width));
             }
-
-            var width = (int) Math.Max(((name.Length + runes.Length) * headerFontSize * .7) + 35, (biggestSizeAffixText * subFontSize * .7) + 35);
-            var height = headerFontSize + imageRadius + (affixes.Count * (subFontSize + 10)) + 40;
+            var height = (int)(headerHeight + ((affixes.Count * textHeight) * .8f) + imageRadius);
+            var width = (int)biggestSizeAffixText;
 
             var size = new Size(width, height);
 
@@ -349,7 +359,7 @@ namespace Template.Utilities
             }
 
             var offset = 160;
-            banner = DrawTextToImage(banner, $"{name}", $"{runes}",10, theSlots, offset, 0, "#7F5200", headerFontSize, "#ab3d0e");
+            banner = DrawTextToImage(banner, $"{name}", $"{runes}",10, theSlots, offset, 30, "#7F5200", headerFontSize, "#ab3d0e");
 
             //foreach (var thisSlot in slotList)
             //{
@@ -375,7 +385,7 @@ namespace Template.Utilities
                     offset += subFontSize + 10;
                     continue;
                 }
-                banner = DrawTextToImage(banner, $"", $"{thisAffix.Item1}", 10, theSlots, offset, 0, textColor);
+                banner = DrawTextToImage(banner, $"{thisAffix.Item1}", $"", 10, theSlots, offset, 0, textColor);
                 offset += subFontSize + 10;
             }
             string path = $"{Guid.NewGuid()}.png";
@@ -423,17 +433,29 @@ namespace Template.Utilities
 
             var headerFontSize = 60;
             var subFontSize = 38;
-            int biggestSizeAffixText = 0;
+            var biggestSizeAffixText = 0f;
+            var headerHeight = 0f;
+            var textHeight = 0f;
 
-            foreach (var thisAffix in affixes)
             {
-                int textSize = (thisAffix.Item1.Length + thisAffix.Item2.ToString().Length + thisAffix.Item3.ToString().Length);
-                biggestSizeAffixText = Math.Max(biggestSizeAffixText, textSize);
-            }
+                var roboto = new Font("Exocet", headerFontSize, FontStyle.Regular);
+                var robotoSmall = new Font("Exocet", subFontSize, FontStyle.Regular);
+                using var GrD = Graphics.FromImage(background);
+                GrD.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAliasGridFit;
 
-            var imageOffset = 200;
-            var width = (int)Math.Max((name.Length * headerFontSize * .7) + 35 + imageOffset, (biggestSizeAffixText * subFontSize * .7) + 35 + imageOffset);
-            var height = headerFontSize + (affixes.Count * (subFontSize + 10)) + 60;
+                headerHeight = GrD.MeasureString("This Text Baby", roboto).Height;
+                textHeight = GrD.MeasureString("This Text Baby", robotoSmall).Height;
+
+                foreach (var thisAffix in affixes)
+                {
+                    var textSize = GrD.MeasureString((thisAffix.Item1 + thisAffix.Item2.ToString() + thisAffix.Item3.ToString()), robotoSmall).Width;
+                    biggestSizeAffixText = Math.Max(biggestSizeAffixText, textSize);
+                }
+            }
+            var height = (int)(headerHeight + ((affixes.Count + requirements.Count) * textHeight * .8f));
+            var image = await FetchImageAsync(imageLink);
+            var imageOffset = (int)(((float)height / (float)image.Height) * (float)(image.Width));
+            var width = (int)Math.Max((name.Length * headerFontSize * .7f) + 35 + imageOffset, (biggestSizeAffixText * .85f) + imageOffset);
 
             var size = new Size(width, height);
 
@@ -471,9 +493,150 @@ namespace Template.Utilities
                     offset += subFontSize + 10;
                     continue;
                 }
+                banner = DrawTextToImage(banner, $"{thisAffix.Item1}", $"", 10, null, offset, imageOffset, textColor);
+                offset += subFontSize + 10;
+            }
+
+            string path = $"{Guid.NewGuid()}.png";
+            banner.Save(path);
+            return await Task.FromResult(path);
+        }
+
+        public async Task<string> CreateSetImageAsync(List<Tuple<string, int, int>> affixes, List<Tuple<string, int, int, string>> setBonuses, string name, List<string> requirements, string imageLink, string url = "https://cdn.discordapp.com/attachments/881552119784681493/881598049397391380/oie_DeJvaQZt4aAb.PNG")
+        {
+            var background = await FetchImageAsync(url);
+
+            var headerFontSize = 60;
+            var subFontSize = 38;
+            var biggestSizeAffixText = 0f;
+            var headerHeight = 0f;
+            var textHeight = 0f;
+
+            {
+                var roboto = new Font("Exocet", headerFontSize, FontStyle.Regular);
+                var robotoSmall = new Font("Exocet", subFontSize, FontStyle.Regular);
+                using var GrD = Graphics.FromImage(background);
+                GrD.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAliasGridFit;
+
+                headerHeight = GrD.MeasureString("This Text Baby", roboto).Height;
+                textHeight = GrD.MeasureString("This Text Baby", robotoSmall).Height;
+
+                foreach (var thisAffix in affixes)
+                {
+                    var textSize = GrD.MeasureString((thisAffix.Item1 + thisAffix.Item2.ToString() + thisAffix.Item3.ToString()), robotoSmall).Width;
+                    biggestSizeAffixText = Math.Max(biggestSizeAffixText, textSize);
+                }
+
+                foreach (var thisBonus in setBonuses)
+                {
+                    var textSize = GrD.MeasureString((thisBonus.Item1 + thisBonus.Item2.ToString() + thisBonus.Item3.ToString() + $"({thisBonus.Item4.ToString()} Set Items)"), robotoSmall).Width;
+                    biggestSizeAffixText = Math.Max(biggestSizeAffixText, textSize);
+                }
+            }
+            var height = (int)(headerHeight + ((affixes.Count + requirements.Count + setBonuses.Count) * textHeight * .8f));
+            var image = await FetchImageAsync(imageLink);
+            var imageOffset = (int)(((float)height / (float)image.Height) * (float)(image.Width));
+            var width = (int)Math.Max((name.Length * headerFontSize * .7f) + 35 + imageOffset, ( biggestSizeAffixText * 1.05f) + imageOffset);
+
+            var size = new Size(width, height);
+
+            Image banner = CropToRunewordBanner(background, size);
+
+            await CopyImage(imageLink, height, banner, 0);
+
+            var offset = 0;
+
+            banner = DrawTextToImage(banner, $"{name}", $"", 10, null, offset, imageOffset, "#00FF00", headerFontSize, "#ab3d0e");
+
+            offset += 100;
+
+            foreach (var requirement in requirements)
+            {
+                string requirementColor = "#DD0000";
+                banner = DrawTextToImage(banner, requirement, "", 10, null, offset, imageOffset, requirementColor);
+                offset += subFontSize + 10;
+            }
+
+            foreach (var thisAffix in affixes)
+            {
+                string textColor = "#FFFFFF";
+                if (thisAffix.Item3 != 0)
+                {
+                    textColor = "#4169E1";
+
+                    banner = DrawTextToImage(banner, $"{thisAffix.Item2}-{thisAffix.Item3}", $"{thisAffix.Item1}", 10, null, offset, imageOffset, textColor);
+                    offset += subFontSize + 10;
+                    continue;
+                }
+                if (thisAffix.Item2 != 0)
+                {
+                    banner = DrawTextToImage(banner, $"{thisAffix.Item2}", $"{thisAffix.Item1}", 10, null, offset, imageOffset, textColor);
+                    offset += subFontSize + 10;
+                    continue;
+                }
                 banner = DrawTextToImage(banner, $"", $"{thisAffix.Item1}", 10, null, offset, imageOffset, textColor);
                 offset += subFontSize + 10;
             }
+
+            var isPartial = false;
+            var isComplete = false;
+            string additionalText = " Set Items";
+            foreach (var thisBonus in setBonuses)
+            {
+                string textColor = "#FFFFFF";
+                if(isPartial)
+                {
+                    additionalText = " Items";
+                }
+                string bonusText = $"({thisBonus.Item4}{additionalText})";
+
+                if (isComplete)
+                {
+                    bonusText = "";
+                }
+
+                if (thisBonus.Item3 != 0)
+                {
+                    textColor = "#4169E1";
+
+                    banner = DrawTextToImage(banner, $"{thisBonus.Item2}-{thisBonus.Item3}", $"{thisBonus.Item1}", 10, null, offset, imageOffset, textColor,38,"#CCCCCC", bonusText);
+                    offset += subFontSize + 10;
+                    continue;
+                }
+                if (thisBonus.Item2 != 0)
+                {
+                    banner = DrawTextToImage(banner, $"{thisBonus.Item2}", $"{thisBonus.Item1}", 10, null, offset, imageOffset, textColor, 38, "#CCCCCC", bonusText);
+                    offset += subFontSize + 10;
+                    continue;
+                }
+                if (thisBonus.Item1.Equals("Partial Set Bonus"))
+                {
+                    isPartial = true;
+                    isComplete = false;
+                    banner = DrawTextToImage(banner, $"{thisBonus.Item1}", $"", 10, null, offset, imageOffset, "#00AA00", 38);
+                    offset += subFontSize + 10;
+                    continue;
+                }
+                if (thisBonus.Item1.Equals("Complete Set Bonus"))
+                {
+                    isPartial = false;
+                    isComplete = true;
+                    banner = DrawTextToImage(banner, $"{thisBonus.Item1}", $"", 10, null, offset, imageOffset, "#00AA00", 38);
+                    offset += subFontSize + 10;
+                    continue;
+                }
+                if ((isPartial || isComplete) && (bonusText.Equals("")))
+                {
+                    banner = DrawTextToImage(banner, $"", $"{thisBonus.Item1}", 10, null, offset, imageOffset, textColor, 38, "#AAAAFF", bonusText);
+                }
+                else
+                {
+                    banner = DrawTextToImage(banner, $"", $"{thisBonus.Item1}", 10, null, offset, imageOffset, textColor, 38, "#CCCCCC", bonusText);
+                }
+                offset += subFontSize + 10;
+            }
+
+
 
             string path = $"{Guid.NewGuid()}.png";
             banner.Save(path);
