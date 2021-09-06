@@ -52,7 +52,7 @@ namespace Template.Utilities
             return destination; 
         }
 
-        private Image DrawTextToImage(Image image, string header, string subheader, int yOffset, List<string> types = null, int textOffset = 0, int xOffset = 0, string textColor = "#FFFFFF", int fontSize = 38, string subColor = "#CCCCCC", string thirdText = null, string tertiaryColor = "#00AF00")
+        private Image DrawTextToImage(Image image, string header, string subheader, int yOffset, List<string> types = null, int textOffset = 0, int xOffset = 0, string textColor = "#FFFFFF", int fontSize = 38, string subColor = "#CCCCCC", string thirdText = null, string tertiaryColor = "#AAAAFF")
         {
             var myFont = new PrivateFontCollection();
             
@@ -590,11 +590,41 @@ namespace Template.Utilities
                     bonusText = "";
                 }
 
+                if (thisBonus.Item3 != 0 && !isPartial && !isComplete)
+                {
+                    textColor = "#4169E1";
+
+                    banner = DrawTextToImage(banner, $"{thisBonus.Item2}-{thisBonus.Item3}", $"{thisBonus.Item1}", 10, null, offset, imageOffset, textColor,38, "#00AA00", bonusText);
+                    offset += subFontSize + 10;
+                    continue;
+                }
+                if (thisBonus.Item2 != 0 && !isPartial && !isComplete)
+                {
+                    banner = DrawTextToImage(banner, $"{thisBonus.Item2}", $"{thisBonus.Item1}", 10, null, offset, imageOffset, textColor, 38, "#00AA00", bonusText);
+                    offset += subFontSize + 10;
+                    continue;
+                }
+                if (thisBonus.Item1.Equals("Partial Set Bonus"))
+                {
+                    isPartial = true;
+                    isComplete = false;
+                    banner = DrawTextToImage(banner, $"{thisBonus.Item1}", $"", 10, null, offset, imageOffset, "#FF5500", 38);
+                    offset += subFontSize + 10;
+                    continue;
+                }
+                if (thisBonus.Item1.Equals("Complete Set Bonus"))
+                {
+                    isPartial = false;
+                    isComplete = true;
+                    banner = DrawTextToImage(banner, $"{thisBonus.Item1}", $"", 10, null, offset, imageOffset, "#FF5500", 38);
+                    offset += subFontSize + 10;
+                    continue;
+                }
                 if (thisBonus.Item3 != 0)
                 {
                     textColor = "#4169E1";
 
-                    banner = DrawTextToImage(banner, $"{thisBonus.Item2}-{thisBonus.Item3}", $"{thisBonus.Item1}", 10, null, offset, imageOffset, textColor,38,"#CCCCCC", bonusText);
+                    banner = DrawTextToImage(banner, $"{thisBonus.Item2}-{thisBonus.Item3}", $"{thisBonus.Item1}", 10, null, offset, imageOffset, textColor, 38, "#CCCCCC", bonusText);
                     offset += subFontSize + 10;
                     continue;
                 }
@@ -604,25 +634,9 @@ namespace Template.Utilities
                     offset += subFontSize + 10;
                     continue;
                 }
-                if (thisBonus.Item1.Equals("Partial Set Bonus"))
-                {
-                    isPartial = true;
-                    isComplete = false;
-                    banner = DrawTextToImage(banner, $"{thisBonus.Item1}", $"", 10, null, offset, imageOffset, "#00AA00", 38);
-                    offset += subFontSize + 10;
-                    continue;
-                }
-                if (thisBonus.Item1.Equals("Complete Set Bonus"))
-                {
-                    isPartial = false;
-                    isComplete = true;
-                    banner = DrawTextToImage(banner, $"{thisBonus.Item1}", $"", 10, null, offset, imageOffset, "#00AA00", 38);
-                    offset += subFontSize + 10;
-                    continue;
-                }
                 if ((isPartial || isComplete) && (bonusText.Equals("")))
                 {
-                    banner = DrawTextToImage(banner, $"", $"{thisBonus.Item1}", 10, null, offset, imageOffset, textColor, 38, "#AAAAFF", bonusText);
+                    banner = DrawTextToImage(banner, $"", $"{thisBonus.Item1}", 10, null, offset, imageOffset, textColor, 38, "#CCCCCC", bonusText);
                 }
                 else
                 {
