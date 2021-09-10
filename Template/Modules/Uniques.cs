@@ -60,7 +60,7 @@ namespace Template.Modules
 
         [Command("Bul-Kathos' Sacred Charge")]
         [Alias("BKSC")]
-        public async Task ImageAsync()
+        public async Task BulKathosSacredChargeImageAsync()
         {
             var name = "Bul-Kathos' Sacred Charge(63)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/great_sword_diablo_2_wiki_guide196px.png";
@@ -84,14 +84,12 @@ namespace Template.Modules
         }
         
         [Command("Lenymo")]
-        public async Task ImageAsync()
+        public async Task LenymoImageAsync()
         {
             var name = "Lenymo(7)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/sash_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "",
-                ""
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -104,14 +102,12 @@ namespace Template.Modules
         }
         
         [Command("Snakecord")]
-        public async Task ImageAsync()
+        public async Task SnakecordImageAsync()
         {
             var name = "Snakecord(12)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/light_belt_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "",
-                ""
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -126,14 +122,13 @@ namespace Template.Modules
         }
         
         [Command("Nightsmoke")]
-        public async Task ImageAsync()
+        public async Task NightsmokeImageAsync()
         {
             var name = "Nightsmoke(20)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/bell_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "25 Strength",
-                ""
+                "25 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -148,14 +143,13 @@ namespace Template.Modules
         }
         
         [Command("Goldwrap")]
-        public async Task ImageAsync()
+        public async Task GoldwrapImageAsync()
         {
             var name = "Goldwrap";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/heavy_belt_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "45 Strength",
-                ""
+                "45 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -170,14 +164,13 @@ namespace Template.Modules
         }
         
         [Command("Bladebuckle")]
-        public async Task ImageAsync()
+        public async Task BladebuckleImageAsync()
         {
             var name = "Bladebuckle(29)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/plated_belt_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "60 Strength",
-                ""
+                "60 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -193,14 +186,13 @@ namespace Template.Modules
         }
         
         [Command("String of Ears")]
-        public async Task ImageAsync()
+        public async Task StringofEarsImageAsync()
         {
             var name = "String of Ears(29)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/sash_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "20 Strength",
-                ""
+                "20 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -214,14 +206,13 @@ namespace Template.Modules
         }
         
         [Command("Razortail")]
-        public async Task ImageAsync()
+        public async Task RazortailImageAsync()
         {
             var name = "Razortail(32)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/light_belt_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "20 Strength",
-                ""
+                "20 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -236,32 +227,31 @@ namespace Template.Modules
         }
         
         [Command("Gloom's Trap")]
-        public async Task ImageAsync()
+        public async Task GloomsTrapImageAsync()
         {
             var name = "Gloom's Trap(36)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/bell_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "58 Strength",
-                ""
+                "58 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("% Enhanced Defense", 120, 150));
-            affixes.Add(Tuple.Create("% Mana Stolen Per Hit", 5, ));
-            affixes.Add(Tuple.Create("% Increase Maximum Mana", 15, ));
-            affixes.Add(Tuple.Create("% Regenerate Mana", 15, ));
-            affixes.Add(Tuple.Create(" Vitality", 15, ));
-            affixes.Add(Tuple.Create(" Light Radius", -3, ));
+            affixes.Add(Tuple.Create("% Mana Stolen Per Hit", 5, 0));
+            affixes.Add(Tuple.Create("% Increase Maximum Mana", 15, 0));
+            affixes.Add(Tuple.Create("% Regenerate Mana", 15, 0));
+            affixes.Add(Tuple.Create(" Vitality", 15, 0));
+            affixes.Add(Tuple.Create(" Light Radius", -3, 0));
 
             await CreateUniqueImage(affixes, name, requirements, imageLink);
         }
         
         [Command("Snowclash")]
-        public async Task ImageAsync()
+        public async Task SnowclashImageAsync()
         {
             var name = "Snowclash(42)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/heavy_belt_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "88 Strength",
@@ -282,10 +272,10 @@ namespace Template.Modules
         }
         
         [Command("Thundergod's Vigor")]
-        public async Task ImageAsync()
+        public async Task ThundergodsVigorImageAsync()
         {
             var name = "Thundergod's Vigor(47)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/plated_belt_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "110 Strength",
@@ -307,10 +297,10 @@ namespace Template.Modules
         }
         
         [Command("Arachnid Mesh")]
-        public async Task ImageAsync()
+        public async Task ArachnidMeshImageAsync()
         {
             var name = "Arachnid Mesh(80)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/sash_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "50 Strength",
@@ -329,10 +319,10 @@ namespace Template.Modules
         }
         
         [Command("Nosferatu's Coil")]
-        public async Task ImageAsync()
+        public async Task NosferatusCoilImageAsync()
         {
             var name = "Nosferatu's Coil(51)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/light_belt_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "50 Strength",
@@ -341,20 +331,20 @@ namespace Template.Modules
             
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("% Slows Target ", 10, 0));
-            affixes.Add(Tuple.Create(" Mana After Each Kill", 2, ));
+            affixes.Add(Tuple.Create(" Mana After Each Kill", 2, 0));
             affixes.Add(Tuple.Create("% Life Stolen Per Hit", 5, 7));
-            affixes.Add(Tuple.Create(" Strength", 15, ));
-            affixes.Add(Tuple.Create("% Increased Attack Speed", 10, ));
-            affixes.Add(Tuple.Create(" Light Radius", -3, ));
+            affixes.Add(Tuple.Create(" Strength", 15, 0));
+            affixes.Add(Tuple.Create("% Increased Attack Speed", 10, 0));
+            affixes.Add(Tuple.Create(" Light Radius", -3, 0));
    
             await CreateUniqueImage(affixes, name, requirements, imageLink);
         }
         
         [Command("Verdungo's Hearty Cord")]
-        public async Task ImageAsync()
+        public async Task VerdungosHeartyCordImageAsync()
         {
             var name = "Verdungo's Hearty Cord(63)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/bell_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "106 Strength",
@@ -363,7 +353,7 @@ namespace Template.Modules
             
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("% Enhanced Defense", 90, 140));
-            affixes.Add(Tuple.Create("% Faster Hit Recovery", 10, ));
+            affixes.Add(Tuple.Create("% Faster Hit Recovery", 10, 0));
             affixes.Add(Tuple.Create(" Vitality", 30, 40));
             affixes.Add(Tuple.Create(" Replenish Life", 10, 13));
             affixes.Add(Tuple.Create(" Maximum Stamina", 100, 120));
@@ -373,10 +363,10 @@ namespace Template.Modules
         }
         
         [Command("Hotspur")]
-        public async Task ImageAsync()
+        public async Task HotspurImageAsync()
         {
             var name = "Hotspur(5)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/leather_boots_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "",
@@ -385,20 +375,20 @@ namespace Template.Modules
             
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("% Enhanced Defense", 10, 20));
-            affixes.Add(Tuple.Create(" Defense", 6, ));
-            affixes.Add(Tuple.Create("% Fire Resist", 45, ));
-            affixes.Add(Tuple.Create("% to Maximum Fire Resist", 15, ));
+            affixes.Add(Tuple.Create(" Defense", 6, 0));
+            affixes.Add(Tuple.Create("% Fire Resist", 45, 0));
+            affixes.Add(Tuple.Create("% to Maximum Fire Resist", 15, 0));
             affixes.Add(Tuple.Create(" Fire Damage", 3, 6));
-            affixes.Add(Tuple.Create(" Life", 15, ));
+            affixes.Add(Tuple.Create(" Life", 15, 0));
  
             await CreateUniqueImage(affixes, name, requirements, imageLink);
         }
         
         [Command("Gorefoot")]
-        public async Task ImageAsync()
+        public async Task GorefootImageAsync()
         {
             var name = "Gorefoot(9)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/heavy_boots_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "18 Strength",
@@ -417,10 +407,10 @@ namespace Template.Modules
         }
         
         [Command("Threads of Cthon")]
-        public async Task ImageAsync()
+        public async Task ThreadsofCthonImageAsync()
         {
             var name = "Threads of Cthon(15)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/chain_boots_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "30 Strength",
@@ -429,20 +419,20 @@ namespace Template.Modules
             
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("% Enhanced Defense", 30, 40));
-            affixes.Add(Tuple.Create(" Defense", 12, ));
-            affixes.Add(Tuple.Create("% Slower Stamina Drain", 50, ));
-            affixes.Add(Tuple.Create("% Faster Run/Walk", 30, ));
-            affixes.Add(Tuple.Create(" Defense vs. Missile", 50, ));
-            affixes.Add(Tuple.Create(" Life", 10, ));
+            affixes.Add(Tuple.Create(" Defense", 12, 0));
+            affixes.Add(Tuple.Create("% Slower Stamina Drain", 50, 0));
+            affixes.Add(Tuple.Create("% Faster Run/Walk", 30, 0));
+            affixes.Add(Tuple.Create(" Defense vs. Missile", 50, 0));
+            affixes.Add(Tuple.Create(" Life", 10, 0));
  
             await CreateUniqueImage(affixes, name, requirements, imageLink);
         }
         
         [Command("Goblin Toe")]
-        public async Task ImageAsync()
+        public async Task GoblinToeImageAsync()
         {
             var name = "Goblin Toe(22)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/light_plate_boots_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "50 Strength",
@@ -461,10 +451,10 @@ namespace Template.Modules
         }
         
         [Command("Tearhaunch")]
-        public async Task ImageAsync()
+        public async Task TearhaunchImageAsync()
         {
             var name = "Tearhaunch(29)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/plate_boots_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "70 Strength",
@@ -484,10 +474,10 @@ namespace Template.Modules
         }
         
         [Command("Infernostride")]
-        public async Task ImageAsync()
+        public async Task InfernostrideImageAsync()
         {
             var name = "Infernostride(29)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/leather_boots_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "20 Strength",
@@ -509,10 +499,10 @@ namespace Template.Modules
         }
         
         [Command("Waterwalk")]
-        public async Task ImageAsync()
+        public async Task WaterwalkImageAsync()
         {
             var name = "Waterwalk(32)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/heavy_boots_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "47 Strength",
@@ -525,7 +515,7 @@ namespace Template.Modules
             affixes.Add(Tuple.Create(" Defense vs. Missil", 100, 0));
             affixes.Add(Tuple.Create(" Dexterity", 15, 0));
             affixes.Add(Tuple.Create("% to Maximum Fire Resist", 5, 0));
-            affixes.Add(Tuple.Create("% Heal Stamina", 50, ));
+            affixes.Add(Tuple.Create("% Heal Stamina", 50, 0));
             affixes.Add(Tuple.Create(" Maximum Stamina", 40, 0));
             affixes.Add(Tuple.Create(" Life", 45, 65));
  
@@ -533,10 +523,10 @@ namespace Template.Modules
         }
         
         [Command("Silkweave")]
-        public async Task ImageAsync()
+        public async Task SilkweaveImageAsync()
         {
             var name = "Silkweave(36)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/chain_boots_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "65 Strength",
@@ -554,10 +544,10 @@ namespace Template.Modules
         }
         
         [Command("War Traveler")]
-        public async Task ImageAsync()
+        public async Task WarTravelerImageAsync()
         {
             var name = "War Traveler(42)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/light_plate_boots_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "95 Strength",
@@ -570,7 +560,7 @@ namespace Template.Modules
             affixes.Add(Tuple.Create(" Vitality", 10, 0));
             affixes.Add(Tuple.Create(" Strength", 10, 0));
             affixes.Add(Tuple.Create(" Damage", 15, 25));
-            affixes.Add(Tuple.Create("% Slower Stamina Drain", 40, ));
+            affixes.Add(Tuple.Create("% Slower Stamina Drain", 40, 0));
             affixes.Add(Tuple.Create(" Damage Taken by Attackers", 5, 10));
             affixes.Add(Tuple.Create("% Better Chance of Getting Magic Items", 30, 50));
 
@@ -578,10 +568,10 @@ namespace Template.Modules
         }
         
         [Command("Gore Rider")]
-        public async Task ImageAsync()
+        public async Task GoreRiderImageAsync()
         {
             var name = "Gore Rider(47)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/plate_boots_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "94 Strength",
@@ -601,10 +591,10 @@ namespace Template.Modules
         }
         
         [Command("Sandstorm Trek")]
-        public async Task ImageAsync()
+        public async Task SandstormTrekImageAsync()
         {
             var name = "Sandstorm Trek(64)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/heavy_boots_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "91 Strength",
@@ -626,10 +616,10 @@ namespace Template.Modules
         }
         
         [Command("Marrowwalk")]
-        public async Task ImageAsync()
+        public async Task MarrowwalkImageAsync()
         {
             var name = "Marrowwalk(66)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/chain_boots_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "118 Strength",
@@ -652,10 +642,10 @@ namespace Template.Modules
         }
         
         [Command("Shadow Dancer")]
-        public async Task ImageAsync()
+        public async Task ShadowDancerImageAsync()
         {
             var name = "Shadow Dancer(71)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/plate_boots_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "167 Strength",
@@ -665,19 +655,19 @@ namespace Template.Modules
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("% Enhanced Defense", 70, 100));
             affixes.Add(Tuple.Create(" Shadow Disciplines (Assassin Only)", 1, 2));
-            affixes.Add(Tuple.Create("% Faster Run/Walk", 30, ));
-            affixes.Add(Tuple.Create("% Faster Hit Recovery", 30, ));
+            affixes.Add(Tuple.Create("% Faster Run/Walk", 30, 0));
+            affixes.Add(Tuple.Create("% Faster Hit Recovery", 30, 0));
             affixes.Add(Tuple.Create("Dexterity", 15, 25));
-            affixes.Add(Tuple.Create("% Requirements", -20, ));
+            affixes.Add(Tuple.Create("% Requirements", -20, 0));
   
             await CreateUniqueImage(affixes, name, requirements, imageLink);
         }
         
         [Command("Rainbow Facet Cold")]
-        public async Task ImageAsync()
+        public async Task RainbowFacetColdImageAsync()
         {
             var name = "Rainbow Facet Cold(49)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/jewel_socketed_item_diablo2_wiki_guide_98px.png";
             var requirements = new List<string>
             {
                 "",
@@ -685,7 +675,7 @@ namespace Template.Modules
             };
             
             var affixes = new List<Tuple<string, int, int>>();
-            affixes.Add(Tuple.Create("% Chance to Cast Level 43 Frost Nova When You Level Up", 100, 0));
+            affixes.Add(Tuple.Create("% Chance to Cast Level 43 Frost Nova When You Level Up\nOR", 100, 0));
             affixes.Add(Tuple.Create("% Chance to Cast Level 37 Blizzard When You Die", 100, 0));
             affixes.Add(Tuple.Create(" Cold Damage", 24, 38));
             affixes.Add(Tuple.Create("% to Cold Skill Damage", 3, 5));
@@ -695,10 +685,10 @@ namespace Template.Modules
         }
         
         [Command("Rainbow Facet Fire")]
-        public async Task ImageAsync()
+        public async Task RainbowFacetFireImageAsync()
         {
             var name = "Rainbow Facet Fire(49)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/jewel4_socketed_item_diablo2_wiki_guide_98px.png";
             var requirements = new List<string>
             {
                 "",
@@ -706,7 +696,7 @@ namespace Template.Modules
             };
             
             var affixes = new List<Tuple<string, int, int>>();
-            affixes.Add(Tuple.Create("% Chance to Cast Level 29 Blaze When You Level Up", 100, 0));
+            affixes.Add(Tuple.Create("% Chance to Cast Level 29 Blaze When You Level Up\nOR", 100, 0));
             affixes.Add(Tuple.Create("% Chance to Cast Level 31 Meteor When You Die", 100, 0));
             affixes.Add(Tuple.Create(" Fire Damage", 17, 45));
             affixes.Add(Tuple.Create("% to Fire Skill Damage", 3, 5));
@@ -716,10 +706,10 @@ namespace Template.Modules
         }
         
         [Command("Rainbow Facet Light")]
-        public async Task ImageAsync()
+        public async Task RainbowFacetLightImageAsync()
         {
             var name = "Rainbow Facet Light(49)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/jewel5_socketed_item_diablo2_wiki_guide_98px.png";
             var requirements = new List<string>
             {
                 "",
@@ -727,7 +717,7 @@ namespace Template.Modules
             };
             
             var affixes = new List<Tuple<string, int, int>>();
-            affixes.Add(Tuple.Create("% Chance to Cast Level 41 Nova When You Level Up", 100, 0));
+            affixes.Add(Tuple.Create("% Chance to Cast Level 41 Nova When You Level Up\nOR", 100, 0));
             affixes.Add(Tuple.Create("% Chance to Cast Level 47 Chain Lightning When You Die", 100, 0));
             affixes.Add(Tuple.Create(" Lightning Damage", 1, 74));
             affixes.Add(Tuple.Create("% to Lightning Skill Damage", 3, 5));
@@ -737,10 +727,10 @@ namespace Template.Modules
         }
         
         [Command("Rainbow Facet Poison")]
-        public async Task ImageAsync()
+        public async Task RainbowFacetPoisonImageAsync()
         {
             var name = "Rainbow Facet Poison(49)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/jewel3_socketed_item_diablo2_wiki_guide_98px.png";
             var requirements = new List<string>
             {
                 "",
@@ -748,9 +738,9 @@ namespace Template.Modules
             };
             
             var affixes = new List<Tuple<string, int, int>>();
-            affixes.Add(Tuple.Create("% Chance to Cast Level 23 Venom When You Level Up", 100, 0));
+            affixes.Add(Tuple.Create("% Chance to Cast Level 23 Venom When You Level Up\nOR", 100, 0));
             affixes.Add(Tuple.Create("% Chance to Cast Level 51 Poison Nova When You Die", 100, 0));
-            affixes.Add(Tuple.Create("Poison Damage Over 2 Seconds", 37, ));
+            affixes.Add(Tuple.Create("Poison Damage Over 2 Seconds", 37, 0));
             affixes.Add(Tuple.Create("% to Poison Skill Damage", 3, 5));
             affixes.Add(Tuple.Create("% to Enemy Poison Resistance", 3, 5));
 
@@ -758,10 +748,10 @@ namespace Template.Modules
         }
         
         [Command("Kira's Guardian")]
-        public async Task ImageAsync()
+        public async Task KirasGuardianImageAsync()
         {
             var name = "Kira's Guardian(77)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/tiara_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "",
@@ -778,10 +768,10 @@ namespace Template.Modules
         }
         
         [Command("Griffon's Eye")]
-        public async Task ImageAsync()
+        public async Task GriffonsEyeImageAsync()
         {
             var name = "Griffon's Eye(76)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/diadem_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "",
@@ -791,7 +781,7 @@ namespace Template.Modules
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create(" Defense ", 100, 200));
             affixes.Add(Tuple.Create(" All Skills", 1, 0));
-            affixes.Add(Tuple.Create("% Faster Cast Rate", 25, ));
+            affixes.Add(Tuple.Create("% Faster Cast Rate", 25, 0));
             affixes.Add(Tuple.Create("% to Enemy Lightning Resistance", 15, 20));
             affixes.Add(Tuple.Create("% to Lightning Skill Damage", 10, 15));
 
@@ -799,10 +789,10 @@ namespace Template.Modules
         }
         
         [Command("The Hand of Broc")]
-        public async Task ImageAsync()
+        public async Task TheHandofBrocImageAsync()
         {
             var name = "The Hand of Broc(5)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/leather_gloves_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "",
@@ -821,10 +811,10 @@ namespace Template.Modules
         }
         
         [Command("Bloodfist")]
-        public async Task ImageAsync()
+        public async Task BloodfistImageAsync()
         {
             var name = "Bloodfist(9)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/heavy_gloves_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "",
@@ -843,10 +833,10 @@ namespace Template.Modules
         }
         
         [Command("Chance Guards")]
-        public async Task ImageAsync()
+        public async Task ChanceGuardsImageAsync()
         {
             var name = "Chance Guards(15)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/chain_gloves_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "25 Strength",
@@ -865,10 +855,10 @@ namespace Template.Modules
         }
         
         [Command("Magefist")]
-        public async Task ImageAsync()
+        public async Task MagefistImageAsync()
         {
             var name = "Magefist(23)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/light_gauntlets_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "45 Strength",
@@ -887,10 +877,10 @@ namespace Template.Modules
         }
         
         [Command("Frostburn")]
-        public async Task ImageAsync()
+        public async Task FrostburnImageAsync()
         {
             var name = "Frostburn(29)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/gauntlets_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "60 Strength",
@@ -908,10 +898,10 @@ namespace Template.Modules
         }
         
         [Command("Venom Grip")]
-        public async Task ImageAsync()
+        public async Task VenomGripImageAsync()
         {
             var name = "Venom Grip(29)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/leather_gloves_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "20 Strength",
@@ -931,10 +921,10 @@ namespace Template.Modules
         }
         
         [Command("Gravepalm")]
-        public async Task ImageAsync()
+        public async Task GravepalmImageAsync()
         {
             var name = "Gravepalm(32)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/heavy_gloves_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "20 Strength",
@@ -952,10 +942,10 @@ namespace Template.Modules
         }
         
         [Command("Ghoulhide")]
-        public async Task ImageAsync()
+        public async Task GhoulhideImageAsync()
         {
             var name = "Ghoulhide(36)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/chain_gloves_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "58 Strength",
@@ -973,10 +963,10 @@ namespace Template.Modules
         }
         
         [Command("Lava Gout")]
-        public async Task ImageAsync()
+        public async Task LavaGoutImageAsync()
         {
             var name = "Lava Gout(42)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/light_gauntlets_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "88 Strength",
@@ -995,10 +985,10 @@ namespace Template.Modules
         }
         
         [Command("Hellmouth")]
-        public async Task ImageAsync()
+        public async Task HellmouthImageAsync()
         {
             var name = "Hellmouth(47)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/gauntlets_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "110 Strength",
@@ -1016,10 +1006,10 @@ namespace Template.Modules
         }
         
         [Command("Dracul's Grasp")]
-        public async Task ImageAsync()
+        public async Task DraculsGraspImageAsync()
         {
             var name = "Dracul's Grasp";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/heavy_gloves_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "50 Strength",
@@ -1038,10 +1028,10 @@ namespace Template.Modules
         }
         
         [Command("Soul Drainer")]
-        public async Task ImageAsync()
+        public async Task SoulDrainerImageAsync()
         {
             var name = "Soul Drainer(74)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/chain_gloves_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "50 Strength",
@@ -1059,10 +1049,10 @@ namespace Template.Modules
         }
         
         [Command("Steelrend")]
-        public async Task ImageAsync()
+        public async Task SteelrendImageAsync()
         {
             var name = "Steelrend(70)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/gauntlets_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "185 Strength",
@@ -1072,17 +1062,17 @@ namespace Template.Modules
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create(" Defense", 170, 210));
             affixes.Add(Tuple.Create("% Enhanced Damage", 30, 60));
-            affixes.Add(Tuple.Create("% Chance of Crushing Blow", 10, ));
+            affixes.Add(Tuple.Create("% Chance of Crushing Blow", 10, 0));
             affixes.Add(Tuple.Create(" Strength", 15, 20));
 
             await CreateUniqueImage(affixes, name, requirements, imageLink);
         }
         
         [Command("Biggin's Bonnet")]
-        public async Task ImageAsync()
+        public async Task BigginsBonnetImageAsync()
         {
             var name = "Tarnhelm(15)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/biggins_bonnet_helm_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "15 Strength",
@@ -1098,10 +1088,10 @@ namespace Template.Modules
         }
         
         [Command("Coif of Glory")]
-        public async Task ImageAsync()
+        public async Task CoifofGloryImageAsync()
         {
             var name = "Coif of Glory(14)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/berserkers_headgear_helm_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "26 Strength",
@@ -1119,10 +1109,10 @@ namespace Template.Modules
         }
         
         [Command("Duskdeep")]
-        public async Task ImageAsync()
+        public async Task DuskdeepImageAsync()
         {
             var name = "Duskdeep(17)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/duskdeep_helm_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "41 Strength",
@@ -1141,10 +1131,10 @@ namespace Template.Modules
         }
         
         [Command("Howltusk")]
-        public async Task ImageAsync()
+        public async Task HowltuskImageAsync()
         {
             var name = "Howltusk(25)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/demonhorns_edge_helm_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "63 Strength",
@@ -1163,10 +1153,10 @@ namespace Template.Modules
         }
         
         [Command("The Face of Horror")]
-        public async Task ImageAsync()
+        public async Task TheFaceofHorrorImageAsync()
         {
             var name = "The Face of Horror(20)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/mask_helm_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "23 Strength",
@@ -1184,10 +1174,10 @@ namespace Template.Modules
         }
         
         [Command("Undead Crown")]
-        public async Task ImageAsync()
+        public async Task UndeadCrownImageAsync()
         {
             var name = "Undead Crown(29)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/crown_helm_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "55 Strength",
@@ -1208,10 +1198,10 @@ namespace Template.Modules
         }
         
         [Command("Wormskull")]
-        public async Task ImageAsync()
+        public async Task WormskullImageAsync()
         {
             var name = "Wormskull(21)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/wormskull_helm_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "25 Strength",
@@ -1229,10 +1219,10 @@ namespace Template.Modules
         }
         
         [Command("Peasant Crown")]
-        public async Task ImageAsync()
+        public async Task PeasantCrownImageAsync()
         {
             var name = "Peasant Crown(28)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/cap_helm_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "20 Strength",
@@ -1251,10 +1241,10 @@ namespace Template.Modules
         }
         
         [Command("Rockstopper")]
-        public async Task ImageAsync()
+        public async Task RockstopperImageAsync()
         {
             var name = "Rockstopper(31)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/rockstopper_helm_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "43 Strength",
@@ -1268,16 +1258,16 @@ namespace Template.Modules
             affixes.Add(Tuple.Create("% Cold Resist", 20, 40));
             affixes.Add(Tuple.Create("% Fire Resist", 20, 40));
             affixes.Add(Tuple.Create("% Lightning Resist", 20, 40));
-            affixes.Add(Tuple.Create(" Vitality", 15, ));
+            affixes.Add(Tuple.Create(" Vitality", 15, 0));
 
             await CreateUniqueImage(affixes, name, requirements, imageLink);
         }
         
         [Command("Stealskull")]
-        public async Task ImageAsync()
+        public async Task StealskullImageAsync()
         {
             var name = "Stealskull(35)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/berserkers_headgear_helm_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "59 Strength",
@@ -1296,10 +1286,10 @@ namespace Template.Modules
         }
         
         [Command("Darksight Helm")]
-        public async Task ImageAsync()
+        public async Task DarksightHelmImageAsync()
         {
             var name = "Darksight Helm(38)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/duskdeep_helm_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "82 Strength",
@@ -1319,10 +1309,10 @@ namespace Template.Modules
         }
         
         [Command("Valkyrie Wing")]
-        public async Task ImageAsync()
+        public async Task ValkyrieWingImageAsync()
         {
             var name = "Valkyrie Wing(44)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/demonhorns_edge_helm_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "115 Strength",
@@ -1340,10 +1330,10 @@ namespace Template.Modules
         }
         
         [Command("Blackthorn's Face")]
-        public async Task ImageAsync()
+        public async Task BlackthornsFaceImageAsync()
         {
             var name = "Blackthorn's Face(41)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/mask_helm_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "55 Strength",
@@ -1362,10 +1352,10 @@ namespace Template.Modules
         }
         
         [Command("Crown of Thieves")]
-        public async Task ImageAsync()
+        public async Task CrownofThievesImageAsync()
         {
             var name = "Crown of Thieves(49)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/crown_of_thieves_helm_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "103 Strength",
@@ -1375,20 +1365,20 @@ namespace Template.Modules
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("% Enhanced Defense", 160, 200));
             affixes.Add(Tuple.Create("% Life Stolen Per Hit", 9, 12));
-            affixes.Add(Tuple.Create("% Fire Resist", 33, ));
-            affixes.Add(Tuple.Create(" Mana", 35, ));
-            affixes.Add(Tuple.Create(" Life", 50, ));
-            affixes.Add(Tuple.Create(" Dexterity", 25, ));
+            affixes.Add(Tuple.Create("% Fire Resist", 33, 0));
+            affixes.Add(Tuple.Create(" Mana", 35, 0));
+            affixes.Add(Tuple.Create(" Life", 50, 0));
+            affixes.Add(Tuple.Create(" Dexterity", 25, 0));
             affixes.Add(Tuple.Create("% Extra Gold From Monsters", 80, 100));
 
             await CreateUniqueImage(affixes, name, requirements, imageLink);
         }
         
         [Command("Vampire Gaze")]
-        public async Task ImageAsync()
+        public async Task VampireGazeImageAsync()
         {
             var name = "Vampire Gaze";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/wormskull_helm_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "58 Strenght",
@@ -1409,10 +1399,10 @@ namespace Template.Modules
         
         [Command("Harlequin Crest")]
         [Alias("Shako")]
-        public async Task ImageAsync()
+        public async Task HarlequinCrestImageAsync()
         {
             var name = "Harlequin Crest(62)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/cap_helm_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "",
@@ -1431,10 +1421,10 @@ namespace Template.Modules
         }
         
         [Command("Steel Shade")]
-        public async Task ImageAsync()
+        public async Task SteelShadeImageAsync()
         {
             var name = "Steel Shade(62)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/berserkers_headgear_helm_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "109 Strength",
@@ -1451,10 +1441,10 @@ namespace Template.Modules
         }
         
         [Command("Veil of Steel")]
-        public async Task ImageAsync()
+        public async Task VeilofSteelImageAsync()
         {
             var name = "Veil of Steel(73)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/great_helm_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "192 Strength",
@@ -1467,16 +1457,16 @@ namespace Template.Modules
             affixes.Add(Tuple.Create(" All Resistances", 50, 0));
             affixes.Add(Tuple.Create(" Strength", 15, 0));
             affixes.Add(Tuple.Create(" Vitality", 15, 0));
-            affixes.Add(Tuple.Create(" Light Radius", -4, ));
+            affixes.Add(Tuple.Create(" Light Radius", -4, 0));
 
             await CreateUniqueImage(affixes, name, requirements, imageLink);
         }
         
         [Command("Nightwing's Veil")]
-        public async Task ImageAsync()
+        public async Task NightwingsVeilImageAsync()
         {
             var name = "Nightwing's Veil(67)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/great_helm_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "96 Strength",
@@ -1497,10 +1487,10 @@ namespace Template.Modules
         
         [Command("Andariel's Visage")]
         [Alias("Andy Face")]
-        public async Task ImageAsync()
+        public async Task AndarielsVisageImageAsync()
         {
             var name = "Andariel's Visage(83)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/mask_helm_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "102 Strength",
@@ -1523,10 +1513,10 @@ namespace Template.Modules
         }
         
         [Command("Crown of Ages")]
-        public async Task ImageAsync()
+        public async Task CrownofAgesImageAsync()
         {
             var name = "Crown of Ages(82)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/crown_helm_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "174 Strength",
@@ -1547,10 +1537,10 @@ namespace Template.Modules
         }
         
         [Command("Giant Skull")]
-        public async Task ImageAsync()
+        public async Task GiantSkullImageAsync()
         {
             var name = "Giant Skull(65)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/bone_helm_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "106 Strength",
@@ -1568,10 +1558,10 @@ namespace Template.Modules
         }
         
         [Command("Pelta Lunata")]
-        public async Task ImageAsync()
+        public async Task PeltaLunataImageAsync()
         {
             var name = "Pelta Lunata(2)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/pelta_lunata_diablo2_wiki_guide_196x294px.png";
             var requirements = new List<string>
             {
                 "12 Strength",
@@ -1591,10 +1581,10 @@ namespace Template.Modules
         }
         
         [Command("Umbral Disk")]
-        public async Task ImageAsync()
+        public async Task UmbralDiskImageAsync()
         {
             var name = "Umbral Disk(9)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/umbral_disk_diablo2_wiki_guide_196x294px.png";
             var requirements = new List<string>
             {
                 "22 Strength",
@@ -1615,10 +1605,10 @@ namespace Template.Modules
         }
         
         [Command("Stormguild")]
-        public async Task ImageAsync()
+        public async Task StormguildImageAsync()
         {
             var name = "Stormguild(13)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/stormguild_diablo2_wiki_guide_196x294px.png";
             var requirements = new List<string>
             {
                 "34 Strength",
@@ -1638,10 +1628,10 @@ namespace Template.Modules
         }
         
         [Command("Steelclash")]
-        public async Task ImageAsync()
+        public async Task SteelclashImageAsync()
         {
             var name = "Steelclash(17)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/steelclash_diablo2_wiki_guide_196x294px.png";
             var requirements = new List<string>
             {
                 "47 Strength",
@@ -1662,10 +1652,10 @@ namespace Template.Modules
         }
         
         [Command("Swordback Hold")]
-        public async Task ImageAsync()
+        public async Task SwordbackHoldImageAsync()
         {
             var name = "Swordback Hold(15)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/swordback_hold_diablo2_wiki_guide_196x294px.png";
             var requirements = new List<string>
             {
                 "30 Strength",
@@ -1683,10 +1673,10 @@ namespace Template.Modules
         }
         
         [Command("Bverrit Keep")]
-        public async Task ImageAsync()
+        public async Task BverritKeepImageAsync()
         {
             var name = "Bverrit Keep(19)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/bverrit_keep_1_diablo2_wiki_guide_196x294px.png";
             var requirements = new List<string>
             {
                 "75 Strength",
@@ -1705,10 +1695,10 @@ namespace Template.Modules
         }
         
         [Command("Wall of the Eyeless")]
-        public async Task ImageAsync()
+        public async Task WalloftheEyelessImageAsync()
         {
             var name = "Wall of the Eyeless(20)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/wall_of_the_eyeless_diablo2_wiki_guide_196x294px.png";
             var requirements = new List<string>
             {
                 "25 Strength",
@@ -1722,21 +1712,15 @@ namespace Template.Modules
             affixes.Add(Tuple.Create("% Faster Cast Rate", 20, 0));
             affixes.Add(Tuple.Create("% Mana Stolen per Hit", 3, 0));
             affixes.Add(Tuple.Create("% Poison Resist", 20, 0));
-            affixes.Add(Tuple.Create("", , ));
-            affixes.Add(Tuple.Create("", , ));
-            affixes.Add(Tuple.Create("", , ));
-            affixes.Add(Tuple.Create("", , ));
-            affixes.Add(Tuple.Create("", , ));
-            affixes.Add(Tuple.Create("", , ));
         
             await CreateUniqueImage(affixes, name, requirements, imageLink);
         }
         
         [Command("The Ward")]
-        public async Task ImageAsync()
+        public async Task TheWardImageAsync()
         {
             var name = "The Ward(26)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/the_ward_diablo2_wiki_guide_196x294px.png";
             var requirements = new List<string>
             {
                 "60 Strength",
@@ -1755,10 +1739,10 @@ namespace Template.Modules
         }
         
         [Command("Visceratuant")]
-        public async Task ImageAsync()
+        public async Task VisceratuantImageAsync()
         {
             var name = "Visceratuant(28)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/pelta_lunata_diablo2_wiki_guide_196x294px.png";
             var requirements = new List<string>
             {
                 "38 Strength",
@@ -1776,10 +1760,10 @@ namespace Template.Modules
         }
         
         [Command("Moser's Blessed Circle")]
-        public async Task ImageAsync()
+        public async Task MosersBlessedCircleImageAsync()
         {
             var name = "Moser's Blessed Circle(31)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/moser's_blessed_circle_diablo2_wiki_guide_196x294px.png";
             var requirements = new List<string>
             {
                 "53 Strength",
@@ -1797,10 +1781,10 @@ namespace Template.Modules
         }
         
         [Command("Stormchaser")]
-        public async Task ImageAsync()
+        public async Task StormchaserImageAsync()
         {
             var name = "Stormchaser(35)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/stormchaser_diablo2_wiki_guide_196x294px.png";
             var requirements = new List<string>
             {
                 "71 Strength",
@@ -1822,10 +1806,10 @@ namespace Template.Modules
         }
         
         [Command("Tiamat's Rebuke")]
-        public async Task ImageAsync()
+        public async Task TiamatsRebukeImageAsync()
         {
             var name = "Tiamat's Rebuke(38)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/steelclash_diablo2_wiki_guide_196x294px.png";
             var requirements = new List<string>
             {
                 "91 Strength",
@@ -1846,10 +1830,10 @@ namespace Template.Modules
         }
         
         [Command("Lance Guard")]
-        public async Task ImageAsync()
+        public async Task LanceGuardImageAsync()
         {
             var name = "Lance Guard(35)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/lance_guard_diablo2_wiki_guide_196x294px.png";
             var requirements = new List<string>
             {
                 "65 Strength",
@@ -1868,10 +1852,10 @@ namespace Template.Modules
         }
         
         [Command("Gerke's Sanctuary")]
-        public async Task ImageAsync()
+        public async Task GerkesSanctuaryImageAsync()
         {
             var name = "Gerke's Sanctuary(44)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/bverrit_keep_1_diablo2_wiki_guide_196x294px.png";
             var requirements = new List<string>
             {
                 "133 Strength",
@@ -1890,10 +1874,10 @@ namespace Template.Modules
         }
         
         [Command("Lidless Wall")]
-        public async Task ImageAsync()
+        public async Task LidlessWallImageAsync()
         {
             var name = "Lidless Wall(41)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/lidless_wall_diablo2_wiki_guide_196x294px.png";
             var requirements = new List<string>
             {
                 "58 Strength",
@@ -1904,7 +1888,7 @@ namespace Template.Modules
             affixes.Add(Tuple.Create("% Enhanced Defense", 80, 130));
             affixes.Add(Tuple.Create(" All Skills", 1, 0));
             affixes.Add(Tuple.Create("% Increase Maximum Mana", 10, 0));
-            affixes.Add(Tuple.Create("% Faster Cast Rate", 20, ));
+            affixes.Add(Tuple.Create("% Faster Cast Rate", 20, 0));
             affixes.Add(Tuple.Create(" Mana After Each Kill", 3, 5));
             affixes.Add(Tuple.Create(" Energy", 10, 0));
             affixes.Add(Tuple.Create(" Light Radius", 1, 0));
@@ -1913,10 +1897,10 @@ namespace Template.Modules
         }
         
         [Command("Radament's Sphere")]
-        public async Task ImageAsync()
+        public async Task RadamentsSphereImageAsync()
         {
             var name = "Radamanent's Sphere(50)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/the_ward_diablo2_wiki_guide_196x294px.png";
             var requirements = new List<string>
             {
                 "110 Strength",
@@ -1936,10 +1920,10 @@ namespace Template.Modules
         }
         
         [Command("Blackoak Shield")]
-        public async Task ImageAsync()
+        public async Task BlackoakShieldImageAsync()
         {
             var name = "Blackoak Shield(61)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/umbral_disk_diablo2_wiki_guide_196x294px.png";
             var requirements = new List<string>
             {
                 "100 Strength",
@@ -1959,10 +1943,10 @@ namespace Template.Modules
         }
         
         [Command("Stormshield")]
-        public async Task ImageAsync()
+        public async Task StormshieldImageAsync()
         {
             var name = "Stormshield(73)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/steelclash_diablo2_wiki_guide_196x294px.png";
             var requirements = new List<string>
             {
                 "156 Strength",
@@ -1984,10 +1968,10 @@ namespace Template.Modules
         }
         
         [Command("Spike Thorn")]
-        public async Task ImageAsync()
+        public async Task SpikeThornImageAsync()
         {
             var name = "Spike Thorn(70)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/swordback_hold_diablo2_wiki_guide_196x294px.png";
             var requirements = new List<string>
             {
                 "118 Strength",
@@ -2005,10 +1989,10 @@ namespace Template.Modules
         }
         
         [Command("Medusa's Gaze")]
-        public async Task ImageAsync()
+        public async Task MedusasGazeImageAsync()
         {
             var name = "Medusa's Gaze(76)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/bverrit_keep_1_diablo2_wiki_guide_196x294px.png";
             var requirements = new List<string>
             {
                 "219 Strength",
@@ -2020,17 +2004,17 @@ namespace Template.Modules
             affixes.Add(Tuple.Create("% Life Stolen Per Hit", 5, 9));
             affixes.Add(Tuple.Create(" Slows Target By 20%", 0, 0));
             affixes.Add(Tuple.Create("% Cold Resist", 40, 80));
-            affixes.Add(Tuple.Create("% Chance to Cast Level 7 Lower Resist When Struck", 10, ));
-            affixes.Add(Tuple.Create("% Chance to Cast Level 44 Nova When You Die", 100, ));
+            affixes.Add(Tuple.Create("% Chance to Cast Level 7 Lower Resist When Struck", 10, 0));
+            affixes.Add(Tuple.Create("% Chance to Cast Level 44 Nova When You Die", 100, 0));
 
             await CreateUniqueImage(affixes, name, requirements, imageLink);
         }
         
         [Command("Head Hunter's Glory")]
-        public async Task ImageAsync()
+        public async Task HeadHuntersGloryImageAsync()
         {
             var name = "Head Hunter's Glory(75)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/wall_of_the_eyeless_diablo2_wiki_guide_196x294px.png";
             var requirements = new List<string>
             {
                 "106 Strength",
@@ -2049,10 +2033,10 @@ namespace Template.Modules
         }
         
         [Command("Spirit Ward")]
-        public async Task ImageAsync()
+        public async Task SpiritWardImageAsync()
         {
             var name = "Spirit Ward(68)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/the_ward_diablo2_wiki_guide_196x294px.png";
             var requirements = new List<string>
             {
                 "185 Strength",
@@ -2067,62 +2051,6 @@ namespace Template.Modules
             affixes.Add(Tuple.Create(" Cold Absorb", 6, 11));
             affixes.Add(Tuple.Create("% Chance to Cast Level 8 Fade When Struck", 5, 0));
 
-            await CreateUniqueImage(affixes, name, requirements, imageLink);
-        }
-        
-        [Command("")]
-        public async Task ImageAsync()
-        {
-            var name = "";
-            var imageLink = "";
-            var requirements = new List<string>
-            {
-                "",
-                ""
-            };
-            
-            var affixes = new List<Tuple<string, int, int>>();
-            affixes.Add(Tuple.Create("", , ));
-            affixes.Add(Tuple.Create("", , ));
-            affixes.Add(Tuple.Create("", , ));
-            affixes.Add(Tuple.Create("", , ));
-            affixes.Add(Tuple.Create("", , ));
-            affixes.Add(Tuple.Create("", , ));
-            affixes.Add(Tuple.Create("", , ));
-            affixes.Add(Tuple.Create("", , ));
-            affixes.Add(Tuple.Create("", , ));
-            affixes.Add(Tuple.Create("", , ));
-            affixes.Add(Tuple.Create("", , ));
-            affixes.Add(Tuple.Create("", , ));
-        
-            await CreateUniqueImage(affixes, name, requirements, imageLink);
-        }
-        
-        [Command("")]
-        public async Task ImageAsync()
-        {
-            var name = "";
-            var imageLink = "";
-            var requirements = new List<string>
-            {
-                "",
-                ""
-            };
-            
-            var affixes = new List<Tuple<string, int, int>>();
-            affixes.Add(Tuple.Create("", , ));
-            affixes.Add(Tuple.Create("", , ));
-            affixes.Add(Tuple.Create("", , ));
-            affixes.Add(Tuple.Create("", , ));
-            affixes.Add(Tuple.Create("", , ));
-            affixes.Add(Tuple.Create("", , ));
-            affixes.Add(Tuple.Create("", , ));
-            affixes.Add(Tuple.Create("", , ));
-            affixes.Add(Tuple.Create("", , ));
-            affixes.Add(Tuple.Create("", , ));
-            affixes.Add(Tuple.Create("", , ));
-            affixes.Add(Tuple.Create("", , ));
-        
             await CreateUniqueImage(affixes, name, requirements, imageLink);
         }
     }
