@@ -117,7 +117,7 @@ namespace Template.Utilities
                 GrD.DrawString(subheader, robotoSmall, brushGrey, subheaderX, subheaderY, drawFormat);
                 if (thirdText != null)
                 {
-                    GrD.DrawString(thirdText, robotoSmall, brushThird, subheaderX + (GrD.MeasureString(subheader, roboto).Width * .96f) , subheaderY, drawFormat);
+                    GrD.DrawString(thirdText, robotoSmall, brushThird, subheaderX + GrD.MeasureString(subheader, roboto).Width , subheaderY, drawFormat);
                 }
             }
 
@@ -452,10 +452,11 @@ namespace Template.Utilities
                     biggestSizeAffixText = Math.Max(biggestSizeAffixText, textSize);
                 }
             }
+
             var height = (int)(headerHeight + ((affixes.Count + requirements.Count) * textHeight * .8f));
             var image = await FetchImageAsync(imageLink);
             var imageOffset = (int)(((float)height / (float)image.Height) * (float)(image.Width));
-            var width = (int)Math.Max((name.Length * headerFontSize * .7f) + 35 + imageOffset, (biggestSizeAffixText * .85f) + imageOffset);
+            var width = (int)Math.Max((name.Length * headerFontSize * .7f) + 35 + imageOffset, (biggestSizeAffixText * 1.05f )+ imageOffset);
 
             var size = new Size(width, height);
 
