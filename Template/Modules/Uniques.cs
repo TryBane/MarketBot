@@ -88,12 +88,9 @@ namespace Template.Modules
         public async Task ImageAsync()
         {
             var name = "Nokozan Relic(10)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/amulet2_diablo2_wiki_guide_98px.png";
             var requirements = new List<string>
-            {
-                "0",
-                "0"
-            };
+            {};
             
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create(" Fire Damage", 3, 6));
@@ -106,18 +103,15 @@ namespace Template.Modules
         }
         
         [Command("The Eye of Etlich")]
-        public async Task ImageAsync()
+        public async Task TheEyeofEtlichImageAsync()
         {
             var name = "The Eye of Etlich(15)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/amulet2_diablo2_wiki_guide_98px.png";
             var requirements = new List<string>
-            {
-                "0",
-                "0"
-            };
+            {};
             
             var affixes = new List<Tuple<string, int, int>>();
-            affixes.Add(Tuple.Create(" All Skills", 1, ));
+            affixes.Add(Tuple.Create(" All Skills", 1, 0));
             affixes.Add(Tuple.Create(" Light Radius", 1, 5));   
             affixes.Add(Tuple.Create(" Defense vs Missiles", 10, 40));                     
             affixes.Add(Tuple.Create("% Life Steal", 3, 7));
@@ -128,18 +122,15 @@ namespace Template.Modules
         }
         
         [Command("The Mahim-Oak Curio")]
-        public async Task ImageAsync()
+        public async Task TheMahimOakCurioImageAsync()
         {
             var name = "The Mahim-Oak Curio(25)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/amulet3_diablo2_wiki_guide_98px.png";
             var requirements = new List<string>
-            {
-                "",
-                ""
-            };
+            {};
             
             var affixes = new List<Tuple<string, int, int>>();
-            affixes.Add(Tuple.Create(" Defense", 10, ));
+            affixes.Add(Tuple.Create(" Defense", 10, 0));
             affixes.Add(Tuple.Create("% Enhanced Defense", 10, 0));            
             affixes.Add(Tuple.Create("% Bonus to Attack Rating", 10, 0));
             affixes.Add(Tuple.Create("% All Resistance", 10, 0));
@@ -150,15 +141,12 @@ namespace Template.Modules
         }
         
         [Command("Saracen's Chance")]
-        public async Task ImageAsync()
+        public async Task SaracensChanceImageAsync()
         {
             var name = "Saracen's Chance(47)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/amulet1_diablo2_wiki_guide_98px.png";
             var requirements = new List<string>
-            {
-                "0",
-                "0"
-            };
+            {};
             
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("% Chance of Casting level 2 Iron Maiden When Struck", 10, 0));
@@ -169,15 +157,12 @@ namespace Template.Modules
         }
         
         [Command("The Cat's Eye")]
-        public async Task ImageAsync()
+        public async Task TheCatsEyeImageAsync()
         {
             var name = "The Cat's Eye(50)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/amulet2_diablo2_wiki_guide_98px.png";
             var requirements = new List<string>
-            {
-                "0",
-                "0"
-            };
+            {};
             
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("% Faster Run/Walk", 30, 0));
@@ -190,15 +175,12 @@ namespace Template.Modules
         }
         
         [Command("Crescent Moon")]
-        public async Task ImageAsync()
+        public async Task CrescentMoonImageAsync()
         {
             var name = "Crescent Moon(50)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/amulet3_diablo2_wiki_guide_98px.png";
             var requirements = new List<string>
-            {
-                "0",
-                "0"
-            };
+            {};
             
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("% of Damage Taken Goes to Mana", 10, 0));
@@ -212,15 +194,12 @@ namespace Template.Modules
         }
         
         [Command("Atma's Scarab")]
-        public async Task ImageAsync()
+        public async Task AtmasScarabImageAsync()
         {
             var name = "Atma's Scarab(60)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/amulet2_diablo2_wiki_guide_98px.png";
             var requirements = new List<string>
-            {
-                "0",
-                "0"
-            };
+            {};
             
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("% Chance To Cast Level 2 Amplify Damage On Striking", 5, 0));
@@ -234,15 +213,12 @@ namespace Template.Modules
         }
         
         [Command("The Rising Sun")]
-        public async Task ImageAsync()
+        public async Task TheRisingSunImageAsync()
         {
             var name = "The Rising Sun(65)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/amulet3_diablo2_wiki_guide_98px.png";
             var requirements = new List<string>
-            {
-                "0",
-                "0"
-            };
+            {};
             
             var affixes = new List<Tuple<string, int, int>>();            
             affixes.Add(Tuple.Create(" Fire Skills", 2, 0));
@@ -256,15 +232,12 @@ namespace Template.Modules
         }
         
         [Command("Highlord's Wrath")]
-        public async Task ImageAsync()
+        public async Task HighlordsWrathImageAsync()
         {
             var name = "Highlord's Wrath(65)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/amulet3_diablo2_wiki_guide_98px.png";
             var requirements = new List<string>
-            {
-                "0",
-                "0"
-            };
+            {};
             
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create(" All Skills", 1, 0));
@@ -278,18 +251,15 @@ namespace Template.Modules
         }
         
         [Command("Mara's Kaleidoscope")]
-        public async Task ImageAsync()
+        public async Task MarasKaleidoscopeImageAsync()
         {
             var name = "Mara's Kaleidoscope(67)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/amulet1_diablo2_wiki_guide_98px.png";
             var requirements = new List<string>
-            {
-                "0",
-                "0"
-            };
+            {};
             
             var affixes = new List<Tuple<string, int, int>>();
-            affixes.Add(Tuple.Create("All Skills", 2, ));
+            affixes.Add(Tuple.Create("All Skills", 2, 0));
             affixes.Add(Tuple.Create("All Resistances", 20, 30));
             affixes.Add(Tuple.Create("All Attributes", 5, 0));
         
@@ -297,15 +267,12 @@ namespace Template.Modules
         }
         
         [Command("Seraph's Hymn")]
-        public async Task ImageAsync()
+        public async Task SeraphsHymnImageAsync()
         {
             var name = "Seraph's Hymn(65)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/amulet2_diablo2_wiki_guide_98px.png";
             var requirements = new List<string>
-            {
-                "0",
-                "0"
-            };
+            {};
             
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create(" All Skills", 2, 0));
@@ -320,15 +287,12 @@ namespace Template.Modules
         }
         
         [Command("Metalgrid")]
-        public async Task ImageAsync()
+        public async Task MetalgridImageAsync()
         {
             var name = "Metalgrid(81)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/amulet2_diablo2_wiki_guide_98px.png";
             var requirements = new List<string>
-            {
-                "0",
-                "0"
-            };
+            {};
             
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("Attack Rating", 400, 450));
@@ -341,15 +305,12 @@ namespace Template.Modules
         }
         
         [Command("Nagelring")]
-        public async Task ImageAsync()
+        public async Task NagelringImageAsync()
         {
             var name = "Nagelring(7)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/ring4_diablo2_wiki_guide_98px.png";
             var requirements = new List<string>
-            {
-                "0",
-                "0"
-            };
+            {};
             
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("Attack Rating ", 50, 75));
@@ -361,15 +322,12 @@ namespace Template.Modules
         }
         
         [Command("Manald Heal")]
-        public async Task ImageAsync()
+        public async Task ManaldHealImageAsync()
         {
             var name = "Manald Heal(15)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/ring5_diablo2_wiki_guide_98px.png";
             var requirements = new List<string>
-            {
-                "0",
-                "0"
-            };
+            {};
             
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("% Mana Stolen Per Hit", 4, 7));
@@ -381,15 +339,12 @@ namespace Template.Modules
         }
         
         [Command("Stone of Jordan")]
-        public async Task ImageAsync()
+        public async Task StoneofJordanImageAsync()
         {
             var name = "Stone of Jordan(29)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/ring1_diablo2_wiki_guide_98px.png";
             var requirements = new List<string>
-            {
-                "0",
-                "0"
-            };
+            {};
             
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("All Skills", 1, 0));
@@ -401,15 +356,12 @@ namespace Template.Modules
         }
         
         [Command("Dwarf Star")]
-        public async Task ImageAsync()
+        public async Task DwarfStarImageAsync()
         {
             var name = "Dwarf Start(45)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/ring5_diablo2_wiki_guide_98px.png";
             var requirements = new List<string>
-            {
-                "0",
-                "0"
-            };
+            {};
             
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create(" Life", 40, 0));
@@ -423,15 +375,12 @@ namespace Template.Modules
         }
         
         [Command("Raven Frost")]
-        public async Task ImageAsync()
+        public async Task RavenFrostImageAsync()
         {
             var name = "Raven Frost(45)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/ring1_diablo2_wiki_guide_98px.png";
             var requirements = new List<string>
-            {
-                "0",
-                "0"
-            };
+            {};
             
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create(" Attack Rating", 150, 250));
@@ -446,15 +395,12 @@ namespace Template.Modules
         
         [Command("Bul-Kathos' Wedding Band")]
         [Alias("Bk ring")]
-        public async Task ImageAsync()
+        public async Task BulKathosWeddingBandImageAsync()
         {
-            var name = "";
-            var imageLink = "";
+            var name = "Bul-Kathos' Wedding Band(58)";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/ring4_diablo2_wiki_guide_98px.png";
             var requirements = new List<string>
-            {
-                "0",
-                "0"
-            };
+            {};
             
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create(" All Skills", 1, 0));
@@ -466,43 +412,32 @@ namespace Template.Modules
         }
         
         [Command("Carrion Wind")]
-        public async Task ImageAsync()
+        public async Task CarrionWindImageAsync()
         {
             var name = "Carrion Wind(60)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/ring1_diablo2_wiki_guide_98px.png";
             var requirements = new List<string>
-            {
-                "0",
-                "0"
-            };
+            {};
             
             var affixes = new List<Tuple<string, int, int>>();
-            affixes.Add(Tuple.Create("% Chance To Cast Level 10 Poison Nova When Struck", 10, ));
-            affixes.Add(Tuple.Create("% Chance To Cast Level 13 Twister On Striking", 8, ));
+            affixes.Add(Tuple.Create("% Chance To Cast Level 10 Poison Nova When Struck", 10, 0));
+            affixes.Add(Tuple.Create("% Chance To Cast Level 13 Twister On Striking", 8, 0));
             affixes.Add(Tuple.Create("% Life Stolen Per Hit", 6, 9));
             affixes.Add(Tuple.Create(" Defense Vs. Missile", 100, 160));
             affixes.Add(Tuple.Create("% Poison Resistance", 55, 0));
             affixes.Add(Tuple.Create("% Damage Taken Goes To Mana", 10, 0));
             affixes.Add(Tuple.Create("Level 21 Poison Creeper (15 Charges)", 0, 0));
-            affixes.Add(Tuple.Create("", , ));
-            affixes.Add(Tuple.Create("", , ));
-            affixes.Add(Tuple.Create("", , ));
-            affixes.Add(Tuple.Create("", , ));
-            affixes.Add(Tuple.Create("", , ));
         
             await CreateUniqueImage(affixes, name, requirements, imageLink);
         }
         
         [Command("Nature's Peace")]
-        public async Task ImageAsync()
+        public async Task NaturesPeaceImageAsync()
         {
             var name = "Nature's Peace(69)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/ring5_diablo2_wiki_guide_98px.png";
             var requirements = new List<string>
-            {
-                "0",
-                "0"
-            };
+            {};
             
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create(" Slain Monsters Rest In Peace", 0, 0));
@@ -515,15 +450,12 @@ namespace Template.Modules
         }
         
         [Command("Wisp Projector")]
-        public async Task ImageAsync()
+        public async Task WispProjectorImageAsync()
         {
             var name = "Wisp Projector(76)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/ring1_diablo2_wiki_guide_98px.png";
             var requirements = new List<string>
-            {
-                "0",
-                "0"
-            };
+            {};
             
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("% Chance To Cast Level 16 Lightning On Striking", 10, 0));
@@ -537,15 +469,12 @@ namespace Template.Modules
         }
         
         [Command("Annihilus")]
-        public async Task ImageAsync()
+        public async Task AnnihilusImageAsync()
         {
             var name = "Annihilus(70)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/mephisto's_soulstone_quest_item_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
-            {
-                "0",
-                "0"
-            };
+            {};
             
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create(" All Skills", 1, 0));
@@ -557,15 +486,12 @@ namespace Template.Modules
         }
         
         [Command("Gheed's Fortune")]
-        public async Task ImageAsync()
+        public async Task GheedsFortuneImageAsync()
         {
             var name = "Gheed's Fortune(62)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/charm_large_3_diablo2_wiki_guide_98px.png";
             var requirements = new List<string>
-            {
-                "0",
-                "0"
-            };
+            {};
             
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("% Extra Gold From Monsters ", 80, 160));
@@ -576,15 +502,12 @@ namespace Template.Modules
         }
         
         [Command("Hellfire Torch")]
-        public async Task ImageAsync()
+        public async Task HellfireTorchImageAsync()
         {
             var name = "Hellfire Torch(75)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/torch_charm_diablo2_wiki_guide_175px.png";
             var requirements = new List<string>
-            {
-                "0",
-                "0"
-            };
+            {};
             
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("% Chance To Cast level 10 Firestorm On Striking", 5, 0));
@@ -598,14 +521,13 @@ namespace Template.Modules
         }
         
         [Command("Greyform")]
-        public async Task ImageAsync()
+        public async Task GreyformImageAsync()
         {
-            var name = "Greyform";
-            var imageLink = "";
+            var name = "Greyform(7)";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/quilted_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "12 Strength",
-                "0"
+                "12 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -620,59 +542,56 @@ namespace Template.Modules
         }
         
         [Command("Blinkbar's Form")]
-        public async Task ImageAsync()
+        public async Task BlinkbarsFormImageAsync()
         {
             var name = "Blinkbat's Form(12)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/leather_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "12 Strength",
-                "0"
+                "12 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create(" Defense", 25, 0));
             affixes.Add(Tuple.Create(" Defense VS. Missile", 50, 0));
-            affixes.Add(Tuple.Create("% Faster Run/Walk", 10, ));
-            affixes.Add(Tuple.Create("% Faster Hit Recovery", 40, ));
+            affixes.Add(Tuple.Create("% Faster Run/Walk", 10, 0));
+            affixes.Add(Tuple.Create("% Faster Hit Recovery", 40, 0));
             affixes.Add(Tuple.Create(" Fire Damage", 3, 6));
         
             await CreateUniqueImage(affixes, name, requirements, imageLink);
         }
         
         [Command("The Centurion")]
-        public async Task ImageAsync()
+        public async Task TheCenturionImageAsync()
         {
             var name = "The centurion(14)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/hard_leather_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "20 Strength",
-                "0"
+                "20 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
-            affixes.Add(Tuple.Create(" Defense", 30, ));
-            affixes.Add(Tuple.Create(" Replenish life", 5, ));
-            affixes.Add(Tuple.Create(" Attack Rating", 50, ));
-            affixes.Add(Tuple.Create(" Mana", 15, ));
-            affixes.Add(Tuple.Create(" Maximum Stamina", 15, ));
-            affixes.Add(Tuple.Create(" Life", 15, ));
-            affixes.Add(Tuple.Create("% Slower Stamina Drain", 25, ));
-            affixes.Add(Tuple.Create(" Damage Reduced", 2, ));
+            affixes.Add(Tuple.Create(" Defense", 30, 0));
+            affixes.Add(Tuple.Create(" Replenish life", 5, 0));
+            affixes.Add(Tuple.Create(" Attack Rating", 50, 0));
+            affixes.Add(Tuple.Create(" Mana", 15, 0));
+            affixes.Add(Tuple.Create(" Maximum Stamina", 15, 0));
+            affixes.Add(Tuple.Create(" Life", 15, 0));
+            affixes.Add(Tuple.Create("% Slower Stamina Drain", 25, 0));
+            affixes.Add(Tuple.Create(" Damage Reduced", 2, 0));
         
             await CreateUniqueImage(affixes, name, requirements, imageLink);
         }
         
         [Command("Twitchthroe")]
-        public async Task ImageAsync()
+        public async Task TwitchthroeImageAsync()
         {
             var name = "Twitchthroe(16)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/studded_leather_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "27 Strength",
-                ""
+                "27 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -687,14 +606,13 @@ namespace Template.Modules
         }
         
         [Command("Darkglow")]
-        public async Task ImageAsync()
+        public async Task DarkglowImageAsync()
         {
             var name = "Darkglow(14)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/ring_mail_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "36 Strength",
-                "0"
+                "36 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -712,14 +630,13 @@ namespace Template.Modules
         }
         
         [Command("Hawkmail")]
-        public async Task ImageAsync()
+        public async Task HawkmailImageAsync()
         {
             var name = "Hawkmail(15)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/scale_mail_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "44 Strength",
-                ""
+                "44 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -733,14 +650,13 @@ namespace Template.Modules
         }
         
         [Command("Venom Ward")]
-        public async Task ImageAsync()
+        public async Task VenomWardImageAsync()
         {
             var name = "Venom Ward(20)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/breast_plate_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "30 Strength",
-                ""
+                "30 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -754,19 +670,18 @@ namespace Template.Modules
         }
         
         [Command("Sparking Mail")]
-        public async Task ImageAsync()
+        public async Task SparkingMailImageAsync()
         {
             var name = "Sparking Mail(17)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/chain_mail_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "48 Strength",
-                "0"
+                "48 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("% Enhanced Defense", 75, 85));
-            affixes.Add(Tuple.Create("% Lightning Resist", 30, ));
+            affixes.Add(Tuple.Create("% Lightning Resist", 30, 0));
             affixes.Add(Tuple.Create(" Attacker Takes Lightning Damage of 10-14", 0, 0));
             affixes.Add(Tuple.Create(" Lightning Damage", 1, 20));
         
@@ -774,14 +689,13 @@ namespace Template.Modules
         }
         
         [Command("Iceblink")]
-        public async Task ImageAsync()
+        public async Task IceblinkImageAsync()
         {
             var name = "Iceblink(22)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/splint_mail_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "51 Strength",
-                "0"
+                "51 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -795,14 +709,13 @@ namespace Template.Modules
         }
         
         [Command("Heavenly Garb")]
-        public async Task ImageAsync()
+        public async Task HeavenlyGarbImageAsync()
         {
             var name = "Heavenly Garb(29)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/light_plate_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "41 Strength",
-                "0"
+                "41 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -817,14 +730,13 @@ namespace Template.Modules
         }
         
         [Command("Boneflesh")]
-        public async Task ImageAsync()
+        public async Task BonefleshImageAsync()
         {
             var name = "Boneflesh(26)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/plate_mail_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "65 Strength",
-                "0"
+                "65 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -837,14 +749,13 @@ namespace Template.Modules
         }
         
         [Command("Rockfleece")]
-        public async Task ImageAsync()
+        public async Task RockfleeceImageAsync()
         {
             var name = "Rockfleece(28)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/field_plate_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "50 Strength",
-                "0"
+                "50 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -858,14 +769,13 @@ namespace Template.Modules
         }
         
         [Command("Rattlecage")]
-        public async Task ImageAsync()
+        public async Task RattlecageImageAsync()
         {
             var name = "Rattlecage(29)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/gothic_plate_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "70 Strength",
-                "0"
+                "70 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -878,14 +788,13 @@ namespace Template.Modules
         }
         
         [Command("Goldskin")]
-        public async Task ImageAsync()
+        public async Task GoldskinImageAsync()
         {
             var name = "Goldskin(28)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/goldskin_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "80 Strength",
-                "0"
+                "80 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -899,14 +808,13 @@ namespace Template.Modules
         }
         
         [Command("Silks of the Victor")]
-        public async Task ImageAsync()
+        public async Task SilksoftheVictorImageAsync()
         {
             var name = "Silks of the Victor(28)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/silks_of_the_victor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "100 Strength",
-                "0"
+                "100 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -919,14 +827,13 @@ namespace Template.Modules
         }
         
         [Command("The Spirit Shroud")]
-        public async Task ImageAsync()
+        public async Task TheSpiritShroudImageAsync()
         {
             var name = "The Spirit Shroud(28)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/quilted_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "38 Strength",
-                "0"
+                "38 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -940,14 +847,13 @@ namespace Template.Modules
         }
         
         [Command("Skin of the Vipermagi")]
-        public async Task ImageAsync()
+        public async Task SkinoftheVipermagiImageAsync()
         {
             var name = "Skin of the Vipermagi(29)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/leather_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "43 Strength",
-                "0"
+                "43 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -961,14 +867,13 @@ namespace Template.Modules
         }
         
         [Command("Skin of the Flayed One")]
-        public async Task ImageAsync()
+        public async Task SkinoftheFlayedOneImageAsync()
         {
             var name = "Skin of the Flayed One(31)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/hard_leather_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "50 Strength",
-                "0"
+                "50 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -982,14 +887,13 @@ namespace Template.Modules
         }
         
         [Command("Iron Pelt")]
-        public async Task ImageAsync()
+        public async Task IronPeltImageAsync()
         {
             var name = "Iron Pelt(33)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/iron_pelt_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "61 Strength",
-                "0"
+                "61 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -1003,14 +907,13 @@ namespace Template.Modules
         }
         
         [Command("Spirit Forge")]
-        public async Task ImageAsync()
+        public async Task SpiritForgeImageAsync()
         {
             var name = "Spirit Forge(35)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/ring_mail_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "74 Strength",
-                "0"
+                "74 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -1026,14 +929,13 @@ namespace Template.Modules
         }
         
         [Command("Crow Caw")]
-        public async Task ImageAsync()
+        public async Task CrowCawImageAsync()
         {
             var name = "Crow Caw(37)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/scale_mail_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "86 Strength",
-                "0"
+                "86 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -1047,14 +949,13 @@ namespace Template.Modules
         }
         
         [Command("Duriel's Shell")]
-        public async Task ImageAsync()
+        public async Task DurielsShellImageAsync()
         {
             var name = "Duriel's Shell(41)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/breast_plate_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "65 Strength",
-                "0"
+                "65 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -1065,21 +966,20 @@ namespace Template.Modules
             affixes.Add(Tuple.Create("% Lightning Resist", 20, 0));
             affixes.Add(Tuple.Create("% Poison Resist", 20, 0));
             affixes.Add(Tuple.Create("% Cold Resist", 50, 0));
-            affixes.Add(Tuple.Create(" Cannot Be Frozen", , 0));
+            affixes.Add(Tuple.Create(" Cannot Be Frozen", 0, 0));
             affixes.Add(Tuple.Create(" Strength", 15, 0));
 
             await CreateUniqueImage(affixes, name, requirements, imageLink);
         }
         
         [Command("Shaftstop")]
-        public async Task ImageAsync()
+        public async Task ShaftstopImageAsync()
         {
             var name = "Shaftstop(38)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/chain_mail_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "92 Strength",
-                "0"
+                "92 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -1092,35 +992,33 @@ namespace Template.Modules
         }
         
         [Command("Skullder's Ire")]
-        public async Task ImageAsync()
+        public async Task SkulldersIreImageAsync()
         {
             var name = "Skullder's Ire(42)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/splint_mail_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "97 Strength",
-                "0"
+                "97 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("% Enhanced Defense", 160, 200));
             affixes.Add(Tuple.Create(" Repairs 1 Durability Every 5 Seconds", 0, 0));
             affixes.Add(Tuple.Create("% Better Chance of Getting Magic Items (Based on Character Level) ", 1, 123));
-            affixes.Add(Tuple.Create(" All Skills", 1, ));
+            affixes.Add(Tuple.Create(" All Skills", 1, 0));
             affixes.Add(Tuple.Create(" Magic Damage Reduced", 10, 0));
 
             await CreateUniqueImage(affixes, name, requirements, imageLink);
         }
         
         [Command("Que-Hegan's Wisdom")]
-        public async Task ImageAsync()
+        public async Task QueHegansWisdomImageAsync()
         {
             var name = "Que-Hegan's Wisdom(51)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/light_plate_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "55 Strength",
-                "0"
+                "55 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -1136,14 +1034,13 @@ namespace Template.Modules
         }
         
         [Command("Guardian Angel")]
-        public async Task ImageAsync()
+        public async Task GuardianAngelImageAsync()
         {
             var name = "Guardian Angel(45)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/plate_mail_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "118 Strength",
-                ""
+                "118 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -1162,14 +1059,13 @@ namespace Template.Modules
         }
         
         [Command("Toothrow")]
-        public async Task ImageAsync()
+        public async Task ToothrowImageAsync()
         {
             var name = "Toothrow(48)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/field_plate_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "103 Strength",
-                "0"
+                "103 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -1184,14 +1080,13 @@ namespace Template.Modules
         }
         
         [Command("Atma's Wail")]
-        public async Task ImageAsync()
+        public async Task AtmasWailImageAsync()
         {
             var name = "Atma's Wail(51)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/gothic_plate_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "125 Strength",
-                "0"
+                "125 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -1207,14 +1102,13 @@ namespace Template.Modules
         }
         
         [Command("Black Hades")]
-        public async Task ImageAsync()
+        public async Task BlackHadesImageAsync()
         {
             var name = "Black Hades(53)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/full_plate_mail_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "140 Strength",
-                ""
+                "140 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -1229,14 +1123,13 @@ namespace Template.Modules
         }
         
         [Command("Corpsemourn")]
-        public async Task ImageAsync()
+        public async Task CorpsemournImageAsync()
         {
             var name = "Corpsemourn(55)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/corpsemourn_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "170 Strength",
-                "0"
+                "170 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -1252,14 +1145,13 @@ namespace Template.Modules
         }
         
         [Command("Ormus Robes")]
-        public async Task ImageAsync()
+        public async Task OrmusRobesImageAsync()
         {
             var name = "Ormus Robes(75)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/quilted_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "77 Strength",
-                "0"
+                "77 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -1275,14 +1167,13 @@ namespace Template.Modules
         }
         
         [Command("The Gladiator's Bane")]
-        public async Task ImageAsync()
+        public async Task TheGladiatorsBaneImageAsync()
         {
             var name = "The Gladiator's Bane(85)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/studded_leather_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "111 Strength",
-                "0"
+                "111 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -1299,14 +1190,13 @@ namespace Template.Modules
         }
         
         [Command("Arkaine's Valor")]
-        public async Task ImageAsync()
+        public async Task ArkainesValorImageAsync()
         {
             var name = "Arkaine's Valor";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/splint_mail_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "165 Strength",
-                "0"
+                "165 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -1320,14 +1210,13 @@ namespace Template.Modules
         }
         
         [Command("Leviathan")]
-        public async Task ImageAsync()
+        public async Task LeviathanImageAsync()
         {
             var name = "Leviathan(65)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/field_plate_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "174 Strength",
-                "0"
+                "174 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -1341,14 +1230,13 @@ namespace Template.Modules
         }
         
         [Command("Steel Carapace")]
-        public async Task ImageAsync()
+        public async Task SteelCarapaceImageAsync()
         {
             var name = "Steel Carapace(66)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/full_plate_mail_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "230 Strength",
-                "0"
+                "230 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -1364,14 +1252,13 @@ namespace Template.Modules
         }
         
         [Command("Templar's Might")]
-        public async Task ImageAsync()
+        public async Task TemplarsMightImageAsync()
         {
             var name = "Templar's Might(74)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/silks_of_the_victor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "232 Strength",
-                ""
+                "232 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -1387,15 +1274,12 @@ namespace Template.Modules
         }
         
         [Command("Tyreal's Might")]
-        public async Task ImageAsync()
+        public async Task TyrealsMightImageAsync()
         {
             var name = "Tyreal's Might(84)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/silks_of_the_victor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
-            {
-                "0",
-                "0"
-            };
+            {};
             
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("% Enhanced Defense", 120, 150));
@@ -1411,16 +1295,13 @@ namespace Template.Modules
             await CreateUniqueImage(affixes, name, requirements, imageLink);
         }
         
-        }
-        
         [Command("Lenymo")]
         public async Task LenymoImageAsync()
         {
             var name = "Lenymo(7)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/sash_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
-            {
-            };
+            {};
             
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("% Regenerate Mana", 30, 0));
@@ -1437,8 +1318,7 @@ namespace Template.Modules
             var name = "Snakecord(12)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/light_belt_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
-            {
-            };
+            {};
             
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("% Enhanced Defense", 20, 30));
@@ -1584,8 +1464,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/heavy_belt_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "88 Strength",
-                ""
+                "88 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -1608,8 +1487,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/plated_belt_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "110 Strength",
-                ""
+                "110 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -1633,8 +1511,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/sash_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "50 Strength",
-                ""
+                "50 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -1655,8 +1532,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/light_belt_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "50 Strength",
-                ""
+                "50 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -1677,8 +1553,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/bell_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "106 Strength",
-                ""
+                "106 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -1698,10 +1573,7 @@ namespace Template.Modules
             var name = "Hotspur(5)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/leather_boots_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
-            {
-                "",
-                ""
-            };
+            {};
             
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("% Enhanced Defense", 10, 20));
@@ -1721,8 +1593,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/heavy_boots_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "18 Strength",
-                ""
+                "18 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -1743,8 +1614,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/chain_boots_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "30 Strength",
-                ""
+                "30 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -1765,8 +1635,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/light_plate_boots_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "50 Strength",
-                ""
+                "50 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -1787,8 +1656,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/plate_boots_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "70 Strength",
-                ""
+                "70 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -1810,8 +1678,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/leather_boots_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "20 Strength",
-                ""
+                "20 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -1835,8 +1702,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/heavy_boots_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "47 Strength",
-                ""
+                "47 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -1859,8 +1725,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/chain_boots_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "65 Strength",
-                ""
+                "65 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -1880,8 +1745,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/light_plate_boots_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "95 Strength",
-                ""
+                "95 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -1904,8 +1768,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/plate_boots_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "94 Strength",
-                ""
+                "94 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -1927,8 +1790,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/heavy_boots_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "91 Strength",
-                ""
+                "91 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -1952,8 +1814,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/chain_boots_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "118 Strength",
-                ""
+                "118 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -1978,8 +1839,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/plate_boots_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "167 Strength",
-                ""
+                "167 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -1999,10 +1859,7 @@ namespace Template.Modules
             var name = "Rainbow Facet Cold(49)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/jewel_socketed_item_diablo2_wiki_guide_98px.png";
             var requirements = new List<string>
-            {
-                "",
-                ""
-            };
+            {};
             
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("% Chance to Cast Level 43 Frost Nova When You Level Up\nOR", 100, 0));
@@ -2020,10 +1877,7 @@ namespace Template.Modules
             var name = "Rainbow Facet Fire(49)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/jewel4_socketed_item_diablo2_wiki_guide_98px.png";
             var requirements = new List<string>
-            {
-                "",
-                ""
-            };
+            {};
             
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("% Chance to Cast Level 29 Blaze When You Level Up\nOR", 100, 0));
@@ -2041,10 +1895,7 @@ namespace Template.Modules
             var name = "Rainbow Facet Light(49)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/jewel5_socketed_item_diablo2_wiki_guide_98px.png";
             var requirements = new List<string>
-            {
-                "",
-                ""
-            };
+            {};
             
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("% Chance to Cast Level 41 Nova When You Level Up\nOR", 100, 0));
@@ -2062,10 +1913,7 @@ namespace Template.Modules
             var name = "Rainbow Facet Poison(49)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/jewel3_socketed_item_diablo2_wiki_guide_98px.png";
             var requirements = new List<string>
-            {
-                "",
-                ""
-            };
+            {};
             
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("% Chance to Cast Level 23 Venom When You Level Up\nOR", 100, 0));
@@ -2083,10 +1931,7 @@ namespace Template.Modules
             var name = "Kira's Guardian(77)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/tiara_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
-            {
-                "",
-                ""
-            };
+            {};
             
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create(" Defense", 50, 120));
@@ -2103,10 +1948,7 @@ namespace Template.Modules
             var name = "Griffon's Eye(76)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/diadem_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
-            {
-                "",
-                ""
-            };
+            {};
             
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create(" Defense ", 100, 200));
@@ -2124,10 +1966,7 @@ namespace Template.Modules
             var name = "The Hand of Broc(5)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/leather_gloves_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
-            {
-                "",
-                ""
-            };
+            {};
             
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("% Enhanced Defense", 10, 20));
@@ -2146,10 +1985,7 @@ namespace Template.Modules
             var name = "Bloodfist(9)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/heavy_gloves_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
-            {
-                "",
-                ""
-            };
+            {};
             
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("% Enhanced Defense", 10, 20));
@@ -2169,8 +2005,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/chain_gloves_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "25 Strength",
-                ""
+                "25 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -2191,8 +2026,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/light_gauntlets_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "45 Strength",
-                ""
+                "45 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -2213,8 +2047,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/gauntlets_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "60 Strength",
-                ""
+                "60 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -2234,8 +2067,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/leather_gloves_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "20 Strength",
-                ""
+                "20 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -2257,8 +2089,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/heavy_gloves_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "20 Strength",
-                ""
+                "20 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -2278,8 +2109,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/chain_gloves_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "58 Strength",
-                ""
+                "58 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -2299,8 +2129,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/light_gauntlets_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "88 Strength",
-                ""
+                "88 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -2321,8 +2150,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/gauntlets_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "110 Strength",
-                ""
+                "110 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -2342,8 +2170,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/heavy_gloves_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "50 Strength",
-                ""
+                "50 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -2364,8 +2191,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/chain_gloves_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "50 Strength",
-                ""
+                "50 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -2385,8 +2211,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/gauntlets_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "185 Strength",
-                ""
+                "185 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -2405,8 +2230,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/biggins_bonnet_helm_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "15 Strength",
-                ""
+                "15 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -2424,8 +2248,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/berserkers_headgear_helm_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "26 Strength",
-                ""
+                "26 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -2445,8 +2268,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/duskdeep_helm_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "41 Strength",
-                ""
+                "41 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -2467,8 +2289,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/demonhorns_edge_helm_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "63 Strength",
-                ""
+                "63 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -2489,8 +2310,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/mask_helm_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "23 Strength",
-                ""
+                "23 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -2510,8 +2330,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/crown_helm_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "55 Strength",
-                ""
+                "55 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -2534,8 +2353,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/wormskull_helm_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "25 Strength",
-                ""
+                "25 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -2555,8 +2373,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/cap_helm_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "20 Strength",
-                ""
+                "20 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -2577,8 +2394,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/rockstopper_helm_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "43 Strength",
-                ""
+                "43 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -2600,8 +2416,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/berserkers_headgear_helm_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "59 Strength",
-                ""
+                "59 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -2622,8 +2437,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/duskdeep_helm_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "82 Strength",
-                ""
+                "82 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -2645,8 +2459,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/demonhorns_edge_helm_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "115 Strength",
-                ""
+                "115 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -2666,8 +2479,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/mask_helm_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "55 Strength",
-                ""
+                "55 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -2688,8 +2500,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/crown_of_thieves_helm_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "103 Strength",
-                ""
+                "103 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -2711,8 +2522,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/wormskull_helm_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "58 Strenght",
-                ""
+                "58 Strenght"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -2734,10 +2544,7 @@ namespace Template.Modules
             var name = "Harlequin Crest(62)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/cap_helm_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
-            {
-                "",
-                ""
-            };
+            {};
             
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create(" All Skills", 2, 0));
@@ -2757,8 +2564,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/berserkers_headgear_helm_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "109 Strength",
-                ""
+                "109 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -2777,8 +2583,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/great_helm_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "192 Strength",
-                ""
+                "192 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -2799,8 +2604,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/great_helm_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "96 Strength",
-                ""
+                "96 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -2823,8 +2627,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/mask_helm_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "102 Strength",
-                ""
+                "102 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -2849,8 +2652,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/crown_helm_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "174 Strength",
-                ""
+                "174 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -2873,8 +2675,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/bone_helm_armor_diablo2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "106 Strength",
-                ""
+                "106 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -2894,8 +2695,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/pelta_lunata_diablo2_wiki_guide_196x294px.png";
             var requirements = new List<string>
             {
-                "12 Strength",
-                ""
+                "12 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -2917,8 +2717,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/umbral_disk_diablo2_wiki_guide_196x294px.png";
             var requirements = new List<string>
             {
-                "22 Strength",
-                ""
+                "22 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -2941,8 +2740,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/stormguild_diablo2_wiki_guide_196x294px.png";
             var requirements = new List<string>
             {
-                "34 Strength",
-                ""
+                "34 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -2964,8 +2762,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/steelclash_diablo2_wiki_guide_196x294px.png";
             var requirements = new List<string>
             {
-                "47 Strength",
-                ""
+                "47 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -2988,8 +2785,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/swordback_hold_diablo2_wiki_guide_196x294px.png";
             var requirements = new List<string>
             {
-                "30 Strength",
-                ""
+                "30 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -3009,8 +2805,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/bverrit_keep_1_diablo2_wiki_guide_196x294px.png";
             var requirements = new List<string>
             {
-                "75 Strength",
-                ""
+                "75 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -3031,8 +2826,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/wall_of_the_eyeless_diablo2_wiki_guide_196x294px.png";
             var requirements = new List<string>
             {
-                "25 Strength",
-                ""
+                "25 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -3053,8 +2847,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/the_ward_diablo2_wiki_guide_196x294px.png";
             var requirements = new List<string>
             {
-                "60 Strength",
-                ""
+                "60 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -3075,8 +2868,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/pelta_lunata_diablo2_wiki_guide_196x294px.png";
             var requirements = new List<string>
             {
-                "38 Strength",
-                ""
+                "38 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -3096,8 +2888,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/moser's_blessed_circle_diablo2_wiki_guide_196x294px.png";
             var requirements = new List<string>
             {
-                "53 Strength",
-                ""
+                "53 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -3117,8 +2908,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/stormchaser_diablo2_wiki_guide_196x294px.png";
             var requirements = new List<string>
             {
-                "71 Strength",
-                ""
+                "71 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -3142,8 +2932,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/steelclash_diablo2_wiki_guide_196x294px.png";
             var requirements = new List<string>
             {
-                "91 Strength",
-                ""
+                "91 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -3166,8 +2955,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/lance_guard_diablo2_wiki_guide_196x294px.png";
             var requirements = new List<string>
             {
-                "65 Strength",
-                ""
+                "65 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -3188,8 +2976,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/bverrit_keep_1_diablo2_wiki_guide_196x294px.png";
             var requirements = new List<string>
             {
-                "133 Strength",
-                ""
+                "133 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -3210,8 +2997,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/lidless_wall_diablo2_wiki_guide_196x294px.png";
             var requirements = new List<string>
             {
-                "58 Strength",
-                ""
+                "58 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -3233,8 +3019,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/the_ward_diablo2_wiki_guide_196x294px.png";
             var requirements = new List<string>
             {
-                "110 Strength",
-                ""
+                "110 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -3256,8 +3041,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/umbral_disk_diablo2_wiki_guide_196x294px.png";
             var requirements = new List<string>
             {
-                "100 Strength",
-                ""
+                "100 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -3279,8 +3063,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/steelclash_diablo2_wiki_guide_196x294px.png";
             var requirements = new List<string>
             {
-                "156 Strength",
-                ""
+                "156 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -3304,8 +3087,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/swordback_hold_diablo2_wiki_guide_196x294px.png";
             var requirements = new List<string>
             {
-                "118 Strength",
-                ""
+                "118 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -3325,8 +3107,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/bverrit_keep_1_diablo2_wiki_guide_196x294px.png";
             var requirements = new List<string>
             {
-                "219 Strength",
-                ""
+                "219 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -3347,8 +3128,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/wall_of_the_eyeless_diablo2_wiki_guide_196x294px.png";
             var requirements = new List<string>
             {
-                "106 Strength",
-                ""
+                "106 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -3369,8 +3149,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/the_ward_diablo2_wiki_guide_196x294px.png";
             var requirements = new List<string>
             {
-                "185 Strength",
-                ""
+                "185 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
