@@ -58,6 +58,572 @@ namespace Template.Modules
         }
         */
 
+        [Command("Uniques")]
+        [Alias("Unique")]
+        public async Task UniqueList([Remainder] string args = null)
+        {
+            var type = new List<string> {};
+
+            string helms = "**Helms:**\n";
+
+            helms += "Wolfhowl\n";
+            helms += "Demonhorn's Edge\n";
+            helms += "Halaberd's Reign\n";
+            helms += "Jalal's Mane\n";
+            helms += "Cerebus' Bite\n";
+            helms += "Ravenlore\n";
+            helms += "Spirit Keeper\n";
+            helms += "Biggin's Bonnet\n";
+            helms += "Tarnhelm\n";
+            helms += "Coif of Glory\n";
+            helms += "Duskdeep\n";
+            helms += "Howltusk\n";
+            helms += "The Face of Horror\n";
+            helms += "Undead Crown\n";
+            helms += "Wormskull\n";
+            helms += "Peasant Crown\n";
+            helms += "Rockstopper\n";
+            helms += "Stealskull\n";
+            helms += "Darksight Helm\n";
+            helms += "Valkyrie Wing\n";
+            helms += "Blackhorn's Face\n";
+            helms += "Crown of Thieves\n";
+            helms += "Vampire Gaze\n";
+            helms += "Harlequin Crest\n";
+            helms += "Steel Shade\n";
+            helms += "Veil of Steel\n";
+            helms += "Nightwing's Veil\n";
+            helms += "Andariel's Visage\n";
+            helms += "Crown of Ages\n";
+            helms += "Giant Skull\n";
+
+            string chests = "**Chests:**\n";
+
+            chests += "The Spirit Shroud\n";
+            chests += "Skin of the Vipermagi\n";
+            chests += "Skin of the Flayed One\n";
+            chests += "Iron Pelt\n";
+            chests += "Crow Caw\n";
+            chests += "Spirit Forge\n";
+            chests += "Duriel's Shell\n";
+            chests += "Shaftstop\n";
+            chests += "Skullder's Ire\n";
+            chests += "Que-Hegan's Wisdom\n";
+            chests += "Toothrow\n";
+            chests += "Guardian Angel\n";
+            chests += "Atma's Wail\n";
+            chests += "Black Hades\n";
+            chests += "Corpsemourn\n";
+            chests += "Greyform\n";
+            chests += "Blinkbat's Form\n";
+            chests += "The Centurion\n";
+            chests += "Twitchthroe\n";
+            chests += "Darkglow\n";
+            chests += "Hawkmail\n";
+            chests += "Venom Ward\n";
+            chests += "Sparking Mail\n";
+            chests += "Iceblink\n";
+            chests += "Heavenly Garb\n";
+            chests += "Rockfleece\n";
+            chests += "Boneflesh\n";
+            chests += "Rattlecage\n";
+            chests += "Goldskin\n";
+            chests += "Silks of the Victor\n";
+            chests += "Ormus' Robes\n";
+            chests += "The Gladiator's Bane\n";
+            chests += "Arkaine's Valor\n";
+            chests += "Leviathan\n";
+            chests += "Steel Carapace\n";
+            chests += "Templar's Might\n";
+            chests += "Tyrael's Might\n";
+
+            string belts = "**Belts**\n";
+
+            belts += "Lenymo\n";
+            belts += "Snakecord\n";
+            belts += "Nightsmoke\n";
+            belts += "Goldwrap\n";
+            belts += "Bladebuckle\n";
+            belts += "String of Ears\n";
+            belts += "Razortail\n";
+            belts += "Gloom's Trap\n";
+            belts += "Snowclash\n";
+            belts += "Thundergod's Vigor\n";
+            belts += "Arachnid Mesh\n";
+            belts += "Nosferatu's Coil\n";
+            belts += "Verdungo's Hearty Cord\n";
+
+            string boots = "**Boots**\n";
+
+            boots += "Hotspur\n";
+            boots += "Gorefoot\n";
+            boots += "Treads of Cthon\n";
+            boots += "Goblin Toe\n";
+            boots += "Tearhaunch\n";
+            boots += "Infernostride\n";
+            boots += "Waterwalk\n";
+            boots += "Silkweave\n";
+            boots += "War Traveler\n";
+            boots += "Gore Rider\n";
+            boots += "Sandstorm Trek\n";
+            boots += "Marrowwalk\n";
+            boots += "Shadow Dancer\n";
+
+            string gloves = "**Gloves**\n";
+
+            gloves += "The Hand of Broc\n";
+            gloves += "Bloodfist\n";
+            gloves += "Chance Guards\n";
+            gloves += "Magefist\n";
+            gloves += "Frostburn\n";
+            gloves += "Venom Grip\n";
+            gloves += "Gravepalm\n";
+            gloves += "Ghoulhide\n";
+            gloves += "Lava Gout\n";
+            gloves += "Hellmouth\n";
+            gloves += "Dracul's Grasp\n";
+            gloves += "Soul Drainer\n";
+            gloves += "Steelrend\n";
+
+            string shields = "**Shields**\n";
+
+            shields += "Homunculus\n";
+            shields += "Darkforce Spawn\n";
+            shields += "Boneflame\n";
+            shields += "Alma Negra\n";
+            shields += "Herald Of Zakarum\n";
+            shields += "Dragonscale\n";
+            shields += "Pelta Lunata\n";
+            shields += "Umbral Disk\n";
+            shields += "Stormguild\n";
+            shields += "Steelclash\n";
+            shields += "Swordback Hold\n";
+            shields += "Bverrit Keep\n";
+            shields += "Wall of the Eyeless\n";
+            shields += "The Ward\n";
+            shields += "Visceratuant\n";
+            shields += "Moser's Blessed Circle\n";
+            shields += "Stormchaser\n";
+            shields += "Tiamat's Rebuke\n";
+            shields += "Lance Guard\n";
+            shields += "Gerke's Sanctuary\n";
+            shields += "Lidless Wall\n";
+            shields += "Radament's Sphere\n";
+            shields += "Blackoak Shield\n";
+            shields += "Stormshield\n";
+            shields += "Spike Thorn\n";
+            shields += "Medusa's Gaze\n";
+            shields += "Head Hunter's Glory\n";
+            shields += "Spirit Ward\n";
+
+            string rings = "**Rings**\n";
+
+            rings += "Nagelring\n";
+            rings += "Manald Heal\n";
+            rings += "Stone of Jordan\n";
+            rings += "Dwarf Star\n";
+            rings += "Raven Frost\n";
+            rings += "Bul-Kathos' Wedding Band\n";
+            rings += "Carrion Wind\n";
+            rings += "Nature's Peace\n";
+            rings += "Wisp Projector\n";
+
+            string amulets = "**Amulets**\n";
+
+            amulets += "Nokozan Relic\n";
+            amulets += "The Eye of Etlich\n";
+            amulets += "The Mahim-Oak Curio\n";
+            amulets += "Saracen's Chance\n";
+            amulets += "The Cat's Eye\n";
+            amulets += "Crescent Moon\n";
+            amulets += "Atma's Scarab\n";
+            amulets += "The Rising Sun\n";
+            amulets += "Highlord's Wrath\n";
+            amulets += "Mara's Kaleidoscope\n";
+            amulets += "Seraph's Hymn\n";
+            amulets += "Metalgrid\n";
+
+            string charms = "**Charms**\n";
+
+            charms += "Annihilus\n";
+            charms += "Gheed's Fortune\n";
+            charms += "Hellfire Torch\n";
+
+            string jewels = "**Jewels**\n";
+
+            jewels += "Rainbow Face Cold\n";
+            jewels += "Rainbow Face Fire\n";
+            jewels += "Rainbow Face Light\n";
+            jewels += "Rainbow Face Poison\n";
+
+            string swords = "**Swords**\n";
+
+            swords += "Bul-Kathos' Sacred Charge\n";
+
+            var separatedArgs = new List<string> { };
+            int firstIndex = 0, nextIndex = 0, thisIndex = 0, previousIndex = 0;
+
+            if (args != null)
+            {
+                foreach (var thisArg in args)
+                {
+                    if (thisArg == ' ')
+                    {
+                        nextIndex = thisIndex;
+                    }
+                    if (previousIndex < nextIndex)
+                    {
+                        separatedArgs.Add(args.Substring(firstIndex, (nextIndex - firstIndex)));
+                        previousIndex = nextIndex;
+                        firstIndex = nextIndex + 1;
+                    }
+                    thisIndex++;
+                }
+
+                nextIndex = thisIndex;
+                separatedArgs.Add(args.Substring(firstIndex, (nextIndex - firstIndex)));
+            }
+
+
+            string message = "", message2 = "", message3 = "", message4 = "";
+            type.Add(helms);
+            type.Add(chests);
+            type.Add(belts);
+            type.Add(boots);
+            type.Add(gloves);
+            type.Add(shields);
+            type.Add(rings);
+            type.Add(amulets);
+            type.Add(charms);
+            type.Add(jewels);
+            type.Add(swords);
+
+            foreach(var thisArg in separatedArgs)
+            {
+                switch (thisArg.ToLower())
+                {
+                    case "helms":
+                    case "helm":
+                        if (message.Length < 1990 - (type[0] + "\n").Length)
+                        {
+                            message += type[0] + "\n";
+                        }
+                        else if (message2.Length < 1990 - (type[0] + "\n").Length)
+                        {
+                            message2 += type[0] + "\n";
+                        }
+                        else if (message3.Length < 1990 - (type[0] + "\n").Length)
+                        {
+                            message3 += type[0] + "\n";
+                        }
+                        else if (message4.Length < 1990 - (type[0] + "\n").Length)
+                        {
+                            message4 += type[0] + "\n";
+                        }
+                        break;
+                    case "chests":
+                    case "chest":
+                        if (message.Length < 1990 - (type[1] + "\n").Length)
+                        {
+                            message += type[1] + "\n";
+                        }
+                        else if (message2.Length < 1990 - (type[1] + "\n").Length)
+                        {
+                            message2 += type[1] + "\n";
+                        }
+                        else if (message3.Length < 1990 - (type[1] + "\n").Length)
+                        {
+                            message3 += type[1] + "\n";
+                        }
+                        else if (message4.Length < 1990 - (type[1] + "\n").Length)
+                        {
+                            message4 += type[1] + "\n";
+                        }
+                        break;
+                    case "belts":
+                    case "belt":
+                        if (message.Length < 1990 - (type[2] + "\n").Length)
+                        {
+                            message += type[2] + "\n";
+                        }
+                        else if (message2.Length < 1990 - (type[2] + "\n").Length)
+                        {
+                            message2 += type[2] + "\n";
+                        }
+                        else if (message3.Length < 1990 - (type[2] + "\n").Length)
+                        {
+                            message3 += type[2] + "\n";
+                        }
+                        else if (message4.Length < 1990 - (type[2] + "\n").Length)
+                        {
+                            message4 += type[2] + "\n";
+                        }
+                        break;
+                    case "boots":
+                    case "boot":
+                        if (message.Length < 1990 - (type[3] + "\n").Length)
+                        {
+                            message += type[3] + "\n";
+                        }
+                        else if (message2.Length < 1990 - (type[3] + "\n").Length)
+                        {
+                            message2 += type[3] + "\n";
+                        }
+                        else if (message3.Length < 1990 - (type[3] + "\n").Length)
+                        {
+                            message3 += type[3] + "\n";
+                        }
+                        else if (message4.Length < 1990 - (type[3] + "\n").Length)
+                        {
+                            message4 += type[3] + "\n";
+                        }
+                        break;
+                    case "gloves":
+                    case "glove":
+                        if (message.Length < 1990 - (type[4] + "\n").Length)
+                        {
+                            message += type[4] + "\n";
+                        }
+                        else if (message2.Length < 1990 - (type[4] + "\n").Length)
+                        {
+                            message2 += type[4] + "\n";
+                        }
+                        else if (message3.Length < 1990 - (type[4] + "\n").Length)
+                        {
+                            message3 += type[4] + "\n";
+                        }
+                        else if (message4.Length < 1990 - (type[4] + "\n").Length)
+                        {
+                            message4 += type[4] + "\n";
+                        }
+                        break;
+                    case "shields":
+                    case "shield":
+                        if (message.Length < 1990 - (type[5] + "\n").Length)
+                        {
+                            message += type[5] + "\n";
+                        }
+                        else if (message2.Length < 1990 - (type[5] + "\n").Length)
+                        {
+                            message2 += type[5] + "\n";
+                        }
+                        else if (message3.Length < 1990 - (type[5] + "\n").Length)
+                        {
+                            message3 += type[5] + "\n";
+                        }
+                        else if (message4.Length < 1990 - (type[5] + "\n").Length)
+                        {
+                            message4 += type[5] + "\n";
+                        }
+                        break;
+                    case "rings":
+                    case "ring":
+                        if (message.Length < 1990 - (type[6] + "\n").Length)
+                        {
+                            message += type[6] + "\n";
+                        }
+                        else if (message2.Length < 1990 - (type[6] + "\n").Length)
+                        {
+                            message2 += type[6] + "\n";
+                        }
+                        else if (message3.Length < 1990 - (type[6] + "\n").Length)
+                        {
+                            message3 += type[6] + "\n";
+                        }
+                        else if (message4.Length < 1990 - (type[6] + "\n").Length)
+                        {
+                            message4 += type[6] + "\n";
+                        }
+                        break;
+                    case "amulets":
+                    case "amulet":
+                        if (message.Length < 1990 - (type[7] + "\n").Length)
+                        {
+                            message += type[7] + "\n";
+                        }
+                        else if (message2.Length < 1990 - (type[7] + "\n").Length)
+                        {
+                            message2 += type[7] + "\n";
+                        }
+                        else if (message3.Length < 1990 - (type[7] + "\n").Length)
+                        {
+                            message3 += type[7] + "\n";
+                        }
+                        else if (message4.Length < 1990 - (type[7] + "\n").Length)
+                        {
+                            message4 += type[7] + "\n";
+                        }
+                        break;
+                    case "charms":
+                    case "charm":
+                        if (message.Length < 1990 - (type[8] + "\n").Length)
+                        {
+                            message += type[8] + "\n";
+                        }
+                        else if (message2.Length < 1990 - (type[8] + "\n").Length)
+                        {
+                            message2 += type[8] + "\n";
+                        }
+                        else if (message3.Length < 1990 - (type[8] + "\n").Length)
+                        {
+                            message3 += type[8] + "\n";
+                        }
+                        else if (message4.Length < 1990 - (type[8] + "\n").Length)
+                        {
+                            message4 += type[8] + "\n";
+                        }
+                        break;
+                    case "jewels":
+                    case "jewel":
+                        if (message.Length < 1990 - (type[9] + "\n").Length)
+                        {
+                            message += type[9] + "\n";
+                        }
+                        else if (message2.Length < 1990 - (type[9] + "\n").Length)
+                        {
+                            message2 += type[9] + "\n";
+                        }
+                        else if (message3.Length < 1990 - (type[9] + "\n").Length)
+                        {
+                            message3 += type[9] + "\n";
+                        }
+                        else if (message4.Length < 1990 - (type[9] + "\n").Length)
+                        {
+                            message4 += type[9] + "\n";
+                        }
+                        break;
+                    case "swords":
+                    case "sword":
+                        if (message.Length < 1990 - (type[10] + "\n").Length)
+                        {
+                            message += type[10] + "\n";
+                        }
+                        else if (message2.Length < 1990 - (type[10] + "\n").Length)
+                        {
+                            message2 += type[10] + "\n";
+                        }
+                        else if (message3.Length < 1990 - (type[10] + "\n").Length)
+                        {
+                            message3 += type[10] + "\n";
+                        }
+                        else if (message4.Length < 1990 - (type[10] + "\n").Length)
+                        {
+                            message4 += type[10] + "\n";
+                        }
+                        break;
+                    case "armor":
+                        for(int i = 0; i < 6; i++)
+                        {
+                            if (message.Length < 1990 - (type[i] + "\n").Length)
+                            {
+                                message += type[i] + "\n";
+                            }
+                            else if (message2.Length < 1990 - (type[i] + "\n").Length)
+                            {
+                                message2 += type[i] + "\n";
+                            }
+                            else if (message3.Length < 1990 - (type[i] + "\n").Length)
+                            {
+                                message3 += type[i] + "\n";
+                            }
+                            else if (message4.Length < 1990 - (type[i] + "\n").Length)
+                            {
+                                message4 += type[i] + "\n";
+                            }
+                        }
+                        break;
+                    case "jewelry":
+                        for(int i = 6; i < 10; i++)
+                        {
+                            if (message.Length < 1990 - (type[i] + "\n").Length)
+                            {
+                                message += type[i] + "\n";
+                            }
+                            else if (message2.Length < 1990 - (type[i] + "\n").Length)
+                            {
+                                message2 += type[i] + "\n";
+                            }
+                            else if (message3.Length < 1990 - (type[i] + "\n").Length)
+                            {
+                                message3 += type[i] + "\n";
+                            }
+                            else if (message4.Length < 1990 - (type[i] + "\n").Length)
+                            {
+                                message4 += type[i] + "\n";
+                            }
+                        }
+                        break;
+                    case "weapons":
+                        for(int i = 10; i < 11; i++)
+                        {
+                            if (message.Length < 1990 - (type[i] + "\n").Length)
+                            {
+                                message += type[i] + "\n";
+                            }
+                            else if (message2.Length < 1990 - (type[i] + "\n").Length)
+                            {
+                                message2 += type[i] + "\n";
+                            }
+                            else if (message3.Length < 1990 - (type[i] + "\n").Length)
+                            {
+                                message3 += type[i] + "\n";
+                            }
+                            else if (message4.Length < 1990 - (type[i] + "\n").Length)
+                            {
+                                message4 += type[i] + "\n";
+                            }
+                        }
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+            if( (message == "") && (message2 == "") && (message3 == "") && (message4 == "") )
+            {
+                foreach(var thisType in type)
+                {
+                    if (message.Length < 1990 - (thisType + "\n").Length)
+                    {
+                        message += thisType + "\n";
+                    }
+                    else if (message2.Length < 1990 - (thisType + "\n").Length)
+                    {
+                        message2 += thisType + "\n";
+                    }
+                    else if (message3.Length < 1990 - (thisType + "\n").Length)
+                    {
+                        message3 += thisType + "\n";
+                    }
+                    else if (message4.Length < 1990 - (thisType + "\n").Length)
+                    {
+                        message4 += thisType + "\n";
+                    }
+                }
+            }
+
+            if (message != "")
+            {
+                await Context.Channel.SendMessageAsync(message);
+                if (message2 != "")
+                {
+                    await Context.Channel.SendMessageAsync(message2);
+                    if (message3 != "")
+                    {
+                        await Context.Channel.SendMessageAsync(message3);
+                        if (message4 != "")
+                        {
+                            await Context.Channel.SendMessageAsync(message4);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                await Context.Channel.SendMessageAsync("Arguments no recognized");
+            }
+        }
+
         [Command("Bul-Kathos' Sacred Charge")]
         [Alias("BKSC")]
         public async Task BulKathosSacredChargeImageAsync()
