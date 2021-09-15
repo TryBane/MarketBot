@@ -256,9 +256,267 @@ namespace Template.Modules
             jewels += "Rainbow Face Light\n";
             jewels += "Rainbow Face Poison\n";
 
+            string axes = "**Axes**\n";
+
+            axes += "The Gnasher\n";
+            axes += "Deathspade\n";
+            axes += "Bladebone\n";
+            axes += "Skull Splitter\n";
+            axes += "Rakescar\n";
+            axes += "Axe of Fechmar\n";
+            axes += "Goreshovel\n";
+            axes += "The Chieftain\n";
+            axes += "Brainhew\n";
+            axes += "Humongous\n";
+            axes += "Razor's Edge\n";
+            axes += "Rune Master\n";
+            axes += "Cranebeak\n";
+            axes += "Death Cleaver\n";
+            axes += "Ethereal Edge\n";
+            axes += "Hellslayer\n";
+            axes += "Messerchmidt's Reaver\n";
+            axes += "Executioner's Justice\n";
+            axes += "Coldkill\n";
+            axes += "Butcher's Pupil\n";
+            axes += "Islestrike\n";
+            axes += "Pompeii's Wrath\n";
+            axes += "Guardian Naga\n";
+            axes += "Warlord's Trust\n";
+            axes += "Spellsteel\n";
+            axes += "Stormrider\n";
+            axes += "Boneslayer Blade\n";
+            axes += "The Minotaur\n";
+
+            string bows = "**Bows**\n";
+
+            bows += "Pluckeye\n";
+            bows += "Witherspring\n";
+            bows += "Raven Claw\n";
+            bows += "Rogue's Bow\n";
+            bows += "Stormstrike\n";
+            bows += "Wizendraw\n";
+            bows += "Hellclap\n";
+            bows += "Blastbark\n";
+            bows += "Skystrike\n";
+            bows += "Riphook\n";
+            bows += "Kuko Shukaku\n";
+            bows += "Endlesshail\n";
+            bows += "Witchwild String\n";
+            bows += "Cliffkiller\n";
+            bows += "Magewrath\n";
+            bows += "Goldstrike Arch\n";
+            bows += "Eaglehorn\n";
+            bows += "Widowmaker\n";
+            bows += "Windforce\n";
+            bows += "Lycander's Aim\n";
+            bows += "Blood Raven's Charge\n";
+
+            string clubs = "**Clubs**\n";
+
+            clubs += "Felloak\n";
+            clubs += "Stoutnail\n";
+            clubs += "Dark Clan Crusher\n";
+            clubs += "Fleshrender\n";
+            clubs += "Nord's Tenderizer\n";
+            clubs += "Demon Limb\n";
+
+            string crossbows = "**Crossbows**\n";
+
+            crossbows += "Leadcrow\n";
+            crossbows += "Ichorsting\n";
+            crossbows += "Hellcast\n";
+            crossbows += "Doomslinger\n";
+            crossbows += "Langer Briser\n";
+            crossbows += "Pus Spitter\n";
+            crossbows += "Buriza-Do Kyanon\n";
+            crossbows += "Demon Machine\n";
+            crossbows += "Hellrack\n";
+            crossbows += "Gut Siphon\n";
+
+            string daggers = "**Daggers**\n";
+
+            daggers += "Gull\n";
+            daggers += "The Diggler\n";
+            daggers += "The Jade Tan Do\n";
+            daggers += "Spectral Shard\n";
+            daggers += "Spineripper\n";
+            daggers += "Heart Carver\n";
+            daggers += "Blackbog's Sharp\n";
+            daggers += "Stormspike\n";
+            daggers += "Wizardspike\n";
+            daggers += "Fleshripper\n";
+            daggers += "Ghostflame\n";
+
+            string hammers = "**Hammers**\n";
+
+            hammers += "Ironstone\n";
+            hammers += "Bonesnap\n";
+            hammers += "Steeldriver\n";
+            hammers += "Earthshaker\n";
+            hammers += "Bloodtree Stump\n";
+            hammers += "The Gavel of Pain\n";
+            hammers += "Stone Crusher\n";
+            hammers += "Schaefer's Hammer\n";
+            hammers += "Windhammer \n";
+            hammers += "Earth Shifter\n";
+            hammers += "The Cranium Basher\n";
+
+            string javelins = "**Javelins**\n";
+
+            javelins += "Demons's Arch\n";
+            javelins += "Wraith Flight\n";
+            javelins += "Gargoyle's Bite\n";
+            javelins += "Titan's Revenge\n";
+            javelins += "Thunderstroke\n";
+
+            string katars = "**Katars**\n";
+
+            katars += "Shadow Killer\n";
+            katars += "Bartuc's Cut-Throat\n";
+            katars += "Jade Talons\n";
+            katars += "Firelizard's Talons\n";
+
+            string maces = "**Maces**\n";
+
+            maces += "Crushflange\n";
+            maces += "Bloodrise\n";
+            maces += "The General's Tan Do Li Ga\n";
+            maces += "Sureshrill Frost\n";
+            maces += "Moonfall\n";
+            maces += "Baezil's Vortex\n";
+            maces += "Baranar's Star\n";
+            maces += "Horizon's Tornado\n";
+            maces += "Stormlash\n";
+
+            string orbs = "**Orbs**\n";
+
+            orbs += "The Oculus\n";
+            orbs += "Eschuta's Temper\n";
+            orbs += "Death's Fathom\n";
+
+            string polearms = "**Polearms**\n";
+
+            polearms += "Dimoak's Hew\n";
+            polearms += "Steelgoad\n";
+            polearms += "Soul Harvest\n";
+            polearms += "The Battlebranch\n";
+            polearms += "Woestave\n";
+            polearms += "The Grim Reaper\n";
+            polearms += "The Meat Scrapper\n";
+            polearms += "Blackleach Blade\n";
+            polearms += "Athena's Wrath\n";
+            polearms += "Pierre Tombale Couant\n";
+            polearms += "Husoldal Evo\n";
+            polearms += "Grim's Burning Dead\n";
+            polearms += "Bonehew\n";
+            polearms += "The Reaper's Toll\n";
+            polearms += "Tomb Reaver\n";
+            polearms += "Stormspire\n";
+
+            string scepters = "**Scepters**\n";
+
+            scepters += "Knell Striker\n";
+            scepters += "Rusthandle\n";
+            scepters += "Stormeye\n";
+            scepters += "Zakarum's Hand\n";
+            scepters += "The Fetid Sprinkler\n";
+            scepters += "Hand of Blessed Light\n";
+            scepters += "Heaven's Light\n";
+            scepters += "The Redeemer\n";
+            scepters += "Astreon's Iron Ward\n";
+
+            string spears = "**Spears**\n";
+
+            spears += "The Dragon Chang\n";
+            spears += "Razortine\n";
+            spears += "Bloodthief\n";
+            spears += "Lance of Yaggai\n";
+            spears += "The Tannr Gorerod\n";
+            spears += "The Impaler\n";
+            spears += "Kelpie Snare\n";
+            spears += "Soulfeast Tine\n";
+            spears += "Hone Sundan\n";
+            spears += "Spire of Honor\n";
+            spears += "Arioc's Needle\n";
+            spears += "Viperfork\n";
+            spears += "Steel Pillar\n";
+            spears += "Stoneraven\n";
+            spears += "Lycander's Flank\n";
+
+            string staves = "**Staves**\n";
+
+            staves += "Bane Ash\n";
+            staves += "Serpent Lord\n";
+            staves += "Spire of Lazarus\n";
+            staves += "The Salamander\n";
+            staves += "The Iron Jang Bong\n";
+            staves += "Razorswitch\n";
+            staves += "Ribcracker\n";
+            staves += "Chromatic Ire\n";
+            staves += "Warpspear\n";
+            staves += "Skull Collector\n";
+            staves += "Ondal's Wisdom\n";
+            staves += "Mang Song's Lesson\n";
+
             string swords = "**Swords**\n";
 
-            swords += "Bul-Kathos' Sacred Charge\n";
+            swords += "Rixot's Keen\n";
+            swords += "Blood Crescent\n";
+            swords += "Skewer of Krintiz\n";
+            swords += "Gleamscythe\n";
+            swords += "Griswold's Edge\n";
+            swords += "Hellplague\n";
+            swords += "Culwen's Point\n";
+            swords += "Shadowfang\n";
+            swords += "Soulflay\n";
+            swords += "Kinemil's Awl\n";
+            swords += "Blacktongue\n";
+            swords += "Ripsaw\n";
+            swords += "The Patriarch\n";
+            swords += "Bloodletter\n";
+            swords += "Coldsteel Eye\n";
+            swords += "Hexfire\n";
+            swords += "Blade of Ali Baba\n";
+            swords += "Ginther's Rift\n";
+            swords += "Headstriker\n";
+            swords += "Plague Bearer\n";
+            swords += "The Atlantean\n";
+            swords += "Crainte Vomir\n";
+            swords += "Bing Sz Wang\n";
+            swords += "The Vile Husk\n";
+            swords += "Cloudcrack\n";
+            swords += "Todesfaelle Flamme\n";
+            swords += "Swordguard\n";
+            swords += "Djinn Slayer\n";
+            swords += "Bloodmoon\n";
+            swords += "Lightsabre\n";
+            swords += "Azurewrath\n";
+            swords += "Frostwind\n";
+            swords += "Flamebellow\n";
+            swords += "Doombringer\n";
+            swords += "The Grandfather\n";
+
+            string throwing = "**Throwing**\n";
+
+            throwing += "Deathbit\n";
+            throwing += "The Scalper\n";
+            throwing += "Warshrike\n";
+            throwing += "Gimmershred\n";
+            throwing += "Lacerator\n";
+
+            string wands = "**Wands**\n";
+
+            wands += "Torch of Iro\n";
+            wands += "Maelstrom\n";
+            wands += "Gravenspine\n";
+            wands += "Ume's Lament\n";
+            wands += "Suicide Branch\n";
+            wands += "Carin Shard\n";
+            wands += "Arm of King Leoric\n";
+            wands += "Blackhand Key\n";
+            wands += "Boneshade\n";
+            wands += "Death's Web\n";
+
 
             var separatedArgs = new List<string> { };
             int firstIndex = 0, nextIndex = 0, thisIndex = 0, previousIndex = 0;
@@ -296,9 +554,25 @@ namespace Template.Modules
             type.Add(amulets);
             type.Add(charms);
             type.Add(jewels);
+            type.Add(axes);
+            type.Add(bows);
+            type.Add(clubs);
+            type.Add(crossbows);
+            type.Add(daggers);
+            type.Add(hammers);
+            type.Add(javelins);
+            type.Add(katars);
+            type.Add(maces);
+            type.Add(orbs);
+            type.Add(polearms);
+            type.Add(scepters);
+            type.Add(spears);
+            type.Add(staves);
             type.Add(swords);
+            type.Add(throwing);
+            type.Add(wands);
 
-            foreach(var thisArg in separatedArgs)
+            foreach (var thisArg in separatedArgs)
             {
                 switch (thisArg.ToLower())
                 {
