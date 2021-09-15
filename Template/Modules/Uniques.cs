@@ -512,6 +512,7 @@ namespace Template.Modules
                         }
                         break;
                     case "armor":
+                    case "armors":
                         for(int i = 0; i < 6; i++)
                         {
                             if (message.Length < 1990 - (type[i] + "\n").Length)
@@ -553,6 +554,7 @@ namespace Template.Modules
                             }
                         }
                         break;
+                    case "weapon":
                     case "weapons":
                         for(int i = 10; i < 11; i++)
                         {
