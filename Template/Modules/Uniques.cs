@@ -900,34 +900,8 @@ namespace Template.Modules
             }
         }
 
-        [Command("Bul-Kathos' Sacred Charge")]
-        [Alias("BKSC")]
-        public async Task BulKathosSacredChargeImageAsync()
-        {
-            var name = "Bul-Kathos' Sacred Charge(63)";
-            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/great_sword_diablo_2_wiki_guide196px.png";
-
-            var requirements = new List<string>
-            {
-                "189 Strength",
-                "110 Dexterity"
-            };
-
-            var affixes = new List<Tuple<string, int, int>>();
-            affixes.Add(Tuple.Create(" One Handed Damage", 75, 195));
-            affixes.Add(Tuple.Create(" Two Handed Damage", 174, 345));
-            affixes.Add(Tuple.Create("% Enhanced Damage", 200, 0));
-            affixes.Add(Tuple.Create("% Change of Crushing Blow", 35, 0));
-            affixes.Add(Tuple.Create(" All Resistances", 20, 0));
-            affixes.Add(Tuple.Create("% Increased Attack Speed", 20, 0));
-            affixes.Add(Tuple.Create("Knockback", 0, 0));
-
-            await CreateUniqueImage(affixes, name, requirements, imageLink);
-
-        }
-
         [Command("Nokozan Relic")]
-        public async Task ImageAsync()
+        public async Task NokozanRelicImageAsync()
         {
             var name = "Nokozan Relic(10)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/amulet2_diablo2_wiki_guide_98px.png";
@@ -5027,10 +5001,10 @@ namespace Template.Modules
         }
         
         [Command("Knell Striker")]
-        public async Task ImageAsync()
+        public async Task KnellStrikerImageAsync()
         {
             var name = "Knell Striker(5)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/scepter_weapons_diablo_2_resurrected_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "25 Strength",
@@ -5050,10 +5024,10 @@ namespace Template.Modules
         }
         
         [Command("Rusthandle")]
-        public async Task ImageAsync()
+        public async Task RusthandleImageAsync()
         {
             var name = "Rusthandle(18)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/grand_scepter_weapons_diablo_2_resurrected_wiki_guide_196xp.png";
             var requirements = new List<string>
             {
                 "37 Strength",
@@ -5074,10 +5048,10 @@ namespace Template.Modules
         }
         
         [Command("Stormeye")]
-        public async Task ImageAsync()
+        public async Task StormeyeImageAsync()
         {
             var name = "Stormeye(30)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/war_scepter_weapons_diablo_2_resurrected_wiki_guide_196xp.png";
             var requirements = new List<string>
             {
                 "55 Strength",
@@ -5098,10 +5072,10 @@ namespace Template.Modules
         }
         
         [Command("Zakarum's Hand")]
-        public async Task ImageAsync()
+        public async Task ZakarumsHandImageAsync()
         {
             var name = "Zakarum's Hand(37)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/scepter_weapons_diablo_2_resurrected_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "58 Strength",
@@ -5124,10 +5098,10 @@ namespace Template.Modules
         }
         
         [Command("The Fetid Sprinkler")]
-        public async Task ImageAsync()
+        public async Task TheFetidSprinklerImageAsync()
         {
             var name = "The Fetid Sprinkler(38)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/grand_scepter_weapons_diablo_2_resurrected_wiki_guide_196xp.png";
             var requirements = new List<string>
             {
                 "76 Strength",
@@ -5148,10 +5122,10 @@ namespace Template.Modules
         }
         
         [Command("Hand of Blessed Light")]
-        public async Task ImageAsync()
+        public async Task HandofBlessedLightImageAsync()
         {
             var name = "Hand of Blessed Light(42)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/war_scepter_weapons_diablo_2_resurrected_wiki_guide_196xp.png";
             var requirements = new List<string>
             {
                 "42 Strength",
@@ -5175,10 +5149,10 @@ namespace Template.Modules
         }
         
         [Command("Heaven's Light")]
-        public async Task ImageAsync()
+        public async Task HeavensLightImageAsync()
         {
             var name = "Heaven's Light(61)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/scepter_weapons_diablo_2_resurrected_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "125 Strength",
@@ -5200,10 +5174,10 @@ namespace Template.Modules
         }
         
         [Command("The Redeemer")]
-        public async Task ImageAsync()
+        public async Task TheRedeemerImageAsync()
         {
             var name = "The Redeemer(72)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/scepter_weapons_diablo_2_resurrected_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "50 Strength",
@@ -5226,10 +5200,10 @@ namespace Template.Modules
         }
         
         [Command("Astreon's Iron Ward")]
-        public async Task ImageAsync()
+        public async Task AstreonsIronWardImageAsync()
         {
             var name = "Astreon's Iron Ward(66)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/war_scepter_weapons_diablo_2_resurrected_wiki_guide_196xp.png";
             var requirements = new List<string>
             {
                 "97 Strength",
@@ -5252,10 +5226,10 @@ namespace Template.Modules
         }
         
         [Command("Bloodthief")]
-        public async Task ImageAsync()
+        public async Task BloodthiefImageAsync()
         {
             var name = "Bloodthief(17)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/brandistock_weapons_diablo_2_resurrected_wiki_guide_201px.png";
             var requirements = new List<string>
             {
                 "40 Strength",
@@ -5273,10 +5247,10 @@ namespace Template.Modules
         }
         
         [Command("Lance of Yaggai")]
-        public async Task ImageAsync()
+        public async Task LanceofYaggaiImageAsync()
         {
             var name = "Lance of Yaggai(22)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/spetum_weapons_diablo_2_resurrected_wiki_guide_201px.png";
             var requirements = new List<string>
             {
                 "54 Strength",
@@ -5293,10 +5267,10 @@ namespace Template.Modules
         }
         
         [Command("Razortine")]
-        public async Task ImageAsync()
+        public async Task RazortineImageAsync()
         {
             var name = "Razortine(12)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/razortine_weapons_diablo_2_resurrected_wiki_guide_201px.png";
             var requirements = new List<string>
             {
                 "38 Strength",
@@ -5315,10 +5289,10 @@ namespace Template.Modules
         }
         
         [Command("The Dragon Chang")]
-        public async Task ImageAsync()
+        public async Task TheDragonChangImageAsync()
         {
             var name = "The Dragon Chang(8)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/spear_weapons_diablo_2_resurrected_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "20 Dexterity",
@@ -5336,10 +5310,10 @@ namespace Template.Modules
         }
         
         [Command("The Tannr Gorerod")]
-        public async Task ImageAsync()
+        public async Task TheTannrGorerodImageAsync()
         {
             var name = "The Tannr Gorerod(27)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/pike_weapons_diablo-2_resurrected_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "60 Strength",
@@ -5359,10 +5333,10 @@ namespace Template.Modules
         }
         
         [Command("Hone Sundan")]
-        public async Task ImageAsync()
+        public async Task HoneSundanImageAsync()
         {
             var name = "Hone Sundan(37)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/spetum_weapons_diablo_2_resurrected_wiki_guide_201px.png";
             var requirements = new List<string>
             {
                 "101 Strength",
@@ -5380,10 +5354,10 @@ namespace Template.Modules
         }
         
         [Command("Kelpie Snare")]
-        public async Task ImageAsync()
+        public async Task KelpieSnareImageAsync()
         {
             var name = "Kelpie Snare(33)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/razortine_weapons_diablo_2_resurrected_wiki_guide_201px.png";
             var requirements = new List<string>
             {
                 "77 Strength",
@@ -5402,10 +5376,10 @@ namespace Template.Modules
         }
         
         [Command("Soulfeast Tine")]
-        public async Task ImageAsync()
+        public async Task SoulfeastTineImageAsync()
         {
             var name = "Soulfeast Tine(35)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/soulfeast_tine_weapons_diablo_2_resurrected_wiki_guide_196xp.png";
             var requirements = new List<string>
             {
                 "64 Strength",
@@ -5424,10 +5398,10 @@ namespace Template.Modules
         }
         
         [Command("Spire of Honor")]
-        public async Task ImageAsync()
+        public async Task SpireofHonorImageAsync()
         {
             var name = "Spire of Honor(39)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/pike_weapons_diablo-2_resurrected_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "110 Strenght",
@@ -5449,10 +5423,10 @@ namespace Template.Modules
         }
         
         [Command("The Impaler")]
-        public async Task ImageAsync()
+        public async Task TheImpalerImageAsync()
         {
             var name = "The Impaler(31)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/spear_weapons_diablo_2_resurrected_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "25 Strength",
@@ -5473,10 +5447,10 @@ namespace Template.Modules
         }
         
         [Command("Arioc's Needle")]
-        public async Task ImageAsync()
+        public async Task AriocsNeedleImageAsync()
         {
             var name = "Arioc's Needle(81)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/spear_weapons_diablo_2_resurrected_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "155 Strength",
@@ -5495,10 +5469,10 @@ namespace Template.Modules
         }
         
         [Command("Steel Pillar")]
-        public async Task ImageAsync()
+        public async Task SteelPillarImageAsync()
         {
             var name = "Steel Pillar(69)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/pike_weapons_diablo-2_resurrected_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "165 Strength",
@@ -5517,10 +5491,10 @@ namespace Template.Modules
         }
         
         [Command("Viperfork")]
-        public async Task ImageAsync()
+        public async Task ViperforkImageAsync()
         {
             var name = "Viperfork(71)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/spetum_weapons_diablo_2_resurrected_wiki_guide_201px.png";
             var requirements = new List<string>
             {
                 "",
@@ -5539,10 +5513,10 @@ namespace Template.Modules
         }
         
         [Command("Bane Ash")]
-        public async Task ImageAsync()
+        public async Task BaneAshImageAsync()
         {
             var name = "Bane Ash(5)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/short_staff_diablo_2_wiki_guide_125px.png";
             var requirements = new List<string>
             {
                 "",
@@ -5556,17 +5530,17 @@ namespace Template.Modules
             affixes.Add(Tuple.Create(" Mana", 30, 0));
             affixes.Add(Tuple.Create("% Fire Resist", 50, 0));
             affixes.Add(Tuple.Create(" Fire Damage", 4, 6));
-            affixes.Add(Tuple.Create(" Fire Bolt (Sorceress Only, 5, 0));
+            affixes.Add(Tuple.Create(" Fire Bolt (Sorceress Only)", 5, 0));
             affixes.Add(Tuple.Create(" Warmth (Sorceress Only)", 2, 0));
 
             await CreateUniqueImage(affixes, name, requirements, imageLink);
         }
         
         [Command("Serpent Lord")]
-        public async Task ImageAsync()
+        public async Task SerpentLordImageAsync()
         {
             var name = "Serpent Lord(9)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/long_staff_diablo_2_wiki_guide_125px.png";
             var requirements = new List<string>
             {
                 "",
@@ -5587,10 +5561,10 @@ namespace Template.Modules
         }
         
         [Command("Spire of Lazarus")]
-        public async Task ImageAsync()
+        public async Task SpireofLazarusImageAsync()
         {
             var name = "Spire of Lazarus(18)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/lazarus_spire_diablo_2_wiki_guide_125px.png";
             var requirements = new List<string>
             {
                 "",
@@ -5613,10 +5587,10 @@ namespace Template.Modules
         }
         
         [Command("The Salamander")]
-        public async Task ImageAsync()
+        public async Task TheSalamanderImageAsync()
         {
             var name = "The Salamander(21)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/battle_staf_diablo_2_wiki_guide_125px.png";
             var requirements = new List<string>
             {
                 "",
@@ -5636,10 +5610,10 @@ namespace Template.Modules
         }
         
         [Command("The Iron Jang Bong")]
-        public async Task ImageAsync()
+        public async Task TheIronJangBongImageAsync()
         {
             var name = "The Iron Jang Bong(28)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/war_staf_diablo_2_wiki_guide_125px.png";
             var requirements = new List<string>
             {
                 "",
@@ -5660,10 +5634,10 @@ namespace Template.Modules
         }
         
         [Command("Razorswitch")]
-        public async Task ImageAsync()
+        public async Task RazorswitchImageAsync()
         {
             var name = "Razorswitch(28)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/short_staff_diablo_2_wiki_guide_125px.png";
             var requirements = new List<string>
             {
                 "25 Strength",
@@ -5684,10 +5658,10 @@ namespace Template.Modules
         }
         
         [Command("Ribcracker")]
-        public async Task ImageAsync()
+        public async Task RibcrackerImageAsync()
         {
             var name = "Ribcracker(31)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/long_staff_diablo_2_wiki_guide_125px.png";
             var requirements = new List<string>
             {
                 "25 Strength",
@@ -5709,10 +5683,10 @@ namespace Template.Modules
         }
         
         [Command("Chromatic Ire")]
-        public async Task ImageAsync()
+        public async Task ChromaticIreImageAsync()
         {
             var name = "Chromatic Ire(35)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/lazarus_spire_diablo_2_wiki_guide_125px.png";
             var requirements = new List<string>
             {
                 "25 Strength",
@@ -5734,10 +5708,10 @@ namespace Template.Modules
         }
         
         [Command("Warpspear")]
-        public async Task ImageAsync()
+        public async Task WarpspearImageAsync()
         {
             var name = "Warpspear(39)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/battle_staf_diablo_2_wiki_guide_125px.png";
             var requirements = new List<string>
             {
                 "25 Strength",
@@ -5757,10 +5731,10 @@ namespace Template.Modules
         }
         
         [Command("Skull Collector")]
-        public async Task ImageAsync()
+        public async Task SkullCollectorImageAsync()
         {
             var name = "Skull Collector(41)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/skullcollector_diablo_2_wiki_guide_125px.png";
             var requirements = new List<string>
             {
                 "25 Strength",
@@ -5778,10 +5752,10 @@ namespace Template.Modules
         }
         
         [Command("Ondal's Wisdom")]
-        public async Task ImageAsync()
+        public async Task OndalsWisdomImageAsync()
         {
             var name = "Ondal's Wisdom(66)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/lazarus_spire_diablo_2_wiki_guide_125px.png";
             var requirements = new List<string>
             {
                 "44 Strength",
@@ -5801,10 +5775,10 @@ namespace Template.Modules
         }
         
         [Command("Mang Song's Lesson")]
-        public async Task ImageAsync()
+        public async Task MangSongsLessonImageAsync()
         {
             var name = "Mang Song's Lesson(82)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/skullcollector_diablo_2_wiki_guide_125px.png";
             var requirements = new List<string>
             {
                 "34 Strength",
@@ -5824,10 +5798,10 @@ namespace Template.Modules
         }
         
         [Command("Deathbit")]
-        public async Task ImageAsync()
+        public async Task DeathbitImageAsync()
         {
             var name = "Deathbit(44)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/throwing_knife_weapons_diablo_2_resurrected_wiki_guide196px1.png";
             var requirements = new List<string>
             {
                 "25 Strength",
@@ -5846,10 +5820,10 @@ namespace Template.Modules
         }
         
         [Command("The Scalper")]
-        public async Task ImageAsync()
+        public async Task TheScalperImageAsync()
         {
             var name = "The Scalper(57)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/throwing_axe_diablo_2_resurrected_wiki_guide_125px.png";
             var requirements = new List<string>
             {
                 "25 Strength",
@@ -5869,10 +5843,10 @@ namespace Template.Modules
         }
         
         [Command("Warshrike")]
-        public async Task ImageAsync()
+        public async Task WarshrikeImageAsync()
         {
             var name = "Warshrike(75)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/warshrike_weapons_diablo_2_resurrected_wiki_guide_125px.png";
             var requirements = new List<string>
             {
                 "45 Strength",
@@ -5891,10 +5865,10 @@ namespace Template.Modules
         }
         
         [Command("Gimmershred")]
-        public async Task ImageAsync()
+        public async Task GimmershredImageAsync()
         {
             var name = "Gimmershred(70)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/throwing_axe_diablo_2_resurrected_wiki_guide_125px.png";
             var requirements = new List<string>
             {
                 "88 Strength",
@@ -5913,10 +5887,10 @@ namespace Template.Modules
         }
         
         [Command("Lacerator")]
-        public async Task ImageAsync()
+        public async Task LaceratorImageAsync()
         {
             var name = "Lacerator(68)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/balanced_axediablo_2_resurrected_wiki_guide_125px.png";
             var requirements = new List<string>
             {
                 "96 Strength",
@@ -5936,10 +5910,10 @@ namespace Template.Modules
         }
         
         [Command("Torch of Iro")]
-        public async Task ImageAsync()
+        public async Task TorchofIroImageAsync()
         {
-            var name = "";
-            var imageLink = "";
+            var name = "Torch of Iro(5)";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/iros_torch_weapons_diablo_2_wiki_guide_125px.png";
             var requirements = new List<string>
             {
                 "",
@@ -5959,10 +5933,10 @@ namespace Template.Modules
         }
         
         [Command("Maelstrom")]
-        public async Task ImageAsync()
+        public async Task MaelstromImageAsync()
         {
             var name = "Maelstrom(14)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/yew_wand_diablo_2_wiki_guide_125px.png";
             var requirements = new List<string>
             {
                 "",
@@ -5984,10 +5958,10 @@ namespace Template.Modules
         }
         
         [Command("Gravenspine")]
-        public async Task ImageAsync()
+        public async Task GravenspineImageAsync()
         {
             var name = "Gravenspine(20)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/gravenspine_diablo_2_wiki_guide_125px.png";
             var requirements = new List<string>
             {
                 "",
@@ -6007,10 +5981,10 @@ namespace Template.Modules
         }
         
         [Command("Ume's Lament")]
-        public async Task ImageAsync()
+        public async Task UmesLamentImageAsync()
         {
             var name = "Ume's Lament(28)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/grim_wand_diablo_2_wiki_guide_125px.png";
             var requirements = new List<string>
             {
                 "",
@@ -6030,10 +6004,10 @@ namespace Template.Modules
         }
         
         [Command("Suicide Branch")]
-        public async Task ImageAsync()
+        public async Task SuicideBranchImageAsync()
         {
             var name = "Suicide Branch(33)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/wand_diablo_2_wiki_guide_125px.png";
             var requirements = new List<string>
             {
                 "25 Strength",
@@ -6053,10 +6027,10 @@ namespace Template.Modules
         }
         
         [Command("Carin Shard")]
-        public async Task ImageAsync()
+        public async Task CarinShardImageAsync()
         {
             var name = "Carin Shard(35)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/yew_wand_diablo_2_wiki_guide_125px.png";
             var requirements = new List<string>
             {
                 "25 Strength",
@@ -6077,10 +6051,10 @@ namespace Template.Modules
         }
         
         [Command("Arm of King Leoric")]
-        public async Task ImageAsync()
+        public async Task ArmofKingLeoricImageAsync()
         {
             var name = "Arm of King Leoric(36)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/gravenspine_diablo_2_wiki_guide_125px.png";
             var requirements = new List<string>
             {
                 "25 Strength",
@@ -6104,10 +6078,10 @@ namespace Template.Modules
         }
         
         [Command("Blackhand Key")]
-        public async Task ImageAsync()
+        public async Task BlackhandKeyImageAsync()
         {
             var name = "Blackhand Key(41)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/blackhand_key_diablo_2_wiki_guide_125px.png";
             var requirements = new List<string>
             {
                 "25 Strength",
@@ -6129,10 +6103,10 @@ namespace Template.Modules
         }
         
         [Command("Boneshade")]
-        public async Task ImageAsync()
+        public async Task BoneshadeImageAsync()
         {
             var name = "Boneshade(79)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/gravenspine_diablo_2_wiki_guide_125px.png";
             var requirements = new List<string>
             {
                 "25 Strength",
@@ -6153,10 +6127,10 @@ namespace Template.Modules
         }
         
         [Command("Death's Web")]
-        public async Task ImageAsync()
+        public async Task DeathsWebImageAsync()
         {
             var name = "Death's Web(66)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/grim_wand_diablo_2_wiki_guide_125px.png";
             var requirements = new List<string>
             {
                 "25 Strength",
@@ -6175,10 +6149,10 @@ namespace Template.Modules
         }
         
         [Command("Blood Crescent")]
-        public async Task ImageAsync()
+        public async Task BloodCrescentImageAsync()
         {
             var name = "Blood Crescent(7)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/blood_crescent_weapons_diablo_2_wiki_guide196px.png";
             var requirements = new List<string>
             {
                 "21 Dexterity",
@@ -6198,10 +6172,10 @@ namespace Template.Modules
         }
         
         [Command("Culwen's Point")]
-        public async Task ImageAsync()
+        public async Task CulwensPointImageAsync()
         {
             var name = "Culwen's Point";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/war_sword_weapons_diablo_2_wiki_guide196px.png";
             var requirements = new List<string>
             {
                 "71 Strength",
@@ -6220,10 +6194,10 @@ namespace Template.Modules
         }
         
         [Command("Gleamscythe")]
-        public async Task ImageAsync()
+        public async Task GleamscytheImageAsync()
         {
             var name = "Gleamscythe(13)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/gleamscythe_weapons_diablo_2_wiki_guide196px.png";
             var requirements = new List<string>
             {
                 "33 Strength",
@@ -6242,10 +6216,10 @@ namespace Template.Modules
         }
         
         [Command("Griswold's Edge")]
-        public async Task ImageAsync()
+        public async Task GriswoldsEdgeImageAsync()
         {
             var name = "Griswold's Edge(17)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/griswold's_edge_sword_diablo_2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "48 Strength",
@@ -6264,10 +6238,10 @@ namespace Template.Modules
         }
         
         [Command("Hellplague")]
-        public async Task ImageAsync()
+        public async Task HellplagueImageAsync()
         {
             var name = "Hellplague(22)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/hellplague_diablo_2_wiki_guide196px.png";
             var requirements = new List<string>
             {
                 "55 Strength",
@@ -6286,10 +6260,10 @@ namespace Template.Modules
         }
         
         [Command("Rixot's Keen")]
-        public async Task ImageAsync()
+        public async Task RixotsKeenImageAsync()
         {
             var name = "Rixot's Keen(2)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/short_sword_weapons_diablo_2_wiki_guide196px.png";
             var requirements = new List<string>
             {
                 "",
@@ -6308,10 +6282,10 @@ namespace Template.Modules
         }
         
         [Command("Skewer of Krintiz")]
-        public async Task ImageAsync()
+        public async Task SkewerofKrintizImageAsync()
         {
             var name = "Skewer of Krintiz(10)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/krintizs_skewer_swords_weapons_diablo_2_wiki_guide196px.png";
             var requirements = new List<string>
             {
                 "25 Strength",
@@ -6330,10 +6304,10 @@ namespace Template.Modules
         }
         
         [Command("Blacktongue")]
-        public async Task ImageAsync()
+        public async Task BlacktongueImageAsync()
         {
             var name = "Blacktongue(26)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/blacktongue_diablo_2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "62 Strength",
@@ -6351,10 +6325,10 @@ namespace Template.Modules
         }
         
         [Command("Kinemil's Awl")]
-        public async Task ImageAsync()
+        public async Task KinemilsAwlImageAsync()
         {
             var name = "Kinemil's Awl(23)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/kinemils_awl_weapons_diablo_2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "56 Strength",
@@ -6372,10 +6346,10 @@ namespace Template.Modules
         }
         
         [Command("Ripsaw")]
-        public async Task ImageAsync()
+        public async Task RipsawImageAsync()
         {
             var name = "Ripsaw(26)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/flamberge_weapons_diablo_2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "70 Strength",
@@ -6392,10 +6366,10 @@ namespace Template.Modules
         }
         
         [Command("Shadowfang")]
-        public async Task ImageAsync()
+        public async Task ShadowfangImageAsync()
         {
             var name = "Shadowfang(12)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/shadowfang_weapons_diablo_2_wiki_guide196px.png";
             var requirements = new List<string>
             {
                 "35 Strength",
@@ -6414,10 +6388,10 @@ namespace Template.Modules
         }
         
         [Command("Soulflay")]
-        public async Task ImageAsync()
+        public async Task SoulflayImageAsync()
         {
             var name = "Soulflay(19)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/claymore_diablo_2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "47 Strength",
@@ -6435,10 +6409,10 @@ namespace Template.Modules
         }
         
         [Command("The Patriarch")]
-        public async Task ImageAsync()
+        public async Task ThePatriarchImageAsync()
         {
             var name = "The Patriarch(29)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/the_patriarch_weapons_diablo_2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "100 Strength",
@@ -6457,10 +6431,10 @@ namespace Template.Modules
         }
         
         [Command("Blade of Ali Baba")]
-        public async Task ImageAsync()
+        public async Task BladeofAliBabaImageAsync()
         {
             var name = "Blade of Ali Baba(35)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/falchion_diablo_2_wiki_guide196px.png";
             var requirements = new List<string>
             {
                 "70 Strength",
@@ -6479,10 +6453,10 @@ namespace Template.Modules
         }
         
         [Command("Bloodletter")]
-        public async Task ImageAsync()
+        public async Task BloodletterImageAsync()
         {
             var name = "Bloodletter(30)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/short_sword_weapons_diablo_2_wiki_guide196px.png";
             var requirements = new List<string>
             {
                 "25 Strength",
@@ -6503,10 +6477,10 @@ namespace Template.Modules
         }
         
         [Command("Coldsteel Eye")]
-        public async Task ImageAsync()
+        public async Task ColdsteelEyeImageAsync()
         {
             var name = "Coldsteel Eye(31)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/blood_crescent_weapons_diablo_2_wiki_guide196px.png";
             var requirements = new List<string>
             {
                 "25 Strength",
@@ -6525,10 +6499,10 @@ namespace Template.Modules
         }
         
         [Command("Ginther's Rift")]
-        public async Task ImageAsync()
+        public async Task GinthersRiftImageAsync()
         {
             var name = "Ginther's Rift(37)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/ginthers_rift_diablo_2_wiki_guide196px.png";
             var requirements = new List<string>
             {
                 "85 Strength",
@@ -6546,10 +6520,10 @@ namespace Template.Modules
         }
         
         [Command("Headstriker")]
-        public async Task ImageAsync()
+        public async Task HeadstrikerImageAsync()
         {
             var name = "Headstriker(39)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/broad_sword_diablo_2_wiki_guide196px.png";
             var requirements = new List<string>
             {
                 "92 Strength",
@@ -6567,10 +6541,10 @@ namespace Template.Modules
         }
         
         [Command("Hexfire")]
-        public async Task ImageAsync()
+        public async Task HexfireImageAsync()
         {
             var name = "Hexfire(33)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/hexfire_sword_weapons_diablo_2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "58 Strength",
@@ -6590,10 +6564,10 @@ namespace Template.Modules
         }
         
         [Command("Plague Bearer")]
-        public async Task ImageAsync()
+        public async Task PlagueBearerImageAsync()
         {
             var name = "Plague Bearer(41)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/hellplague_diablo_2_wiki_guide196px.png";
             var requirements = new List<string>
             {
                 "103 Strength",
@@ -6612,10 +6586,10 @@ namespace Template.Modules
         }
         
         [Command("The Atlantean")]
-        public async Task ImageAsync()
+        public async Task TheAtlanteanImageAsync()
         {
             var name = "The Atlantean";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/war_sword_weapons_diablo_2_wiki_guide196px.png";
             var requirements = new List<string>
             {
                 "127 Strength",
@@ -6635,10 +6609,10 @@ namespace Template.Modules
         }
         
         [Command("Bing Sz Wang")]
-        public async Task ImageAsync()
+        public async Task BingSzWangImageAsync()
         {
             var name = "Bing Sz Wang(43)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/claymore_diablo_2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "64 Strength",
@@ -6657,10 +6631,10 @@ namespace Template.Modules
         }
         
         [Command("Cloudcrack")]
-        public async Task ImageAsync()
+        public async Task CloudcrackImageAsync()
         {
             var name = "Cloudcrack(45)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/blacktongue_diablo_2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "113 Strength",
@@ -6682,10 +6656,10 @@ namespace Template.Modules
         }
         
         [Command("Crainte Vomir")]
-        public async Task ImageAsync()
+        public async Task CrainteVomirImageAsync()
         {
             var name = "Crainte Vomir(42)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/shadowfang_weapons_diablo_2_wiki_guide196px.png";
             var requirements = new List<string>
             {
                 "73 Strength",
@@ -6704,10 +6678,10 @@ namespace Template.Modules
         }
         
         [Command("Swordguard")]
-        public async Task ImageAsync()
+        public async Task SwordguardImageAsync()
         {
             var name = "Swordguard(48)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/the_patriarch_weapons_diablo_2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "85 Strength",
@@ -6729,10 +6703,10 @@ namespace Template.Modules
         }
         
         [Command("The Vile Husk")]
-        public async Task ImageAsync()
+        public async Task TheVileHuskImageAsync()
         {
             var name = "The Vile Husk(44)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/kinemils_awl_weapons_diablo_2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "104 Strength",
@@ -6751,10 +6725,10 @@ namespace Template.Modules
         }
         
         [Command("Todesfaelle Flamme")]
-        public async Task ImageAsync()
+        public async Task TodesfaelleFlammeImageAsync()
         {
             var name = "Todesfaelle Flamme";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/todesfaelle_flamme_weapons_diablo_2_wiki_guide196_px.png";
             var requirements = new List<string>
             {
                 "125 Strength",
@@ -6774,10 +6748,10 @@ namespace Template.Modules
         }
         
         [Command("Azurewrath")]
-        public async Task ImageAsync()
+        public async Task AzurewrathImageAsync()
         {
             var name = "Azurewrath(85)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/ginthers_rift_diablo_2_wiki_guide196px.png";
             var requirements = new List<string>
             {
                 "25 Strength",
@@ -6798,10 +6772,10 @@ namespace Template.Modules
         }
         
         [Command("Bloodmoon")]
-        public async Task ImageAsync()
+        public async Task BloodmoonImageAsync()
         {
             var name = "Bloodmoon(61)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/hexfire_sword_weapons_diablo_2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "109 Strength",
@@ -6819,10 +6793,10 @@ namespace Template.Modules
         }
         
         [Command("Djinn Slayer")]
-        public async Task ImageAsync()
+        public async Task DjinnSlayerImageAsync()
         {
             var name = "Djinn Slayer(65)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/blood_crescent_weapons_diablo_2_wiki_guide196px.png";
             var requirements = new List<string>
             {
                 "138 Strength",
@@ -6834,7 +6808,7 @@ namespace Template.Modules
             affixes.Add(Tuple.Create("% Damage to Demons", 100, 150));
             affixes.Add(Tuple.Create("Attack Rating Against Demons", 200, 300));
             affixes.Add(Tuple.Create(" Fire Damage", 250, 500));
-            affixes.Add(Tuple.Create("% Mana Stolen per Hit, 3, 6));
+            affixes.Add(Tuple.Create("% Mana Stolen per Hit", 3, 6));
             affixes.Add(Tuple.Create(" Lightning Absorb", 3, 7));
             affixes.Add(Tuple.Create(" Sockets", 1, 2));
 
@@ -6842,10 +6816,10 @@ namespace Template.Modules
         }
         
         [Command("Frostwind")]
-        public async Task ImageAsync()
+        public async Task FrostwindImageAsync()
         {
             var name = "Frostwind(70)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/hellplague_diablo_2_wiki_guide196px.png";
             var requirements = new List<string>
             {
                 "99 Strength",
@@ -6865,10 +6839,10 @@ namespace Template.Modules
         }
         
         [Command("Lightsabre")]
-        public async Task ImageAsync()
+        public async Task LightsabreImageAsync()
         {
             var name = "Lightsabre(58)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/lightsabre_diablo_2_wiki_guide196px.png";
             var requirements = new List<string>
             {
                 "25 Strength",
@@ -6891,10 +6865,10 @@ namespace Template.Modules
         }
         
         [Command("Doombringer")]
-        public async Task ImageAsync()
+        public async Task DoombringerImageAsync()
         {
             var name = "Doombringer(69)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/blacktongue_diablo_2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "163 Strength",
@@ -6914,10 +6888,10 @@ namespace Template.Modules
         }
         
         [Command("Flamebellow")]
-        public async Task ImageAsync()
+        public async Task FlamebellowImageAsync()
         {
             var name = "Flamebellow(71)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/kinemils_awl_weapons_diablo_2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "185 Strength",
@@ -6927,7 +6901,7 @@ namespace Template.Modules
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("% Enhanced Damage", 170, 240));
             affixes.Add(Tuple.Create(" Fire Damage", 233, 482));
-            affixes.Add(Tuple.Create(" Fire Skills", 3, ));
+            affixes.Add(Tuple.Create(" Fire Skills", 3, 0));
             affixes.Add(Tuple.Create(" Inferno", 12, 18));
             affixes.Add(Tuple.Create(" Strength", 10, 20));
             affixes.Add(Tuple.Create(" Vitality", 5, 10));
@@ -6938,10 +6912,10 @@ namespace Template.Modules
         }
         
         [Command("The Grandfather")]
-        public async Task ImageAsync()
+        public async Task TheGrandfatherImageAsync()
         {
             var name = "The Grandfather(81)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/the_patriarch_weapons_diablo_2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
                 "189 Strength",

@@ -86,7 +86,7 @@ namespace Template.Modules
                         Tuple.Create(" Poison Damage over 3 seconds", 5, 9, "")
                     };
                     break;
-                    case "Arcanna's Tricks":
+                case "Arcanna's Tricks":
                     setPieces = new List<string>
                     {
                         "Arcanna's Deathwand",
@@ -105,7 +105,7 @@ namespace Template.Modules
                         Tuple.Create("% Mana Stolen per Hit", 5, 0, "")
                     };
                     break;
-                    case "Arctic Gear":
+                case "Arctic Gear":
                     setPieces = new List<string>
                     {
                         "Arctic Horn",
@@ -124,7 +124,7 @@ namespace Template.Modules
                         Tuple.Create(" Cold Damage", 6, 14, "")
                     };
                     break;
-                    case "Cathan's Traps":
+                case "Cathan's Traps":
                     setPieces = new List<string>
                     {
                         "Cathan's Rule",
@@ -147,7 +147,7 @@ namespace Template.Modules
                         Tuple.Create(" Mana", 20, 0, "")
                     };
                     break;
-                    case "Civerb's Vestments":
+                case "Civerb's Vestments":
                     setPieces = new List<string>
                     {
                         "Civerb's Cudgel",
@@ -164,7 +164,7 @@ namespace Template.Modules
                         Tuple.Create("% Lightning Resist", 25, 0, "")
                     };
                     break;
-                    case "Cleglaw's Brace":
+                case "Cleglaw's Brace":
                     setPieces = new List<string>
                     {
                         "Cleglaw's Tooth",
@@ -181,7 +181,7 @@ namespace Template.Modules
                         Tuple.Create("% Increased Attack Speed", 20, 0, "")
                     };
                     break;
-                    case "Angelic Raiment":
+                case "Angelic Raiment":
                     setPieces = new List<string>
                     {
                         "Angelic Sickle",
@@ -202,7 +202,7 @@ namespace Template.Modules
                         Tuple.Create(" Mana", 50, 0, "")
                     };
                     break;
-                    case "Hsarus' Defense":
+                case "Hsarus' Defense":
                     setPieces = new List<string>
                     {
                         "Hsarus' Iron Fist",
@@ -219,7 +219,7 @@ namespace Template.Modules
                         Tuple.Create(" Maximum Damage", 5, 0, "")
                     };
                     break;
-                    case "Infernal Tools":
+                case "Infernal Tools":
                     setPieces = new List<string>
                     {
                         "Infernal Torch",
@@ -237,7 +237,7 @@ namespace Template.Modules
                         Tuple.Create("% Mana Stolen per Hit", 6, 0, "")
                     };
                     break;
-                    case "Iratha's Finery":
+                case "Iratha's Finery":
                     setPieces = new List<string>
                     {
                         "Iratha's Coil",
@@ -260,8 +260,8 @@ namespace Template.Modules
                         Tuple.Create(" All Resistances", 20, 0, "")
                     };
                     break;
-                    
-                    case "Isenhart's Armory":
+
+                case "Isenhart's Armory":
                     setPieces = new List<string>
                     {
                         "Isenhart's Lightbrand",
@@ -283,8 +283,8 @@ namespace Template.Modules
                         Tuple.Create(" All Resistances", 10, 0, "")
                     };
                     break;
-                    
-                    case "Milabrega's Regalia":
+
+                case "Milabrega's Regalia":
                     setPieces = new List<string>
                     {
                         "Milabrega's Rod",
@@ -304,7 +304,7 @@ namespace Template.Modules
                         Tuple.Create("% Poison Resist", 15, 0, "")
                     };
                     break;
-                    case "Sigon's Complete Steel":
+                case "Sigon's Complete Steel":
                     setPieces = new List<string>
                     {
                         "Sigon's Shelter",
@@ -328,7 +328,7 @@ namespace Template.Modules
                         Tuple.Create(" Damage Reduced", 7, 0, "")
                     };
                     break;
-                    case "Tancred's Battlegear":
+                case "Tancred's Battlegear":
                     setPieces = new List<string>
                     {
                         "Tancred's Crowbill",
@@ -350,7 +350,7 @@ namespace Template.Modules
                         Tuple.Create("% Extra Gold From Monsters", 75, 0, "")
                     };
                     break;
-                    case "Death's Disguise":
+                case "Death's Disguise":
                     setPieces = new List<string>
                     {
                         "Death's Touch",
@@ -367,7 +367,7 @@ namespace Template.Modules
                         Tuple.Create(" Minimum Damage", 10, 0, "")
                     };
                     break;
-                    case "Vidala's Rig":
+                case "Vidala's Rig":
                     setPieces = new List<string>
                     {
                         "Vidala's Barb",
@@ -388,7 +388,7 @@ namespace Template.Modules
                         Tuple.Create(" Strength", 10, 0, "")
                     };
                     break;
-                    case "Heaven's Brethren":
+                case "Heaven's Brethren":
                     setPieces = new List<string>
                     {
                         "Dangoon's Teaching",
@@ -409,7 +409,7 @@ namespace Template.Modules
                         Tuple.Create(" Light Radius", 5, 0, "")
                     };
                     break;
-                    case "The Disciple":
+                case "The Disciple":
                     setPieces = new List<string>
                     {
                         "Dark Adherent",
@@ -432,7 +432,7 @@ namespace Template.Modules
                         Tuple.Create(" Mana", 100, 0, "")
                     };
                     break;
-                    case "Hwanin's Majesty":
+                case "Hwanin's Majesty":
                     setPieces = new List<string>
                     {
                         "Hwanin's Justice",
@@ -452,7 +452,7 @@ namespace Template.Modules
                         Tuple.Create(" All Resistances", 30, 0, "")
                     };
                     break;
-                    case "Cow King's Leathers":
+                case "Cow King's Leathers":
                     setPieces = new List<string>
                     {
                         "Cow King's Horns",
@@ -471,7 +471,7 @@ namespace Template.Modules
                         Tuple.Create("% Better Chance of Getting Magic Items", 100, 0, "")
                     };
                     break;
-                    case "Naj's Ancient Vestige":
+                case "Naj's Ancient Vestige":
                     setPieces = new List<string>
                     {
                         "Naj's Puzzler",
@@ -490,7 +490,7 @@ namespace Template.Modules
                         Tuple.Create(" All Skills", 1, 0, "")
                     };
                     break;
-                    case "Sander's Folly":
+                case "Sander's Folly":
                     setPieces = new List<string>
                     {
                         "Sander's Paragon",
@@ -511,7 +511,7 @@ namespace Template.Modules
                         Tuple.Create("% Better Chance of Getting Magic Items", 50, 0, "")
                     };
                     break;
-                    case "Sazabi's Grand Tribute":
+                case "Sazabi's Grand Tribute":
                     setPieces = new List<string>
                     {
                         "Sazabi's Cobalt Redeemer",
@@ -528,7 +528,7 @@ namespace Template.Modules
                         Tuple.Create(" All Resistances", 30, 0, "")
                     };
                     break;
-                    case "Orphan's Call":
+                case "Orphan's Call":
                     setPieces = new List<string>
                     {
                         "Guillaume's Face",
@@ -550,25 +550,7 @@ namespace Template.Modules
                         Tuple.Create("% Better Chance of Getting Magic Items", 80, 0, "")
                     };
                     break;
-                    case "Aldur's Watchtower":
-                    setPieces = new List<string>
-                    {
-                        "",
-                        "",
-                        ""
-                    };
-                    setBonuses = new List<Tuple<string, int, int, string>> {
-                        Tuple.Create("Partial Set Bonus", 0, 0, ""),
-                        Tuple.Create("", , , ""),
-                        Tuple.Create("Complete Set Bonus", 0, 0, ""),
-                        Tuple.Create("", , , ""),
-                        Tuple.Create("", , , ""),
-                        Tuple.Create("", , , ""),
-                        Tuple.Create("", , , ""),
-                        Tuple.Create("", , , "")
-                    };
-                    break;
-                    case "":
+                case "Aldur's Watchtower":
                     setPieces = new List<string>
                     {
                         "Aldur's Rhythm",
@@ -591,7 +573,7 @@ namespace Template.Modules
                         Tuple.Create(" Mana", 150, 0, "")
                     };
                     break;
-                    case "Bul-Kathos' Children":
+                case "Bul-Kathos' Children":
                     setPieces = new List<string>
                     {
                         "Bul-Kathos' Sacred Charge",
@@ -604,7 +586,7 @@ namespace Template.Modules
                         Tuple.Create("% Damage to Demons", 200, 0, "")
                     };
                     break;
-                    case "Griswold's Legacy":
+                case "Griswold's Legacy":
                     setPieces = new List<string>
                     {
                         "Griswold's Redemption",
@@ -627,7 +609,7 @@ namespace Template.Modules
                         Tuple.Create(" Display Aura", 0, 0, "")
                     };
                     break;
-                    case "M'avina's Battle Hymn:
+                case "M'avina's Battle Hymn":
                     setPieces = new List<string>
                     {
                         "M'avina's Caster",
@@ -651,7 +633,7 @@ namespace Template.Modules
                         Tuple.Create(" Display Aura", 0, 0, "")
                     };
                     break;
-                    case "Natalya's Odium":
+                case "Natalya's Odium":
                     setPieces = new List<string>
                     {
                         "Natalya's Mark",
@@ -674,7 +656,7 @@ namespace Template.Modules
                         Tuple.Create(" Fade", 0, 0, "")
                     };
                     break;
-                    case "Tal Rasha's Wrappings":
+                case "Tal Rasha's Wrappings":
                     setPieces = new List<string>
                     {
                         "Tal Rasha's Lidless Eye",
@@ -689,7 +671,7 @@ namespace Template.Modules
                         Tuple.Create("% Better Chance of Getting Magic Items", 65, 0, "3"),
                         Tuple.Create("% Faster Hit Recovery", 25, 0, "4"),
                         Tuple.Create("Complete Set Bonus", 0, 0, ""),                      
-                        Tuple.Create(" Sorceress Skill Levels", 3, , ""),
+                        Tuple.Create(" Sorceress Skill Levels", 3, 0, ""),
                         Tuple.Create(" Replenish Life", 10, 0, "2"),
                         Tuple.Create("% Better Chance of Getting Magic Items", 65, 0, "3"),
                         Tuple.Create("% Faster Hit Recovery", 25, 0, ""),
@@ -700,7 +682,7 @@ namespace Template.Modules
                         Tuple.Create(" Display Aura", 0, 0, "")
                     };
                     break;
-                    case "Immortal King":
+                case "Immortal King":
                     setPieces = new List<string>
                     {
                         "Immortal King's Stone Crusher",
@@ -725,7 +707,7 @@ namespace Template.Modules
                         Tuple.Create(" Display Aura", 0, 0, "")
                     };
                     break;
-                    case "Trang-Oul's Avatar":
+                case "Trang-Oul's Avatar":
                     setPieces = new List<string>
                     {
                         "Trang-Oul's Scales",
@@ -749,18 +731,14 @@ namespace Template.Modules
                         Tuple.Create(" Meteor", 10, 0, ""),
                         Tuple.Create(" Fire Wall", 13, 0, ""),
                         Tuple.Create(" Fire Ball", 18, 0, ""),
-                        Tuple.Create(" Defense", 200, , ""),
-                        Tuple.Create(" Mana", 100, , ""),
+                        Tuple.Create(" Defense", 200, 0, ""),
+                        Tuple.Create(" Mana", 100, 0, ""),
                         Tuple.Create("% Regenerate Mana", 60, 0, ""),
                         Tuple.Create(" Replenish Life", 5, 0, ""),
                         Tuple.Create(" All Resistances", 50, 0, ""),
                         Tuple.Create("Transforms into Vampire", 0, 0, "")
                     };
                     break;
-                  
-                    
-                    
-
                 default:
                     setPieces = new List<string>{};
                     setBonuses = new List<Tuple<string, int, int, string>> {};
@@ -999,7 +977,7 @@ namespace Template.Modules
         public async Task ArcannasDeathwandImageAsync()
         {
             var name = "Arcanna's Deathwand(15)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/war_staf_diablo_2_wiki_guide_125px.png";
             var setName = "Arcanna's Tricks";
             var requirements = new List<string>
             {
@@ -1031,7 +1009,7 @@ namespace Template.Modules
         public async Task ArcannasFleshImageAsync()
         {
             var name = "Arcanna's Flesh(15)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/light_plate_diablo2_wiki_guide_196px.png";
             var setName = "Arcanna's Tricks";
             var requirements = new List<string>
             {
@@ -1061,7 +1039,7 @@ namespace Template.Modules
         public async Task ArcannasHeadImageAsync()
         {
             var name = "Arcanna's Head(15)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/skull_cap_helm_armor_diablo2_wiki_guide_196px.png";
             var setName = "Arcanna's Tricks";
             var requirements = new List<string>
             {
@@ -1091,7 +1069,7 @@ namespace Template.Modules
         public async Task ArcannasSignImageAsync()
         {
             var name = "Arcanna's Sign(15)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/amulet3_diablo2_wiki_guide_98px.png";
             var setName = "Arcanna's Tricks";
             var requirements = new List<string>
             {
@@ -1121,8 +1099,8 @@ namespace Template.Modules
         {
             await ArcticHornImageAsync();
             await ArcticFursImageAsync();
-            await ArcticMittsImagekAsync();
-            await ArcticBindingImagekAsync();
+            await ArcticMittsImageAsync();
+            await ArcticBindingImageAsync();
 
         }
 
@@ -1130,7 +1108,7 @@ namespace Template.Modules
         public async Task ArcticHornImageAsync()
         {
             var name = "Arctic Horn(2)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/hellclap_weapons_diablo_2_resurrected_wiki_guide.png";
             var setName = "Arctic Gear";
             var requirements = new List<string>
             {
@@ -1160,7 +1138,7 @@ namespace Template.Modules
         public async Task ArcticFursImageAsync()
         {
             var name = "Arctic Furs(2)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/quilted_armor_diablo2_wiki_guide_196px.png";
             var setName = "Arctic Gear";
             var requirements = new List<string>
             {
@@ -1171,7 +1149,7 @@ namespace Template.Modules
             var affixes = new List<Tuple<string, int, int>>()
             {
                 Tuple.Create("% Enhanced Defense", 275, 325),
-                Tuple.Create(" All Resistances", 10, )
+                Tuple.Create(" All Resistances", 10, 0)
 
             };
 
@@ -1190,7 +1168,7 @@ namespace Template.Modules
         public async Task ArcticMittsImageAsync()
         {
             var name = "Arctic Mitts(2)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/light_gauntlets_diablo2_wiki_guide_196px.png";
             var setName = "Arctic Gear";
             var requirements = new List<string>
             {
@@ -1206,7 +1184,7 @@ namespace Template.Modules
 
             var setBonuses = new List<Tuple<string, int, int, string>>()
             {
-                Tuple.Create(" Attack rating", 50, 0, "2")
+                Tuple.Create(" Attack rating", 50, 0, "2"),
                 Tuple.Create(" Dexterity ", 10, 0, "3")
             };
 
@@ -1219,7 +1197,7 @@ namespace Template.Modules
         public async Task ArcticBindingImageAsync()
         {
             var name = "Arctic Binding(2)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/light_belt_armor_diablo2_wiki_guide_196px.png";
             var setName = "Arctic Gear";
             var requirements = new List<string>
             {
@@ -1256,10 +1234,10 @@ namespace Template.Modules
         }
 
         [Command("Cathan's Rule")]
-        public async Task ImageAsync()
+        public async Task CathansRuleImageAsync()
         {
             var name = "Cathan's Rule(11)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/battle_staf_diablo_2_wiki_guide_125px.png";
             var setName = "Cathan's Traps";
             var requirements = new List<string>
             {
@@ -1289,7 +1267,7 @@ namespace Template.Modules
         public async Task CathansMeshImageAsync()
         {
             var name = "Cathan's Mesh(11)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/chain_mail_armor_diablo2_wiki_guide_196px.png";
             var setName = "Cathan's Traps";
             var requirements = new List<string>
             {
@@ -1300,7 +1278,7 @@ namespace Template.Modules
             var affixes = new List<Tuple<string, int, int>>()
             {
                 Tuple.Create(" Defense", 15, 0),
-                Tuple.Create(" Requirements", -50%, 0)
+                Tuple.Create("% Requirements", -50, 0)
             };
 
             var setBonuses = new List<Tuple<string, int, int, string>>()
@@ -1318,7 +1296,7 @@ namespace Template.Modules
         public async Task CathansVisageImageAsync()
         {
             var name = "Cathan's Visage(11)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/mask_helm_armor_diablo2_wiki_guide_196px.png";
             var setName = "Cathan's Traps";
             var requirements = new List<string>
             {
@@ -1346,7 +1324,7 @@ namespace Template.Modules
         public async Task CathansSigilImageAsync()
         {
             var name = "Cathan's Sigil";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/amulet1_diablo2_wiki_guide_98px.png";
             var setName = "Cathan's Traps(11)";
             var requirements = new List<string>
             {
@@ -1375,7 +1353,7 @@ namespace Template.Modules
         public async Task CathansSealImageAsync()
         {
             var name = "Cathan's Seal(11)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/ring2_diablo2_wiki_guide_98px.png";
             var setName = "Cathan's Traps";
             var requirements = new List<string>
             {
@@ -1412,7 +1390,7 @@ namespace Template.Modules
         public async Task CiverbsCudgelImageAsync()
         {
             var name = "Civerb's Cudgel(9)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/grand_scepter_weapons_diablo_2_resurrected_wiki_guide_201px.png";
             var setName = "Civerb's Vestments";
             var requirements = new List<string>
             {
@@ -1430,8 +1408,6 @@ namespace Template.Modules
 
             var setBonuses = new List<Tuple<string, int, int, string>>()
             {
-                Tuple.Create(" ", , , ""),
-                Tuple.Create(" ", , , "")
             };
 
             var setPieces = ParseSetPieces(name, setName);
@@ -1443,7 +1419,7 @@ namespace Template.Modules
         public async Task CiverbsWardImageAsync()
         {
             var name = "Civerb's Ward(9)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/stormguild_diablo2_wiki_guide_196x294px.png";
             var setName = "Civerb's Vestments";
             var requirements = new List<string>
             {
@@ -1472,7 +1448,7 @@ namespace Template.Modules
         public async Task CiverbsIconImageAsync()
         {
             var name = "Civerb's Icon(9)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/amulet1_diablo2_wiki_guide_98px.png";
             var setName = "Civerb's Vestments";
             var requirements = new List<string>
             {
@@ -1507,10 +1483,10 @@ namespace Template.Modules
         }
 
         [Command("Cleglaw's Tooth")]
-        public async Task ImageAsync()
+        public async Task CleglawsToothImageAsync()
         {
             var name = "Cleglaw's Tooth(4)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/hellplague_diablo_2_wiki_guide196px.png";
             var setName = "Cleglaw's Brace";
             var requirements = new List<string>
             {
@@ -1538,7 +1514,7 @@ namespace Template.Modules
         public async Task CleglawsClawImageAsync()
         {
             var name = "Cleglaw's Claw(4)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/umbral_disk_diablo2_wiki_guide_196x294px.png";
             var setName = "Cleglaw's Brace";
             var requirements = new List<string>
             {
@@ -1566,7 +1542,7 @@ namespace Template.Modules
         public async Task CleglawsPincersImageAsync()
         {
             var name = "Cleglaw's Pincers(4)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/chain_gloves_diablo2_wiki_guide_196px.png";
             var setName = "Cleglaw's Brace";
             var requirements = new List<string>
             {
@@ -1601,10 +1577,10 @@ namespace Template.Modules
         }
 
         [Command("Angelic Sickle")]
-        public async Task ImageAsync()
+        public async Task AngelicSickleImageAsync()
         {
             var name = "Angelic Sickle(12)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/krintizs_skewer_swords_weapons_diablo_2_wiki_guide196px.png";
             var setName = "Angelic Raiment";
             var requirements = new List<string>
             {
@@ -1633,7 +1609,7 @@ namespace Template.Modules
         public async Task AngelicMantleImageAsync()
         {
             var name = "Angelic Mantle(12)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/ring_mail_armor_diablo2_wiki_guide_196px.png";
             var setName = "Angelic Raiment";
             var requirements = new List<string>
             {
@@ -1662,7 +1638,7 @@ namespace Template.Modules
         public async Task AngelicHaloImageAsync()
         {
             var name = "Angelic Halo(12)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/ring4_diablo2_wiki_guide_98px.png";
             var setName = "Angelic Raiment";
             var requirements = new List<string>
             {
@@ -1691,7 +1667,7 @@ namespace Template.Modules
         public async Task AngelicWingsImageAsync()
         {
             var name = "Angelic Wings(12)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/amulet2_diablo2_wiki_guide_98px.png";
             var setName = "Angelic Raiment";
             var requirements = new List<string>
             {
@@ -1729,7 +1705,7 @@ namespace Template.Modules
         public async Task HsarusIronFistImageAsync()
         {
             var name = "Hsarus' Iron Fist(3)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/buckler_shields_diablo2_wiki_guide_100x150px.png";
             var setName = "Hsarus' Defense";
             var requirements = new List<string>
             {
@@ -1757,7 +1733,7 @@ namespace Template.Modules
         public async Task HsarusIronStayImageAsync()
         {
             var name = "Hsarus' Iron Stay(3)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/bell_armor_diablo2_wiki_guide_196px.png";
             var setName = "Hsarus' Defense";
             var requirements = new List<string>
             {
@@ -1785,7 +1761,7 @@ namespace Template.Modules
         public async Task HsarusIronHeelImageAsync()
         {
             var name = "Hsarus' Iron Heel(3)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/chain_boots_diablo2_wiki_guide_196px.png";
             var setName = "Hsarus' Defense";
             var requirements = new List<string>
             {
@@ -1822,7 +1798,7 @@ namespace Template.Modules
         public async Task InfernalTorchImageAsync()
         {
             var name = "Infernal Torch(5)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/grim_wand_diablo_2_wiki_guide_125px.png";
             var setName = "Infernal Tools";
             var requirements = new List<string>
             {
@@ -1851,7 +1827,7 @@ namespace Template.Modules
         public async Task InfernalCraniumImageAsync()
         {
             var name = "Infernal Cranium(5)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/biggins_bonnet_helm_armor_diablo2_wiki_guide_196px.png";
             var setName = "Infernal Tools";
             var requirements = new List<string>
             {
@@ -1879,7 +1855,7 @@ namespace Template.Modules
         public async Task InfernalSignImageAsync()
         {
             var name = "Infernal Sign(5)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/heavy_belt_armor_diablo2_wiki_guide_196px.png";
             var setName = "Infernal Tools";
             var requirements = new List<string>
             {
@@ -1918,7 +1894,7 @@ namespace Template.Modules
         public async Task IrathasCoilImageAsync()
         {
             var name = "Iratha's Coil(15)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/crown_helm_armor_diablo2_wiki_guide_196px.png";
             var setName = "Iratha's Finery";
             var requirements = new List<string>
             {
@@ -1946,7 +1922,7 @@ namespace Template.Modules
         public async Task IrathasCuffImageAsync()
         {
             var name = "Iratha's Cuff(15)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/light_gauntlets_diablo2_wiki_guide_196px.png";
             var setName = "Iratha's Finery";
             var requirements = new List<string>
             {
@@ -1974,7 +1950,7 @@ namespace Template.Modules
         public async Task IrathasCordImageAsync()
         {
             var name = "Iratha's Cord(15)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/heavy_belt_armor_diablo2_wiki_guide_196px.png";
             var setName = "Iratha's Finery";
             var requirements = new List<string>
             {
@@ -2002,7 +1978,7 @@ namespace Template.Modules
         public async Task IrathasCollarImageAsync()
         {
             var name = "Iratha's Collar(15)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/amulet1_diablo2_wiki_guide_98px.png";
             var setName = "Iratha's Finery";
             var requirements = new List<string>
             {
@@ -2040,7 +2016,7 @@ namespace Template.Modules
         public async Task IsenhartsLightbrandImageAsync()
         {
             var name = "Isenhart's Lightbrand(8)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/broad_sword_diablo_2_wiki_guide196px.png";
             var setName = "Isenhart's Armory";
             var requirements = new List<string>
             {
@@ -2068,7 +2044,7 @@ namespace Template.Modules
         public async Task IsenhartsCaseImageAsync()
         {
             var name = "Isenhart's Case(8)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/breast_plate_armor_diablo2_wiki_guide_196px.png";
             var setName = "Isenhart's Armory";
             var requirements = new List<string>
             {
@@ -2096,7 +2072,7 @@ namespace Template.Modules
         public async Task IsenhartsParryImageAsync()
         {
             var name = "Isenhart's Parry(8)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/the_ward_diablo2_wiki_guide_196x294px.png";
             var setName = "Isenhart's Armory";
             var requirements = new List<string>
             {
@@ -2125,7 +2101,7 @@ namespace Template.Modules
         public async Task IsenhartsHornsImageAsync()
         {
             var name = "Isenhart's Horns(8)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/duskdeep_helm_armor_diablo2_wiki_guide_196px.png";
             var setName = "Isenhart's Armory";
             var requirements = new List<string>
             {
@@ -2163,7 +2139,7 @@ namespace Template.Modules
         public async Task MilabregasRodImageAsync()
         {
             var name = "Milabrega's Rod";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/war_scepter_weapons_diablo_2_resurrected_wiki_guide_196xp.png";
             var setName = "Milabrega's Regalia";
             var requirements = new List<string>
             {
@@ -2181,8 +2157,6 @@ namespace Template.Modules
 
             var setBonuses = new List<Tuple<string, int, int, string>>()
             {
-                Tuple.Create(" ", , , ""),
-                Tuple.Create(" ", , , "")
             };
 
             var setPieces = ParseSetPieces(name, setName);
@@ -2194,7 +2168,7 @@ namespace Template.Modules
         public async Task MilabregasRobeImageAsync()
         {
             var name = "Milabrega's Robe(17)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/ancient_armor_diablo2_wiki_guide_196px.png";
             var setName = "Milabrega's Regalia";
             var requirements = new List<string>
             {
@@ -2222,7 +2196,7 @@ namespace Template.Modules
         public async Task MilabregasOrbImageAsync()
         {
             var name = "Milabrega's Orb(17)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/steelclash_diablo2_wiki_guide_196x294px.png";
             var setName = "Milabrega's Regalia";
             var requirements = new List<string>
             {
@@ -2251,7 +2225,7 @@ namespace Template.Modules
         public async Task MilabregasDiademImageAsync()
         {
             var name = "Milabrega's Diadem(17)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/crown_helm_armor_diablo2_wiki_guide_196px.png";
             var setName = "Milabrega's Regalia";
             var requirements = new List<string>
             {
@@ -2291,7 +2265,7 @@ namespace Template.Modules
         public async Task SigonsShelterImageAsync()
         {
             var name = "Sigon's Shelter(6)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/gothic_plate_armor_diablo2_wiki_guide_196px.png";
             var setName = "Sigon's Complete Steel";
             var requirements = new List<string>
             {
@@ -2302,7 +2276,7 @@ namespace Template.Modules
             var affixes = new List<Tuple<string, int, int>>()
             {
                 Tuple.Create("% Enhanced Defense", 25, 0),
-                Tuple.Create("% Lightning Resist", 30, )
+                Tuple.Create("% Lightning Resist", 30, 0)
             };
 
             var setBonuses = new List<Tuple<string, int, int, string>>()
@@ -2319,7 +2293,7 @@ namespace Template.Modules
         public async Task SigonsGuardImageAsync()
         {
             var name = "Sigon's Guard(6)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/bverrit_keep_1_diablo2_wiki_guide_196x294px.png";
             var setName = "Sigon's Complete Steel";
             var requirements = new List<string>
             {
@@ -2335,8 +2309,6 @@ namespace Template.Modules
 
             var setBonuses = new List<Tuple<string, int, int, string>>()
             {
-                Tuple.Create(" ", , , ""),
-                Tuple.Create(" ", , , "")
             };
 
             var setPieces = ParseSetPieces(name, setName);
@@ -2348,7 +2320,7 @@ namespace Template.Modules
         public async Task SigonsVisorImageAsync()
         {
             var name = "Sigon's Visor(6)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/great_helm_armor_diablo2_wiki_guide_196px.png";
             var setName = "Sigon's Complete Steel";
             var requirements = new List<string>
             {
@@ -2377,7 +2349,7 @@ namespace Template.Modules
         public async Task SigonsGageImageAsync()
         {
             var name = "Sigon's Gage(6)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/gauntlets_diablo2_wiki_guide_196px.png";
             var setName = "Sigon's Complete Steel";
             var requirements = new List<string>
             {
@@ -2406,7 +2378,7 @@ namespace Template.Modules
         public async Task SigonsWrapImageAsync()
         {
             var name = "Sigon's Wrap(6)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/plated_belt_armor_diablo2_wiki_guide_196px.png";
             var setName = "Sigon's Complete Steel";
             var requirements = new List<string>
             {
@@ -2435,7 +2407,7 @@ namespace Template.Modules
         public async Task SigonsSabotImageAsync()
         {
             var name = "Sigon's Sabot(6)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/plate_boots_diablo2_wiki_guide_196px.png";
             var setName = "Sigon's Complete Steel";
             var requirements = new List<string>
             {
@@ -2475,7 +2447,7 @@ namespace Template.Modules
         public async Task TancredsCrowbillImageAsync()
         {
             var name = "Tancred's Crowbill(20)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/military_pick_weapons_diablo_2_resurrected_wiki_guide_196px.png";
             var setName = "Tancred's Battlegear";
             var requirements = new List<string>
             {
@@ -2491,8 +2463,8 @@ namespace Template.Modules
 
             var setBonuses = new List<Tuple<string, int, int, string>>()
             {
-                Tuple.Create(" Mana", 20, 0),
-                Tuple.Create("% Increased Attack Speed", 20, 0)
+                Tuple.Create(" Mana", 20, 0, "2"),
+                Tuple.Create("% Increased Attack Speed", 20, 0, "3")
             };
 
             var setPieces = ParseSetPieces(name, setName);
@@ -2504,7 +2476,7 @@ namespace Template.Modules
         public async Task TancredsSpineImageAsync()
         {
             var name = "Tancred's Spine(20)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/full_plate_mail_diablo2_wiki_guide_196px.png";
             var setName = "Tancred's Battlegear";
             var requirements = new List<string>
             {
@@ -2532,7 +2504,7 @@ namespace Template.Modules
         public async Task TancredsSkullImageAsync()
         {
             var name = "Tancred's Skull(20)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/wormskull_helm_armor_diablo2_wiki_guide_196px.png";
             var setName = "Tancred's Battlegear";
             var requirements = new List<string>
             {
@@ -2560,7 +2532,7 @@ namespace Template.Modules
         public async Task TancredsHobnailsImageAsync()
         {
             var name = "Tancred's Hobnails(20)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/leather_boots_diablo2_wiki_guide_196px.png";
             var setName = "Tancred's Battlegear";
             var requirements = new List<string>
             {
@@ -2589,7 +2561,7 @@ namespace Template.Modules
         public async Task TancredsWeirdImageAsync()
         {
             var name = "Tancred's Weird(20)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/amulet3_diablo2_wiki_guide_98px.png";
             var setName = "Tancred's Battlegear";
             var requirements = new List<string>
             {
@@ -2627,7 +2599,7 @@ namespace Template.Modules
         public async Task DeathsTouchImageAsync()
         {
             var name = "Death's Touch(6)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/war_sword_weapons_diablo_2_wiki_guide196px.png";
             var setName = "Death's Disguise";
             var requirements = new List<string>
             {
@@ -2655,7 +2627,7 @@ namespace Template.Modules
         public async Task DeathsHandImageAsync()
         {
             var name = "Death's Hand(6)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/leather_gloves_diablo2_wiki_guide_196px.png";
             var setName = "Death's Disguise";
             var requirements = new List<string>
             {
@@ -2683,7 +2655,7 @@ namespace Template.Modules
         public async Task DeathsGuardImageAsync()
         {
             var name = "Death's Guard(6)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/sash_armor_diablo2_wiki_guide_196px.png";
             var setName = "Death's Disguise";
             var requirements = new List<string>
             {
@@ -2721,7 +2693,7 @@ namespace Template.Modules
         public async Task VidalasBarbImageAsync()
         {
             var name = "Vidala's Barb(14)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/long_battle_bow_weapons_diablo_2_resurrected_wiki_guide.png";
             var setName = "Vidala's Rig";
             var requirements = new List<string>
             {
@@ -2748,7 +2720,7 @@ namespace Template.Modules
         public async Task VidalasAmbushImageAsync()
         {
             var name = "Vidala's Ambush(14)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/leather_armor_diablo2_wiki_guide_196px.png";
             var setName = "Vidala's Rig";
             var requirements = new List<string>
             {
@@ -2777,7 +2749,7 @@ namespace Template.Modules
         public async Task VidalasFetlockImageAsync()
         {
             var name = "Vidala's Fetlock(14)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/light_plate_boots_diablo2_wiki_guide_196px.png";
             var setName = "Vidala's Rig";
             var requirements = new List<string>
             {
@@ -2805,7 +2777,7 @@ namespace Template.Modules
         public async Task VidalasSnareImageAsync()
         {
             var name = "Vidala's Snare(14)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/amulet2_diablo2_wiki_guide_98px.png";
             var setName = "Vidala's Rig";
             var requirements = new List<string>
             {
@@ -2843,7 +2815,7 @@ namespace Template.Modules
         public async Task DangoonsTeachingImageAsync()
         {
             var name = "Dangoon's Teaching(68)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/dangoons_teaching_weapons_diablo_2_resurrected_wiki_guide_196px.png";
             var setName = "Heaven's Brethren";
             var requirements = new List<string>
             {
@@ -2862,8 +2834,6 @@ namespace Template.Modules
 
             var setBonuses = new List<Tuple<string, int, int, string>>()
             {
-                Tuple.Create(" ", , , ""),
-                Tuple.Create(" ", , , "")
             };
 
             var setPieces = ParseSetPieces(name, setName);
@@ -2875,7 +2845,7 @@ namespace Template.Modules
         public async Task HaemosusAdamantImageAsync()
         {
             var name = "Haemosu's Adamant(44)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/haemosu's_adamant_armor_diablo2_wiki_guide_196px.png";
             var setName = "Heaven's Brethren";
             var requirements = new List<string>
             {
@@ -2887,15 +2857,13 @@ namespace Template.Modules
             {
                 Tuple.Create(" Defense", 500, 0),
                 Tuple.Create(" Defense vs. Melee", 40, 0),
-                Tuple.Create(" Defense vs. Missile", 35, ),
-                Tuple.Create("% Requirements", -20, ),
+                Tuple.Create(" Defense vs. Missile", 35, 0),
+                Tuple.Create("% Requirements", -20, 0),
                 Tuple.Create(" Life", 75, 0)
             };
 
             var setBonuses = new List<Tuple<string, int, int, string>>()
             {
-                Tuple.Create(" ", , , ""),
-                Tuple.Create(" ", , , "")
             };
 
             var setPieces = ParseSetPieces(name, setName);
@@ -2907,7 +2875,7 @@ namespace Template.Modules
         public async Task TaebaeksGloryImageAsync()
         {
             var name = "Taebaek's Glory(81)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/heaven's_brethren_diablo2_wiki_guide_196x294px.png";
             var setName = "Heaven's Brethren";
             var requirements = new List<string>
             {
@@ -2929,8 +2897,6 @@ namespace Template.Modules
 
             var setBonuses = new List<Tuple<string, int, int, string>>()
             {
-                Tuple.Create(" ", , , ""),
-                Tuple.Create(" ", , , "")
             };
 
             var setPieces = ParseSetPieces(name, setName);
@@ -2942,7 +2908,7 @@ namespace Template.Modules
         public async Task OndalsAlmightyImageAsync()
         {
             var name = "Ondal's Almighty(69)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/ondals_almighty_helm_armor_diablo2_wiki_guide_196px.png";
             var setName = "Heaven's Brethren";
             var requirements = new List<string>
             {
@@ -2962,8 +2928,6 @@ namespace Template.Modules
 
             var setBonuses = new List<Tuple<string, int, int, string>>()
             {
-                Tuple.Create(" ", , , ""),
-                Tuple.Create(" ", , , "")
             };
 
             var setPieces = ParseSetPieces(name, setName);
@@ -2974,11 +2938,11 @@ namespace Template.Modules
         [Command("The Disciple")]
         public async Task TheDiscipleImageAsync()
         {
-            await ImageAsync();
-            await ImageAsync();
-            await ImageAsync();
-            await ImageAsync();
-            await ImageAsync();
+            await DarkAdherentImageAsync();
+            await LayingofHandsImageAsync();
+            await CredendumImageAsync();
+            await RiteofPassageImageAsync();
+            await TellingofBeadsImageAsync();
             
 
         }
@@ -2987,7 +2951,7 @@ namespace Template.Modules
         public async Task DarkAdherentImageAsync()
         {
             var name = "Dark Adherent(49)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/quilted_armor_diablo2_wiki_guide_196px.png";
             var setName = "The Disciple";
             var requirements = new List<string>
             {
@@ -3005,8 +2969,6 @@ namespace Template.Modules
 
             var setBonuses = new List<Tuple<string, int, int, string>>()
             {
-                Tuple.Create(" ", , , ""),
-                Tuple.Create(" ", , , "")
             };
 
             var setPieces = ParseSetPieces(name, setName);
@@ -3018,7 +2980,7 @@ namespace Template.Modules
         public async Task LayingofHandsImageAsync()
         {
             var name = "Laying of Hands(63)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/leather_gloves_diablo2_wiki_guide_196px.png";
             var setName = "The Disciple";
             var requirements = new List<string>
             {
@@ -3037,8 +2999,6 @@ namespace Template.Modules
 
             var setBonuses = new List<Tuple<string, int, int, string>>()
             {
-                Tuple.Create(" ", , , ""),
-                Tuple.Create(" ", , , "")
             };
 
             var setPieces = ParseSetPieces(name, setName);
@@ -3050,7 +3010,7 @@ namespace Template.Modules
         public async Task CredendumImageAsync()
         {
             var name = "Credendum(65)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/bell_armor_diablo2_wiki_guide_196px.png";
             var setName = "The Disciple";
             var requirements = new List<string>
             {
@@ -3068,8 +3028,6 @@ namespace Template.Modules
 
             var setBonuses = new List<Tuple<string, int, int, string>>()
             {
-                Tuple.Create(" ", , , ""),
-                Tuple.Create(" ", , , "")
             };
 
             var setPieces = ParseSetPieces(name, setName);
@@ -3078,10 +3036,10 @@ namespace Template.Modules
             await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
         }
         [Command("Rite of Passage")]
-        public async Task ImageAsync()
+        public async Task RiteofPassageImageAsync()
         {
             var name = "Rite of Passage(29)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/leather_boots_diablo2_wiki_guide_196px.png";
             var setName = "The Disciple";
             var requirements = new List<string>
             {
@@ -3099,8 +3057,6 @@ namespace Template.Modules
 
             var setBonuses = new List<Tuple<string, int, int, string>>()
             {
-                Tuple.Create(" ", , , ""),
-                Tuple.Create(" ", , , "")
             };
 
             var setPieces = ParseSetPieces(name, setName);
@@ -3112,7 +3068,7 @@ namespace Template.Modules
         public async Task TellingofBeadsImageAsync()
         {
             var name = "Telling of Beads(30)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/amulet2_diablo2_wiki_guide_98px.png";
             var setName = "The Disciple";
             var requirements = new List<string>
             {
@@ -3130,8 +3086,6 @@ namespace Template.Modules
 
             var setBonuses = new List<Tuple<string, int, int, string>>()
             {
-                Tuple.Create(" ", , , ""),
-                Tuple.Create(" ", , , "")
             };
 
             var setPieces = ParseSetPieces(name, setName);
@@ -3153,7 +3107,7 @@ namespace Template.Modules
         public async Task HwaninsJusticeImageAsync()
         {
             var name = "Hwanin's Justice(28)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/voulge_weapons_diablo_2_resurrected_wiki_guide_196px.png";
             var setName = "Hwanin's Majesty";
             var requirements = new List<string>
             {
@@ -3173,8 +3127,6 @@ namespace Template.Modules
 
             var setBonuses = new List<Tuple<string, int, int, string>>()
             {
-                Tuple.Create(" ", , , ""),
-                Tuple.Create(" ", , , "")
             };
 
             var setPieces = ParseSetPieces(name, setName);
@@ -3186,7 +3138,7 @@ namespace Template.Modules
         public async Task HwaninsRefugeImageAsync()
         {
             var name = "Hwanin's Refuge(30)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/scale_mail_armor_diablo2_wiki_guide_196px.png";
             var setName = "Hwanin's Majesty";
             var requirements = new List<string>
             {
@@ -3204,8 +3156,6 @@ namespace Template.Modules
 
             var setBonuses = new List<Tuple<string, int, int, string>>()
             {
-                Tuple.Create(" ", , , ""),
-                Tuple.Create(" ", , , "")
             };
 
             var setPieces = ParseSetPieces(name, setName);
@@ -3217,7 +3167,7 @@ namespace Template.Modules
         public async Task HwaninsSplendorImageAsync()
         {
             var name = "Hwanin's Splendor(45)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/crown_of_thieves_helm_armor_diablo2_wiki_guide_196px.png";
             var setName = "Hwanin's Majesty";
             var requirements = new List<string>
             {
@@ -3235,8 +3185,6 @@ namespace Template.Modules
 
             var setBonuses = new List<Tuple<string, int, int, string>>()
             {
-                Tuple.Create(" ", , , ""),
-                Tuple.Create(" ", , , "")
             };
 
             var setPieces = ParseSetPieces(name, setName);
@@ -3248,7 +3196,7 @@ namespace Template.Modules
         public async Task HwaninsBlessingImageAsync()
         {
             var name = "Hwanin's Blessing(35)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/bell_armor_diablo2_wiki_guide_196px.png";
             var setName = "Hwanin's Majesty";
             var requirements = new List<string>
             {
@@ -3266,8 +3214,6 @@ namespace Template.Modules
 
             var setBonuses = new List<Tuple<string, int, int, string>>()
             {
-                Tuple.Create(" ", , , ""),
-                Tuple.Create(" ", , , "")
             };
 
             var setPieces = ParseSetPieces(name, setName);
@@ -3285,10 +3231,10 @@ namespace Template.Modules
         }
 
         [Command("Cow King's Horns")]
-        public async Task ImageAsync()
+        public async Task CowKingsHornsImageAsync()
         {
             var name = "Cow King's Horns(25)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/cap_helm_armor_diablo2_wiki_guide_196px.png";
             var setName = "Cow King's Leathers";
             var requirements = new List<string>
             {
@@ -3306,8 +3252,6 @@ namespace Template.Modules
 
             var setBonuses = new List<Tuple<string, int, int, string>>()
             {
-                Tuple.Create(" ", , , ""),
-                Tuple.Create(" ", , , "")
             };
 
             var setPieces = ParseSetPieces(name, setName);
@@ -3319,7 +3263,7 @@ namespace Template.Modules
         public async Task CowKingsHideImageAsync()
         {
             var name = "Cow King's Hide(18)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/studded_leather_armor_diablo2_wiki_guide_196px.png";
             var setName = "Cow King's Leathers";
             var requirements = new List<string>
             {
@@ -3337,8 +3281,6 @@ namespace Template.Modules
 
             var setBonuses = new List<Tuple<string, int, int, string>>()
             {
-                Tuple.Create(" ", , , ""),
-                Tuple.Create(" ", , , "")
             };
 
             var setPieces = ParseSetPieces(name, setName);
@@ -3350,7 +3292,7 @@ namespace Template.Modules
         public async Task CowKingsHoovesImageAsync()
         {
             var name = "Cow King's Hooves(13)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/heavy_boots_diablo2_wiki_guide_196px.png";
             var setName = "Cow King's Leathers";
             var requirements = new List<string>
             {
@@ -3369,8 +3311,6 @@ namespace Template.Modules
 
             var setBonuses = new List<Tuple<string, int, int, string>>()
             {
-                Tuple.Create(" ", , , ""),
-                Tuple.Create(" ", , , "")
             };
 
             var setPieces = ParseSetPieces(name, setName);
@@ -3391,7 +3331,7 @@ namespace Template.Modules
         public async Task NajsPuzzlerImageAsync()
         {
             var name = "Naj's Puzzler(78)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/staff_of_kings_quest_item_diablo2_wiki_guide_125px.png";
             var setName = "Naj's Ancient Vestige";
             var requirements = new List<string>
             {
@@ -3414,8 +3354,6 @@ namespace Template.Modules
 
             var setBonuses = new List<Tuple<string, int, int, string>>()
             {
-                Tuple.Create(" ", , , ""),
-                Tuple.Create(" ", , , "")
             };
 
             var setPieces = ParseSetPieces(name, setName);
@@ -3427,7 +3365,7 @@ namespace Template.Modules
         public async Task NajsLightPlateImageAsync()
         {
             var name = "Naj's Light Plate(71)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/plate_mail_armor_diablo2_wiki_guide_196px.png";
             var setName = "Naj's Ancient Vestige";
             var requirements = new List<string>
             {
@@ -3447,8 +3385,6 @@ namespace Template.Modules
 
             var setBonuses = new List<Tuple<string, int, int, string>>()
             {
-                Tuple.Create(" ", , , ""),
-                Tuple.Create(" ", , , "")
             };
 
             var setPieces = ParseSetPieces(name, setName);
@@ -3460,7 +3396,7 @@ namespace Template.Modules
         public async Task NajsCircletImageAsync()
         {
             var name = "Naj's Circlet(28)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/circlet_armor_diablo2_wiki_guide_196px.png";
             var setName = "Naj's Ancient Vestige";
             var requirements = new List<string>
             {
@@ -3479,8 +3415,6 @@ namespace Template.Modules
 
             var setBonuses = new List<Tuple<string, int, int, string>>()
             {
-                Tuple.Create(" ", , , ""),
-                Tuple.Create(" ", , , "")
             };
 
             var setPieces = ParseSetPieces(name, setName);
@@ -3502,7 +3436,7 @@ namespace Template.Modules
         public async Task SandersParagonImageAsync()
         {
             var name = "Sander's Paragon(25)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/biggins_bonnet_helm_armor_diablo2_wiki_guide_196px.png";
             var setName = "Sander's Folly";
             var requirements = new List<string>
             {
@@ -3519,8 +3453,6 @@ namespace Template.Modules
 
             var setBonuses = new List<Tuple<string, int, int, string>>()
             {
-                Tuple.Create(" ", , , ""),
-                Tuple.Create(" ", , , "")
             };
 
             var setPieces = ParseSetPieces(name, setName);
@@ -3532,7 +3464,7 @@ namespace Template.Modules
         public async Task SandersSuperstitionImageAsync()
         {
             var name = "Sander's Superstition(25)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/gravenspine_diablo_2_wiki_guide_125px.png";
             var setName = "Sander's Folly";
             var requirements = new List<string>
             {
@@ -3552,8 +3484,6 @@ namespace Template.Modules
 
             var setBonuses = new List<Tuple<string, int, int, string>>()
             {
-                Tuple.Create(" ", , , ""),
-                Tuple.Create(" ", , , "")
             };
 
             var setPieces = ParseSetPieces(name, setName);
@@ -3565,7 +3495,7 @@ namespace Template.Modules
         public async Task SandersTabooImageAsync()
         {
             var name = "Sander's Taboo(28)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/heavy_gloves_diablo2_wiki_guide_196px.png";
             var setName = "Sander's Folly";
             var requirements = new List<string>
             {
@@ -3583,8 +3513,6 @@ namespace Template.Modules
 
             var setBonuses = new List<Tuple<string, int, int, string>>()
             {
-                Tuple.Create(" ", , , ""),
-                Tuple.Create(" ", , , "")
             };
 
             var setPieces = ParseSetPieces(name, setName);
@@ -3596,7 +3524,7 @@ namespace Template.Modules
         public async Task SandersRiprapImageAsync()
         {
             var name = "Sander's Riprap(20)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/heavy_boots_diablo2_wiki_guide_196px.png";
             var setName = "Sander's Folly";
             var requirements = new List<string>
             {
@@ -3614,8 +3542,6 @@ namespace Template.Modules
 
             var setBonuses = new List<Tuple<string, int, int, string>>()
             {
-                Tuple.Create(" ", , , ""),
-                Tuple.Create(" ", , , "")
             };
 
             var setPieces = ParseSetPieces(name, setName);
@@ -3636,7 +3562,7 @@ namespace Template.Modules
         public async Task SazabisCobaltRedeemerImageAsync()
         {
             var name = "Sazabi's Cobalt Redeemer(73)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/hellplague_diablo_2_wiki_guide196px.png";
             var setName = "Sazabi's Grand Tribute";
             var requirements = new List<string>
             {
@@ -3658,8 +3584,6 @@ namespace Template.Modules
 
             var setBonuses = new List<Tuple<string, int, int, string>>()
             {
-                Tuple.Create(" ", , , ""),
-                Tuple.Create(" ", , , "")
             };
 
             var setPieces = ParseSetPieces(name, setName);
@@ -3671,7 +3595,7 @@ namespace Template.Modules
         public async Task SazabisGhostLiberatorImageAsync()
         {
             var name = "Sazabi's Ghost Liberator(67)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/splint_mail_armor_diablo2_wiki_guide_196px.png";
             var setName = "Sazabi's Grand Tribute";
             var requirements = new List<string>
             {
@@ -3690,8 +3614,6 @@ namespace Template.Modules
 
             var setBonuses = new List<Tuple<string, int, int, string>>()
             {
-                Tuple.Create(" ", , , ""),
-                Tuple.Create(" ", , , "")
             };
 
             var setPieces = ParseSetPieces(name, setName);
@@ -3703,7 +3625,7 @@ namespace Template.Modules
         public async Task SazabisMentalSheathImageAsync()
         {
             var name = "Sazabi's Mental Sheath(43)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/duskdeep_helm_armor_diablo2_wiki_guide_196px.png";
             var setName = "Sazabi's Grand Tribute";
             var requirements = new List<string>
             {
@@ -3721,8 +3643,6 @@ namespace Template.Modules
 
             var setBonuses = new List<Tuple<string, int, int, string>>()
             {
-                Tuple.Create(" ", , , ""),
-                Tuple.Create(" ", , , "")
             };
 
             var setPieces = ParseSetPieces(name, setName);
@@ -3744,7 +3664,7 @@ namespace Template.Modules
         public async Task GuillaumesFaceImageAsync()
         {
             var name = "Guillaume's Face(34)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/great_helm_armor_diablo2_wiki_guide_196px.png";
             var setName = "Orphan's Call";
             var requirements = new List<string>
             {
@@ -3763,8 +3683,6 @@ namespace Template.Modules
 
             var setBonuses = new List<Tuple<string, int, int, string>>()
             {
-                Tuple.Create(" ", , , ""),
-                Tuple.Create(" ", , , "")
             };
 
             var setPieces = ParseSetPieces(name, setName);
@@ -3776,7 +3694,7 @@ namespace Template.Modules
         public async Task WhitstansGuardImageAsync()
         {
             var name = "Whitstan's Guard(29)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/moser's_blessed_circle_diablo2_wiki_guide_196x294px.png";
             var setName = "Orphan's Call";
             var requirements = new List<string>
             {
@@ -3795,8 +3713,6 @@ namespace Template.Modules
 
             var setBonuses = new List<Tuple<string, int, int, string>>()
             {
-                Tuple.Create(" ", , , ""),
-                Tuple.Create(" ", , , "")
             };
 
             var setPieces = ParseSetPieces(name, setName);
@@ -3808,7 +3724,7 @@ namespace Template.Modules
         public async Task MagnusSkinImageAsync()
         {
             var name = "Magnus' Skin(37)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/heavy_gloves_diablo2_wiki_guide_196px.png";
             var setName = "Orphan's Call";
             var requirements = new List<string>
             {
@@ -3827,8 +3743,6 @@ namespace Template.Modules
 
             var setBonuses = new List<Tuple<string, int, int, string>>()
             {
-                Tuple.Create(" ", , , ""),
-                Tuple.Create(" ", , , "")
             };
 
             var setPieces = ParseSetPieces(name, setName);
@@ -3840,7 +3754,7 @@ namespace Template.Modules
         public async Task WilhelmsPrideImageAsync()
         {
             var name = "Wilhelm's Pride(42)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/heavy_belt_armor_diablo2_wiki_guide_196px.png";
             var setName = "Orphan's Call";
             var requirements = new List<string>
             {
@@ -3858,8 +3772,6 @@ namespace Template.Modules
 
             var setBonuses = new List<Tuple<string, int, int, string>>()
             {
-                Tuple.Create(" ", , , ""),
-                Tuple.Create(" ", , , "")
             };
 
             var setPieces = ParseSetPieces(name, setName);
@@ -3881,7 +3793,7 @@ namespace Template.Modules
         public async Task AldursRhythmImageAsync()
         {
             var name = "Aldur's Rhythm(42)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/bloodrise_weapons_diablo_2_resurrected_wiki_guide_196px.png";
             var setName = "Aldur's Watchtower";
             var requirements = new List<string>
             {
@@ -3918,7 +3830,7 @@ namespace Template.Modules
         public async Task AldursDeceptionImageAsync()
         {
             var name = "Aldur's Deception(76)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/full_plate_mail_diablo2_wiki_guide_196px.png";
             var setName = "Aldur's Watchtower";
             var requirements = new List<string>
             {
@@ -3954,7 +3866,7 @@ namespace Template.Modules
         public async Task AldursStonyGazeImageAsync()
         {
             var name = "Aldur's Stony Gaze(36)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/spirit_keeper_mask_armor_diablo2_wiki_guide_196px.png";
             var setName = "Aldur's Watchtower";
             var requirements = new List<string>
             {
@@ -3988,7 +3900,7 @@ namespace Template.Modules
         public async Task AldursAdvanceImageAsync()
         {
             var name = "Aldur's Advance(45)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/light_plate_boots_diablo2_wiki_guide_196px.png";
             var setName = "Aldur's Watchtower";
             var requirements = new List<string>
             {
@@ -4002,7 +3914,7 @@ namespace Template.Modules
                 Tuple.Create(" Maximum Stamina", 180, 0),
                 Tuple.Create("% Damage Taken Goes To Mana", 10, 0),
                 Tuple.Create("% Heal Stamina", 32, 0),
-                Tuple.Create(" Life", 50, ),
+                Tuple.Create(" Life", 50, 0),
                 Tuple.Create("% Fire Resist", 40, 50)
             };
 
@@ -4030,8 +3942,8 @@ namespace Template.Modules
         [Command("Bul-Kathos' Sacred Charge")]
         public async Task BulKathosSacredChargeImageAsync()
         {
-            var name = "BulKathosSacredCharge(63)";
-            var imageLink = "";
+            var name = "Bul-Katho's Sacred Charge(63)";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/great_sword_diablo_2_wiki_guide196px.png";
             var setName = "Bul-Kathos' Children";
             var requirements = new List<string>
             {
@@ -4050,8 +3962,6 @@ namespace Template.Modules
 
             var setBonuses = new List<Tuple<string, int, int, string>>()
             {
-                Tuple.Create(" ", , , ""),
-                Tuple.Create(" ", , , "")
             };
 
             var setPieces = ParseSetPieces(name, setName);
@@ -4063,7 +3973,7 @@ namespace Template.Modules
         public async Task BulKathosTribalGuardianImageAsync()
         {
             var name = "Bul-Kathos' Tribal Guardian(66)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/war_sword_weapons_diablo_2_wiki_guide196px.png";
             var setName = "Bul-Kathos' Children";
             var requirements = new List<string>
             {
@@ -4082,8 +3992,6 @@ namespace Template.Modules
 
             var setBonuses = new List<Tuple<string, int, int, string>>()
             {
-                Tuple.Create(" ", , , ""),
-                Tuple.Create(" ", , , "")
             };
 
             var setPieces = ParseSetPieces(name, setName);
@@ -4105,7 +4013,7 @@ namespace Template.Modules
         public async Task GriswoldsRedemptionImageAsync()
         {
             var name = "Griswold's Redemption(66)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/war_scepter_weapons_diablo_2_resurrected_wiki_guide_196xp.png";
             var setName = "Griswold's Legacy";
             var requirements = new List<string>
             {
@@ -4138,7 +4046,7 @@ namespace Template.Modules
         public async Task GriswoldsHeartImageAsync()
         {
             var name = "Griswold's Heart(45)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/corpsemourn_armor_diablo2_wiki_guide_196px.png";
             var setName = "Griswold's Legacy";
             var requirements = new List<string>
             {
@@ -4157,8 +4065,6 @@ namespace Template.Modules
 
             var setBonuses = new List<Tuple<string, int, int, string>>()
             {
-                Tuple.Create(" ", , , ""),
-                Tuple.Create(" ", , , "")
             };
 
             var setPieces = ParseSetPieces(name, setName);
@@ -4170,7 +4076,7 @@ namespace Template.Modules
         public async Task GriswoldsHonorImageAsync()
         {
             var name = "Griswold's Honor(68)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/crown_shield_diablo2_wiki_guide_196x294px.png";
             var setName = "Griswold's Legacy";
             var requirements = new List<string>
             {
@@ -4189,8 +4095,6 @@ namespace Template.Modules
 
             var setBonuses = new List<Tuple<string, int, int, string>>()
             {
-                Tuple.Create(" ", , , ""),
-                Tuple.Create(" ", , , "")
             };
 
             var setPieces = ParseSetPieces(name, setName);
@@ -4203,7 +4107,7 @@ namespace Template.Modules
         public async Task GriswoldsValorImageAsync()
         {
             var name = "Griswold's Valor(69)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/crown_helm_armor_diablo2_wiki_guide_196px.png";
             var setName = "Griswold's Legacy";
             var requirements = new List<string>
             {
@@ -4246,7 +4150,7 @@ namespace Template.Modules
         public async Task MavinasCasterImageAsync()
         {
             var name = "M'avina's Caster(70)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/reflex_bow_weapons_diablo_2_resurrected_wiki_guide.png";
             var setName = "M'avina's Battle Hymn";
             var requirements = new List<string>
             {
@@ -4265,7 +4169,7 @@ namespace Template.Modules
             var setBonuses = new List<Tuple<string, int, int, string>>()
             {
                 Tuple.Create(" Magic Damage", 114, 377, "2"),
-                Tuple.Create("% Chance to Cast Level 15 Nova on Striking", 10, , "3"),
+                Tuple.Create("% Chance to Cast Level 15 Nova on Striking", 10, 0, "3"),
                 Tuple.Create(" Bow and Crossbow Skills (Amazon Only)", 2, 0, "4")
             };
 
@@ -4278,7 +4182,7 @@ namespace Template.Modules
         public async Task MavinasEmbraceImageAsync()
         {
             var name = "M'avina's Embrace(70)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/field_plate_armor_diablo2_wiki_guide_196px.png";
             var setName = "M'avina's Battle Hymn";
             var requirements = new List<string>
             {
@@ -4288,10 +4192,10 @@ namespace Template.Modules
 
             var affixes = new List<Tuple<string, int, int>>()
             {
-                Tuple.Create(" Defense", 350, ),
+                Tuple.Create(" Defense", 350, 0),
                 Tuple.Create(" Defense (Based on Character Level)", 4, 396),
-                Tuple.Create("% Requirements", -30, ),
-                Tuple.Create("% Chance to Cast Level 3 Glacial Spike When Struck", 10, ),
+                Tuple.Create("% Requirements", -30, 0),
+                Tuple.Create("% Chance to Cast Level 3 Glacial Spike When Struck", 10, 0),
                 Tuple.Create(" Magic Damage Reduced", 5, 12),
                 Tuple.Create("Passive and Magic Skills (Amazon Only)", 2, 0)
             };
@@ -4310,7 +4214,7 @@ namespace Template.Modules
         public async Task MavinasTrueSightImageAsync()
         {
             var name = "M'avina's True Sight(64)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/m'avina's_true_sight_diadem_armor_diablo2_wiki_guide_196px.png";
             var setName = "M'avina's Battle Hymn";
             var requirements = new List<string>
             {
@@ -4343,7 +4247,7 @@ namespace Template.Modules
         public async Task MavinasIcyClutchImageAsync()
         {
             var name = "M'avina's Icy Clutch(32)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/light_gauntlets_diablo2_wiki_guide_196px.png";
             var setName = "M'avina's Battle Hymn";
             var requirements = new List<string>
             {
@@ -4376,7 +4280,7 @@ namespace Template.Modules
         public async Task MavinasTenetImageAsync()
         {
             var name = "M'avina's Tenet(45)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/light_belt_armor_diablo2_wiki_guide_196px.png";
             var setName = "M'avina's Battle Hymn";
             var requirements = new List<string>
             {
@@ -4416,7 +4320,7 @@ namespace Template.Modules
         public async Task NatalyasMarkImageAsync()
         {
             var name = "Natalya's Mark(79)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/natalyas_mark_diablo_2_wiki_guide_125px.png";
             var setName = "Natalya's Odium";
             var requirements = new List<string>
             {
@@ -4438,8 +4342,6 @@ namespace Template.Modules
 
             var setBonuses = new List<Tuple<string, int, int, string>>()
             {
-                Tuple.Create(" ", , , ""),
-                Tuple.Create(" ", , , "")
             };
 
             var setPieces = ParseSetPieces(name, setName);
@@ -4451,7 +4353,7 @@ namespace Template.Modules
         public async Task NatalyasShadowImageAsync()
         {
             var name = "Natalya's Shadow(73)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/scale_mail_armor_diablo2_wiki_guide_196px.png";
             var setName = "Natalya's Odium";
             var requirements = new List<string>
             {
@@ -4471,8 +4373,6 @@ namespace Template.Modules
 
             var setBonuses = new List<Tuple<string, int, int, string>>()
             {
-                Tuple.Create(" ", , , ""),
-                Tuple.Create(" ", , , "")
             };
 
             var setPieces = ParseSetPieces(name, setName);
@@ -4484,7 +4384,7 @@ namespace Template.Modules
         public async Task NatalyasTotemImageAsync()
         {
             var name = "Natalya's Totem(59)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/wormskull_helm_armor_diablo2_wiki_guide_196px.png";
             var setName = "Natalya's Odium";
             var requirements = new List<string>
             {
@@ -4503,8 +4403,6 @@ namespace Template.Modules
 
             var setBonuses = new List<Tuple<string, int, int, string>>()
             {
-                Tuple.Create(" ", , , ""),
-                Tuple.Create(" ", , , "")
             };
 
             var setPieces = ParseSetPieces(name, setName);
@@ -4517,7 +4415,7 @@ namespace Template.Modules
         public async Task NatalyasSoulImageAsync()
         {
             var name = "Natalya's Soul(25)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/chain_boots_diablo2_wiki_guide_196px.png";
             var setName = "Natalya's Odium";
             var requirements = new List<string>
             {
@@ -4536,8 +4434,6 @@ namespace Template.Modules
 
             var setBonuses = new List<Tuple<string, int, int, string>>()
             {
-                Tuple.Create(" ", , , ""),
-                Tuple.Create(" ", , , "")
             };
 
             var setPieces = ParseSetPieces(name, setName);
@@ -4560,7 +4456,7 @@ namespace Template.Modules
         public async Task TalRashasLidlessEyeImageAsync()
         {
             var name = "Tal Rasha's Lidless Eye(65)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/dragon_stone_diablo_2_wiki_guide_196px.png";
             var setName = "Tal Rasha's Wrappings";
             var requirements = new List<string>
             {
@@ -4570,10 +4466,10 @@ namespace Template.Modules
 
             var affixes = new List<Tuple<string, int, int>>()
             {
-                Tuple.Create("% Faster Cast Rate", 20, ),
-                Tuple.Create(" Mana", 77, ),
-                Tuple.Create(" Life", 57, ),
-                Tuple.Create(" Energy", 10, ),
+                Tuple.Create("% Faster Cast Rate", 20, 0),
+                Tuple.Create(" Mana", 77, 0),
+                Tuple.Create(" Life", 57, 0),
+                Tuple.Create(" Energy", 10, 0),
                 Tuple.Create(" Lightning Mastery (Sorceress Only)", 1, 2),
                 Tuple.Create(" Fire Mastery (Sorceress Only)", 1, 2),
                 Tuple.Create(" Cold Mastery (Sorceress Only)", 1, 2)
@@ -4597,7 +4493,7 @@ namespace Template.Modules
         public async Task TalRashasGuardianshipImageAsync()
         {
             var name = "Tal Rasha's Guardianship(71)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/gothic_plate_armor_diablo2_wiki_guide_196px.png";
             var setName = "Tal Rasha's Wrappings";
             var requirements = new List<string>
             {
@@ -4631,7 +4527,7 @@ namespace Template.Modules
         public async Task TalRashasHoradricCrestImageAsync()
         {
             var name = "Tal Rasha's Horadric Crest(66)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/mask_helm_armor_diablo2_wiki_guide_196px.png";
             var setName = "Tal Rasha's Wrappings";
             var requirements = new List<string>
             {
@@ -4651,8 +4547,6 @@ namespace Template.Modules
 
             var setBonuses = new List<Tuple<string, int, int, string>>()
             {
-                Tuple.Create(" ", , , ""),
-                Tuple.Create(" ", , , "")
             };
 
             var setPieces = ParseSetPieces(name, setName);
@@ -4664,7 +4558,7 @@ namespace Template.Modules
         public async Task TalRashasFineSpunClothImageAsync()
         {
             var name = "Tal Rasha's Fine-Spun Cloth(53)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/bell_armor_diablo2_wiki_guide_196px.png";
             var setName = "Tal Rasha's Wrappings";
             var requirements = new List<string>
             {
@@ -4696,7 +4590,7 @@ namespace Template.Modules
         public async Task TalRashasAdjudicationImageAsync()
         {
             var name = "Tal Rasha's Adjudication(67)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/amulet2_diablo2_wiki_guide_98px.png";
             var setName = "Tal Rasha's Wrappings";
             var requirements = new List<string>
             {
@@ -4738,7 +4632,7 @@ namespace Template.Modules
         public async Task TrangOulsScalesImageAsync()
         {
             var name = "Trang-Oul's Scales(49)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/full_plate_mail_diablo2_wiki_guide_196px.png";
             var setName = "Trang-Oul's Avatar";
             var requirements = new List<string>
             {
@@ -4771,7 +4665,7 @@ namespace Template.Modules
         public async Task TrangOulsWingImageAsync()
         {
             var name = "Trang-Oul's Wing(54)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/gargoyle_head_shield_diablo2_wiki_guide_196x294px.png";
             var setName = "Trang-Oul's Avatar";
             var requirements = new List<string>
             {
@@ -4806,7 +4700,7 @@ namespace Template.Modules
         public async Task TrangOulsGuiseImageAsync()
         {
             var name = "Trang-Oul's Guise(65)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/wormskull_helm_armor_diablo2_wiki_guide_196px.png";
             var setName = "Trang-Oul's Avatar";
             var requirements = new List<string>
             {
@@ -4825,8 +4719,6 @@ namespace Template.Modules
 
             var setBonuses = new List<Tuple<string, int, int, string>>()
             {
-                Tuple.Create(" ", , , ""),
-                Tuple.Create(" ", , , "")
             };
 
             var setPieces = ParseSetPieces(name, setName);
@@ -4839,7 +4731,7 @@ namespace Template.Modules
         public async Task TrangOulsClawsImageAsync()
         {
             var name = "Trang-Oul's Claws(45)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/chain_gloves_diablo2_wiki_guide_196px.png";
             var setName = "Trang-Oul's Avatar";
             var requirements = new List<string>
             {
@@ -4858,8 +4750,6 @@ namespace Template.Modules
 
             var setBonuses = new List<Tuple<string, int, int, string>>()
             {
-                Tuple.Create(" ", , , ""),
-                Tuple.Create(" ", , , "")
             };
 
             var setPieces = ParseSetPieces(name, setName);
@@ -4872,7 +4762,7 @@ namespace Template.Modules
         public async Task TrangOulsGirthImageAsync()
         {
             var name = "Trang-Oul's Girth(62)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/heavy_belt_armor_diablo2_wiki_guide_196px.png";
             var setName = "Trang-Oul's Avatar";
             var requirements = new List<string>
             {
@@ -4918,7 +4808,7 @@ namespace Template.Modules
         public async Task ImmortalKingsStoneCrusherImageAsync()
         {
             var name = "Immortal King's Stone Crusher(76)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/maul_weapons_diablo_2_wiki_guide_125px.png";
             var setName = "Immortal King";
             var requirements = new List<string>
             {
@@ -4956,7 +4846,7 @@ namespace Template.Modules
         public async Task ImmortalKingsSoulCageImageAsync()
         {
             var name = "Immortal King's Soul Cage(76)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/silks_of_the_victor_diablo2_wiki_guide_196px.png";
             var setName = "Immortal King";
             var requirements = new List<string>
             {
@@ -4990,7 +4880,7 @@ namespace Template.Modules
         public async Task ImmortalKingsWillImageAsync()
         {
             var name = "Immortal King's Will(47)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/arreats_face_helm_armor_diablo2_wiki_guide_196px.png";
             var setName = "Immortal King";
             var requirements = new List<string>
             {
@@ -5010,8 +4900,6 @@ namespace Template.Modules
 
             var setBonuses = new List<Tuple<string, int, int, string>>()
             {
-                Tuple.Create(" ", , , ""),
-                Tuple.Create(" ", , , "")
             };
 
             var setPieces = ParseSetPieces(name, setName);
@@ -5023,7 +4911,7 @@ namespace Template.Modules
         public async Task ImmortalKingsForgeImageAsync()
         {
             var name = "Immortal King's Forge(30)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/gauntlets_diablo2_wiki_guide_196px.png";
             var setName = "Immortal King";
             var requirements = new List<string>
             {
@@ -5057,7 +4945,7 @@ namespace Template.Modules
         public async Task ImmortalKingsDetailImageAsync()
         {
             var name = "Immortal King's Detail(29)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/plated_belt_armor_diablo2_wiki_guide_196px.png";
             var setName = "Immortal King";
             var requirements = new List<string>
             {
@@ -5091,7 +4979,7 @@ namespace Template.Modules
         public async Task ImmortalKingsPillarImageAsync()
         {
             var name = "Immortal King's Pillar(31)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/plate_boots_diablo2_wiki_guide_196px.png";
             var setName = "Immortal King";
             var requirements = new List<string>
             {
@@ -5102,7 +4990,7 @@ namespace Template.Modules
             var affixes = new List<Tuple<string, int, int>>()
             {
                 Tuple.Create(" Defense", 75, 0),
-                Tuple.Create("% Faster Run/Walk, 40, 0),
+                Tuple.Create("% Faster Run/Walk", 40, 0),
                 Tuple.Create(" Attack Rating", 110, 0),
                 Tuple.Create(" Life", 44, 0)
             };
