@@ -62,461 +62,461 @@ namespace Template.Modules
         [Alias("Unique")]
         public async Task UniqueList([Remainder] string args = null)
         {
-            var type = new List<string> {};
+            var type = new List<string> { };
 
             string helms = "**Helms:**\n";
-
-            helms += "Wolfhowl\n";
-            helms += "Demonhorn's Edge\n";
-            helms += "Halaberd's Reign\n";
-            helms += "Jalal's Mane\n";
-            helms += "Cerebus' Bite\n";
-            helms += "Ravenlore\n";
-            helms += "Spirit Keeper\n";
-            helms += "Biggin's Bonnet\n";
-            helms += "Tarnhelm\n";
-            helms += "Coif of Glory\n";
-            helms += "Duskdeep\n";
-            helms += "Howltusk\n";
-            helms += "The Face of Horror\n";
-            helms += "Undead Crown\n";
-            helms += "Wormskull\n";
-            helms += "Peasant Crown\n";
-            helms += "Rockstopper\n";
-            helms += "Stealskull\n";
-            helms += "Darksight Helm\n";
-            helms += "Valkyrie Wing\n";
-            helms += "Blackhorn's Face\n";
-            helms += "Crown of Thieves\n";
-            helms += "Vampire Gaze\n";
-            helms += "Harlequin Crest\n";
-            helms += "Steel Shade\n";
-            helms += "Veil of Steel\n";
-            helms += "Nightwing's Veil\n";
-            helms += "Andariel's Visage\n";
-            helms += "Crown of Ages\n";
-            helms += "Giant Skull\n";
-
+            {
+                helms += "Wolfhowl\n";
+                helms += "Demonhorn's Edge\n";
+                helms += "Halaberd's Reign\n";
+                helms += "Jalal's Mane\n";
+                helms += "Cerebus' Bite\n";
+                helms += "Ravenlore\n";
+                helms += "Spirit Keeper\n";
+                helms += "Biggin's Bonnet\n";
+                helms += "Tarnhelm\n";
+                helms += "Coif of Glory\n";
+                helms += "Duskdeep\n";
+                helms += "Howltusk\n";
+                helms += "The Face of Horror\n";
+                helms += "Undead Crown\n";
+                helms += "Wormskull\n";
+                helms += "Peasant Crown\n";
+                helms += "Rockstopper\n";
+                helms += "Stealskull\n";
+                helms += "Darksight Helm\n";
+                helms += "Valkyrie Wing\n";
+                helms += "Blackhorn's Face\n";
+                helms += "Crown of Thieves\n";
+                helms += "Vampire Gaze\n";
+                helms += "Harlequin Crest\n";
+                helms += "Steel Shade\n";
+                helms += "Veil of Steel\n";
+                helms += "Nightwing's Veil\n";
+                helms += "Andariel's Visage\n";
+                helms += "Crown of Ages\n";
+                helms += "Giant Skull\n";
+            }
             string chests = "**Chests:**\n";
-
-            chests += "The Spirit Shroud\n";
-            chests += "Skin of the Vipermagi\n";
-            chests += "Skin of the Flayed One\n";
-            chests += "Iron Pelt\n";
-            chests += "Crow Caw\n";
-            chests += "Spirit Forge\n";
-            chests += "Duriel's Shell\n";
-            chests += "Shaftstop\n";
-            chests += "Skullder's Ire\n";
-            chests += "Que-Hegan's Wisdom\n";
-            chests += "Toothrow\n";
-            chests += "Guardian Angel\n";
-            chests += "Atma's Wail\n";
-            chests += "Black Hades\n";
-            chests += "Corpsemourn\n";
-            chests += "Greyform\n";
-            chests += "Blinkbat's Form\n";
-            chests += "The Centurion\n";
-            chests += "Twitchthroe\n";
-            chests += "Darkglow\n";
-            chests += "Hawkmail\n";
-            chests += "Venom Ward\n";
-            chests += "Sparking Mail\n";
-            chests += "Iceblink\n";
-            chests += "Heavenly Garb\n";
-            chests += "Rockfleece\n";
-            chests += "Boneflesh\n";
-            chests += "Rattlecage\n";
-            chests += "Goldskin\n";
-            chests += "Silks of the Victor\n";
-            chests += "Ormus' Robes\n";
-            chests += "The Gladiator's Bane\n";
-            chests += "Arkaine's Valor\n";
-            chests += "Leviathan\n";
-            chests += "Steel Carapace\n";
-            chests += "Templar's Might\n";
-            chests += "Tyrael's Might\n";
-
+            {
+                chests += "The Spirit Shroud\n";
+                chests += "Skin of the Vipermagi\n";
+                chests += "Skin of the Flayed One\n";
+                chests += "Iron Pelt\n";
+                chests += "Crow Caw\n";
+                chests += "Spirit Forge\n";
+                chests += "Duriel's Shell\n";
+                chests += "Shaftstop\n";
+                chests += "Skullder's Ire\n";
+                chests += "Que-Hegan's Wisdom\n";
+                chests += "Toothrow\n";
+                chests += "Guardian Angel\n";
+                chests += "Atma's Wail\n";
+                chests += "Black Hades\n";
+                chests += "Corpsemourn\n";
+                chests += "Greyform\n";
+                chests += "Blinkbat's Form\n";
+                chests += "The Centurion\n";
+                chests += "Twitchthroe\n";
+                chests += "Darkglow\n";
+                chests += "Hawkmail\n";
+                chests += "Venom Ward\n";
+                chests += "Sparking Mail\n";
+                chests += "Iceblink\n";
+                chests += "Heavenly Garb\n";
+                chests += "Rockfleece\n";
+                chests += "Boneflesh\n";
+                chests += "Rattlecage\n";
+                chests += "Goldskin\n";
+                chests += "Silks of the Victor\n";
+                chests += "Ormus' Robes\n";
+                chests += "The Gladiator's Bane\n";
+                chests += "Arkaine's Valor\n";
+                chests += "Leviathan\n";
+                chests += "Steel Carapace\n";
+                chests += "Templar's Might\n";
+                chests += "Tyrael's Might\n";
+            }
             string belts = "**Belts**\n";
-
-            belts += "Lenymo\n";
-            belts += "Snakecord\n";
-            belts += "Nightsmoke\n";
-            belts += "Goldwrap\n";
-            belts += "Bladebuckle\n";
-            belts += "String of Ears\n";
-            belts += "Razortail\n";
-            belts += "Gloom's Trap\n";
-            belts += "Snowclash\n";
-            belts += "Thundergod's Vigor\n";
-            belts += "Arachnid Mesh\n";
-            belts += "Nosferatu's Coil\n";
-            belts += "Verdungo's Hearty Cord\n";
-
+            {
+                belts += "Lenymo\n";
+                belts += "Snakecord\n";
+                belts += "Nightsmoke\n";
+                belts += "Goldwrap\n";
+                belts += "Bladebuckle\n";
+                belts += "String of Ears\n";
+                belts += "Razortail\n";
+                belts += "Gloom's Trap\n";
+                belts += "Snowclash\n";
+                belts += "Thundergod's Vigor\n";
+                belts += "Arachnid Mesh\n";
+                belts += "Nosferatu's Coil\n";
+                belts += "Verdungo's Hearty Cord\n";
+            }
             string boots = "**Boots**\n";
-
-            boots += "Hotspur\n";
-            boots += "Gorefoot\n";
-            boots += "Treads of Cthon\n";
-            boots += "Goblin Toe\n";
-            boots += "Tearhaunch\n";
-            boots += "Infernostride\n";
-            boots += "Waterwalk\n";
-            boots += "Silkweave\n";
-            boots += "War Traveler\n";
-            boots += "Gore Rider\n";
-            boots += "Sandstorm Trek\n";
-            boots += "Marrowwalk\n";
-            boots += "Shadow Dancer\n";
-
+            {
+                boots += "Hotspur\n";
+                boots += "Gorefoot\n";
+                boots += "Treads of Cthon\n";
+                boots += "Goblin Toe\n";
+                boots += "Tearhaunch\n";
+                boots += "Infernostride\n";
+                boots += "Waterwalk\n";
+                boots += "Silkweave\n";
+                boots += "War Traveler\n";
+                boots += "Gore Rider\n";
+                boots += "Sandstorm Trek\n";
+                boots += "Marrowwalk\n";
+                boots += "Shadow Dancer\n";
+            }
             string gloves = "**Gloves**\n";
-
-            gloves += "The Hand of Broc\n";
-            gloves += "Bloodfist\n";
-            gloves += "Chance Guards\n";
-            gloves += "Magefist\n";
-            gloves += "Frostburn\n";
-            gloves += "Venom Grip\n";
-            gloves += "Gravepalm\n";
-            gloves += "Ghoulhide\n";
-            gloves += "Lava Gout\n";
-            gloves += "Hellmouth\n";
-            gloves += "Dracul's Grasp\n";
-            gloves += "Soul Drainer\n";
-            gloves += "Steelrend\n";
-
+            {
+                gloves += "The Hand of Broc\n";
+                gloves += "Bloodfist\n";
+                gloves += "Chance Guards\n";
+                gloves += "Magefist\n";
+                gloves += "Frostburn\n";
+                gloves += "Venom Grip\n";
+                gloves += "Gravepalm\n";
+                gloves += "Ghoulhide\n";
+                gloves += "Lava Gout\n";
+                gloves += "Hellmouth\n";
+                gloves += "Dracul's Grasp\n";
+                gloves += "Soul Drainer\n";
+                gloves += "Steelrend\n";
+            }
             string shields = "**Shields**\n";
-
-            shields += "Homunculus\n";
-            shields += "Darkforce Spawn\n";
-            shields += "Boneflame\n";
-            shields += "Alma Negra\n";
-            shields += "Herald Of Zakarum\n";
-            shields += "Dragonscale\n";
-            shields += "Pelta Lunata\n";
-            shields += "Umbral Disk\n";
-            shields += "Stormguild\n";
-            shields += "Steelclash\n";
-            shields += "Swordback Hold\n";
-            shields += "Bverrit Keep\n";
-            shields += "Wall of the Eyeless\n";
-            shields += "The Ward\n";
-            shields += "Visceratuant\n";
-            shields += "Moser's Blessed Circle\n";
-            shields += "Stormchaser\n";
-            shields += "Tiamat's Rebuke\n";
-            shields += "Lance Guard\n";
-            shields += "Gerke's Sanctuary\n";
-            shields += "Lidless Wall\n";
-            shields += "Radament's Sphere\n";
-            shields += "Blackoak Shield\n";
-            shields += "Stormshield\n";
-            shields += "Spike Thorn\n";
-            shields += "Medusa's Gaze\n";
-            shields += "Head Hunter's Glory\n";
-            shields += "Spirit Ward\n";
-
+            {
+                shields += "Homunculus\n";
+                shields += "Darkforce Spawn\n";
+                shields += "Boneflame\n";
+                shields += "Alma Negra\n";
+                shields += "Herald Of Zakarum\n";
+                shields += "Dragonscale\n";
+                shields += "Pelta Lunata\n";
+                shields += "Umbral Disk\n";
+                shields += "Stormguild\n";
+                shields += "Steelclash\n";
+                shields += "Swordback Hold\n";
+                shields += "Bverrit Keep\n";
+                shields += "Wall of the Eyeless\n";
+                shields += "The Ward\n";
+                shields += "Visceratuant\n";
+                shields += "Moser's Blessed Circle\n";
+                shields += "Stormchaser\n";
+                shields += "Tiamat's Rebuke\n";
+                shields += "Lance Guard\n";
+                shields += "Gerke's Sanctuary\n";
+                shields += "Lidless Wall\n";
+                shields += "Radament's Sphere\n";
+                shields += "Blackoak Shield\n";
+                shields += "Stormshield\n";
+                shields += "Spike Thorn\n";
+                shields += "Medusa's Gaze\n";
+                shields += "Head Hunter's Glory\n";
+                shields += "Spirit Ward\n";
+            }
             string rings = "**Rings**\n";
-
-            rings += "Nagelring\n";
-            rings += "Manald Heal\n";
-            rings += "Stone of Jordan\n";
-            rings += "Dwarf Star\n";
-            rings += "Raven Frost\n";
-            rings += "Bul-Kathos' Wedding Band\n";
-            rings += "Carrion Wind\n";
-            rings += "Nature's Peace\n";
-            rings += "Wisp Projector\n";
-
+            {
+                rings += "Nagelring\n";
+                rings += "Manald Heal\n";
+                rings += "Stone of Jordan\n";
+                rings += "Dwarf Star\n";
+                rings += "Raven Frost\n";
+                rings += "Bul-Kathos' Wedding Band\n";
+                rings += "Carrion Wind\n";
+                rings += "Nature's Peace\n";
+                rings += "Wisp Projector\n";
+            }
             string amulets = "**Amulets**\n";
-
-            amulets += "Nokozan Relic\n";
-            amulets += "The Eye of Etlich\n";
-            amulets += "The Mahim-Oak Curio\n";
-            amulets += "Saracen's Chance\n";
-            amulets += "The Cat's Eye\n";
-            amulets += "Crescent Moon\n";
-            amulets += "Atma's Scarab\n";
-            amulets += "The Rising Sun\n";
-            amulets += "Highlord's Wrath\n";
-            amulets += "Mara's Kaleidoscope\n";
-            amulets += "Seraph's Hymn\n";
-            amulets += "Metalgrid\n";
-
+            {
+                amulets += "Nokozan Relic\n";
+                amulets += "The Eye of Etlich\n";
+                amulets += "The Mahim-Oak Curio\n";
+                amulets += "Saracen's Chance\n";
+                amulets += "The Cat's Eye\n";
+                amulets += "Crescent Moon\n";
+                amulets += "Atma's Scarab\n";
+                amulets += "The Rising Sun\n";
+                amulets += "Highlord's Wrath\n";
+                amulets += "Mara's Kaleidoscope\n";
+                amulets += "Seraph's Hymn\n";
+                amulets += "Metalgrid\n";
+            }
             string charms = "**Charms**\n";
-
-            charms += "Annihilus\n";
-            charms += "Gheed's Fortune\n";
-            charms += "Hellfire Torch\n";
-
+            {
+                charms += "Annihilus\n";
+                charms += "Gheed's Fortune\n";
+                charms += "Hellfire Torch\n";
+            }
             string jewels = "**Jewels**\n";
-
-            jewels += "Rainbow Face Cold\n";
-            jewels += "Rainbow Face Fire\n";
-            jewels += "Rainbow Face Light\n";
-            jewels += "Rainbow Face Poison\n";
-
+            {
+                jewels += "Rainbow Face Cold\n";
+                jewels += "Rainbow Face Fire\n";
+                jewels += "Rainbow Face Light\n";
+                jewels += "Rainbow Face Poison\n";
+            }
             string axes = "**Axes**\n";
-
-            axes += "The Gnasher\n";
-            axes += "Deathspade\n";
-            axes += "Bladebone\n";
-            axes += "Skull Splitter\n";
-            axes += "Rakescar\n";
-            axes += "Axe of Fechmar\n";
-            axes += "Goreshovel\n";
-            axes += "The Chieftain\n";
-            axes += "Brainhew\n";
-            axes += "Humongous\n";
-            axes += "Razor's Edge\n";
-            axes += "Rune Master\n";
-            axes += "Cranebeak\n";
-            axes += "Death Cleaver\n";
-            axes += "Ethereal Edge\n";
-            axes += "Hellslayer\n";
-            axes += "Messerchmidt's Reaver\n";
-            axes += "Executioner's Justice\n";
-            axes += "Coldkill\n";
-            axes += "Butcher's Pupil\n";
-            axes += "Islestrike\n";
-            axes += "Pompeii's Wrath\n";
-            axes += "Guardian Naga\n";
-            axes += "Warlord's Trust\n";
-            axes += "Spellsteel\n";
-            axes += "Stormrider\n";
-            axes += "Boneslayer Blade\n";
-            axes += "The Minotaur\n";
-
+            {
+                axes += "The Gnasher\n";
+                axes += "Deathspade\n";
+                axes += "Bladebone\n";
+                axes += "Skull Splitter\n";
+                axes += "Rakescar\n";
+                axes += "Axe of Fechmar\n";
+                axes += "Goreshovel\n";
+                axes += "The Chieftain\n";
+                axes += "Brainhew\n";
+                axes += "Humongous\n";
+                axes += "Razor's Edge\n";
+                axes += "Rune Master\n";
+                axes += "Cranebeak\n";
+                axes += "Death Cleaver\n";
+                axes += "Ethereal Edge\n";
+                axes += "Hellslayer\n";
+                axes += "Messerchmidt's Reaver\n";
+                axes += "Executioner's Justice\n";
+                axes += "Coldkill\n";
+                axes += "Butcher's Pupil\n";
+                axes += "Islestrike\n";
+                axes += "Pompeii's Wrath\n";
+                axes += "Guardian Naga\n";
+                axes += "Warlord's Trust\n";
+                axes += "Spellsteel\n";
+                axes += "Stormrider\n";
+                axes += "Boneslayer Blade\n";
+                axes += "The Minotaur\n";
+            }
             string bows = "**Bows**\n";
-
-            bows += "Pluckeye\n";
-            bows += "Witherspring\n";
-            bows += "Raven Claw\n";
-            bows += "Rogue's Bow\n";
-            bows += "Stormstrike\n";
-            bows += "Wizendraw\n";
-            bows += "Hellclap\n";
-            bows += "Blastbark\n";
-            bows += "Skystrike\n";
-            bows += "Riphook\n";
-            bows += "Kuko Shukaku\n";
-            bows += "Endlesshail\n";
-            bows += "Witchwild String\n";
-            bows += "Cliffkiller\n";
-            bows += "Magewrath\n";
-            bows += "Goldstrike Arch\n";
-            bows += "Eaglehorn\n";
-            bows += "Widowmaker\n";
-            bows += "Windforce\n";
-            bows += "Lycander's Aim\n";
-            bows += "Blood Raven's Charge\n";
-
+            {
+                bows += "Pluckeye\n";
+                bows += "Witherspring\n";
+                bows += "Raven Claw\n";
+                bows += "Rogue's Bow\n";
+                bows += "Stormstrike\n";
+                bows += "Wizendraw\n";
+                bows += "Hellclap\n";
+                bows += "Blastbark\n";
+                bows += "Skystrike\n";
+                bows += "Riphook\n";
+                bows += "Kuko Shukaku\n";
+                bows += "Endlesshail\n";
+                bows += "Witchwild String\n";
+                bows += "Cliffkiller\n";
+                bows += "Magewrath\n";
+                bows += "Goldstrike Arch\n";
+                bows += "Eaglehorn\n";
+                bows += "Widowmaker\n";
+                bows += "Windforce\n";
+                bows += "Lycander's Aim\n";
+                bows += "Blood Raven's Charge\n";
+            }
             string clubs = "**Clubs**\n";
-
-            clubs += "Felloak\n";
-            clubs += "Stoutnail\n";
-            clubs += "Dark Clan Crusher\n";
-            clubs += "Fleshrender\n";
-            clubs += "Nord's Tenderizer\n";
-            clubs += "Demon Limb\n";
-
+            {
+                clubs += "Felloak\n";
+                clubs += "Stoutnail\n";
+                clubs += "Dark Clan Crusher\n";
+                clubs += "Fleshrender\n";
+                clubs += "Nord's Tenderizer\n";
+                clubs += "Demon Limb\n";
+            }
             string crossbows = "**Crossbows**\n";
-
-            crossbows += "Leadcrow\n";
-            crossbows += "Ichorsting\n";
-            crossbows += "Hellcast\n";
-            crossbows += "Doomslinger\n";
-            crossbows += "Langer Briser\n";
-            crossbows += "Pus Spitter\n";
-            crossbows += "Buriza-Do Kyanon\n";
-            crossbows += "Demon Machine\n";
-            crossbows += "Hellrack\n";
-            crossbows += "Gut Siphon\n";
-
+            {
+                crossbows += "Leadcrow\n";
+                crossbows += "Ichorsting\n";
+                crossbows += "Hellcast\n";
+                crossbows += "Doomslinger\n";
+                crossbows += "Langer Briser\n";
+                crossbows += "Pus Spitter\n";
+                crossbows += "Buriza-Do Kyanon\n";
+                crossbows += "Demon Machine\n";
+                crossbows += "Hellrack\n";
+                crossbows += "Gut Siphon\n";
+            }
             string daggers = "**Daggers**\n";
-
-            daggers += "Gull\n";
-            daggers += "The Diggler\n";
-            daggers += "The Jade Tan Do\n";
-            daggers += "Spectral Shard\n";
-            daggers += "Spineripper\n";
-            daggers += "Heart Carver\n";
-            daggers += "Blackbog's Sharp\n";
-            daggers += "Stormspike\n";
-            daggers += "Wizardspike\n";
-            daggers += "Fleshripper\n";
-            daggers += "Ghostflame\n";
-
+            {
+                daggers += "Gull\n";
+                daggers += "The Diggler\n";
+                daggers += "The Jade Tan Do\n";
+                daggers += "Spectral Shard\n";
+                daggers += "Spineripper\n";
+                daggers += "Heart Carver\n";
+                daggers += "Blackbog's Sharp\n";
+                daggers += "Stormspike\n";
+                daggers += "Wizardspike\n";
+                daggers += "Fleshripper\n";
+                daggers += "Ghostflame\n";
+            }
             string hammers = "**Hammers**\n";
-
-            hammers += "Ironstone\n";
-            hammers += "Bonesnap\n";
-            hammers += "Steeldriver\n";
-            hammers += "Earthshaker\n";
-            hammers += "Bloodtree Stump\n";
-            hammers += "The Gavel of Pain\n";
-            hammers += "Stone Crusher\n";
-            hammers += "Schaefer's Hammer\n";
-            hammers += "Windhammer \n";
-            hammers += "Earth Shifter\n";
-            hammers += "The Cranium Basher\n";
-
+            {
+                hammers += "Ironstone\n";
+                hammers += "Bonesnap\n";
+                hammers += "Steeldriver\n";
+                hammers += "Earthshaker\n";
+                hammers += "Bloodtree Stump\n";
+                hammers += "The Gavel of Pain\n";
+                hammers += "Stone Crusher\n";
+                hammers += "Schaefer's Hammer\n";
+                hammers += "Windhammer \n";
+                hammers += "Earth Shifter\n";
+                hammers += "The Cranium Basher\n";
+            }
             string javelins = "**Javelins**\n";
-
-            javelins += "Demons's Arch\n";
-            javelins += "Wraith Flight\n";
-            javelins += "Gargoyle's Bite\n";
-            javelins += "Titan's Revenge\n";
-            javelins += "Thunderstroke\n";
-
+            {
+                javelins += "Demons's Arch\n";
+                javelins += "Wraith Flight\n";
+                javelins += "Gargoyle's Bite\n";
+                javelins += "Titan's Revenge\n";
+                javelins += "Thunderstroke\n";
+            }
             string katars = "**Katars**\n";
-
-            katars += "Shadow Killer\n";
-            katars += "Bartuc's Cut-Throat\n";
-            katars += "Jade Talons\n";
-            katars += "Firelizard's Talons\n";
-
+            {
+                katars += "Shadow Killer\n";
+                katars += "Bartuc's Cut-Throat\n";
+                katars += "Jade Talons\n";
+                katars += "Firelizard's Talons\n";
+            }
             string maces = "**Maces**\n";
-
-            maces += "Crushflange\n";
-            maces += "Bloodrise\n";
-            maces += "The General's Tan Do Li Ga\n";
-            maces += "Sureshrill Frost\n";
-            maces += "Moonfall\n";
-            maces += "Baezil's Vortex\n";
-            maces += "Baranar's Star\n";
-            maces += "Horizon's Tornado\n";
-            maces += "Stormlash\n";
-
+            {
+                maces += "Crushflange\n";
+                maces += "Bloodrise\n";
+                maces += "The General's Tan Do Li Ga\n";
+                maces += "Sureshrill Frost\n";
+                maces += "Moonfall\n";
+                maces += "Baezil's Vortex\n";
+                maces += "Baranar's Star\n";
+                maces += "Horizon's Tornado\n";
+                maces += "Stormlash\n";
+            }
             string orbs = "**Orbs**\n";
-
-            orbs += "The Oculus\n";
-            orbs += "Eschuta's Temper\n";
-            orbs += "Death's Fathom\n";
-
+            {
+                orbs += "The Oculus\n";
+                orbs += "Eschuta's Temper\n";
+                orbs += "Death's Fathom\n";
+            }
             string polearms = "**Polearms**\n";
-
-            polearms += "Dimoak's Hew\n";
-            polearms += "Steelgoad\n";
-            polearms += "Soul Harvest\n";
-            polearms += "The Battlebranch\n";
-            polearms += "Woestave\n";
-            polearms += "The Grim Reaper\n";
-            polearms += "The Meat Scrapper\n";
-            polearms += "Blackleach Blade\n";
-            polearms += "Athena's Wrath\n";
-            polearms += "Pierre Tombale Couant\n";
-            polearms += "Husoldal Evo\n";
-            polearms += "Grim's Burning Dead\n";
-            polearms += "Bonehew\n";
-            polearms += "The Reaper's Toll\n";
-            polearms += "Tomb Reaver\n";
-            polearms += "Stormspire\n";
-
+            {
+                polearms += "Dimoak's Hew\n";
+                polearms += "Steelgoad\n";
+                polearms += "Soul Harvest\n";
+                polearms += "The Battlebranch\n";
+                polearms += "Woestave\n";
+                polearms += "The Grim Reaper\n";
+                polearms += "The Meat Scrapper\n";
+                polearms += "Blackleach Blade\n";
+                polearms += "Athena's Wrath\n";
+                polearms += "Pierre Tombale Couant\n";
+                polearms += "Husoldal Evo\n";
+                polearms += "Grim's Burning Dead\n";
+                polearms += "Bonehew\n";
+                polearms += "The Reaper's Toll\n";
+                polearms += "Tomb Reaver\n";
+                polearms += "Stormspire\n";
+            }
             string scepters = "**Scepters**\n";
-
-            scepters += "Knell Striker\n";
-            scepters += "Rusthandle\n";
-            scepters += "Stormeye\n";
-            scepters += "Zakarum's Hand\n";
-            scepters += "The Fetid Sprinkler\n";
-            scepters += "Hand of Blessed Light\n";
-            scepters += "Heaven's Light\n";
-            scepters += "The Redeemer\n";
-            scepters += "Astreon's Iron Ward\n";
-
+            {
+                scepters += "Knell Striker\n";
+                scepters += "Rusthandle\n";
+                scepters += "Stormeye\n";
+                scepters += "Zakarum's Hand\n";
+                scepters += "The Fetid Sprinkler\n";
+                scepters += "Hand of Blessed Light\n";
+                scepters += "Heaven's Light\n";
+                scepters += "The Redeemer\n";
+                scepters += "Astreon's Iron Ward\n";
+            }
             string spears = "**Spears**\n";
-
-            spears += "The Dragon Chang\n";
-            spears += "Razortine\n";
-            spears += "Bloodthief\n";
-            spears += "Lance of Yaggai\n";
-            spears += "The Tannr Gorerod\n";
-            spears += "The Impaler\n";
-            spears += "Kelpie Snare\n";
-            spears += "Soulfeast Tine\n";
-            spears += "Hone Sundan\n";
-            spears += "Spire of Honor\n";
-            spears += "Arioc's Needle\n";
-            spears += "Viperfork\n";
-            spears += "Steel Pillar\n";
-            spears += "Stoneraven\n";
-            spears += "Lycander's Flank\n";
-
+            {
+                spears += "The Dragon Chang\n";
+                spears += "Razortine\n";
+                spears += "Bloodthief\n";
+                spears += "Lance of Yaggai\n";
+                spears += "The Tannr Gorerod\n";
+                spears += "The Impaler\n";
+                spears += "Kelpie Snare\n";
+                spears += "Soulfeast Tine\n";
+                spears += "Hone Sundan\n";
+                spears += "Spire of Honor\n";
+                spears += "Arioc's Needle\n";
+                spears += "Viperfork\n";
+                spears += "Steel Pillar\n";
+                spears += "Stoneraven\n";
+                spears += "Lycander's Flank\n";
+            }
             string staves = "**Staves**\n";
-
-            staves += "Bane Ash\n";
-            staves += "Serpent Lord\n";
-            staves += "Spire of Lazarus\n";
-            staves += "The Salamander\n";
-            staves += "The Iron Jang Bong\n";
-            staves += "Razorswitch\n";
-            staves += "Ribcracker\n";
-            staves += "Chromatic Ire\n";
-            staves += "Warpspear\n";
-            staves += "Skull Collector\n";
-            staves += "Ondal's Wisdom\n";
-            staves += "Mang Song's Lesson\n";
-
+            {
+                staves += "Bane Ash\n";
+                staves += "Serpent Lord\n";
+                staves += "Spire of Lazarus\n";
+                staves += "The Salamander\n";
+                staves += "The Iron Jang Bong\n";
+                staves += "Razorswitch\n";
+                staves += "Ribcracker\n";
+                staves += "Chromatic Ire\n";
+                staves += "Warpspear\n";
+                staves += "Skull Collector\n";
+                staves += "Ondal's Wisdom\n";
+                staves += "Mang Song's Lesson\n";
+            }
             string swords = "**Swords**\n";
-
-            swords += "Rixot's Keen\n";
-            swords += "Blood Crescent\n";
-            swords += "Skewer of Krintiz\n";
-            swords += "Gleamscythe\n";
-            swords += "Griswold's Edge\n";
-            swords += "Hellplague\n";
-            swords += "Culwen's Point\n";
-            swords += "Shadowfang\n";
-            swords += "Soulflay\n";
-            swords += "Kinemil's Awl\n";
-            swords += "Blacktongue\n";
-            swords += "Ripsaw\n";
-            swords += "The Patriarch\n";
-            swords += "Bloodletter\n";
-            swords += "Coldsteel Eye\n";
-            swords += "Hexfire\n";
-            swords += "Blade of Ali Baba\n";
-            swords += "Ginther's Rift\n";
-            swords += "Headstriker\n";
-            swords += "Plague Bearer\n";
-            swords += "The Atlantean\n";
-            swords += "Crainte Vomir\n";
-            swords += "Bing Sz Wang\n";
-            swords += "The Vile Husk\n";
-            swords += "Cloudcrack\n";
-            swords += "Todesfaelle Flamme\n";
-            swords += "Swordguard\n";
-            swords += "Djinn Slayer\n";
-            swords += "Bloodmoon\n";
-            swords += "Lightsabre\n";
-            swords += "Azurewrath\n";
-            swords += "Frostwind\n";
-            swords += "Flamebellow\n";
-            swords += "Doombringer\n";
-            swords += "The Grandfather\n";
-
+            {
+                swords += "Rixot's Keen\n";
+                swords += "Blood Crescent\n";
+                swords += "Skewer of Krintiz\n";
+                swords += "Gleamscythe\n";
+                swords += "Griswold's Edge\n";
+                swords += "Hellplague\n";
+                swords += "Culwen's Point\n";
+                swords += "Shadowfang\n";
+                swords += "Soulflay\n";
+                swords += "Kinemil's Awl\n";
+                swords += "Blacktongue\n";
+                swords += "Ripsaw\n";
+                swords += "The Patriarch\n";
+                swords += "Bloodletter\n";
+                swords += "Coldsteel Eye\n";
+                swords += "Hexfire\n";
+                swords += "Blade of Ali Baba\n";
+                swords += "Ginther's Rift\n";
+                swords += "Headstriker\n";
+                swords += "Plague Bearer\n";
+                swords += "The Atlantean\n";
+                swords += "Crainte Vomir\n";
+                swords += "Bing Sz Wang\n";
+                swords += "The Vile Husk\n";
+                swords += "Cloudcrack\n";
+                swords += "Todesfaelle Flamme\n";
+                swords += "Swordguard\n";
+                swords += "Djinn Slayer\n";
+                swords += "Bloodmoon\n";
+                swords += "Lightsabre\n";
+                swords += "Azurewrath\n";
+                swords += "Frostwind\n";
+                swords += "Flamebellow\n";
+                swords += "Doombringer\n";
+                swords += "The Grandfather\n";
+            }
             string throwing = "**Throwing**\n";
-
-            throwing += "Deathbit\n";
-            throwing += "The Scalper\n";
-            throwing += "Warshrike\n";
-            throwing += "Gimmershred\n";
-            throwing += "Lacerator\n";
-
+            {
+                throwing += "Deathbit\n";
+                throwing += "The Scalper\n";
+                throwing += "Warshrike\n";
+                throwing += "Gimmershred\n";
+                throwing += "Lacerator\n";
+            }
             string wands = "**Wands**\n";
-
-            wands += "Torch of Iro\n";
-            wands += "Maelstrom\n";
-            wands += "Gravenspine\n";
-            wands += "Ume's Lament\n";
-            wands += "Suicide Branch\n";
-            wands += "Carin Shard\n";
-            wands += "Arm of King Leoric\n";
-            wands += "Blackhand Key\n";
-            wands += "Boneshade\n";
-            wands += "Death's Web\n";
-
+            {
+                wands += "Torch of Iro\n";
+                wands += "Maelstrom\n";
+                wands += "Gravenspine\n";
+                wands += "Ume's Lament\n";
+                wands += "Suicide Branch\n";
+                wands += "Carin Shard\n";
+                wands += "Arm of King Leoric\n";
+                wands += "Blackhand Key\n";
+                wands += "Boneshade\n";
+                wands += "Death's Web\n";
+            }
 
             var separatedArgs = new List<string> { };
             int firstIndex = 0, nextIndex = 0, thisIndex = 0, previousIndex = 0;
@@ -544,33 +544,55 @@ namespace Template.Modules
 
 
             string message = "", message2 = "", message3 = "", message4 = "";
-            type.Add(helms);
-            type.Add(chests);
-            type.Add(belts);
-            type.Add(boots);
-            type.Add(gloves);
-            type.Add(shields);
-            type.Add(rings);
-            type.Add(amulets);
-            type.Add(charms);
-            type.Add(jewels);
-            type.Add(axes);
-            type.Add(bows);
-            type.Add(clubs);
-            type.Add(crossbows);
-            type.Add(daggers);
-            type.Add(hammers);
-            type.Add(javelins);
-            type.Add(katars);
-            type.Add(maces);
-            type.Add(orbs);
-            type.Add(polearms);
-            type.Add(scepters);
-            type.Add(spears);
-            type.Add(staves);
-            type.Add(swords);
-            type.Add(throwing);
-            type.Add(wands);
+            {
+                type.Add(helms);
+                type.Add(chests);
+                type.Add(belts);
+                type.Add(boots);
+                type.Add(gloves);
+                type.Add(shields);
+                type.Add(rings);
+                type.Add(amulets);
+                type.Add(charms);
+                type.Add(jewels);
+                type.Add(axes);
+                type.Add(bows);
+                type.Add(clubs);
+                type.Add(crossbows);
+                type.Add(daggers);
+                type.Add(hammers);
+                type.Add(javelins);
+                type.Add(katars);
+                type.Add(maces);
+                type.Add(orbs);
+                type.Add(polearms);
+                type.Add(scepters);
+                type.Add(spears);
+                type.Add(staves);
+                type.Add(swords);
+                type.Add(throwing);
+                type.Add(wands);
+            }
+
+            void AddToMessage(string slotType)
+            {
+                if (message.Length < 1990 - (slotType + "\n").Length)
+                {
+                    message += slotType + "\n";
+                }
+                else if (message2.Length < 1990 - (slotType + "\n").Length)
+                {
+                    message2 += slotType + "\n";
+                }
+                else if (message3.Length < 1990 - (slotType + "\n").Length)
+                {
+                    message3 += slotType + "\n";
+                }
+                else if (message4.Length < 1990 - (slotType + "\n").Length)
+                {
+                    message4 += slotType + "\n";
+                }
+            }
 
             foreach (var thisArg in separatedArgs)
             {
@@ -578,304 +600,174 @@ namespace Template.Modules
                 {
                     case "helms":
                     case "helm":
-                        if (message.Length < 1990 - (type[0] + "\n").Length)
-                        {
-                            message += type[0] + "\n";
-                        }
-                        else if (message2.Length < 1990 - (type[0] + "\n").Length)
-                        {
-                            message2 += type[0] + "\n";
-                        }
-                        else if (message3.Length < 1990 - (type[0] + "\n").Length)
-                        {
-                            message3 += type[0] + "\n";
-                        }
-                        else if (message4.Length < 1990 - (type[0] + "\n").Length)
-                        {
-                            message4 += type[0] + "\n";
-                        }
+                        AddToMessage(type[0]);
                         break;
                     case "chests":
                     case "chest":
-                        if (message.Length < 1990 - (type[1] + "\n").Length)
-                        {
-                            message += type[1] + "\n";
-                        }
-                        else if (message2.Length < 1990 - (type[1] + "\n").Length)
-                        {
-                            message2 += type[1] + "\n";
-                        }
-                        else if (message3.Length < 1990 - (type[1] + "\n").Length)
-                        {
-                            message3 += type[1] + "\n";
-                        }
-                        else if (message4.Length < 1990 - (type[1] + "\n").Length)
-                        {
-                            message4 += type[1] + "\n";
-                        }
+                        AddToMessage(type[1]);
                         break;
                     case "belts":
                     case "belt":
-                        if (message.Length < 1990 - (type[2] + "\n").Length)
-                        {
-                            message += type[2] + "\n";
-                        }
-                        else if (message2.Length < 1990 - (type[2] + "\n").Length)
-                        {
-                            message2 += type[2] + "\n";
-                        }
-                        else if (message3.Length < 1990 - (type[2] + "\n").Length)
-                        {
-                            message3 += type[2] + "\n";
-                        }
-                        else if (message4.Length < 1990 - (type[2] + "\n").Length)
-                        {
-                            message4 += type[2] + "\n";
-                        }
+                        AddToMessage(type[2]);
                         break;
                     case "boots":
                     case "boot":
-                        if (message.Length < 1990 - (type[3] + "\n").Length)
-                        {
-                            message += type[3] + "\n";
-                        }
-                        else if (message2.Length < 1990 - (type[3] + "\n").Length)
-                        {
-                            message2 += type[3] + "\n";
-                        }
-                        else if (message3.Length < 1990 - (type[3] + "\n").Length)
-                        {
-                            message3 += type[3] + "\n";
-                        }
-                        else if (message4.Length < 1990 - (type[3] + "\n").Length)
-                        {
-                            message4 += type[3] + "\n";
-                        }
+                        AddToMessage(type[3]);
                         break;
                     case "gloves":
                     case "glove":
-                        if (message.Length < 1990 - (type[4] + "\n").Length)
-                        {
-                            message += type[4] + "\n";
-                        }
-                        else if (message2.Length < 1990 - (type[4] + "\n").Length)
-                        {
-                            message2 += type[4] + "\n";
-                        }
-                        else if (message3.Length < 1990 - (type[4] + "\n").Length)
-                        {
-                            message3 += type[4] + "\n";
-                        }
-                        else if (message4.Length < 1990 - (type[4] + "\n").Length)
-                        {
-                            message4 += type[4] + "\n";
-                        }
+                        AddToMessage(type[4]);
                         break;
                     case "shields":
                     case "shield":
-                        if (message.Length < 1990 - (type[5] + "\n").Length)
-                        {
-                            message += type[5] + "\n";
-                        }
-                        else if (message2.Length < 1990 - (type[5] + "\n").Length)
-                        {
-                            message2 += type[5] + "\n";
-                        }
-                        else if (message3.Length < 1990 - (type[5] + "\n").Length)
-                        {
-                            message3 += type[5] + "\n";
-                        }
-                        else if (message4.Length < 1990 - (type[5] + "\n").Length)
-                        {
-                            message4 += type[5] + "\n";
-                        }
+                        AddToMessage(type[5]);
                         break;
                     case "rings":
                     case "ring":
-                        if (message.Length < 1990 - (type[6] + "\n").Length)
-                        {
-                            message += type[6] + "\n";
-                        }
-                        else if (message2.Length < 1990 - (type[6] + "\n").Length)
-                        {
-                            message2 += type[6] + "\n";
-                        }
-                        else if (message3.Length < 1990 - (type[6] + "\n").Length)
-                        {
-                            message3 += type[6] + "\n";
-                        }
-                        else if (message4.Length < 1990 - (type[6] + "\n").Length)
-                        {
-                            message4 += type[6] + "\n";
-                        }
+                        AddToMessage(type[6]);
                         break;
                     case "amulets":
                     case "amulet":
-                        if (message.Length < 1990 - (type[7] + "\n").Length)
-                        {
-                            message += type[7] + "\n";
-                        }
-                        else if (message2.Length < 1990 - (type[7] + "\n").Length)
-                        {
-                            message2 += type[7] + "\n";
-                        }
-                        else if (message3.Length < 1990 - (type[7] + "\n").Length)
-                        {
-                            message3 += type[7] + "\n";
-                        }
-                        else if (message4.Length < 1990 - (type[7] + "\n").Length)
-                        {
-                            message4 += type[7] + "\n";
-                        }
+                        AddToMessage(type[7]);
                         break;
                     case "charms":
                     case "charm":
-                        if (message.Length < 1990 - (type[8] + "\n").Length)
-                        {
-                            message += type[8] + "\n";
-                        }
-                        else if (message2.Length < 1990 - (type[8] + "\n").Length)
-                        {
-                            message2 += type[8] + "\n";
-                        }
-                        else if (message3.Length < 1990 - (type[8] + "\n").Length)
-                        {
-                            message3 += type[8] + "\n";
-                        }
-                        else if (message4.Length < 1990 - (type[8] + "\n").Length)
-                        {
-                            message4 += type[8] + "\n";
-                        }
+                        AddToMessage(type[8]);
                         break;
                     case "jewels":
                     case "jewel":
-                        if (message.Length < 1990 - (type[9] + "\n").Length)
-                        {
-                            message += type[9] + "\n";
-                        }
-                        else if (message2.Length < 1990 - (type[9] + "\n").Length)
-                        {
-                            message2 += type[9] + "\n";
-                        }
-                        else if (message3.Length < 1990 - (type[9] + "\n").Length)
-                        {
-                            message3 += type[9] + "\n";
-                        }
-                        else if (message4.Length < 1990 - (type[9] + "\n").Length)
-                        {
-                            message4 += type[9] + "\n";
-                        }
+                        AddToMessage(type[9]);
+                        break;
+                    case "axe":
+                    case "axes":
+                        AddToMessage(type[10]);
+                        break;
+                    case "bow":
+                    case "bows":
+                        AddToMessage(type[11]);
+                        break;
+                    case "club":
+                    case "clubs":
+                        AddToMessage(type[12]);
+                        break;
+                    case "crossbow":
+                    case "crossbows":
+                        AddToMessage(type[13]);
+                        break;
+                    case "dagger":
+                    case "daggers":
+                        AddToMessage(type[14]);
+                        break;
+                    case "hammer":
+                    case "hammers":
+                        AddToMessage(type[15]);
+                        break;
+                    case "javelin":
+                    case "javelins":
+                        AddToMessage(type[16]);
+                        break;
+                    case "katar":
+                    case "katars":
+                        AddToMessage(type[17]);
+                        break;
+                    case "mace":
+                    case "maces":
+                        AddToMessage(type[18]);
+                        break;
+                    case "orb":
+                    case "orbs":
+                        AddToMessage(type[19]);
+                        break;
+                    case "polearm":
+                    case "polearms":
+                        AddToMessage(type[20]);
+                        break;
+                    case "scepter":
+                    case "scepters":
+                        AddToMessage(type[21]);
+                        break;
+                    case "spear":
+                    case "spears":
+                        AddToMessage(type[22]);
+                        break;
+                    case "staff":
+                    case "staves":
+                        AddToMessage(type[23]);
                         break;
                     case "swords":
                     case "sword":
-                        if (message.Length < 1990 - (type[10] + "\n").Length)
-                        {
-                            message += type[10] + "\n";
-                        }
-                        else if (message2.Length < 1990 - (type[10] + "\n").Length)
-                        {
-                            message2 += type[10] + "\n";
-                        }
-                        else if (message3.Length < 1990 - (type[10] + "\n").Length)
-                        {
-                            message3 += type[10] + "\n";
-                        }
-                        else if (message4.Length < 1990 - (type[10] + "\n").Length)
-                        {
-                            message4 += type[10] + "\n";
-                        }
+                        AddToMessage(type[24]);
+                        break;
+                    case "throwing":
+                    case "projectile":
+                    case "projectiles":
+                        AddToMessage(type[25]);
+                        break;
+                    case "wand":
+                    case "wands":
+                        AddToMessage(type[26]);
                         break;
                     case "armor":
                     case "armors":
                         for(int i = 0; i < 6; i++)
                         {
-                            if (message.Length < 1990 - (type[i] + "\n").Length)
-                            {
-                                message += type[i] + "\n";
-                            }
-                            else if (message2.Length < 1990 - (type[i] + "\n").Length)
-                            {
-                                message2 += type[i] + "\n";
-                            }
-                            else if (message3.Length < 1990 - (type[i] + "\n").Length)
-                            {
-                                message3 += type[i] + "\n";
-                            }
-                            else if (message4.Length < 1990 - (type[i] + "\n").Length)
-                            {
-                                message4 += type[i] + "\n";
-                            }
+                            AddToMessage(type[i]);
                         }
                         break;
                     case "jewelry":
                         for(int i = 6; i < 10; i++)
                         {
-                            if (message.Length < 1990 - (type[i] + "\n").Length)
-                            {
-                                message += type[i] + "\n";
-                            }
-                            else if (message2.Length < 1990 - (type[i] + "\n").Length)
-                            {
-                                message2 += type[i] + "\n";
-                            }
-                            else if (message3.Length < 1990 - (type[i] + "\n").Length)
-                            {
-                                message3 += type[i] + "\n";
-                            }
-                            else if (message4.Length < 1990 - (type[i] + "\n").Length)
-                            {
-                                message4 += type[i] + "\n";
-                            }
+                            AddToMessage(type[i]);
                         }
                         break;
                     case "weapon":
                     case "weapons":
-                        for(int i = 10; i < 11; i++)
+                        for(int i = 10; i < 26; i++)
                         {
-                            if (message.Length < 1990 - (type[i] + "\n").Length)
-                            {
-                                message += type[i] + "\n";
-                            }
-                            else if (message2.Length < 1990 - (type[i] + "\n").Length)
-                            {
-                                message2 += type[i] + "\n";
-                            }
-                            else if (message3.Length < 1990 - (type[i] + "\n").Length)
-                            {
-                                message3 += type[i] + "\n";
-                            }
-                            else if (message4.Length < 1990 - (type[i] + "\n").Length)
-                            {
-                                message4 += type[i] + "\n";
-                            }
+                            AddToMessage(type[i]);
                         }
                         break;
                     default:
                         break;
                 }
+                break;
             }
 
-            if( (message == "") && (message2 == "") && (message3 == "") && (message4 == "") )
+            if ( (message == "") && (message2 == "") && (message3 == "") && (message4 == "") )
             {
-                foreach(var thisType in type)
-                {
-                    if (message.Length < 1990 - (thisType + "\n").Length)
-                    {
-                        message += thisType + "\n";
-                    }
-                    else if (message2.Length < 1990 - (thisType + "\n").Length)
-                    {
-                        message2 += thisType + "\n";
-                    }
-                    else if (message3.Length < 1990 - (thisType + "\n").Length)
-                    {
-                        message3 += thisType + "\n";
-                    }
-                    else if (message4.Length < 1990 - (thisType + "\n").Length)
-                    {
-                        message4 += thisType + "\n";
-                    }
-                }
+                message += "Unique listing commands:\n" +
+                    "!unique helm\\s\n" +
+                    "!unique chest\\s\n" +
+                    "!unique belt\\s\n" +
+                    "!unique boot\\s\n" +
+                    "!unique glove\\s\n" +
+                    "!unique shield\\s\n" +
+                    "!unique ring\\s\n" +
+                    "!unique amulet\\s\n" +
+                    "!unique charm\\s\n" +
+                    "!unique jewel\\s\n" +
+                    "!unique axe\\s\n" +
+                    "!unique bow\\s\n" +
+                    "!unique club\\s\n" +
+                    "!unique crossbow\\s\n" +
+                    "!unique dagger\\s\n" +
+                    "!unique hammer\\s\n" +
+                    "!unique javelin\\s\n" +
+                    "!unique katar\\s\n" +
+                    "!unique mace\\s\n" +
+                    "!unique orb\\s\n" +
+                    "!unique polearm\\s\n" +
+                    "!unique scepter\\s\n" +
+                    "!unique spear\\s\n" +
+                    "!unique staff\n" +
+                    "!unique staves\n" +
+                    "!unique sword\\s\n" +
+                    "!unique throwing\n" +
+                    "!unique protectile\\s\n" +
+                    "!unique wand\\s\n" +
+                    "!unique armor\\s\n" +
+                    "!unique jewelry\n" +
+                    "!unique weapon\\s";
             }
 
             if (message != "")
@@ -896,7 +788,7 @@ namespace Template.Modules
             }
             else
             {
-                await Context.Channel.SendMessageAsync("Arguments no recognized");
+                await Context.Channel.SendMessageAsync("Arguments not recognized");
             }
         }
 
