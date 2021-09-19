@@ -251,10 +251,10 @@ namespace Template.Modules
             }
             string jewels = "**Jewels**\n";
             {
-                jewels += "Rainbow Face Cold\n";
-                jewels += "Rainbow Face Fire\n";
-                jewels += "Rainbow Face Light\n";
-                jewels += "Rainbow Face Poison\n";
+                jewels += "Rainbow Facet Cold\n";
+                jewels += "Rainbow Facet Fire\n";
+                jewels += "Rainbow Facet Light\n";
+                jewels += "Rainbow Facet Poison\n";
             }
             string axes = "**Axes**\n";
             {
@@ -342,7 +342,7 @@ namespace Template.Modules
                 daggers += "Spineripper\n";
                 daggers += "Heart Carver\n";
                 daggers += "Blackbog's Sharp\n";
-                daggers += "Stormspike\n";
+                daggers += "Stormstrike\n";
                 daggers += "Wizardspike\n";
                 daggers += "Fleshripper\n";
                 daggers += "Ghostflame\n";
@@ -668,6 +668,8 @@ namespace Template.Modules
                         break;
                     case "katar":
                     case "katars":
+                    case "claw":
+                    case "claws":
                         AddToMessage(type[17]);
                         break;
                     case "mace":
@@ -754,6 +756,7 @@ namespace Template.Modules
                     "!unique hammer\\s\n" +
                     "!unique javelin\\s\n" +
                     "!unique katar\\s\n" +
+                    "!unique claw\\s\n" +
                     "!unique mace\\s\n" +
                     "!unique orb\\s\n" +
                     "!unique polearm\\s\n" +
@@ -4892,6 +4895,911 @@ namespace Template.Modules
             await CreateUniqueImage(affixes, name, requirements, imageLink);
         }
         
+        [Command("Lycander's Aim")]
+        public async Task LycandersAimImageAsync()
+        {
+            var name = "Lycander's Aim(42)";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/reflex_bow_weapons_diablo_2_resurrected_wiki_guide.png";
+            var requirements = new List<string>
+            {
+                "73 Strength",
+                "110 Dexterity"
+            };
+
+            var affixes = new List<Tuple<string, int, int>>();
+            affixes.Add(Tuple.Create("% Enhanced Damage", 150, 200));
+            affixes.Add(Tuple.Create(" Additional Damage", 25, 50));
+            affixes.Add(Tuple.Create("% Increased Attack Speed", 20, 0));
+            affixes.Add(Tuple.Create("% Mana Stolen per Hit", 5, 8));
+            affixes.Add(Tuple.Create(" Energy", 20, 0));
+            affixes.Add(Tuple.Create(" Dexterity", 20, 0));
+            affixes.Add(Tuple.Create("% Enhanced Defense", 20, 0));
+            affixes.Add(Tuple.Create(" To Bow And Crossbow Skills (Amazon Only)", 2, 0));
+
+            await CreateUniqueImage(affixes, name, requirements, imageLink);
+        }
+
+        [Command("Blood Raven's Charge")]
+        public async Task BloodRavensChargeImageAsync()
+        {
+            var name = "Blood Raven's Charge(71)";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/hellclap_weapons_diablo_2_resurrected_wiki_guide.png";
+            var requirements = new List<string>
+            {
+                "87 Strength",
+                "187 Dexterity"
+            };
+
+            var affixes = new List<Tuple<string, int, int>>();
+            affixes.Add(Tuple.Create("% Enhanced Damage", 180, 230));
+            affixes.Add(Tuple.Create("% Bonus To Attack Rating", 200, 300));
+            affixes.Add(Tuple.Create("Fires Explosive Arrows Or Bolts [Level 13]", 0, 0));
+            affixes.Add(Tuple.Create("Level 5 Revive (30 Charges)", 0, 0));
+            affixes.Add(Tuple.Create(" To Bow And Crossbow Skills (Amazon Only)", 2, 4));
+
+            await CreateUniqueImage(affixes, name, requirements, imageLink);
+        }
+
+        [Command("Felloak")]
+        public async Task FelloakImageAsync()
+        {
+            var name = "Felloak(3)";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/felloak_weapons_diablo_2_wiki_guide.png";
+            var requirements = new List<string>
+            {
+            };
+
+            var affixes = new List<Tuple<string, int, int>>();
+            affixes.Add(Tuple.Create("% Enhanced Damage", 70, 80));
+            affixes.Add(Tuple.Create("% Additional Damage To Undead", 50, 0));
+            affixes.Add(Tuple.Create(" Additional Fire Damage", 6, 8));
+            affixes.Add(Tuple.Create("Knockback", 0, 0));
+            affixes.Add(Tuple.Create("% Lightning Resistance", 60, 0));
+            affixes.Add(Tuple.Create("% Fire Resistance", 20, 0));
+
+            await CreateUniqueImage(affixes, name, requirements, imageLink);
+        }
+
+        [Command("Stoutnail")]
+        public async Task StoutnailImageAsync()
+        {
+            var name = "Stoutnail(5)";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/stoutnail_weapons_diablo_2_wiki_guide196px.png";
+            var requirements = new List<string>
+            {
+            };
+
+            var affixes = new List<Tuple<string, int, int>>();
+            affixes.Add(Tuple.Create("% Enhanced Damage", 100, 0));
+            affixes.Add(Tuple.Create("% Additional Damage To Undead", 50, 0));
+            affixes.Add(Tuple.Create(" To Vitality", 7, 0));
+            affixes.Add(Tuple.Create(" Damage To Attacker", 3, 10));
+            affixes.Add(Tuple.Create(" Magic Damage Taken", -2, 0));
+
+            await CreateUniqueImage(affixes, name, requirements, imageLink);
+        }
+
+        [Command("Dark Clan Crusher")]
+        public async Task DarkClanCrusherImageAsync()
+        {
+            var name = "Dark Clan Crusher(34)";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/felloak_weapons_diablo_2_wiki_guide.png";
+            var requirements = new List<string>
+            {
+                "25 Strength"
+            };
+
+            var affixes = new List<Tuple<string, int, int>>();
+            affixes.Add(Tuple.Create("% Enhanced Damage", 195, 0));
+            affixes.Add(Tuple.Create("% Additional Damage To Demons", 200, 0));
+            affixes.Add(Tuple.Create("% Additional Damage To Undead", 50, 0));
+            affixes.Add(Tuple.Create(" Bonus To Attack Rating Against Demons", 200, 0));
+            affixes.Add(Tuple.Create("% Bonus To Attack Rating", 20, 25));
+            affixes.Add(Tuple.Create(" Life After Each Demon Kill", 15, 0));
+            affixes.Add(Tuple.Create(" To Druid Skill Levels", 2, 0));
+
+            await CreateUniqueImage(affixes, name, requirements, imageLink);
+        }
+
+        [Command("Fleshrender")]
+        public async Task FleshrenderImageAsync()
+        {
+            var name = "Fleshrender(38)";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/stoutnail_weapons_diablo_2_wiki_guide196px.png";
+            var requirements = new List<string>
+            {
+                "30 Strength"
+            };
+
+            var affixes = new List<Tuple<string, int, int>>();
+            affixes.Add(Tuple.Create("% Enhanced Damage", 130, 200));
+            affixes.Add(Tuple.Create(" Additional Damage", 35, 50));
+            affixes.Add(Tuple.Create("% Damage To Undead", 50, 0));
+            affixes.Add(Tuple.Create("% Deadly Strike", 20, 0));
+            affixes.Add(Tuple.Create("% Chance Of Crushing Blow", 20, 0));
+            affixes.Add(Tuple.Create("% Chance Of Open Wounds", 25, 0));
+            affixes.Add(Tuple.Create(" To Druid Skills", 1, 0));
+            affixes.Add(Tuple.Create(" To Shape Shifting Skills (Druid Only)", 2, 0));
+            affixes.Add(Tuple.Create("Prevent Monster Heal", 0, 0));
+
+            await CreateUniqueImage(affixes, name, requirements, imageLink);
+        }
+
+        [Command("Nord's Tenderizer")]
+        public async Task NordsTenderizerImageAsync()
+        {
+            var name = "Nord's Tenderizer(68)";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/felloak_weapons_diablo_2_wiki_guide.png";
+            var requirements = new List<string>
+            {
+                "88 Strength",
+                "43 Dexterity"
+            };
+
+            var affixes = new List<Tuple<string, int, int>>();
+            affixes.Add(Tuple.Create("% Enhanced Damage", 270, 330));
+            affixes.Add(Tuple.Create("% Additional Damage To Undead", 50, 0));
+            affixes.Add(Tuple.Create(" Addtional Cold Damage", 205, 455));
+            affixes.Add(Tuple.Create(" Additional Freeze Targets", 2, 4));
+            affixes.Add(Tuple.Create("% Cold Absorb", 5, 15));
+            affixes.Add(Tuple.Create("% Increased Attack Speed", 25, 0));
+            affixes.Add(Tuple.Create("Level 16 Blizzard (12 Charges)", 0, 0));
+            affixes.Add(Tuple.Create("% Bonus To Attack Rating", 150, 180));
+
+            await CreateUniqueImage(affixes, name, requirements, imageLink);
+        }
+
+        [Command("Demon Limb")]
+        public async Task DemonLimbImageAsync()
+        {
+            var name = "Demon Limb(63)";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/stoutnail_weapons_diablo_2_wiki_guide196px.png";
+            var requirements = new List<string>
+            {
+                "133 Strength"
+            };
+
+            var affixes = new List<Tuple<string, int, int>>();
+            affixes.Add(Tuple.Create("% Enhanced Damage", 180, 230));
+            affixes.Add(Tuple.Create("% Additional Damage To Undead", 50, 0));
+            affixes.Add(Tuple.Create("% Additional Damage To Demons", 123, 0));
+            affixes.Add(Tuple.Create(" Additional Fire Damage", 222, 333));
+            affixes.Add(Tuple.Create("% Life Stolen Per Hit", 7, 13));
+            affixes.Add(Tuple.Create("% Fire Resistance", 15, 20));
+            affixes.Add(Tuple.Create("Level 23 Enchant (20 Charges)", 0, 0));
+            affixes.Add(Tuple.Create(" Durability Repaired In 20 Seconds", 1, 0));
+
+            await CreateUniqueImage(affixes, name, requirements, imageLink);
+        }
+
+        [Command("Leadcrow")]
+        public async Task LeadcrowImageAsync()
+        {
+            var name = "Leadcrow(9)";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/leadcrow_weapons_diablo_2_resurrected_wiki_guide.png";
+            var requirements = new List<string>
+            {
+                "21 Strength",
+                "27 Dexterity"
+            };
+
+            var affixes = new List<Tuple<string, int, int>>();
+            affixes.Add(Tuple.Create("% Enhanced Damage", 70, 0));
+            affixes.Add(Tuple.Create("% Deadly Strike", 25, 0));
+            affixes.Add(Tuple.Create(" To Attack Rating", 40, 0));
+            affixes.Add(Tuple.Create("% Poison Resist", 30, 0));
+            affixes.Add(Tuple.Create(" To Life", 10, 0));
+            affixes.Add(Tuple.Create(" To Dexterity", 10, 0));
+
+            await CreateUniqueImage(affixes, name, requirements, imageLink);
+        }
+
+        [Command("Ichorsting")]
+        public async Task IchorstingImageAsync()
+        {
+            var name = "Ichorsting(18)";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/ichorsting_weapons_diablo_2_resurrected_wiki_guide.png";
+            var requirements = new List<string>
+            {
+                "40 Strength",
+                "33 Dexterity"
+            };
+
+            var affixes = new List<Tuple<string, int, int>>();
+            affixes.Add(Tuple.Create("% Enhanced Damage", 50, 0));
+            affixes.Add(Tuple.Create(" Poison Damage Over 3 Seconds", 30, 0));
+            affixes.Add(Tuple.Create("% Increased Attack Speed", 20, 0));
+            affixes.Add(Tuple.Create("Piercing Attack (50)", 0, 0));
+            affixes.Add(Tuple.Create(" To Attack Rating", 50, 0));
+            affixes.Add(Tuple.Create(" To Dexterity", 20, 0));
+
+            await CreateUniqueImage(affixes, name, requirements, imageLink);
+        }
+
+        [Command("Hellcast")]
+        public async Task HellcastImageAsync()
+        {
+            var name = "Hellcast(27)";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/hellcast_diablo_2_weapons_wiki_guide_196px.png";
+            var requirements = new List<string>
+            {
+                "60 Strength",
+                "40 Dexterity"
+            };
+
+            var affixes = new List<Tuple<string, int, int>>();
+            affixes.Add(Tuple.Create("% Enhanced Damage", 70, 80));
+            affixes.Add(Tuple.Create("Fires Explosive Arrows Or Bolts [Level 5]", 0, 0));
+            affixes.Add(Tuple.Create(" Additional Fire Damage", 15, 35));
+            affixes.Add(Tuple.Create("% Increased Attack Speed", 20, 0));
+            affixes.Add(Tuple.Create(" To Attack Rating", 70, 0));
+            affixes.Add(Tuple.Create("% To Max Fire Resistance", 15, 0));
+            affixes.Add(Tuple.Create("% Fire Resistance", 15, 0));
+
+            await CreateUniqueImage(affixes, name, requirements, imageLink);
+        }
+
+        [Command("Doomslinger")]
+        public async Task DoomslingerImageAsync()
+        {
+            var name = "Doomslinger(28)";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/doomspittle_weapons_diablo_2_resurrected_wiki_guide.png";
+            var requirements = new List<string>
+            {
+                "40 Strength",
+                "50 Dexterity"
+            };
+
+            var affixes = new List<Tuple<string, int, int>>();
+            affixes.Add(Tuple.Create("% Enhanced Damage", 60, 100));
+            affixes.Add(Tuple.Create("Piercing Attack (35)", 0, 0));
+            affixes.Add(Tuple.Create("% Increased Attack Speed", 30, 0));
+            affixes.Add(Tuple.Create(" To Amazon Skill Levels", 1, 0));
+            affixes.Add(Tuple.Create(" To Life", 15, 0));
+
+            await CreateUniqueImage(affixes, name, requirements, imageLink);
+        }
+
+        [Command("Langer Briser")]
+        public async Task LangerBriserImageAsync()
+        {
+            var name = "Langer Briser(32)";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/langer_briser_weapons_diablo_2_resurrected_wiki_guide.png";
+            var requirements = new List<string>
+            {
+                "52 Strength",
+                "61 Dexterity"
+            };
+
+            var affixes = new List<Tuple<string, int, int>>();
+            affixes.Add(Tuple.Create("% Enhanced Damage", 170, 200));
+            affixes.Add(Tuple.Create(" To Maximum Damage", 10, 30));
+            affixes.Add(Tuple.Create("% Chance Of Open Wounds", 33, 0));
+            affixes.Add(Tuple.Create(" Additional Lightning Damage", 1, 212));
+            affixes.Add(Tuple.Create(" To Life", 30, 0));
+            affixes.Add(Tuple.Create("Knockback", 0, 0));
+            affixes.Add(Tuple.Create("% Better Chance of Getting Magic Items", 30, 60));
+
+            await CreateUniqueImage(affixes, name, requirements, imageLink);
+        }
+
+        [Command("Pus Spitter")]
+        public async Task PusSpitterImageAsync()
+        {
+            var name = "Pus Spitter(36)";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/pus_spiter_weapons_diablo_2_resurrected_wiki_guide.png";
+            var requirements = new List<string>
+            {
+                "32 Strength",
+                "28 Dexterity"
+            };
+
+            var affixes = new List<Tuple<string, int, int>>();
+            affixes.Add(Tuple.Create("% Enhanced Damage", 150, 220));
+            affixes.Add(Tuple.Create(" Poison Damage Over 8 Seconds", 150, 0));
+            affixes.Add(Tuple.Create("% Requirements", -60, 0));
+            affixes.Add(Tuple.Create("% Chance To Cast Level 6 Poison Nova When Struck", 9, 0));
+            affixes.Add(Tuple.Create("% Chance To Cast Level 1 Lower Resist On Striking", 4, 0));
+            affixes.Add(Tuple.Create(" To Attack Rating (Based On Character Level)", 5, 495));
+            affixes.Add(Tuple.Create("% Increased Attack Speed", 10, 0));
+            affixes.Add(Tuple.Create(" To Necromancer Skill Levels", 2, 0));
+
+            await CreateUniqueImage(affixes, name, requirements, imageLink);
+        }
+
+        [Command("Buriza-Do Kyanon")]
+        public async Task BurizaDoKyanonImageAsync()
+        {
+            var name = "Buriza-Do Kyanon(41)";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/hellcast_diablo_2_weapons_wiki_guide_196px.png";
+            var requirements = new List<string>
+            {
+                "110 Strength",
+                "80 Dexterity"
+            };
+
+            var affixes = new List<Tuple<string, int, int>>();
+            affixes.Add(Tuple.Create("% Enhanced Damage", 150, 200));
+            affixes.Add(Tuple.Create(" To Maximum Damage (Based On Character Level)", 2, 247));
+            affixes.Add(Tuple.Create(" Additional Cold Damage", 32, 196));
+            affixes.Add(Tuple.Create("Piercing Attack (100)", 0, 0));
+            affixes.Add(Tuple.Create("Freezes Target +3", 0, 0));
+            affixes.Add(Tuple.Create(" Additional Defense", 75, 150));
+            affixes.Add(Tuple.Create(" To Dexterity", 35, 0));
+            affixes.Add(Tuple.Create("% Increased Attack Speed", 80, 0));
+
+            await CreateUniqueImage(affixes, name, requirements, imageLink);
+        }
+
+        [Command("Demon Machine")]
+        public async Task DemonMachineImageAsync()
+        {
+            var name = "Demon Machine(49)";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/doomspittle_weapons_diablo_2_resurrected_wiki_guide.png";
+            var requirements = new List<string>
+            {
+                "80 Strength",
+                "95 Dexterity"
+            };
+
+            var affixes = new List<Tuple<string, int, int>>();
+            affixes.Add(Tuple.Create("% Enhanced Damage", 123, 0));
+            affixes.Add(Tuple.Create(" To Maximum Damage", 66, 0));
+            affixes.Add(Tuple.Create("Fires Explosive Bolts [Level 6]", 0, 0));
+            affixes.Add(Tuple.Create(" To Attack Rating", 632, 0));
+            affixes.Add(Tuple.Create("Piercing Atack (66)", 0, 0));
+            affixes.Add(Tuple.Create(" To Defense", 321, 0));
+            affixes.Add(Tuple.Create(" To Mana", 36, 0));
+
+            await CreateUniqueImage(affixes, name, requirements, imageLink);
+        }
+
+        [Command("Hellrack")]
+        public async Task HellrackImageAsync()
+        {
+            var name = "Hellrack(76)";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/hellcast_diablo_2_weapons_wiki_guide_196px.png";
+            var requirements = new List<string>
+            {
+                "163 Strength",
+                "77 Dexterity"
+            };
+
+            var affixes = new List<Tuple<string, int, int>>();
+            affixes.Add(Tuple.Create("% Enhanced Damage", 180, 230));
+            affixes.Add(Tuple.Create("% To Attack Rating", 100, 150));
+            affixes.Add(Tuple.Create(" Additional Fire Damage", 63, 324));
+            affixes.Add(Tuple.Create(" Additional Lightning Damage", 63, 324));
+            affixes.Add(Tuple.Create(" Additional Cold Damage", 63, 324));
+            affixes.Add(Tuple.Create("% Increased Attack Speed", 20, 0));
+            affixes.Add(Tuple.Create("Level 18 Immolation Arrow (150 Charges)", 0, 0));
+            affixes.Add(Tuple.Create(" Sockets", 2, 0));
+
+            await CreateUniqueImage(affixes, name, requirements, imageLink);
+        }
+
+        [Command("Gut Siphon")]
+        public async Task GutSiphonImageAsync()
+        {
+            var name = "Gut Siphon(71)";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/doomspittle_weapons_diablo_2_resurrected_wiki_guide.png";
+            var requirements = new List<string>
+            {
+                "141 Strength",
+                "98 Dexterity"
+            };
+
+            var affixes = new List<Tuple<string, int, int>>();
+            affixes.Add(Tuple.Create("% Enhanced Damage", 160, 220));
+            affixes.Add(Tuple.Create("Piercing Attack (33)", 0, 0));
+            affixes.Add(Tuple.Create("% Life Stolen Per Hit", 12, 18));
+            affixes.Add(Tuple.Create("% Chance Of Open Wounds", 33, 0));
+            affixes.Add(Tuple.Create("% Target Slow", 25, 0));
+
+            await CreateUniqueImage(affixes, name, requirements, imageLink);
+        }
+
+        [Command("Gull")]
+        public async Task GullImageAsync()
+        {
+            var name = "Gull(4)";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/dagger_weapons_diablo_2_resurrected_wiki_guide.png";
+            var requirements = new List<string>
+            {
+            };
+
+            var affixes = new List<Tuple<string, int, int>>();
+            affixes.Add(Tuple.Create(" Additional Damage", 1, 15));
+            affixes.Add(Tuple.Create("% Better Chance of Getting Magic Items", 100, 0));
+            affixes.Add(Tuple.Create(" To Mana", -5, 0));
+
+            await CreateUniqueImage(affixes, name, requirements, imageLink);
+        }
+
+
+        [Command("The Diggler")]
+        public async Task TheDigglerImageAsync()
+        {
+            var name = "The Diggler(11)";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/dirk_weapons_diablo_2_resurrected_wiki_guide.png";
+            var requirements = new List<string>
+            {
+                "25 Dexterity"
+            };
+
+            var affixes = new List<Tuple<string, int, int>>();
+            affixes.Add(Tuple.Create("% Enhanced Damage", 50, 0));
+            affixes.Add(Tuple.Create("Ignore Targets Defense", 0, 0));
+            affixes.Add(Tuple.Create("% Increased Attack Speed", 30, 0));
+            affixes.Add(Tuple.Create("% Cold Resist", 25, 0));
+            affixes.Add(Tuple.Create("% Fire Resist", 25, 0));
+            affixes.Add(Tuple.Create(" To Dexterity", 10, 0));
+
+            await CreateUniqueImage(affixes, name, requirements, imageLink);
+        }
+
+
+        [Command("The Jade Tan Do")]
+        public async Task TheJadeTanDoImageAsync()
+        {
+            var name = "The Jade Tan Do(19)";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/the_jade_tan_do_weapons_diablo_2_resurrected_wiki_guide.png";
+            var requirements = new List<string>
+            {
+                "45 Dexterity"
+            };
+
+            var affixes = new List<Tuple<string, int, int>>();
+            affixes.Add(Tuple.Create(" To Attack Rating", 100, 150));
+            affixes.Add(Tuple.Create(" Poison Damage Over 4 Seconds", 180, 0));
+            affixes.Add(Tuple.Create("% Poison Resist", 95, 0));
+            affixes.Add(Tuple.Create("% To Maximum Poison Resist", 20, 0));
+            affixes.Add(Tuple.Create("Cannot Be Frozen", 0, 0));
+
+            await CreateUniqueImage(affixes, name, requirements, imageLink);
+        }
+
+
+        [Command("Spectral Shard")]
+        public async Task SpectralShardImageAsync()
+        {
+            var name = "Spectral Shard(25)";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/blade_weapons_diablo_2_resurrected_wiki_guide.png";
+            var requirements = new List<string>
+            {
+                "35 Strength",
+                "51 Dexterity"
+            };
+
+            var affixes = new List<Tuple<string, int, int>>();
+            affixes.Add(Tuple.Create("% Faster Cast Rate", 50, 0));
+            affixes.Add(Tuple.Create(" To Attack Rating", 55, 0));
+            affixes.Add(Tuple.Create(" To All Resists", 10, 0));
+            affixes.Add(Tuple.Create(" To Mana", 50, 0));
+
+            await CreateUniqueImage(affixes, name, requirements, imageLink);
+        }
+
+
+        [Command("Spineripper")]
+        public async Task SpineripperImageAsync()
+        {
+            var name = "Spineripper(32)";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/dagger_weapons_diablo_2_resurrected_wiki_guide.png";
+            var requirements = new List<string>
+            {
+                "25 Strength"
+            };
+
+            var affixes = new List<Tuple<string, int, int>>();
+            affixes.Add(Tuple.Create("% Enhanced Damage", 200, 240));
+            affixes.Add(Tuple.Create(" Additional Damage", 15, 27));
+            affixes.Add(Tuple.Create("% Increased Attack Speed", 15, 0));
+            affixes.Add(Tuple.Create(" To Necromancer Skills", 1, 0));
+            affixes.Add(Tuple.Create("Prevent Monster Heal", 0, 0));
+            affixes.Add(Tuple.Create("Ignore Targets Defense", 0, 0));
+            affixes.Add(Tuple.Create("% Life Stolen Per Hit", 8, 0));
+            affixes.Add(Tuple.Create(" To Dexterity", 10, 0));
+
+            await CreateUniqueImage(affixes, name, requirements, imageLink);
+        }
+
+
+        [Command("Heart Carver")]
+        public async Task HeartCarverImageAsync()
+        {
+            var name = "Heart Carver(36)";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/dirk_weapons_diablo_2_resurrected_wiki_guide.png";
+            var requirements = new List<string>
+            {
+                "25 Strength",
+                "58 Dexterity"
+            };
+
+            var affixes = new List<Tuple<string, int, int>>();
+            affixes.Add(Tuple.Create("% Enhanced Damage", 190, 240));
+            affixes.Add(Tuple.Create(" Additional Damage", 15, 35));
+            affixes.Add(Tuple.Create("% Deadly Strike", 35, 0));
+            affixes.Add(Tuple.Create("Ignore Targets Defense", 0, 0));
+            affixes.Add(Tuple.Create(" To Grim Ward (Barbarian Only)", 4, 0));
+            affixes.Add(Tuple.Create(" To Find Item (Barbarian Only)", 4, 0));
+            affixes.Add(Tuple.Create(" To Find Potion (Barbarian Only)", 4, 0));
+
+            await CreateUniqueImage(affixes, name, requirements, imageLink);
+        }
+
+
+        [Command("Blackbog's Sharp")]
+        public async Task BlackbogsSharpImageAsync()
+        {
+            var name = "Blackbog's Sharp(38)";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/the_jade_tan_do_weapons_diablo_2_resurrected_wiki_guide.png";
+            var requirements = new List<string>
+            {
+                "25 Strength",
+                "88 Dexterity"
+            };
+
+            var affixes = new List<Tuple<string, int, int>>();
+            affixes.Add(Tuple.Create(" Poison Damage Over 10 Seconds", 488, 0));
+            affixes.Add(Tuple.Create(" Additional Damage", 15, 45));
+            affixes.Add(Tuple.Create("% Increased Attack Speed", 30, 0));
+            affixes.Add(Tuple.Create("% Target Slow", 50, 0));
+            affixes.Add(Tuple.Create(" To Defense", 50, 0));
+            affixes.Add(Tuple.Create(" To Poison Nova (Necromancer Only)", 4, 0));
+            affixes.Add(Tuple.Create(" To Poison Explosion (Necromancer Only)", 4, 0));
+            affixes.Add(Tuple.Create(" To Poison Dagger (Necromancer Only)", 5, 0));
+
+            await CreateUniqueImage(affixes, name, requirements, imageLink);
+        }
+
+
+        [Command("Stormspike")]
+        public async Task StormspikeImageAsync()
+        {
+            var name = "Stormspike(41)";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/stormspike_weapons_diablo_2_resurrected_wiki_guide.png";
+            var requirements = new List<string>
+            {
+                "47 Strength",
+                "97 Dexterity"
+            };
+
+            var affixes = new List<Tuple<string, int, int>>();
+            affixes.Add(Tuple.Create("% Ehanced Damage", 150, 0));
+            affixes.Add(Tuple.Create(" Additional Lightning Damage", 1, 120));
+            affixes.Add(Tuple.Create("% Chance To Cast Level 3", 25, 0));
+            affixes.Add(Tuple.Create("Charged Bolt When Struck", 0, 0));
+            affixes.Add(Tuple.Create("% To Lightning Resist (Based On Character Level)", 1, 99));
+            affixes.Add(Tuple.Create(" Lightning Damage To Attacker", 20, 0));
+
+            await CreateUniqueImage(affixes, name, requirements, imageLink);
+        }
+
+
+        [Command("Wizardspike")]
+        public async Task WizardspikeImageAsync()
+        {
+            var name = "Wizardspike(61)";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/dagger_weapons_diablo_2_resurrected_wiki_guide.png";
+            var requirements = new List<string>
+            {
+                "38 Strength",
+                "75 Dexterity"
+            };
+
+            var affixes = new List<Tuple<string, int, int>>();
+            affixes.Add(Tuple.Create(" To Mana (Based On Character Level)", 2, 198));
+            affixes.Add(Tuple.Create("% Faster Cast Rate", 50, 0));
+            affixes.Add(Tuple.Create("% Regenerate Mana", 15, 0));
+            affixes.Add(Tuple.Create("% Increased Maximum Mana", 15, 0));
+            affixes.Add(Tuple.Create(" To All Resists", 75, 0));
+            affixes.Add(Tuple.Create("Indestructible", 0, 0));
+
+            await CreateUniqueImage(affixes, name, requirements, imageLink);
+        }
+
+
+        [Command("Fleshripper")]
+        public async Task FleshripperImageAsync()
+        {
+            var name = "Fleshripper(68)";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/the_jade_tan_do_weapons_diablo_2_resurrected_wiki_guide.png";
+            var requirements = new List<string>
+            {
+                "42 Strength",
+                "86 Dexterity"
+            };
+
+            var affixes = new List<Tuple<string, int, int>>();
+            affixes.Add(Tuple.Create("% Enhanced Damage", 200, 300));
+            affixes.Add(Tuple.Create("% Target Defense", -50, 0));
+            affixes.Add(Tuple.Create("% Chance Of Crushing Blow", 25, 0));
+            affixes.Add(Tuple.Create("% Deadly Strike", 33, 0));
+            affixes.Add(Tuple.Create("% Chance Of Open Wounds", 50, 0));
+            affixes.Add(Tuple.Create("Prevent Monster Heal", 0, 0));
+            affixes.Add(Tuple.Create("% Target Slow", 20, 0));
+
+            await CreateUniqueImage(affixes, name, requirements, imageLink);
+        }
+
+        [Command("Ghostflame")]
+        public async Task GhostflameImageAsync()
+        {
+            var name = "Ghostflame(66)";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/blade_weapons_diablo_2_resurrected_wiki_guide.png";
+            var requirements = new List<string>
+            {
+                "55 Strength",
+                "57 Dexterity"
+            };
+
+            var affixes = new List<Tuple<string, int, int>>();
+            affixes.Add(Tuple.Create("% Enhanced Damage", 190, 240));
+            affixes.Add(Tuple.Create("Ignore Target's Defense", 0, 0));
+            affixes.Add(Tuple.Create(" Additional Magic Damage", 108, 0));
+            affixes.Add(Tuple.Create("% Mana Stolen Per Hit", 10, 15));
+            affixes.Add(Tuple.Create(" To Light Radius", 2, 0));
+            affixes.Add(Tuple.Create("Indestructible", 0, 0));
+            affixes.Add(Tuple.Create("Ethereal (Cannot Be Repaired)", 0, 0));
+
+            await CreateUniqueImage(affixes, name, requirements, imageLink);
+        }
+
+        [Command("Ironstone")]
+        public async Task IronstoneImageAsync()
+        {
+            var name = "Ironstone()";
+            var imageLink = "";
+            var requirements = new List<string>
+            {
+                " Strength",
+                " Dexterity"
+            };
+
+            var affixes = new List<Tuple<string, int, int>>();
+            affixes.Add(Tuple.Create("% Enhanced Damage", 100, 150));
+            affixes.Add(Tuple.Create("% Damage To Undead", 50, 0));
+            affixes.Add(Tuple.Create(" Additional Lightning Damage", 1, 10));
+            affixes.Add(Tuple.Create(" To Attack Rating", 100, 150));
+            affixes.Add(Tuple.Create(" To Strength", 10, 0));
+
+            await CreateUniqueImage(affixes, name, requirements, imageLink);
+        }
+
+        [Command("Bonesnap")]
+        public async Task BonesnapImageAsync()
+        {
+            var name = "Bonesnap()";
+            var imageLink = "";
+            var requirements = new List<string>
+            {
+                " Strength",
+                " Dexterity"
+            };
+
+            var affixes = new List<Tuple<string, int, int>>();
+            affixes.Add(Tuple.Create("% Enhanced Damage", 200, 300));
+            affixes.Add(Tuple.Create("% Damage To Undead", 100, 0));
+            affixes.Add(Tuple.Create("% chance of Crushing Blow", 40, 0));
+            affixes.Add(Tuple.Create("% Cold Resist", 30, 0));
+            affixes.Add(Tuple.Create("% Fire Resist", 30, 0));
+
+            await CreateUniqueImage(affixes, name, requirements, imageLink);
+        }
+
+        [Command("Steeldriver")]
+        public async Task SteeldriverImageAsync()
+        {
+            var name = "Steeldriver()";
+            var imageLink = "";
+            var requirements = new List<string>
+            {
+                " Strength",
+                " Dexterity"
+            };
+
+            var affixes = new List<Tuple<string, int, int>>();
+            affixes.Add(Tuple.Create("% Enhanced Damage", 150, 250));
+            affixes.Add(Tuple.Create("% Damage To Undead", 50, 0));
+            affixes.Add(Tuple.Create("% Increased Attack Speed", 40, 0));
+            affixes.Add(Tuple.Create("% Requirements", -50, 0));
+            affixes.Add(Tuple.Create("% Faster Stamina Regen", 25, 0));
+
+            await CreateUniqueImage(affixes, name, requirements, imageLink);
+        }
+
+        [Command("Earthshaker")]
+        public async Task EarthshakerImageAsync()
+        {
+            var name = "Earthshaker()";
+            var imageLink = "";
+            var requirements = new List<string>
+            {
+                " Strength",
+                " Dexterity"
+            };
+
+            var affixes = new List<Tuple<string, int, int>>();
+            affixes.Add(Tuple.Create("% Enhanced Damage", 180, 0));
+            affixes.Add(Tuple.Create("% Damage To Undead", 50, 0));
+            affixes.Add(Tuple.Create("% Chance To Cast Level 7 Fissure On Striking", 5, 0));
+            affixes.Add(Tuple.Create("% Increased Attack Speed", 30, 0));
+            affixes.Add(Tuple.Create("Hit Blinds Target", 0, 0));
+            affixes.Add(Tuple.Create("Knockback", 0, 0));
+            affixes.Add(Tuple.Create(" To Elemental Skills (Druid Only)", 3, 0));
+
+            await CreateUniqueImage(affixes, name, requirements, imageLink);
+        }
+
+        [Command("Bloodtree Stump")]
+        public async Task BloodtreeStumpImageAsync()
+        {
+            var name = "Bloodtree Stump()";
+            var imageLink = "";
+            var requirements = new List<string>
+            {
+                " Strength",
+                " Dexterity"
+            };
+
+            var affixes = new List<Tuple<string, int, int>>();
+            affixes.Add(Tuple.Create("% Enhanced Damage", 180, 220));
+            affixes.Add(Tuple.Create("% Damage To Undead", 50, 0));
+            affixes.Add(Tuple.Create("% Chance Of Crushing Blow", 50, 0));
+            affixes.Add(Tuple.Create(" All Resists", 20, 0));
+            affixes.Add(Tuple.Create(" To Strength", 25, 0));
+            affixes.Add(Tuple.Create(" To Masteries (Barbarian Only)", 2, 0));
+            affixes.Add(Tuple.Create(" To Mace Masteries (Barbarian Only)", 3, 0));
+
+            await CreateUniqueImage(affixes, name, requirements, imageLink);
+        }
+
+        [Command("The Gavel of Pain")]
+        public async Task TheGavelofPainImageAsync()
+        {
+            var name = "The Gavel of Pain()";
+            var imageLink = "";
+            var requirements = new List<string>
+            {
+                " Strength",
+                " Dexterity"
+            };
+
+            var affixes = new List<Tuple<string, int, int>>();
+            affixes.Add(Tuple.Create("% Enhanced Damage", 130, 160));
+            affixes.Add(Tuple.Create(" Additional Damage", 12, 30));
+            affixes.Add(Tuple.Create("% Damage To Undead", 50, 0));
+            affixes.Add(Tuple.Create("% Chance To Cast Level 1 Iron Maiden When Struck", 5, 0));
+            affixes.Add(Tuple.Create("% Chance To Cast Level 1 Amplify Damage On Striking", 5, 0));
+            affixes.Add(Tuple.Create("Level 8 Amplify Damage (3 Charges)", 0, 0));
+            affixes.Add(Tuple.Create(" Damage To Attacker", 26, 0));
+            affixes.Add(Tuple.Create("Indestructible", 0, 0));
+
+            await CreateUniqueImage(affixes, name, requirements, imageLink);
+        }
+
+        [Command("Stone Crusher")]
+        public async Task StoneCrusherImageAsync()
+        {
+            var name = "Stone Crusher()";
+            var imageLink = "";
+            var requirements = new List<string>
+            {
+                " Strength",
+                " Dexterity"
+            };
+
+            var affixes = new List<Tuple<string, int, int>>();
+            affixes.Add(Tuple.Create("% Enhanced Damage", 280, 320));
+            affixes.Add(Tuple.Create(" Additional Damage", 10, 30));
+            affixes.Add(Tuple.Create("% Damage To Undead", 50, 0));
+            affixes.Add(Tuple.Create("% Target Defense", -25, 0));
+            affixes.Add(Tuple.Create("% Chance of Crushing Blow", 40, 0));
+            affixes.Add(Tuple.Create(" To Monster Defense Per Hit", -100, 0));
+            affixes.Add(Tuple.Create(" To Strength", 20, 30));
+
+            await CreateUniqueImage(affixes, name, requirements, imageLink);
+        }
+
+        [Command("Schaefer's Hammer")]
+        public async Task SchaefersHammerImageAsync()
+        {
+            var name = "Schaefer's Hammer()";
+            var imageLink = "";
+            var requirements = new List<string>
+            {
+                " Strength",
+                " Dexterity"
+            };
+
+            var affixes = new List<Tuple<string, int, int>>();
+            affixes.Add(Tuple.Create("% Enhanced Damage", 100, 130));
+            affixes.Add(Tuple.Create(" To Maximum Damage (Based On Character Level)", 2, 198));
+            affixes.Add(Tuple.Create(" Additional Lightning Damage", 50, 200));
+            affixes.Add(Tuple.Create("% Damage To Undead", 50, 0));
+            affixes.Add(Tuple.Create("% Chance To Cast Level 10 Static Field On Striking", 20, 0));
+            affixes.Add(Tuple.Create("% Increased Attack Speed", 20, 0));
+            affixes.Add(Tuple.Create(" To Attack Rating (Based On Character Level)", 8, 792));
+            affixes.Add(Tuple.Create(" To Lightning Resist", 75, 0));
+            affixes.Add(Tuple.Create(" To Life", 50, 0));
+            affixes.Add(Tuple.Create(" To Light Radius", 1, 0));
+            affixes.Add(Tuple.Create("Indestructible", 0, 0));
+
+            await CreateUniqueImage(affixes, name, requirements, imageLink);
+        }
+
+        [Command("Windhammer ")]
+        public async Task WindhammerImageAsync()
+        {
+            var name = "Windhammer ()";
+            var imageLink = "";
+            var requirements = new List<string>
+            {
+                " Strength",
+                " Dexterity"
+            };
+
+            var affixes = new List<Tuple<string, int, int>>();
+            affixes.Add(Tuple.Create("% Enhanced Damage", 180, 230));
+            affixes.Add(Tuple.Create("% Chance of Crushing Blow", 50, 0));
+            affixes.Add(Tuple.Create("% Increased Attack Speed", 60, 0));
+            affixes.Add(Tuple.Create("% Chance To Cast Level 22 Twister On Striking", 33, 0));
+            affixes.Add(Tuple.Create("% Damage To Undead", 50, 0));
+
+            await CreateUniqueImage(affixes, name, requirements, imageLink);
+        }
+
+        [Command("Earth Shifter")]
+        public async Task EarthShifterImageAsync()
+        {
+            var name = "Earth Shifter()";
+            var imageLink = "";
+            var requirements = new List<string>
+            {
+                " Strength",
+                " Dexterity"
+            };
+
+            var affixes = new List<Tuple<string, int, int>>();
+            affixes.Add(Tuple.Create("% Enhanced Damage", 250, 300));
+            affixes.Add(Tuple.Create("% Damage To Undead", 50, 0));
+            affixes.Add(Tuple.Create(" To Elemental Skills (Druid Only)", 7, 0));
+            affixes.Add(Tuple.Create("% Chance To Cast Level 14 Fissure On Striking", 25, 0));
+            affixes.Add(Tuple.Create("% Increased Attack Speed", 10, 0));
+            affixes.Add(Tuple.Create("% Chance of Crushing Blow", 33, 0));
+            affixes.Add(Tuple.Create("% Faster Cast Rate", 10, 0));
+            affixes.Add(Tuple.Create("Level 14 Volcano (30 charges)", 0, 0));
+
+            await CreateUniqueImage(affixes, name, requirements, imageLink);
+        }
+
+        [Command("The Cranium Basher")]
+        public async Task TheCraniumBasherImageAsync()
+        {
+            var name = "The Cranium Basher()";
+            var imageLink = "";
+            var requirements = new List<string>
+            {
+                " Strength",
+                " Dexterity"
+            };
+
+            var affixes = new List<Tuple<string, int, int>>();
+            affixes.Add(Tuple.Create("% Enhanced Damage", 200, 240));
+            affixes.Add(Tuple.Create(" To Minimum Damage", 20, 0));
+            affixes.Add(Tuple.Create("% Damage To Undead", 50, 0));
+            affixes.Add(Tuple.Create("% Chance Of Crushing Blow", 75, 0));
+            affixes.Add(Tuple.Create("% Chance To Cast Level 1 Amplify Damage On Striking", 4, 0));
+            affixes.Add(Tuple.Create("% Increased Attack Speed", 20, 0));
+            affixes.Add(Tuple.Create(" To All Resists", 25, 0));
+            affixes.Add(Tuple.Create(" To Strength", 25, 0));
+            affixes.Add(Tuple.Create(" To Maximum Damage (not shown)", 20, 0));
+            affixes.Add(Tuple.Create("Indestructible", 0, 0));
+
+            await CreateUniqueImage(affixes, name, requirements, imageLink);
+        }
+
         [Command("Knell Striker")]
         public async Task KnellStrikerImageAsync()
         {
@@ -5381,7 +6289,7 @@ namespace Template.Modules
 
             await CreateUniqueImage(affixes, name, requirements, imageLink);
         }
-        
+
         [Command("Viperfork")]
         public async Task ViperforkImageAsync()
         {
@@ -5392,7 +6300,7 @@ namespace Template.Modules
                 "",
                 ""
             };
-            
+
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("% Enhanced Damage", 190, 240));
             affixes.Add(Tuple.Create(" Attack Rating", 200, 250));
@@ -5403,7 +6311,53 @@ namespace Template.Modules
 
             await CreateUniqueImage(affixes, name, requirements, imageLink);
         }
-        
+
+        [Command("Stoneraven")]
+        public async Task StoneravenImageAsync()
+        {
+            var name = "Stoneraven(64)";
+            var imageLink = "";
+            var requirements = new List<string>
+            {
+                "114 Strength",
+                "142 Dexterity"
+            };
+
+            var affixes = new List<Tuple<string, int, int>>();
+            affixes.Add(Tuple.Create("% Enhanced Damage", 230, 280));
+            affixes.Add(Tuple.Create(" Additional Magic Damage", 101, 187));
+            affixes.Add(Tuple.Create(" To Defense", 400, 600));
+            affixes.Add(Tuple.Create(" To All Resists", 30, 50));
+            affixes.Add(Tuple.Create(" To Javelin and Spear Skills (Amazon Only)", 1, 3));
+
+            await CreateUniqueImage(affixes, name, requirements, imageLink);
+        }
+
+        [Command("Lycander's Flank")]
+        public async Task LycandersFlankImageAsync()
+        {
+            var name = "Lycander's Flank(64)";
+            var imageLink = "";
+            var requirements = new List<string>
+            {
+                "",
+                ""
+            };
+
+            var affixes = new List<Tuple<string, int, int>>();
+            affixes.Add(Tuple.Create("% Enhanced Damage", 190, 240));
+            affixes.Add(Tuple.Create(" Additional Damage", 25, 50));
+            affixes.Add(Tuple.Create(" To Amazon Skill Levels", 2, 0));
+            affixes.Add(Tuple.Create("% Increased Attack Speed", 30, 0));
+            affixes.Add(Tuple.Create("% Life Stolen Per Hit", 5, 9));
+            affixes.Add(Tuple.Create(" To Strength", 20, 0));
+            affixes.Add(Tuple.Create(" To Vitality", 20, 0));
+            affixes.Add(Tuple.Create("% Enhanced Defense", 20, 0));
+            affixes.Add(Tuple.Create(" To Javelin and Spear Skills (Amazon Only)", 2, 0));
+
+            await CreateUniqueImage(affixes, name, requirements, imageLink);
+        }
+
         [Command("Bane Ash")]
         public async Task BaneAshImageAsync()
         {
