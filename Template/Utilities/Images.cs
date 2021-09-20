@@ -374,7 +374,6 @@ namespace Template.Utilities
                 if(thisAffix.Item3 != 0)
                 {
                     textColor = "#4169E1";
-
                     banner = DrawTextToImage(banner, $"{thisAffix.Item2}-{thisAffix.Item3}", $"{thisAffix.Item1}", 10, theSlots, offset, 0, textColor);
                     offset += subFontSize + 10;
                     continue;
@@ -426,7 +425,7 @@ namespace Template.Utilities
 
             return bitmap;
         }
-
+        
         public async Task<string> CreateUniqueImageAsync(List<Tuple<string,int,int>> affixes, string name, List<string> requirements, string imageLink, string url = "https://cdn.discordapp.com/attachments/881552119784681493/881598049397391380/oie_DeJvaQZt4aAb.PNG")
         {
             var background = await FetchImageAsync(url);
