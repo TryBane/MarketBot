@@ -685,8 +685,16 @@ namespace Template.Modules
             affixes.Add(Tuple.Create("% Chance To Cast Level 15 Chilling Armor when Struck", 20, 0));
             affixes.Add(Tuple.Create("% Faster Cast Rate", 25, 0));
             affixes.Add(Tuple.Create("% Enhanced Damage", 300, 0));
+            affixes.Add(Tuple.Create(" To Minimum Damage(Weapons)", 300, 0));
+            affixes.Add(Tuple.Create(" To Attack Rating(Weapons)", 300, 0));
+            affixes.Add(Tuple.Create("% Deadly Strike(Weapons)", 300, 0));
+            affixes.Add(Tuple.Create("% Chance Hit Causes Monster To Flee(Weapons)", 300, 0));
             affixes.Add(Tuple.Create("% Enhanced Defense", 200, 0));
+            affixes.Add(Tuple.Create(" To Life (Based on Character Level [1-1.5 Per Level])", 1, 149));
+            affixes.Add(Tuple.Create(" Replenish Life(Armor)", 7, 0));
+            affixes.Add(Tuple.Create("% To Maximum Lightning Resistance(Armor)", 5, 0));
             affixes.Add(Tuple.Create(" All Resistances", 25, 30));
+            affixes.Add(Tuple.Create(" Reduced Damage(Armor)", 7, 0));
             affixes.Add(Tuple.Create("% Damage Taken Goes To Mana", 12, 0));
             affixes.Add(Tuple.Create(" To Light Radius", 1, 0));
 

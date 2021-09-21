@@ -181,6 +181,7 @@ namespace Template.Utilities
                 "Staff",
                 "Sword",
                 "Wand",
+                "Weapons"
             };
             List<string> meleeWeapons = new List<string>()
             {
