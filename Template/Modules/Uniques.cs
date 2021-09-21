@@ -6628,8 +6628,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/scepter_weapons_diablo_2_resurrected_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "25 Strength",
-                ""
+                "25 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -6651,8 +6650,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/grand_scepter_weapons_diablo_2_resurrected_wiki_guide_196xp.png";
             var requirements = new List<string>
             {
-                "37 Strength",
-                ""
+                "37 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -6675,8 +6673,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/war_scepter_weapons_diablo_2_resurrected_wiki_guide_196xp.png";
             var requirements = new List<string>
             {
-                "55 Strength",
-                ""
+                "55 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -6699,8 +6696,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/scepter_weapons_diablo_2_resurrected_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "58 Strength",
-                ""
+                "58 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -6725,8 +6721,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/grand_scepter_weapons_diablo_2_resurrected_wiki_guide_196xp.png";
             var requirements = new List<string>
             {
-                "76 Strength",
-                ""
+                "76 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -6749,8 +6744,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/war_scepter_weapons_diablo_2_resurrected_wiki_guide_196xp.png";
             var requirements = new List<string>
             {
-                "42 Strength",
-                ""
+                "42 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -6916,8 +6910,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/spear_weapons_diablo_2_resurrected_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "20 Dexterity",
-                ""
+                "20 Dexterity"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -6960,8 +6953,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/spetum_weapons_diablo_2_resurrected_wiki_guide_201px.png";
             var requirements = new List<string>
             {
-                "101 Strength",
-                ""
+                "101 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -7118,8 +7110,6 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/spetum_weapons_diablo_2_resurrected_wiki_guide_201px.png";
             var requirements = new List<string>
             {
-                "",
-                ""
             };
 
             var affixes = new List<Tuple<string, int, int>>();
@@ -7137,7 +7127,7 @@ namespace Template.Modules
         public async Task StoneravenImageAsync()
         {
             var name = "Stoneraven(64)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/maiden_spear_spears_weapons_diablo_2_resurrected_wiki_guide_196xp.png";
             var requirements = new List<string>
             {
                 "114 Strength",
@@ -7158,11 +7148,11 @@ namespace Template.Modules
         public async Task LycandersFlankImageAsync()
         {
             var name = "Lycander's Flank(64)";
-            var imageLink = "";
+            var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/maiden_pike_weapons_diablo_2_resurrected_wiki_guide_196xp.png";
             var requirements = new List<string>
             {
-                "",
-                ""
+                "115 Strength",
+                "98 Dexterity"
             };
 
             var affixes = new List<Tuple<string, int, int>>();
@@ -7186,8 +7176,6 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/short_staff_diablo_2_wiki_guide_125px.png";
             var requirements = new List<string>
             {
-                "",
-                ""
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -7210,8 +7198,6 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/long_staff_diablo_2_wiki_guide_125px.png";
             var requirements = new List<string>
             {
-                "",
-                ""
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -7234,8 +7220,6 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/lazarus_spire_diablo_2_wiki_guide_125px.png";
             var requirements = new List<string>
             {
-                "",
-                ""
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -7260,8 +7244,6 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/battle_staf_diablo_2_wiki_guide_125px.png";
             var requirements = new List<string>
             {
-                "",
-                ""
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -7283,8 +7265,6 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/war_staf_diablo_2_wiki_guide_125px.png";
             var requirements = new List<string>
             {
-                "",
-                ""
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -7307,8 +7287,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/short_staff_diablo_2_wiki_guide_125px.png";
             var requirements = new List<string>
             {
-                "25 Strength",
-                ""
+                "25 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -7331,8 +7310,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/long_staff_diablo_2_wiki_guide_125px.png";
             var requirements = new List<string>
             {
-                "25 Strength",
-                ""
+                "25 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -7356,8 +7334,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/lazarus_spire_diablo_2_wiki_guide_125px.png";
             var requirements = new List<string>
             {
-                "25 Strength",
-                ""
+                "25 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -7381,8 +7358,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/battle_staf_diablo_2_wiki_guide_125px.png";
             var requirements = new List<string>
             {
-                "25 Strength",
-                ""
+                "25 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -7404,8 +7380,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/skullcollector_diablo_2_wiki_guide_125px.png";
             var requirements = new List<string>
             {
-                "25 Strength",
-                ""
+                "25 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -7448,8 +7423,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/skullcollector_diablo_2_wiki_guide_125px.png";
             var requirements = new List<string>
             {
-                "34 Strength",
-                ""
+                "34 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -7583,8 +7557,6 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/iros_torch_weapons_diablo_2_wiki_guide_125px.png";
             var requirements = new List<string>
             {
-                "",
-                ""
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -7606,8 +7578,6 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/yew_wand_diablo_2_wiki_guide_125px.png";
             var requirements = new List<string>
             {
-                "",
-                ""
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -7631,8 +7601,6 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/gravenspine_diablo_2_wiki_guide_125px.png";
             var requirements = new List<string>
             {
-                "",
-                ""
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -7654,8 +7622,6 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/grim_wand_diablo_2_wiki_guide_125px.png";
             var requirements = new List<string>
             {
-                "",
-                ""
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -7677,8 +7643,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/wand_diablo_2_wiki_guide_125px.png";
             var requirements = new List<string>
             {
-                "25 Strength",
-                ""
+                "25 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -7700,8 +7665,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/yew_wand_diablo_2_wiki_guide_125px.png";
             var requirements = new List<string>
             {
-                "25 Strength",
-                ""
+                "25 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -7724,8 +7688,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/gravenspine_diablo_2_wiki_guide_125px.png";
             var requirements = new List<string>
             {
-                "25 Strength",
-                ""
+                "25 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -7751,8 +7714,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/blackhand_key_diablo_2_wiki_guide_125px.png";
             var requirements = new List<string>
             {
-                "25 Strength",
-                ""
+                "25 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -7776,8 +7738,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/gravenspine_diablo_2_wiki_guide_125px.png";
             var requirements = new List<string>
             {
-                "25 Strength",
-                ""
+                "25 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -7800,8 +7761,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/grim_wand_diablo_2_wiki_guide_125px.png";
             var requirements = new List<string>
             {
-                "25 Strength",
-                ""
+                "25 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -7822,8 +7782,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/blood_crescent_weapons_diablo_2_wiki_guide196px.png";
             var requirements = new List<string>
             {
-                "21 Dexterity",
-                ""
+                "21 Dexterity"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -7867,8 +7826,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/gleamscythe_weapons_diablo_2_wiki_guide196px.png";
             var requirements = new List<string>
             {
-                "33 Strength",
-                ""
+                "33 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -7889,8 +7847,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/griswold's_edge_sword_diablo_2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "48 Strength",
-                ""
+                "48 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -7933,8 +7890,6 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/short_sword_weapons_diablo_2_wiki_guide196px.png";
             var requirements = new List<string>
             {
-                "",
-                ""
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -7977,8 +7932,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/blacktongue_diablo_2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "62 Strength",
-                ""
+                "62 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -8061,8 +8015,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/claymore_diablo_2_wiki_guide_196px.png";
             var requirements = new List<string>
             {
-                "47 Strength",
-                ""
+                "47 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -8126,8 +8079,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/short_sword_weapons_diablo_2_wiki_guide196px.png";
             var requirements = new List<string>
             {
-                "25 Strength",
-                ""
+                "25 Strength"
             };
             
             var affixes = new List<Tuple<string, int, int>>();
