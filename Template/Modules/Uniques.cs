@@ -4604,10 +4604,10 @@ namespace Template.Modules
             await CreateUniqueImage(affixes, name, requirements, imageLink);
         }
         
-        [Command("Witherstring")]
-        public async Task WitherstringImageAsync()
+        [Command("Witherspring")]
+        public async Task WitherspringImageAsync()
         {
-            var name = "Witherstring(13)";
+            var name = "Witherspring(13)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/hunters_bow_weapons_diablo_2_resurrected_wiki_guide.png";
             var requirements = new List<string>
             {
@@ -4715,10 +4715,10 @@ namespace Template.Modules
             await CreateUniqueImage(affixes, name, requirements, imageLink);
         }
         
-        [Command("Kuko Shakaku")]
-        public async Task KukoShakakuImageAsync()
+        [Command("Kuko Shukaku")]
+        public async Task KukoShukakuImageAsync()
         {
-            var name = "Kuko Shakaku(33)";
+            var name = "Kuko Shukaku(33)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/kuko_shakaku_weapons_diablo_2_resurrected_wiki_guide.png";
             var requirements = new List<string>
             {
