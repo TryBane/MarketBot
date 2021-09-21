@@ -5721,7 +5721,7 @@ namespace Template.Modules
             await CreateUniqueImage(affixes, name, requirements, imageLink);
         }
 
-        [Command("Windhammer ")]
+        [Command("Windhammer")]
         public async Task WindhammerImageAsync()
         {
             var name = "Windhammer(68)";
