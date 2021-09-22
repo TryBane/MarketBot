@@ -246,9 +246,11 @@ namespace Template.Utilities
                 headerHeight = GrD.MeasureString("This Text Baby", roboto).Height;
                 textHeight = GrD.MeasureString("This Text Baby", robotoSmall).Height;
 
+                biggestSizeAffixText = GrD.MeasureString(name + runes, roboto).Width + 30;
+
                 foreach (var thisAffix in affixes)
                 {
-                    var textSize = GrD.MeasureString((thisAffix.Item1 + thisAffix.Item2.ToString() + thisAffix.Item3.ToString()), robotoSmall).Width;
+                    var textSize = GrD.MeasureString((thisAffix.Item1 + thisAffix.Item2.ToString() + thisAffix.Item3.ToString()), robotoSmall).Width + 30;
                     biggestSizeAffixText = Math.Max(biggestSizeAffixText, textSize);
                 }
 
