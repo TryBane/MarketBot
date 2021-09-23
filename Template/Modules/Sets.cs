@@ -1027,7 +1027,6 @@ namespace Template.Modules
             var setName = "Arcanna's Tricks";
             var requirements = new List<string>
             {
-                ""
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -1119,7 +1118,6 @@ namespace Template.Modules
             var setName = "Arcanna's Tricks";
             var requirements = new List<string>
             {
-                ""
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -1188,8 +1186,7 @@ namespace Template.Modules
             var setName = "Arctic Gear";
             var requirements = new List<string>
             {
-                "12 Strength",
-                ""
+                "12 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -1247,7 +1244,6 @@ namespace Template.Modules
             var setName = "Arctic Gear";
             var requirements = new List<string>
             {
-                ""
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -1287,8 +1283,6 @@ namespace Template.Modules
             var setName = "Cathan's Traps";
             var requirements = new List<string>
             {
-                "",
-                ""
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -1317,8 +1311,7 @@ namespace Template.Modules
             var setName = "Cathan's Traps";
             var requirements = new List<string>
             {
-                "24 Strength",
-                ""
+                "24 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -1346,8 +1339,7 @@ namespace Template.Modules
             var setName = "Cathan's Traps";
             var requirements = new List<string>
             {
-                "23 Strength",
-                ""
+                "23 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -1358,7 +1350,7 @@ namespace Template.Modules
 
             var setBonuses = new List<Tuple<string, int, int, string>>()
             {
-                Tuple.Create(" Defense (Based on Character Level)", 2, 198, "")
+                Tuple.Create(" Defense (Based on Character Level)", 2, 198, "2")
             };
 
             var setPieces = ParseSetPieces(name, setName);
@@ -1401,8 +1393,6 @@ namespace Template.Modules
             var setName = "Cathan's Traps";
             var requirements = new List<string>
             {
-                "",
-                ""
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -1438,8 +1428,7 @@ namespace Template.Modules
             var setName = "Civerb's Vestments";
             var requirements = new List<string>
             {
-                "37 Strength",
-                ""
+                "37 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -1467,8 +1456,6 @@ namespace Template.Modules
             var setName = "Civerb's Vestments";
             var requirements = new List<string>
             {
-                "",
-                ""
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -1496,8 +1483,6 @@ namespace Template.Modules
             var setName = "Civerb's Vestments";
             var requirements = new List<string>
             {
-                "",
-                ""
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -1562,8 +1547,7 @@ namespace Template.Modules
             var setName = "Cleglaw's Brace";
             var requirements = new List<string>
             {
-                "22 Strength",
-                ""
+                "22 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -1590,8 +1574,7 @@ namespace Template.Modules
             var setName = "Cleglaw's Brace";
             var requirements = new List<string>
             {
-                "25 Strength",
-                ""
+                "25 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -1657,8 +1640,7 @@ namespace Template.Modules
             var setName = "Angelic Raiment";
             var requirements = new List<string>
             {
-                "36 Strength",
-                ""
+                "36 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -1686,8 +1668,6 @@ namespace Template.Modules
             var setName = "Angelic Raiment";
             var requirements = new List<string>
             {
-                "",
-                ""
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -1715,8 +1695,6 @@ namespace Template.Modules
             var setName = "Angelic Raiment";
             var requirements = new List<string>
             {
-                "",
-                ""
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -1753,8 +1731,7 @@ namespace Template.Modules
             var setName = "Hsarus' Defense";
             var requirements = new List<string>
             {
-                "12 Strength",
-                ""
+                "12 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -1781,8 +1758,7 @@ namespace Template.Modules
             var setName = "Hsarus' Defense";
             var requirements = new List<string>
             {
-                "25 Strength",
-                ""
+                "25 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -1809,8 +1785,7 @@ namespace Template.Modules
             var setName = "Hsarus' Defense";
             var requirements = new List<string>
             {
-                "30 Strength",
-                ""
+                "30 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -1846,8 +1821,6 @@ namespace Template.Modules
             var setName = "Infernal Tools";
             var requirements = new List<string>
             {
-                "",
-                ""
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -1875,8 +1848,6 @@ namespace Template.Modules
             var setName = "Infernal Tools";
             var requirements = new List<string>
             {
-                "",
-                ""
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -1903,8 +1874,7 @@ namespace Template.Modules
             var setName = "Infernal Tools";
             var requirements = new List<string>
             {
-                "45 Strength",
-                ""
+                "45 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -1942,8 +1912,7 @@ namespace Template.Modules
             var setName = "Iratha's Finery";
             var requirements = new List<string>
             {
-                "55 Strength",
-                ""
+                "55 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -1970,8 +1939,7 @@ namespace Template.Modules
             var setName = "Iratha's Finery";
             var requirements = new List<string>
             {
-                "45 Strength",
-                ""
+                "45 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -1998,8 +1966,7 @@ namespace Template.Modules
             var setName = "Iratha's Finery";
             var requirements = new List<string>
             {
-                "45 Strength",
-                ""
+                "45 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -2026,8 +1993,6 @@ namespace Template.Modules
             var setName = "Iratha's Finery";
             var requirements = new List<string>
             {
-                "",
-                ""
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -2064,8 +2029,7 @@ namespace Template.Modules
             var setName = "Isenhart's Armory";
             var requirements = new List<string>
             {
-                "48 Strength",
-                ""
+                "48 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -2092,8 +2056,7 @@ namespace Template.Modules
             var setName = "Isenhart's Armory";
             var requirements = new List<string>
             {
-                "30 Strength",
-                ""
+                "30 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -2120,8 +2083,7 @@ namespace Template.Modules
             var setName = "Isenhart's Armory";
             var requirements = new List<string>
             {
-                "60 Strength",
-                ""
+                "60 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -2149,8 +2111,7 @@ namespace Template.Modules
             var setName = "Isenhart's Armory";
             var requirements = new List<string>
             {
-                "41 Strength",
-                ""
+                "41 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -2187,8 +2148,7 @@ namespace Template.Modules
             var setName = "Milabrega's Regalia";
             var requirements = new List<string>
             {
-                "55 Strength",
-                ""
+                "55 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -2216,8 +2176,7 @@ namespace Template.Modules
             var setName = "Milabrega's Regalia";
             var requirements = new List<string>
             {
-                "100 Strength",
-                ""
+                "100 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -2244,8 +2203,7 @@ namespace Template.Modules
             var setName = "Milabrega's Regalia";
             var requirements = new List<string>
             {
-                "47 Strength",
-                ""
+                "47 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -2273,8 +2231,7 @@ namespace Template.Modules
             var setName = "Milabrega's Regalia";
             var requirements = new List<string>
             {
-                "55 Strength",
-                ""
+                "55 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -2313,8 +2270,7 @@ namespace Template.Modules
             var setName = "Sigon's Complete Steel";
             var requirements = new List<string>
             {
-                "70 Strength",
-                ""
+                "70 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -2341,8 +2297,7 @@ namespace Template.Modules
             var setName = "Sigon's Complete Steel";
             var requirements = new List<string>
             {
-                "75 Strength",
-                ""
+                "75 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -2368,8 +2323,7 @@ namespace Template.Modules
             var setName = "Sigon's Complete Steel";
             var requirements = new List<string>
             {
-                "63 Strength",
-                ""
+                "63 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -2397,8 +2351,7 @@ namespace Template.Modules
             var setName = "Sigon's Complete Steel";
             var requirements = new List<string>
             {
-                "60 Strength",
-                ""
+                "60 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -2426,8 +2379,7 @@ namespace Template.Modules
             var setName = "Sigon's Complete Steel";
             var requirements = new List<string>
             {
-                "60 Strength",
-                ""
+                "60 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -2455,8 +2407,7 @@ namespace Template.Modules
             var setName = "Sigon's Complete Steel";
             var requirements = new List<string>
             {
-                "70 Strength",
-                ""
+                "70 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -2524,8 +2475,7 @@ namespace Template.Modules
             var setName = "Tancred's Battlegear";
             var requirements = new List<string>
             {
-                "80 Strength",
-                ""
+                "80 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -2552,8 +2502,7 @@ namespace Template.Modules
             var setName = "Tancred's Battlegear";
             var requirements = new List<string>
             {
-                "25 Strength",
-                ""
+                "25 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -2579,9 +2528,7 @@ namespace Template.Modules
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/leather_boots_diablo2_wiki_guide_196px.png";
             var setName = "Tancred's Battlegear";
             var requirements = new List<string>
-            {
-                "",
-                ""
+            { 
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -2609,8 +2556,6 @@ namespace Template.Modules
             var setName = "Tancred's Battlegear";
             var requirements = new List<string>
             {
-                "",
-                ""
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -2675,8 +2620,6 @@ namespace Template.Modules
             var setName = "Death's Disguise";
             var requirements = new List<string>
             {
-                "",
-                ""
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -2703,8 +2646,6 @@ namespace Template.Modules
             var setName = "Death's Disguise";
             var requirements = new List<string>
             {
-                "",
-                ""
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -2768,8 +2709,7 @@ namespace Template.Modules
             var setName = "Vidala's Rig";
             var requirements = new List<string>
             {
-                "15 Strength",
-                ""
+                "15 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -2797,8 +2737,7 @@ namespace Template.Modules
             var setName = "Vidala's Rig";
             var requirements = new List<string>
             {
-                "50 Strength",
-                ""
+                "50 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -2825,8 +2764,6 @@ namespace Template.Modules
             var setName = "Vidala's Rig";
             var requirements = new List<string>
             {
-                "",
-                ""
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -2893,8 +2830,7 @@ namespace Template.Modules
             var setName = "Heaven's Brethren";
             var requirements = new List<string>
             {
-                "52 Strength",
-                ""
+                "52 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -2923,8 +2859,7 @@ namespace Template.Modules
             var setName = "Heaven's Brethren";
             var requirements = new List<string>
             {
-                "185 Strength",
-                ""
+                "185 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -2956,8 +2891,7 @@ namespace Template.Modules
             var setName = "Heaven's Brethren";
             var requirements = new List<string>
             {
-                "116 Strength",
-                ""
+                "116 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -2999,8 +2933,7 @@ namespace Template.Modules
             var setName = "The Disciple";
             var requirements = new List<string>
             {
-                "77 Strength",
-                ""
+                "77 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -3028,8 +2961,7 @@ namespace Template.Modules
             var setName = "The Disciple";
             var requirements = new List<string>
             {
-                "50 Strength",
-                ""
+                "50 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -3058,8 +2990,7 @@ namespace Template.Modules
             var setName = "The Disciple";
             var requirements = new List<string>
             {
-                "106 Strength",
-                ""
+                "106 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -3087,8 +3018,7 @@ namespace Template.Modules
             var setName = "The Disciple";
             var requirements = new List<string>
             {
-                "20 Strength",
-                ""
+                "20 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -3116,8 +3046,6 @@ namespace Template.Modules
             var setName = "The Disciple";
             var requirements = new List<string>
             {
-                "",
-                ""
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -3155,8 +3083,7 @@ namespace Template.Modules
             var setName = "Hwanin's Majesty";
             var requirements = new List<string>
             {
-                "95 Strength",
-                ""
+                "95 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -3186,8 +3113,7 @@ namespace Template.Modules
             var setName = "Hwanin's Majesty";
             var requirements = new List<string>
             {
-                "86 Strength",
-                ""
+                "86 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -3215,8 +3141,6 @@ namespace Template.Modules
             var setName = "Hwanin's Majesty";
             var requirements = new List<string>
             {
-                "",
-                ""
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -3244,8 +3168,7 @@ namespace Template.Modules
             var setName = "Hwanin's Majesty";
             var requirements = new List<string>
             {
-                "25 Strength",
-                ""
+                "25 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -3282,8 +3205,7 @@ namespace Template.Modules
             var setName = "Cow King's Leathers";
             var requirements = new List<string>
             {
-                "20 Strength",
-                ""
+                "20 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -3311,8 +3233,7 @@ namespace Template.Modules
             var setName = "Cow King's Leathers";
             var requirements = new List<string>
             {
-                "27 Strength",
-                ""
+                "27 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -3340,8 +3261,7 @@ namespace Template.Modules
             var setName = "Cow King's Leathers";
             var requirements = new List<string>
             {
-                "18 Strength",
-                ""
+                "18 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -3413,8 +3333,7 @@ namespace Template.Modules
             var setName = "Naj's Ancient Vestige";
             var requirements = new List<string>
             {
-                "79 Strength",
-                ""
+                "79 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -3444,8 +3363,6 @@ namespace Template.Modules
             var setName = "Naj's Ancient Vestige";
             var requirements = new List<string>
             {
-                "",
-                ""
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -3484,8 +3401,6 @@ namespace Template.Modules
             var setName = "Sander's Folly";
             var requirements = new List<string>
             {
-                "",
-                ""
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -3512,8 +3427,6 @@ namespace Template.Modules
             var setName = "Sander's Folly";
             var requirements = new List<string>
             {
-                "",
-                ""
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -3543,8 +3456,6 @@ namespace Template.Modules
             var setName = "Sander's Folly";
             var requirements = new List<string>
             {
-                "",
-                ""
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -3572,8 +3483,7 @@ namespace Template.Modules
             var setName = "Sander's Folly";
             var requirements = new List<string>
             {
-                "18 Strength",
-                ""
+                "18 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -3643,8 +3553,7 @@ namespace Template.Modules
             var setName = "Sazabi's Grand Tribute";
             var requirements = new List<string>
             {
-                "165 Strength",
-                ""
+                "165 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -3673,8 +3582,7 @@ namespace Template.Modules
             var setName = "Sazabi's Grand Tribute";
             var requirements = new List<string>
             {
-                "82 Strength",
-                ""
+                "82 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -3712,8 +3620,7 @@ namespace Template.Modules
             var setName = "Orphan's Call";
             var requirements = new List<string>
             {
-                "115 Strength",
-                ""
+                "115 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -3742,8 +3649,7 @@ namespace Template.Modules
             var setName = "Orphan's Call";
             var requirements = new List<string>
             {
-                "53 Strength",
-                ""
+                "53 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -3772,8 +3678,7 @@ namespace Template.Modules
             var setName = "Orphan's Call";
             var requirements = new List<string>
             {
-                "20 Strength",
-                ""
+                "20 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -3802,8 +3707,7 @@ namespace Template.Modules
             var setName = "Orphan's Call";
             var requirements = new List<string>
             {
-                "88 Strength",
-                ""
+                "88 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -3841,8 +3745,7 @@ namespace Template.Modules
             var setName = "Aldur's Watchtower";
             var requirements = new List<string>
             {
-                "74 Strength",
-                ""
+                "74 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -3878,8 +3781,7 @@ namespace Template.Modules
             var setName = "Aldur's Watchtower";
             var requirements = new List<string>
             {
-                "115 Strength",
-                ""
+                "115 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -3914,8 +3816,7 @@ namespace Template.Modules
             var setName = "Aldur's Watchtower";
             var requirements = new List<string>
             {
-                "56 Strength",
-                ""
+                "56 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -3948,8 +3849,7 @@ namespace Template.Modules
             var setName = "Aldur's Watchtower";
             var requirements = new List<string>
             {
-                "95 Strength",
-                ""
+                "95 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -4094,8 +3994,7 @@ namespace Template.Modules
             var setName = "Griswold's Legacy";
             var requirements = new List<string>
             {
-                "102 Strength",
-                ""
+                "102 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -4124,8 +4023,7 @@ namespace Template.Modules
             var setName = "Griswold's Legacy";
             var requirements = new List<string>
             {
-                "148 Strength",
-                ""
+                "148 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -4155,8 +4053,7 @@ namespace Template.Modules
             var setName = "Griswold's Legacy";
             var requirements = new List<string>
             {
-                "105 Strength",
-                ""
+                "105 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -4230,8 +4127,7 @@ namespace Template.Modules
             var setName = "M'avina's Battle Hymn";
             var requirements = new List<string>
             {
-                "122 Strength",
-                ""
+                "122 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -4262,8 +4158,6 @@ namespace Template.Modules
             var setName = "M'avina's Battle Hymn";
             var requirements = new List<string>
             {
-                "",
-                ""
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -4295,8 +4189,7 @@ namespace Template.Modules
             var setName = "M'avina's Battle Hymn";
             var requirements = new List<string>
             {
-                "88 Strength",
-                ""
+                "88 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -4328,8 +4221,7 @@ namespace Template.Modules
             var setName = "M'avina's Battle Hymn";
             var requirements = new List<string>
             {
-                "45 Strength",
-                ""
+                "45 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -4401,8 +4293,7 @@ namespace Template.Modules
             var setName = "Natalya's Odium";
             var requirements = new List<string>
             {
-                "149 Strength",
-                ""
+                "149 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -4432,8 +4323,7 @@ namespace Template.Modules
             var setName = "Natalya's Odium";
             var requirements = new List<string>
             {
-                "58 Strength",
-                ""
+                "58 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -4463,8 +4353,7 @@ namespace Template.Modules
             var setName = "Natalya's Odium";
             var requirements = new List<string>
             {
-                "65 Strength",
-                ""
+                "65 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -4504,8 +4393,6 @@ namespace Template.Modules
             var setName = "Tal Rasha's Wrappings";
             var requirements = new List<string>
             {
-                "",
-                ""
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -4541,8 +4428,7 @@ namespace Template.Modules
             var setName = "Tal Rasha's Wrappings";
             var requirements = new List<string>
             {
-                "84 Strength",
-                ""
+                "84 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -4575,8 +4461,7 @@ namespace Template.Modules
             var setName = "Tal Rasha's Wrappings";
             var requirements = new List<string>
             {
-                "55 Strength",
-                ""
+                "55 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -4606,8 +4491,7 @@ namespace Template.Modules
             var setName = "Tal Rasha's Wrappings";
             var requirements = new List<string>
             {
-                "47 Strength",
-                ""
+                "47 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -4638,8 +4522,6 @@ namespace Template.Modules
             var setName = "Tal Rasha's Wrappings";
             var requirements = new List<string>
             {
-                "",
-                ""
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -4680,8 +4562,7 @@ namespace Template.Modules
             var setName = "Trang-Oul's Avatar";
             var requirements = new List<string>
             {
-                "84 Strength",
-                ""
+                "84 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -4713,8 +4594,7 @@ namespace Template.Modules
             var setName = "Trang-Oul's Avatar";
             var requirements = new List<string>
             {
-                "50 Strength",
-                ""
+                "50 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -4748,8 +4628,7 @@ namespace Template.Modules
             var setName = "Trang-Oul's Avatar";
             var requirements = new List<string>
             {
-                "106 Strength",
-                ""
+                "106 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -4779,8 +4658,7 @@ namespace Template.Modules
             var setName = "Trang-Oul's Avatar";
             var requirements = new List<string>
             {
-                "58 Strength",
-                ""
+                "58 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -4810,8 +4688,7 @@ namespace Template.Modules
             var setName = "Trang-Oul's Avatar";
             var requirements = new List<string>
             {
-                "91 Strength",
-                ""
+                "91 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -4856,8 +4733,7 @@ namespace Template.Modules
             var setName = "Immortal King";
             var requirements = new List<string>
             {
-                "225 Strength",
-                ""
+                "225 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -4894,8 +4770,7 @@ namespace Template.Modules
             var setName = "Immortal King";
             var requirements = new List<string>
             {
-                "232 Strength",
-                ""
+                "232 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -4928,8 +4803,7 @@ namespace Template.Modules
             var setName = "Immortal King";
             var requirements = new List<string>
             {
-                "65 Strength",
-                ""
+                "65 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -4959,8 +4833,7 @@ namespace Template.Modules
             var setName = "Immortal King";
             var requirements = new List<string>
             {
-                "110 Strength",
-                ""
+                "110 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -4993,8 +4866,7 @@ namespace Template.Modules
             var setName = "Immortal King";
             var requirements = new List<string>
             {
-                "110 Strength",
-                ""
+                "110 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -5027,8 +4899,7 @@ namespace Template.Modules
             var setName = "Immortal King";
             var requirements = new List<string>
             {
-                "125 Strength",
-                ""
+                "125 Strength"
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -5041,10 +4912,10 @@ namespace Template.Modules
 
             var setBonuses = new List<Tuple<string, int, int, string>>()
             {
-                Tuple.Create("% Better Chance of Getting Magic Items", 25, 0, ""),
-                Tuple.Create("Combat Skills (Barbarian Only)", 2, 0, ""),
-                Tuple.Create(" Defense", 160, 0, ""),
-                Tuple.Create("Half Freeze Duration", 0, 0, "")
+                Tuple.Create("% Better Chance of Getting Magic Items", 25, 0, "2"),
+                Tuple.Create("Combat Skills (Barbarian Only)", 2, 0, "3"),
+                Tuple.Create(" Defense", 160, 0, "4"),
+                Tuple.Create("Half Freeze Duration", 0, 0, "5")
             };
 
             var setPieces = ParseSetPieces(name, setName);
