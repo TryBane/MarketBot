@@ -171,7 +171,6 @@ namespace Template.Utilities
                 "Crossbow",
                 "Dagger",
                 "Hammer",
-                "Javelin",
                 "Katar",
                 "Mace",
                 "Orb",
@@ -198,11 +197,34 @@ namespace Template.Utilities
                 "Sword",
                 "Wand"
             };
+            List<string> rangedWeapons = new List<string>()
+            {
+                "Bow",
+                "Crossbow",
+            };
             List<string> slot2Weapons = new List<string>();
             List<string> slot3Weapons = new List<string>();
-            List<string> slot4Weapons = new List<string>();
             List<string> slot5Weapons = new List<string>();
             List<string> slot6Weapons = new List<string>();
+
+            slot6Weapons.Add("Axe");
+            slot6Weapons.Add("Bow");
+            slot6Weapons.Add("Crossbow");
+            slot6Weapons.Add("Hammer");
+            slot6Weapons.Add("Polearm");
+            slot6Weapons.Add("Spear");
+            slot6Weapons.Add("Staff");
+            slot6Weapons.Add("Sword");
+
+            slot5Weapons.Add("Mace");
+            slot5Weapons.Add("Scepter");
+
+            slot3Weapons.Add("Club");
+            slot3Weapons.Add("Dagger");
+            slot3Weapons.Add("Katar");
+            slot3Weapons.Add("Orb");
+
+            slot2Weapons.Add("Wand");
 
             List<string> itemSlots = new List<string>();
 
@@ -210,7 +232,21 @@ namespace Template.Utilities
             {
                 if(slots.Contains(thisSlot))
                 {
+                    if(!thisSlot.Contains("Weapons"))
                     itemSlots.Add(thisSlot);
+                }
+            }
+
+            int runeCount = 1;
+
+            if (runes != null)
+            {
+                foreach (var thisChar in runes)
+                {
+                    if (thisChar == '+')
+                    {
+                        runeCount++;
+                    }
                 }
             }
 
@@ -218,17 +254,96 @@ namespace Template.Utilities
             {
                 if(slots.Contains("All Weapons"))
                 {
-
+                    if (runeCount <= 6)
+                    {
+                        foreach (var thisSlot in slot6Weapons)
+                        {
+                            itemSlots.Add(thisSlot);
+                        }
+                    }
+                    if (runeCount <= 5)
+                    {
+                        foreach (var thisSlot in slot5Weapons)
+                        {
+                            itemSlots.Add(thisSlot);
+                        }
+                    }
+                    if (runeCount <= 3)
+                    {
+                        foreach (var thisSlot in slot3Weapons)
+                        {
+                            itemSlots.Add(thisSlot);
+                        }
+                    }
+                    if (runeCount <= 2)
+                    {
+                        foreach (var thisSlot in slot2Weapons)
+                        {
+                            itemSlots.Add(thisSlot);
+                        }
+                    }
                 }
 
                 if(slots.Contains("Melee Weapons"))
                 {
-
+                    if (runeCount <= 6)
+                    {
+                        foreach (var thisSlot in slot6Weapons)
+                        {
+                            foreach(var rangedSlot in rangedWeapons)
+                            {
+                                if( thisSlot != rangedSlot)
+                                {
+                                    itemSlots.Add(thisSlot);
+                                }
+                            }
+                        }
+                    }
+                    if (runeCount <= 5)
+                    {
+                        foreach (var thisSlot in slot5Weapons)
+                        {
+                            foreach (var rangedSlot in rangedWeapons)
+                            {
+                                if (thisSlot != rangedSlot)
+                                {
+                                    itemSlots.Add(thisSlot);
+                                }
+                            }
+                        }
+                    }
+                    if (runeCount <= 3)
+                    {
+                        foreach (var thisSlot in slot3Weapons)
+                        {
+                            foreach (var rangedSlot in rangedWeapons)
+                            {
+                                if (thisSlot != rangedSlot)
+                                {
+                                    itemSlots.Add(thisSlot);
+                                }
+                            }
+                        }
+                    }
+                    if (runeCount <= 2)
+                    {
+                        foreach (var thisSlot in slot2Weapons)
+                        {
+                            foreach (var rangedSlot in rangedWeapons)
+                            {
+                                if (thisSlot != rangedSlot)
+                                {
+                                    itemSlots.Add(thisSlot);
+                                }
+                            }
+                        }
+                    }
                 }
 
                 if(slots.Contains("Missile Weapons"))
                 {
-
+                    itemSlots.Add("Bow");
+                    itemSlots.Add("Crossbow");
                 }
             }
             var headerFontSize = 60;
@@ -267,7 +382,7 @@ namespace Template.Utilities
             // Need to loop for each type provided, separated by ,'s. Provide size of image as offset for next iteration
             foreach (var thisSlot in theSlots)
             {
-                if (slots.Contains(thisSlot))
+                if (itemSlots.Contains(thisSlot))
                 {
                     switch (thisSlot)
                     {

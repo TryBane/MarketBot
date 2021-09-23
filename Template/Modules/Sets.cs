@@ -748,6 +748,52 @@ namespace Template.Modules
 
             return Tuple.Create(setPieces,setBonuses);
         }
+
+        [Command("Set")]
+        [Alias("Sets")]
+        public async Task SetListAsync()
+        {
+            string message = "";
+
+            {
+                message += "Angelic Raiment\n";
+                message += "Arcanna's Tricks\n";
+                message += "Arctic Gear\n";
+                message += "Berserker's Arsenal\n";
+                message += "Cathan's Traps\n";
+                message += "Civerb's Vestments\n";
+                message += "Cleglaw's Brace\n";
+                message += "Death's Disguise\n";
+                message += "Hsarus' Defense\n";
+                message += "Infernal Tools\n";
+                message += "Iratha's Finery\n";
+                message += "Isenhart's Armory\n";
+                message += "Milabrega's Regalia\n";
+                message += "Sigon's Complete Steel\n";
+                message += "Tancred's Battlegear\n";
+                message += "Vidala's Rig\n";
+                message += "Aldur's Watchtower\n";
+                message += "Bul-Kathos' Children\n";
+                message += "Cow King's Leathers\n";
+                message += "The Disciple\n";
+                message += "Griswold's Legacy\n";
+                message += "Heaven's Brethren\n";
+                message += "Hwanin's Majesty\n";
+                message += "Immortal King\n";
+                message += "M'avina's Battle Hymn\n";
+                message += "Natalya's Odium\n";
+                message += "Naj's Ancient Vestige\n";
+                message += "Orphan's Call\n";
+                message += "Sander's Folly\n";
+                message += "Sazabi's Grand Tribute\n";
+                message += "Tal Rasha's Wrappings\n";
+                message += "Trang-Oul's Avatar\n";
+
+            }
+
+            await Context.Channel.SendMessageAsync(message);
+        }
+
         /*
         [Command("")]
         public async Task ImageAsync()
@@ -791,7 +837,7 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("")]
         public async Task ImageAsync()
@@ -826,7 +872,7 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("")]
         public async Task ImageAsync()
@@ -861,7 +907,7 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         */
         [Command("Berserker's Arsenal")]
@@ -966,15 +1012,15 @@ namespace Template.Modules
         [Command("Arcanna's Tricks")]
         public async Task ArcannasTricksImageAsync()
         {
-            await ArcannasDeathwandImageAsync();
-            await ArcannasFleshImageAsync();
-            await ArcannasHeadImageAsync();
-            await ArcannasSignImageAsync();
+            await ArcannasDeathwandImageAsync("3");
+            await ArcannasFleshImageAsync("0");
+            await ArcannasHeadImageAsync("0");
+            await ArcannasSignImageAsync("0");
 
         }
 
         [Command("Arcanna's Deathwand")]
-        public async Task ArcannasDeathwandImageAsync()
+        public async Task ArcannasDeathwandImageAsync([Remainder] string args = null)
         {
             var name = "Arcanna's Deathwand(15)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/war_staf_diablo_2_wiki_guide_125px.png";
@@ -1002,11 +1048,11 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
 
         [Command("Arcanna's Flesh")]
-        public async Task ArcannasFleshImageAsync()
+        public async Task ArcannasFleshImageAsync([Remainder] string args = null)
         {
             var name = "Arcanna's Flesh(15)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/light_plate_diablo2_wiki_guide_196px.png";
@@ -1032,11 +1078,11 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
 
         [Command("Arcanna's Head")]
-        public async Task ArcannasHeadImageAsync()
+        public async Task ArcannasHeadImageAsync([Remainder] string args = null)
         {
             var name = "Arcanna's Head(15)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/skull_cap_helm_armor_diablo2_wiki_guide_196px.png";
@@ -1062,11 +1108,11 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
 
         [Command("Arcanna's Sign")]
-        public async Task ArcannasSignImageAsync()
+        public async Task ArcannasSignImageAsync([Remainder] string args = null)
         {
             var name = "Arcanna's Sign(15)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/amulet3_diablo2_wiki_guide_98px.png";
@@ -1092,20 +1138,20 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Arctic Gear")]
         public async Task ArcticGearImageAsync()
         {
-            await ArcticHornImageAsync();
-            await ArcticFursImageAsync();
-            await ArcticMittsImageAsync();
-            await ArcticBindingImageAsync();
+            await ArcticHornImageAsync("3");
+            await ArcticFursImageAsync("0");
+            await ArcticMittsImageAsync("0");
+            await ArcticBindingImageAsync("0");
 
         }
 
         [Command("Arctic Horn")]
-        public async Task ArcticHornImageAsync()
+        public async Task ArcticHornImageAsync([Remainder] string args = null)
         {
             var name = "Arctic Horn(2)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/hellclap_weapons_diablo_2_resurrected_wiki_guide.png";
@@ -1132,10 +1178,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Arctic Furs")]
-        public async Task ArcticFursImageAsync()
+        public async Task ArcticFursImageAsync([Remainder] string args = null)
         {
             var name = "Arctic Furs(2)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/quilted_armor_diablo2_wiki_guide_196px.png";
@@ -1162,10 +1208,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Arctic Mitts")]
-        public async Task ArcticMittsImageAsync()
+        public async Task ArcticMittsImageAsync([Remainder] string args = null)
         {
             var name = "Arctic Mitts(2)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/light_gauntlets_diablo2_wiki_guide_196px.png";
@@ -1191,10 +1237,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Arctic Binding")]
-        public async Task ArcticBindingImageAsync()
+        public async Task ArcticBindingImageAsync([Remainder] string args = null)
         {
             var name = "Arctic Binding(2)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/light_belt_armor_diablo2_wiki_guide_196px.png";
@@ -1219,22 +1265,22 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
 
         [Command("Cathan's Traps")]
         public async Task CathansTrapsImageAsync()
         {
-            await CathansRuleImageAsync();
-            await CathansMeshImageAsync();
-            await CathansVisageImageAsync();
-            await CathansSigilImageAsync();
-            await CathansSealImageAsync();
+            await CathansRuleImageAsync("3");
+            await CathansMeshImageAsync("0");
+            await CathansVisageImageAsync("0");
+            await CathansSigilImageAsync("0");
+            await CathansSealImageAsync("0");
             
         }
 
         [Command("Cathan's Rule")]
-        public async Task CathansRuleImageAsync()
+        public async Task CathansRuleImageAsync([Remainder] string args = null)
         {
             var name = "Cathan's Rule(11)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/battle_staf_diablo_2_wiki_guide_125px.png";
@@ -1261,10 +1307,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Cathan's Mesh")]
-        public async Task CathansMeshImageAsync()
+        public async Task CathansMeshImageAsync([Remainder] string args = null)
         {
             var name = "Cathan's Mesh(11)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/chain_mail_armor_diablo2_wiki_guide_196px.png";
@@ -1290,10 +1336,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Cathan's Visage")]
-        public async Task CathansVisageImageAsync()
+        public async Task CathansVisageImageAsync([Remainder] string args = null)
         {
             var name = "Cathan's Visage(11)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/mask_helm_armor_diablo2_wiki_guide_196px.png";
@@ -1318,18 +1364,16 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Cathan's Sigil")]
-        public async Task CathansSigilImageAsync()
+        public async Task CathansSigilImageAsync([Remainder] string args = null)
         {
-            var name = "Cathan's Sigil";
+            var name = "Cathan's Sigil(11)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/amulet1_diablo2_wiki_guide_98px.png";
-            var setName = "Cathan's Traps(11)";
+            var setName = "Cathan's Traps";
             var requirements = new List<string>
             {
-                "",
-                ""
             };
 
             var affixes = new List<Tuple<string, int, int>>()
@@ -1347,10 +1391,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Cathan's Seal")]
-        public async Task CathansSealImageAsync()
+        public async Task CathansSealImageAsync([Remainder] string args = null)
         {
             var name = "Cathan's Seal(11)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/ring2_diablo2_wiki_guide_98px.png";
@@ -1375,19 +1419,19 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Civerb's Vestments")]
         public async Task CiverbsVestmentsImageAsync()
         {
-            await CiverbsCudgelImageAsync();
-            await CiverbsWardImageAsync();
-            await CiverbsIconImageAsync();
+            await CiverbsCudgelImageAsync("3");
+            await CiverbsWardImageAsync("0");
+            await CiverbsIconImageAsync("0");
 
         }
 
         [Command("Civerb's Cudgel")]
-        public async Task CiverbsCudgelImageAsync()
+        public async Task CiverbsCudgelImageAsync([Remainder] string args = null)
         {
             var name = "Civerb's Cudgel(9)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/grand_scepter_weapons_diablo_2_resurrected_wiki_guide_201px.png";
@@ -1413,10 +1457,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Civerb's Ward")]
-        public async Task CiverbsWardImageAsync()
+        public async Task CiverbsWardImageAsync([Remainder] string args = null)
         {
             var name = "Civerb's Ward(9)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/stormguild_diablo2_wiki_guide_196x294px.png";
@@ -1442,10 +1486,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Civerb's Icon")]
-        public async Task CiverbsIconImageAsync()
+        public async Task CiverbsIconImageAsync([Remainder] string args = null)
         {
             var name = "Civerb's Icon(9)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/amulet1_diablo2_wiki_guide_98px.png";
@@ -1471,19 +1515,19 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Cleglaw's Brace")]
         public async Task CleglawsBraceImageAsync()
         {
-            await CleglawsToothImageAsync();
-            await CleglawsClawImageAsync();
-            await CleglawsPincersImageAsync();
+            await CleglawsToothImageAsync("3");
+            await CleglawsClawImageAsync("0");
+            await CleglawsPincersImageAsync("0");
 
         }
 
         [Command("Cleglaw's Tooth")]
-        public async Task CleglawsToothImageAsync()
+        public async Task CleglawsToothImageAsync([Remainder] string args = null)
         {
             var name = "Cleglaw's Tooth(4)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/hellplague_diablo_2_wiki_guide196px.png";
@@ -1508,10 +1552,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Cleglaw's Claw")]
-        public async Task CleglawsClawImageAsync()
+        public async Task CleglawsClawImageAsync([Remainder] string args = null)
         {
             var name = "Cleglaw's Claw(4)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/umbral_disk_diablo2_wiki_guide_196x294px.png";
@@ -1536,10 +1580,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Cleglaw's Pincers")]
-        public async Task CleglawsPincersImageAsync()
+        public async Task CleglawsPincersImageAsync([Remainder] string args = null)
         {
             var name = "Cleglaw's Pincers(4)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/chain_gloves_diablo2_wiki_guide_196px.png";
@@ -1564,20 +1608,20 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Angelic Raiment")]
         public async Task AngelicRaimentImageAsync()
         {
-            await AngelicSickleImageAsync();
-            await AngelicMantleImageAsync();
-            await AngelicHaloImageAsync();
-            await AngelicWingsImageAsync();
+            await AngelicSickleImageAsync("3");
+            await AngelicMantleImageAsync("0");
+            await AngelicHaloImageAsync("0");
+            await AngelicWingsImageAsync("0");
 
         }
 
         [Command("Angelic Sickle")]
-        public async Task AngelicSickleImageAsync()
+        public async Task AngelicSickleImageAsync([Remainder] string args = null)
         {
             var name = "Angelic Sickle(12)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/krintizs_skewer_swords_weapons_diablo_2_wiki_guide196px.png";
@@ -1603,10 +1647,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Angelic Mantle")]
-        public async Task AngelicMantleImageAsync()
+        public async Task AngelicMantleImageAsync([Remainder] string args = null)
         {
             var name = "Angelic Mantle(12)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/ring_mail_armor_diablo2_wiki_guide_196px.png";
@@ -1632,10 +1676,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Angelic Halo")]
-        public async Task AngelicHaloImageAsync()
+        public async Task AngelicHaloImageAsync([Remainder] string args = null)
         {
             var name = "Angelic Halo(12)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/ring4_diablo2_wiki_guide_98px.png";
@@ -1661,10 +1705,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Angelic Wings")]
-        public async Task AngelicWingsImageAsync()
+        public async Task AngelicWingsImageAsync([Remainder] string args = null)
         {
             var name = "Angelic Wings(12)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/amulet2_diablo2_wiki_guide_98px.png";
@@ -1690,19 +1734,19 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Hsarus' Defense")]
         public async Task HsarusDefenseImageAsync()
         {
-            await HsarusIronFistImageAsync();
-            await HsarusIronStayImageAsync();
-            await HsarusIronHeelImageAsync();
+            await HsarusIronFistImageAsync("3");
+            await HsarusIronStayImageAsync("0");
+            await HsarusIronHeelImageAsync("0");
 
         }
 
         [Command("Hsarus' Iron Fist")]
-        public async Task HsarusIronFistImageAsync()
+        public async Task HsarusIronFistImageAsync([Remainder] string args = null)
         {
             var name = "Hsarus' Iron Fist(3)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/buckler_shields_diablo2_wiki_guide_100x150px.png";
@@ -1727,10 +1771,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Hsarus' Iron Stay")]
-        public async Task HsarusIronStayImageAsync()
+        public async Task HsarusIronStayImageAsync([Remainder] string args = null)
         {
             var name = "Hsarus' Iron Stay(3)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/bell_armor_diablo2_wiki_guide_196px.png";
@@ -1755,10 +1799,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Hsarus' Iron Heel")]
-        public async Task HsarusIronHeelImageAsync()
+        public async Task HsarusIronHeelImageAsync([Remainder] string args = null)
         {
             var name = "Hsarus' Iron Heel(3)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/chain_boots_diablo2_wiki_guide_196px.png";
@@ -1783,19 +1827,19 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Infernal Tools")]
         public async Task InfernalToolsImageAsync()
         {
-            await InfernalTorchImageAsync();
-            await InfernalCraniumImageAsync();
-            await InfernalSignImageAsync();
+            await InfernalTorchImageAsync("3");
+            await InfernalCraniumImageAsync("0");
+            await InfernalSignImageAsync("0");
 
         }
 
         [Command("Infernal Torch")]
-        public async Task InfernalTorchImageAsync()
+        public async Task InfernalTorchImageAsync([Remainder] string args = null)
         {
             var name = "Infernal Torch(5)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/grim_wand_diablo_2_wiki_guide_125px.png";
@@ -1821,10 +1865,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Infernal Cranium")]
-        public async Task InfernalCraniumImageAsync()
+        public async Task InfernalCraniumImageAsync([Remainder] string args = null)
         {
             var name = "Infernal Cranium(5)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/biggins_bonnet_helm_armor_diablo2_wiki_guide_196px.png";
@@ -1849,10 +1893,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Infernal Sign")]
-        public async Task InfernalSignImageAsync()
+        public async Task InfernalSignImageAsync([Remainder] string args = null)
         {
             var name = "Infernal Sign(5)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/heavy_belt_armor_diablo2_wiki_guide_196px.png";
@@ -1878,20 +1922,20 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Iratha's Finery")]
         public async Task IrathasFineryImageAsync()
         {
-            await IrathasCoilImageAsync();
-            await IrathasCuffImageAsync();
-            await IrathasCordImageAsync();
-            await IrathasCollarImageAsync();
+            await IrathasCoilImageAsync("3");
+            await IrathasCuffImageAsync("0");
+            await IrathasCordImageAsync("0");
+            await IrathasCollarImageAsync("0");
 
         }
 
         [Command("Iratha's Coil")]
-        public async Task IrathasCoilImageAsync()
+        public async Task IrathasCoilImageAsync([Remainder] string args = null)
         {
             var name = "Iratha's Coil(15)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/crown_helm_armor_diablo2_wiki_guide_196px.png";
@@ -1916,10 +1960,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Iratha's Cuff")]
-        public async Task IrathasCuffImageAsync()
+        public async Task IrathasCuffImageAsync([Remainder] string args = null)
         {
             var name = "Iratha's Cuff(15)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/light_gauntlets_diablo2_wiki_guide_196px.png";
@@ -1944,10 +1988,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Iratha's Cord")]
-        public async Task IrathasCordImageAsync()
+        public async Task IrathasCordImageAsync([Remainder] string args = null)
         {
             var name = "Iratha's Cord(15)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/heavy_belt_armor_diablo2_wiki_guide_196px.png";
@@ -1972,10 +2016,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Iratha's Collar")]
-        public async Task IrathasCollarImageAsync()
+        public async Task IrathasCollarImageAsync([Remainder] string args = null)
         {
             var name = "Iratha's Collar(15)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/amulet1_diablo2_wiki_guide_98px.png";
@@ -2000,20 +2044,20 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Isenhart's Armory")]
         public async Task IsenhartsArmoryImageAsync()
         {
-            await IsenhartsLightbrandImageAsync();
-            await IsenhartsCaseImageAsync();
-            await IsenhartsParryImageAsync();
-            await IsenhartsHornsImageAsync();
+            await IsenhartsLightbrandImageAsync("3");
+            await IsenhartsCaseImageAsync("0");
+            await IsenhartsParryImageAsync("0");
+            await IsenhartsHornsImageAsync("0");
 
         }
 
         [Command("Isenhart's Lightbrand")]
-        public async Task IsenhartsLightbrandImageAsync()
+        public async Task IsenhartsLightbrandImageAsync([Remainder] string args = null)
         {
             var name = "Isenhart's Lightbrand(8)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/broad_sword_diablo_2_wiki_guide196px.png";
@@ -2038,10 +2082,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Isenhart's Case")]
-        public async Task IsenhartsCaseImageAsync()
+        public async Task IsenhartsCaseImageAsync([Remainder] string args = null)
         {
             var name = "Isenhart's Case(8)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/breast_plate_armor_diablo2_wiki_guide_196px.png";
@@ -2066,10 +2110,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Isenhart's Parry")]
-        public async Task IsenhartsParryImageAsync()
+        public async Task IsenhartsParryImageAsync([Remainder] string args = null)
         {
             var name = "Isenhart's Parry(8)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/the_ward_diablo2_wiki_guide_196x294px.png";
@@ -2094,11 +2138,11 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         
         [Command("Isenhart's Horns")]
-        public async Task IsenhartsHornsImageAsync()
+        public async Task IsenhartsHornsImageAsync([Remainder] string args = null)
         {
             var name = "Isenhart's Horns(8)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/duskdeep_helm_armor_diablo2_wiki_guide_196px.png";
@@ -2123,22 +2167,22 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Milabrega's Regalia")]
         public async Task ImageAsync()
         {
-            await MilabregasRodImageAsync();
-            await MilabregasRobeImageAsync();
-            await MilabregasOrbImageAsync();
-            await MilabregasDiademImageAsync();
+            await MilabregasRodImageAsync("3");
+            await MilabregasRobeImageAsync("0");
+            await MilabregasOrbImageAsync("0");
+            await MilabregasDiademImageAsync("0");
 
         }
 
         [Command("Milabrega's Rod")]
-        public async Task MilabregasRodImageAsync()
+        public async Task MilabregasRodImageAsync([Remainder] string args = null)
         {
-            var name = "Milabrega's Rod";
+            var name = "Milabrega's Rod(17)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/war_scepter_weapons_diablo_2_resurrected_wiki_guide_196xp.png";
             var setName = "Milabrega's Regalia";
             var requirements = new List<string>
@@ -2162,10 +2206,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Milabrega's Robe")]
-        public async Task MilabregasRobeImageAsync()
+        public async Task MilabregasRobeImageAsync([Remainder] string args = null)
         {
             var name = "Milabrega's Robe(17)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/ancient_armor_diablo2_wiki_guide_196px.png";
@@ -2190,10 +2234,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Milabrega's Orb")]
-        public async Task MilabregasOrbImageAsync()
+        public async Task MilabregasOrbImageAsync([Remainder] string args = null)
         {
             var name = "Milabrega's Orb(17)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/steelclash_diablo2_wiki_guide_196x294px.png";
@@ -2219,10 +2263,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Milabrega's Diadem")]
-        public async Task MilabregasDiademImageAsync()
+        public async Task MilabregasDiademImageAsync([Remainder] string args = null)
         {
             var name = "Milabrega's Diadem(17)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/crown_helm_armor_diablo2_wiki_guide_196px.png";
@@ -2247,22 +2291,22 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Sigon's Complete Steel")]
         public async Task SigonsCompleteSteelImageAsync()
         {
-            await SigonsShelterImageAsync();
-            await SigonsGuardImageAsync();
-            await SigonsVisorImageAsync();
-            await SigonsGageImageAsync();
-            await SigonsWrapImageAsync();
-            await SigonsSabotImageAsync();
+            await SigonsShelterImageAsync("3");
+            await SigonsGuardImageAsync("0");
+            await SigonsVisorImageAsync("0");
+            await SigonsGageImageAsync("0");
+            await SigonsWrapImageAsync("0");
+            await SigonsSabotImageAsync("0");
 
         }
 
         [Command("Sigon's Shelter")]
-        public async Task SigonsShelterImageAsync()
+        public async Task SigonsShelterImageAsync([Remainder] string args = null)
         {
             var name = "Sigon's Shelter(6)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/gothic_plate_armor_diablo2_wiki_guide_196px.png";
@@ -2287,10 +2331,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Sigon's Guard")]
-        public async Task SigonsGuardImageAsync()
+        public async Task SigonsGuardImageAsync([Remainder] string args = null)
         {
             var name = "Sigon's Guard(6)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/bverrit_keep_1_diablo2_wiki_guide_196x294px.png";
@@ -2314,10 +2358,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Sigon's Visor")]
-        public async Task SigonsVisorImageAsync()
+        public async Task SigonsVisorImageAsync([Remainder] string args = null)
         {
             var name = "Sigon's Visor(6)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/great_helm_armor_diablo2_wiki_guide_196px.png";
@@ -2342,11 +2386,11 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         
         [Command("Sigon's Gage")]
-        public async Task SigonsGageImageAsync()
+        public async Task SigonsGageImageAsync([Remainder] string args = null)
         {
             var name = "Sigon's Gage(6)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/gauntlets_diablo2_wiki_guide_196px.png";
@@ -2371,11 +2415,11 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         
         [Command("Sigon's Wrap")]
-        public async Task SigonsWrapImageAsync()
+        public async Task SigonsWrapImageAsync([Remainder] string args = null)
         {
             var name = "Sigon's Wrap(6)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/plated_belt_armor_diablo2_wiki_guide_196px.png";
@@ -2400,11 +2444,11 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         
         [Command("Sigon's Sabot")]
-        public async Task SigonsSabotImageAsync()
+        public async Task SigonsSabotImageAsync([Remainder] string args = null)
         {
             var name = "Sigon's Sabot(6)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/plate_boots_diablo2_wiki_guide_196px.png";
@@ -2430,21 +2474,21 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Tancred's Battlegear")]
         public async Task TancredsBattlegearImageAsync()
         {
-            await TancredsCrowbillImageAsync();
-            await TancredsSpineImageAsync();
-            await TancredsSkullImageAsync();
-            await TancredsHobnailsImageAsync();
-            await TancredsWeirdImageAsync();
+            await TancredsCrowbillImageAsync("3");
+            await TancredsSpineImageAsync("0");
+            await TancredsSkullImageAsync("0");
+            await TancredsHobnailsImageAsync("0");
+            await TancredsWeirdImageAsync("0");
 
         }
 
         [Command("Tancred's Crowbill")]
-        public async Task TancredsCrowbillImageAsync()
+        public async Task TancredsCrowbillImageAsync([Remainder] string args = null)
         {
             var name = "Tancred's Crowbill(20)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/military_pick_weapons_diablo_2_resurrected_wiki_guide_196px.png";
@@ -2470,10 +2514,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Tancred's Spine")]
-        public async Task TancredsSpineImageAsync()
+        public async Task TancredsSpineImageAsync([Remainder] string args = null)
         {
             var name = "Tancred's Spine(20)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/full_plate_mail_diablo2_wiki_guide_196px.png";
@@ -2498,10 +2542,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Tancred's Skull")]
-        public async Task TancredsSkullImageAsync()
+        public async Task TancredsSkullImageAsync([Remainder] string args = null)
         {
             var name = "Tancred's Skull(20)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/wormskull_helm_armor_diablo2_wiki_guide_196px.png";
@@ -2526,10 +2570,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Tancred's Hobnails")]
-        public async Task TancredsHobnailsImageAsync()
+        public async Task TancredsHobnailsImageAsync([Remainder] string args = null)
         {
             var name = "Tancred's Hobnails(20)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/leather_boots_diablo2_wiki_guide_196px.png";
@@ -2555,10 +2599,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Tancred's Weird")]
-        public async Task TancredsWeirdImageAsync()
+        public async Task TancredsWeirdImageAsync([Remainder] string args = null)
         {
             var name = "Tancred's Weird(20)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/amulet3_diablo2_wiki_guide_98px.png";
@@ -2584,19 +2628,19 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Death's Disguise")]
         public async Task DeathsDisguiseImageAsync()
         {
-            await DeathsTouchImageAsync();
-            await DeathsHandImageAsync();
-            await DeathsGuardImageAsync();
+            await DeathsTouchImageAsync("3");
+            await DeathsHandImageAsync("0");
+            await DeathsGuardImageAsync("0");
 
         }
 
         [Command("Death's Touch")]
-        public async Task DeathsTouchImageAsync()
+        public async Task DeathsTouchImageAsync([Remainder] string args = null)
         {
             var name = "Death's Touch(6)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/war_sword_weapons_diablo_2_wiki_guide196px.png";
@@ -2621,10 +2665,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Death's Hand")]
-        public async Task DeathsHandImageAsync()
+        public async Task DeathsHandImageAsync([Remainder] string args = null)
         {
             var name = "Death's Hand(6)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/leather_gloves_diablo2_wiki_guide_196px.png";
@@ -2649,10 +2693,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Death's Guard")]
-        public async Task DeathsGuardImageAsync()
+        public async Task DeathsGuardImageAsync([Remainder] string args = null)
         {
             var name = "Death's Guard(6)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/sash_armor_diablo2_wiki_guide_196px.png";
@@ -2677,20 +2721,20 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Vidala's Rig")]
         public async Task VidalasRigImageAsync()
         {
-            await VidalasBarbImageAsync();
-            await VidalasAmbushImageAsync();
-            await VidalasFetlockImageAsync();
-            await VidalasSnareImageAsync();
+            await VidalasBarbImageAsync("3");
+            await VidalasAmbushImageAsync("0");
+            await VidalasFetlockImageAsync("0");
+            await VidalasSnareImageAsync("0");
 
         }
 
         [Command("Vidala's Barb")]
-        public async Task VidalasBarbImageAsync()
+        public async Task VidalasBarbImageAsync([Remainder] string args = null)
         {
             var name = "Vidala's Barb(14)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/long_battle_bow_weapons_diablo_2_resurrected_wiki_guide.png";
@@ -2714,10 +2758,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Vidala's Ambush")]
-        public async Task VidalasAmbushImageAsync()
+        public async Task VidalasAmbushImageAsync([Remainder] string args = null)
         {
             var name = "Vidala's Ambush(14)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/leather_armor_diablo2_wiki_guide_196px.png";
@@ -2743,10 +2787,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Vidala's Fetlock")]
-        public async Task VidalasFetlockImageAsync()
+        public async Task VidalasFetlockImageAsync([Remainder] string args = null)
         {
             var name = "Vidala's Fetlock(14)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/light_plate_boots_diablo2_wiki_guide_196px.png";
@@ -2771,10 +2815,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Vidala's Snare")]
-        public async Task VidalasSnareImageAsync()
+        public async Task VidalasSnareImageAsync([Remainder] string args = null)
         {
             var name = "Vidala's Snare(14)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/amulet2_diablo2_wiki_guide_98px.png";
@@ -2799,20 +2843,20 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Heaven's Brethren")]
         public async Task HeavensBrethrenImageAsync()
         {
-            await DangoonsTeachingImageAsync();
-            await HaemosusAdamantImageAsync();
-            await TaebaeksGloryImageAsync();
-            await OndalsAlmightyImageAsync();
+            await DangoonsTeachingImageAsync("3");
+            await HaemosusAdamantImageAsync("0");
+            await TaebaeksGloryImageAsync("0");
+            await OndalsAlmightyImageAsync("0");
 
         }
 
         [Command("Dangoon's Teaching")]
-        public async Task DangoonsTeachingImageAsync()
+        public async Task DangoonsTeachingImageAsync([Remainder] string args = null)
         {
             var name = "Dangoon's Teaching(68)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/dangoons_teaching_weapons_diablo_2_resurrected_wiki_guide_196px.png";
@@ -2839,10 +2883,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Haemosu's Adamant")]
-        public async Task HaemosusAdamantImageAsync()
+        public async Task HaemosusAdamantImageAsync([Remainder] string args = null)
         {
             var name = "Haemosu's Adamant(44)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/haemosu's_adamant_armor_diablo2_wiki_guide_196px.png";
@@ -2869,10 +2913,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Taebaek's Glory")]
-        public async Task TaebaeksGloryImageAsync()
+        public async Task TaebaeksGloryImageAsync([Remainder] string args = null)
         {
             var name = "Taebaek's Glory(81)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/heaven's_brethren_diablo2_wiki_guide_196x294px.png";
@@ -2902,10 +2946,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Ondal's Almighty")]
-        public async Task OndalsAlmightyImageAsync()
+        public async Task OndalsAlmightyImageAsync([Remainder] string args = null)
         {
             var name = "Ondal's Almighty(69)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/ondals_almighty_helm_armor_diablo2_wiki_guide_196px.png";
@@ -2933,22 +2977,22 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("The Disciple")]
         public async Task TheDiscipleImageAsync()
         {
-            await DarkAdherentImageAsync();
-            await LayingofHandsImageAsync();
-            await CredendumImageAsync();
-            await RiteofPassageImageAsync();
-            await TellingofBeadsImageAsync();
+            await DarkAdherentImageAsync("3");
+            await LayingofHandsImageAsync("0");
+            await CredendumImageAsync("0");
+            await RiteofPassageImageAsync("0");
+            await TellingofBeadsImageAsync("0");
             
 
         }
 
         [Command("Dark Adherent")]
-        public async Task DarkAdherentImageAsync()
+        public async Task DarkAdherentImageAsync([Remainder] string args = null)
         {
             var name = "Dark Adherent(49)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/quilted_armor_diablo2_wiki_guide_196px.png";
@@ -2974,10 +3018,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Laying of Hands")]
-        public async Task LayingofHandsImageAsync()
+        public async Task LayingofHandsImageAsync([Remainder] string args = null)
         {
             var name = "Laying of Hands(63)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/leather_gloves_diablo2_wiki_guide_196px.png";
@@ -3004,10 +3048,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Credendum")]
-        public async Task CredendumImageAsync()
+        public async Task CredendumImageAsync([Remainder] string args = null)
         {
             var name = "Credendum(65)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/bell_armor_diablo2_wiki_guide_196px.png";
@@ -3033,10 +3077,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Rite of Passage")]
-        public async Task RiteofPassageImageAsync()
+        public async Task RiteofPassageImageAsync([Remainder] string args = null)
         {
             var name = "Rite of Passage(29)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/leather_boots_diablo2_wiki_guide_196px.png";
@@ -3062,10 +3106,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Telling of Beads")]
-        public async Task TellingofBeadsImageAsync()
+        public async Task TellingofBeadsImageAsync([Remainder] string args = null)
         {
             var name = "Telling of Beads(30)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/amulet2_diablo2_wiki_guide_98px.png";
@@ -3091,20 +3135,20 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Hwanin's Majesty")]
         public async Task HwaninsMajestyImageAsync()
         {
-            await HwaninsJusticeImageAsync();
-            await HwaninsRefugeImageAsync();
-            await HwaninsSplendorImageAsync();
-            await HwaninsBlessingImageAsync();
+            await HwaninsJusticeImageAsync("3");
+            await HwaninsRefugeImageAsync("0");
+            await HwaninsSplendorImageAsync("0");
+            await HwaninsBlessingImageAsync("0");
 
         }
 
         [Command("Hwanin's Justice")]
-        public async Task HwaninsJusticeImageAsync()
+        public async Task HwaninsJusticeImageAsync([Remainder] string args = null)
         {
             var name = "Hwanin's Justice(28)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/voulge_weapons_diablo_2_resurrected_wiki_guide_196px.png";
@@ -3132,10 +3176,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Hwanin's Refuge")]
-        public async Task HwaninsRefugeImageAsync()
+        public async Task HwaninsRefugeImageAsync([Remainder] string args = null)
         {
             var name = "Hwanin's Refuge(30)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/scale_mail_armor_diablo2_wiki_guide_196px.png";
@@ -3161,10 +3205,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Hwanin's Splendor")]
-        public async Task HwaninsSplendorImageAsync()
+        public async Task HwaninsSplendorImageAsync([Remainder] string args = null)
         {
             var name = "Hwanin's Splendor(45)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/crown_of_thieves_helm_armor_diablo2_wiki_guide_196px.png";
@@ -3190,10 +3234,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Hwanin's Blessing")]
-        public async Task HwaninsBlessingImageAsync()
+        public async Task HwaninsBlessingImageAsync([Remainder] string args = null)
         {
             var name = "Hwanin's Blessing(35)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/bell_armor_diablo2_wiki_guide_196px.png";
@@ -3219,19 +3263,19 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Cow King's Leathers")]
         public async Task CowKingsLeathersImageAsync()
         {
-            await CowKingsHornsImageAsync();
-            await CowKingsHideImageAsync();
-            await CowKingsHoovesImageAsync();
+            await CowKingsHornsImageAsync("3");
+            await CowKingsHideImageAsync("0");
+            await CowKingsHoovesImageAsync("0");
 
         }
 
         [Command("Cow King's Horns")]
-        public async Task CowKingsHornsImageAsync()
+        public async Task CowKingsHornsImageAsync([Remainder] string args = null)
         {
             var name = "Cow King's Horns(25)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/cap_helm_armor_diablo2_wiki_guide_196px.png";
@@ -3257,10 +3301,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Cow King's Hide")]
-        public async Task CowKingsHideImageAsync()
+        public async Task CowKingsHideImageAsync([Remainder] string args = null)
         {
             var name = "Cow King's Hide(18)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/studded_leather_armor_diablo2_wiki_guide_196px.png";
@@ -3286,10 +3330,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Cow King's Hooves")]
-        public async Task CowKingsHoovesImageAsync()
+        public async Task CowKingsHoovesImageAsync([Remainder] string args = null)
         {
             var name = "Cow King's Hooves(13)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/heavy_boots_diablo2_wiki_guide_196px.png";
@@ -3316,19 +3360,19 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Naj's Ancient Vestige")]
         public async Task NajsAncientVestigeImageAsync()
         {
-            await NajsPuzzlerImageAsync();
-            await NajsLightPlateImageAsync();
-            await NajsCircletImageAsync();
+            await NajsPuzzlerImageAsync("3");
+            await NajsLightPlateImageAsync("0");
+            await NajsCircletImageAsync("0");
 
         }
 
         [Command("Naj's Puzzler")]
-        public async Task NajsPuzzlerImageAsync()
+        public async Task NajsPuzzlerImageAsync([Remainder] string args = null)
         {
             var name = "Naj's Puzzler(78)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/staff_of_kings_quest_item_diablo2_wiki_guide_125px.png";
@@ -3359,10 +3403,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Naj's Light Plate")]
-        public async Task NajsLightPlateImageAsync()
+        public async Task NajsLightPlateImageAsync([Remainder] string args = null)
         {
             var name = "Naj's Light Plate(71)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/plate_mail_armor_diablo2_wiki_guide_196px.png";
@@ -3390,10 +3434,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Naj's Circlet")]
-        public async Task NajsCircletImageAsync()
+        public async Task NajsCircletImageAsync([Remainder] string args = null)
         {
             var name = "Naj's Circlet(28)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/circlet_armor_diablo2_wiki_guide_196px.png";
@@ -3420,20 +3464,20 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Sander's Folly")]
         public async Task SandersFollyImageAsync()
         {
-            await SandersParagonImageAsync();
-            await SandersSuperstitionImageAsync();
-            await SandersTabooImageAsync();
-            await SandersRiprapImageAsync();
+            await SandersParagonImageAsync("3");
+            await SandersSuperstitionImageAsync("0");
+            await SandersTabooImageAsync("0");
+            await SandersRiprapImageAsync("0");
 
         }
 
         [Command("Sander's Paragon")]
-        public async Task SandersParagonImageAsync()
+        public async Task SandersParagonImageAsync([Remainder] string args = null)
         {
             var name = "Sander's Paragon(25)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/biggins_bonnet_helm_armor_diablo2_wiki_guide_196px.png";
@@ -3458,10 +3502,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Sander's Superstition")]
-        public async Task SandersSuperstitionImageAsync()
+        public async Task SandersSuperstitionImageAsync([Remainder] string args = null)
         {
             var name = "Sander's Superstition(25)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/gravenspine_diablo_2_wiki_guide_125px.png";
@@ -3489,10 +3533,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Sander's Taboo")]
-        public async Task SandersTabooImageAsync()
+        public async Task SandersTabooImageAsync([Remainder] string args = null)
         {
             var name = "Sander's Taboo(28)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/heavy_gloves_diablo2_wiki_guide_196px.png";
@@ -3518,10 +3562,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Sander's Riprap")]
-        public async Task SandersRiprapImageAsync()
+        public async Task SandersRiprapImageAsync([Remainder] string args = null)
         {
             var name = "Sander's Riprap(20)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/heavy_boots_diablo2_wiki_guide_196px.png";
@@ -3547,19 +3591,19 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Sazabi's Grand Tribute")]
         public async Task SazabisGrandTributeImageAsync()
         {
-            await SazabisCobaltRedeemerImageAsync();
-            await SazabisGhostLiberatorImageAsync();
-            await SazabisMentalSheathImageAsync();
+            await SazabisCobaltRedeemerImageAsync("3");
+            await SazabisGhostLiberatorImageAsync("0");
+            await SazabisMentalSheathImageAsync("0");
 
         }
 
         [Command("Sazabi's Cobalt Redeemer")]
-        public async Task SazabisCobaltRedeemerImageAsync()
+        public async Task SazabisCobaltRedeemerImageAsync([Remainder] string args = null)
         {
             var name = "Sazabi's Cobalt Redeemer(73)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/hellplague_diablo_2_wiki_guide196px.png";
@@ -3589,10 +3633,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Sazabi's Ghost Liberator")]
-        public async Task SazabisGhostLiberatorImageAsync()
+        public async Task SazabisGhostLiberatorImageAsync([Remainder] string args = null)
         {
             var name = "Sazabi's Ghost Liberator(67)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/splint_mail_armor_diablo2_wiki_guide_196px.png";
@@ -3619,10 +3663,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Sazabi's Mental Sheath")]
-        public async Task SazabisMentalSheathImageAsync()
+        public async Task SazabisMentalSheathImageAsync([Remainder] string args = null)
         {
             var name = "Sazabi's Mental Sheath(43)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/duskdeep_helm_armor_diablo2_wiki_guide_196px.png";
@@ -3648,20 +3692,20 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Orphan's Call")]
         public async Task OrphansCallImageAsync()
         {
-            await GuillaumesFaceImageAsync();
-            await WhitstansGuardImageAsync();
-            await MagnusSkinImageAsync();
-            await WilhelmsPrideImageAsync();
+            await GuillaumesFaceImageAsync("3");
+            await WhitstansGuardImageAsync("0");
+            await MagnusSkinImageAsync("0");
+            await WilhelmsPrideImageAsync("0");
 
         }
 
         [Command("Guillaume's Face")]
-        public async Task GuillaumesFaceImageAsync()
+        public async Task GuillaumesFaceImageAsync([Remainder] string args = null)
         {
             var name = "Guillaume's Face(34)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/great_helm_armor_diablo2_wiki_guide_196px.png";
@@ -3688,10 +3732,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Whitstan's Guard")]
-        public async Task WhitstansGuardImageAsync()
+        public async Task WhitstansGuardImageAsync([Remainder] string args = null)
         {
             var name = "Whitstan's Guard(29)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/moser's_blessed_circle_diablo2_wiki_guide_196x294px.png";
@@ -3718,10 +3762,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Magnus' Skin")]
-        public async Task MagnusSkinImageAsync()
+        public async Task MagnusSkinImageAsync([Remainder] string args = null)
         {
             var name = "Magnus' Skin(37)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/heavy_gloves_diablo2_wiki_guide_196px.png";
@@ -3748,10 +3792,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Wilhelm's Pride")]
-        public async Task WilhelmsPrideImageAsync()
+        public async Task WilhelmsPrideImageAsync([Remainder] string args = null)
         {
             var name = "Wilhelm's Pride(42)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/heavy_belt_armor_diablo2_wiki_guide_196px.png";
@@ -3777,20 +3821,20 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Aldur's Watchtower")]
         public async Task AldursWatchtowerImageAsync()
         {
-            await AldursRhythmImageAsync();
-            await AldursDeceptionImageAsync();
-            await AldursStonyGazeImageAsync();
-            await AldursAdvanceImageAsync();
+            await AldursRhythmImageAsync("3");
+            await AldursDeceptionImageAsync("0");
+            await AldursStonyGazeImageAsync("0");
+            await AldursAdvanceImageAsync("0");
 
         }
 
         [Command("Aldur's Rhythm")]
-        public async Task AldursRhythmImageAsync()
+        public async Task AldursRhythmImageAsync([Remainder] string args = null)
         {
             var name = "Aldur's Rhythm(42)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/bloodrise_weapons_diablo_2_resurrected_wiki_guide_196px.png";
@@ -3824,10 +3868,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Aldur's Deception")]
-        public async Task AldursDeceptionImageAsync()
+        public async Task AldursDeceptionImageAsync([Remainder] string args = null)
         {
             var name = "Aldur's Deception(76)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/full_plate_mail_diablo2_wiki_guide_196px.png";
@@ -3860,10 +3904,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Aldur's Stony Gaze")]
-        public async Task AldursStonyGazeImageAsync()
+        public async Task AldursStonyGazeImageAsync([Remainder] string args = null)
         {
             var name = "Aldur's Stony Gaze(36)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/spirit_keeper_mask_armor_diablo2_wiki_guide_196px.png";
@@ -3894,10 +3938,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
                 [Command("Aldur's Advance")]
-        public async Task AldursAdvanceImageAsync()
+        public async Task AldursAdvanceImageAsync([Remainder] string args = null)
         {
             var name = "Aldur's Advance(45)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/light_plate_boots_diablo2_wiki_guide_196px.png";
@@ -3928,19 +3972,19 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Bul-Kathos' Children")]
         public async Task BulKathosChildrenImageAsync()
         {
-            await BulKathosSacredChargeImageAsync();
-            await BulKathosTribalGuardianImageAsync();
+            await BulKathosSacredChargeImageAsync("3");
+            await BulKathosTribalGuardianImageAsync("0");
            
 
         }
 
         [Command("Bul-Kathos' Sacred Charge")]
-        public async Task BulKathosSacredChargeImageAsync()
+        public async Task BulKathosSacredChargeImageAsync([Remainder] string args = null)
         {
             var name = "Bul-Katho's Sacred Charge(63)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/great_sword_diablo_2_wiki_guide196px.png";
@@ -3967,10 +4011,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Bul-Kathos' Tribal Guardian")]
-        public async Task BulKathosTribalGuardianImageAsync()
+        public async Task BulKathosTribalGuardianImageAsync([Remainder] string args = null)
         {
             var name = "Bul-Kathos' Tribal Guardian(66)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/war_sword_weapons_diablo_2_wiki_guide196px.png";
@@ -3997,20 +4041,20 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Griswold's Legacy")]
         public async Task GriswoldsLegacyImageAsync()
         {
-            await GriswoldsRedemptionImageAsync();
-            await GriswoldsHeartImageAsync();
-            await GriswoldsHonorImageAsync();
-            await GriswoldsValorImageAsync();
+            await GriswoldsRedemptionImageAsync("3");
+            await GriswoldsHeartImageAsync("0");
+            await GriswoldsHonorImageAsync("0");
+            await GriswoldsValorImageAsync("0");
 
         }
 
         [Command("Griswold's Redemption")]
-        public async Task GriswoldsRedemptionImageAsync()
+        public async Task GriswoldsRedemptionImageAsync([Remainder] string args = null)
         {
             var name = "Griswold's Redemption(66)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/war_scepter_weapons_diablo_2_resurrected_wiki_guide_196xp.png";
@@ -4040,10 +4084,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Griswold's Heart")]
-        public async Task GriswoldsHeartImageAsync()
+        public async Task GriswoldsHeartImageAsync([Remainder] string args = null)
         {
             var name = "Griswold's Heart(45)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/corpsemourn_armor_diablo2_wiki_guide_196px.png";
@@ -4070,10 +4114,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Griswold's Honor")]
-        public async Task GriswoldsHonorImageAsync()
+        public async Task GriswoldsHonorImageAsync([Remainder] string args = null)
         {
             var name = "Griswold's Honor(68)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/crown_shield_diablo2_wiki_guide_196x294px.png";
@@ -4100,11 +4144,11 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         
         [Command("Griswold's Valor")]
-        public async Task GriswoldsValorImageAsync()
+        public async Task GriswoldsValorImageAsync([Remainder] string args = null)
         {
             var name = "Griswold's Valor(69)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/crown_helm_armor_diablo2_wiki_guide_196px.png";
@@ -4133,21 +4177,21 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("M'avina's Battle Hymn")]
         public async Task MavinasBattleHymnImageAsync()
         {
-            await MavinasCasterImageAsync();
-            await MavinasEmbraceImageAsync();
-            await MavinasTrueSightImageAsync();
-            await MavinasIcyClutchImageAsync();
-            await MavinasTenetImageAsync();
+            await MavinasCasterImageAsync("3");
+            await MavinasEmbraceImageAsync("0");
+            await MavinasTrueSightImageAsync("0");
+            await MavinasIcyClutchImageAsync("0");
+            await MavinasTenetImageAsync("0");
 
         }
 
         [Command("M'avina's Caster")]
-        public async Task MavinasCasterImageAsync()
+        public async Task MavinasCasterImageAsync([Remainder] string args = null)
         {
             var name = "M'avina's Caster(70)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/reflex_bow_weapons_diablo_2_resurrected_wiki_guide.png";
@@ -4176,10 +4220,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("M'avina's Embrace")]
-        public async Task MavinasEmbraceImageAsync()
+        public async Task MavinasEmbraceImageAsync([Remainder] string args = null)
         {
             var name = "M'avina's Embrace(70)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/field_plate_armor_diablo2_wiki_guide_196px.png";
@@ -4208,10 +4252,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("M'avina's True Sight")]
-        public async Task MavinasTrueSightImageAsync()
+        public async Task MavinasTrueSightImageAsync([Remainder] string args = null)
         {
             var name = "M'avina's True Sight(64)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/m'avina's_true_sight_diadem_armor_diablo2_wiki_guide_196px.png";
@@ -4240,11 +4284,11 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         
         [Command("M'avina's Icy Clutch")]
-        public async Task MavinasIcyClutchImageAsync()
+        public async Task MavinasIcyClutchImageAsync([Remainder] string args = null)
         {
             var name = "M'avina's Icy Clutch(32)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/light_gauntlets_diablo2_wiki_guide_196px.png";
@@ -4274,10 +4318,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("M'avina's Tenet")]
-        public async Task MavinasTenetImageAsync()
+        public async Task MavinasTenetImageAsync([Remainder] string args = null)
         {
             var name = "M'avina's Tenet(45)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/light_belt_armor_diablo2_wiki_guide_196px.png";
@@ -4304,20 +4348,20 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Natalya's Odium")]
         public async Task NatalyasOdiumImageAsync()
         {
-            await NatalyasMarkImageAsync();
-            await NatalyasShadowImageAsync();
-            await NatalyasTotemImageAsync();
-            await NatalyasSoulImageAsync();
+            await NatalyasMarkImageAsync("3");
+            await NatalyasShadowImageAsync("0");
+            await NatalyasTotemImageAsync("0");
+            await NatalyasSoulImageAsync("0");
 
         }
 
         [Command("Natalya's Mark")]
-        public async Task NatalyasMarkImageAsync()
+        public async Task NatalyasMarkImageAsync([Remainder] string args = null)
         {
             var name = "Natalya's Mark(79)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/natalyas_mark_diablo_2_wiki_guide_125px.png";
@@ -4347,10 +4391,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Natalya's Shadow")]
-        public async Task NatalyasShadowImageAsync()
+        public async Task NatalyasShadowImageAsync([Remainder] string args = null)
         {
             var name = "Natalya's Shadow(73)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/scale_mail_armor_diablo2_wiki_guide_196px.png";
@@ -4378,10 +4422,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Natalya's Totem")]
-        public async Task NatalyasTotemImageAsync()
+        public async Task NatalyasTotemImageAsync([Remainder] string args = null)
         {
             var name = "Natalya's Totem(59)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/wormskull_helm_armor_diablo2_wiki_guide_196px.png";
@@ -4408,11 +4452,11 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         
         [Command("Natalya's Soul")]
-        public async Task NatalyasSoulImageAsync()
+        public async Task NatalyasSoulImageAsync([Remainder] string args = null)
         {
             var name = "Natalya's Soul(25)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/chain_boots_diablo2_wiki_guide_196px.png";
@@ -4439,21 +4483,21 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Tal Rasha's Wrappings")]
         public async Task TalRashasWrappingsImageAsync()
         {
-            await TalRashasLidlessEyeImageAsync();
-            await TalRashasGuardianshipImageAsync();
-            await TalRashasHoradricCrestImageAsync();
-            await TalRashasFineSpunClothImageAsync();
-            await TalRashasAdjudicationImageAsync();
+            await TalRashasLidlessEyeImageAsync("3");
+            await TalRashasGuardianshipImageAsync("0");
+            await TalRashasHoradricCrestImageAsync("0");
+            await TalRashasFineSpunClothImageAsync("0");
+            await TalRashasAdjudicationImageAsync("0");
 
         }
 
         [Command("Tal Rasha's Lidless Eye")]
-        public async Task TalRashasLidlessEyeImageAsync()
+        public async Task TalRashasLidlessEyeImageAsync([Remainder] string args = null)
         {
             var name = "Tal Rasha's Lidless Eye(65)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/dragon_stone_diablo_2_wiki_guide_196px.png";
@@ -4487,10 +4531,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Tal Rasha's Guardianship")]
-        public async Task TalRashasGuardianshipImageAsync()
+        public async Task TalRashasGuardianshipImageAsync([Remainder] string args = null)
         {
             var name = "Tal Rasha's Guardianship(71)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/gothic_plate_armor_diablo2_wiki_guide_196px.png";
@@ -4521,10 +4565,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Tal Rasha's Horadric Crest")]
-        public async Task TalRashasHoradricCrestImageAsync()
+        public async Task TalRashasHoradricCrestImageAsync([Remainder] string args = null)
         {
             var name = "Tal Rasha's Horadric Crest(66)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/mask_helm_armor_diablo2_wiki_guide_196px.png";
@@ -4552,10 +4596,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Tal Rasha's Fine-Spun Cloth")]
-        public async Task TalRashasFineSpunClothImageAsync()
+        public async Task TalRashasFineSpunClothImageAsync([Remainder] string args = null)
         {
             var name = "Tal Rasha's Fine-Spun Cloth(53)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/bell_armor_diablo2_wiki_guide_196px.png";
@@ -4584,10 +4628,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Tal Rasha's Adjudication")]
-        public async Task TalRashasAdjudicationImageAsync()
+        public async Task TalRashasAdjudicationImageAsync([Remainder] string args = null)
         {
             var name = "Tal Rasha's Adjudication(67)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/amulet2_diablo2_wiki_guide_98px.png";
@@ -4615,21 +4659,21 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Trang-Oul's Avatar")]
         public async Task TrangOulsAvatarImageAsync()
         {
-            await TrangOulsScalesImageAsync();
-            await TrangOulsWingImageAsync();
-            await TrangOulsGuiseImageAsync();
-            await TrangOulsClawsImageAsync();
-            await TrangOulsGirthImageAsync();
+            await TrangOulsScalesImageAsync("3");
+            await TrangOulsWingImageAsync("0");
+            await TrangOulsGuiseImageAsync("0");
+            await TrangOulsClawsImageAsync("0");
+            await TrangOulsGirthImageAsync("0");
 
         }
 
         [Command("Trang-Oul's Scales")]
-        public async Task TrangOulsScalesImageAsync()
+        public async Task TrangOulsScalesImageAsync([Remainder] string args = null)
         {
             var name = "Trang-Oul's Scales(49)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/full_plate_mail_diablo2_wiki_guide_196px.png";
@@ -4659,10 +4703,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Trang-Oul's Wing")]
-        public async Task TrangOulsWingImageAsync()
+        public async Task TrangOulsWingImageAsync([Remainder] string args = null)
         {
             var name = "Trang-Oul's Wing(54)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/gargoyle_head_shield_diablo2_wiki_guide_196x294px.png";
@@ -4694,10 +4738,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Trang-Oul's Guise")]
-        public async Task TrangOulsGuiseImageAsync()
+        public async Task TrangOulsGuiseImageAsync([Remainder] string args = null)
         {
             var name = "Trang-Oul's Guise(65)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/wormskull_helm_armor_diablo2_wiki_guide_196px.png";
@@ -4724,11 +4768,11 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         
         [Command("Trang-Oul's Claws")]
-        public async Task TrangOulsClawsImageAsync()
+        public async Task TrangOulsClawsImageAsync([Remainder] string args = null)
         {
             var name = "Trang-Oul's Claws(45)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/chain_gloves_diablo2_wiki_guide_196px.png";
@@ -4755,11 +4799,11 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         
         [Command("Trang-Oul's Girth")]
-        public async Task TrangOulsGirthImageAsync()
+        public async Task TrangOulsGirthImageAsync([Remainder] string args = null)
         {
             var name = "Trang-Oul's Girth(62)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/heavy_belt_armor_diablo2_wiki_guide_196px.png";
@@ -4790,22 +4834,22 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Immortal King")]
         public async Task ImmortalKingImageAsync()
         {
-            await ImmortalKingsStoneCrusherImageAsync();
-            await ImmortalKingsSoulCageImageAsync();
-            await ImmortalKingsWillImageAsync();
-            await ImmortalKingsForgeImageAsync();
-            await ImmortalKingsDetailImageAsync();
-            await ImmortalKingsPillarImageAsync();
+            await ImmortalKingsStoneCrusherImageAsync("3");
+            await ImmortalKingsSoulCageImageAsync("0");
+            await ImmortalKingsWillImageAsync("0");
+            await ImmortalKingsForgeImageAsync("0");
+            await ImmortalKingsDetailImageAsync("0");
+            await ImmortalKingsPillarImageAsync("0");
 
         }
 
         [Command("Immortal King's Stone Crusher")]
-        public async Task ImmortalKingsStoneCrusherImageAsync()
+        public async Task ImmortalKingsStoneCrusherImageAsync([Remainder] string args = null)
         {
             var name = "Immortal King's Stone Crusher(76)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/maul_weapons_diablo_2_wiki_guide_125px.png";
@@ -4840,10 +4884,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Immortal King's Soul Cage")]
-        public async Task ImmortalKingsSoulCageImageAsync()
+        public async Task ImmortalKingsSoulCageImageAsync([Remainder] string args = null)
         {
             var name = "Immortal King's Soul Cage(76)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/silks_of_the_victor_diablo2_wiki_guide_196px.png";
@@ -4874,10 +4918,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Immortal King's Will")]
-        public async Task ImmortalKingsWillImageAsync()
+        public async Task ImmortalKingsWillImageAsync([Remainder] string args = null)
         {
             var name = "Immortal King's Will(47)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/arreats_face_helm_armor_diablo2_wiki_guide_196px.png";
@@ -4905,10 +4949,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Immortal King's Forge")]
-        public async Task ImmortalKingsForgeImageAsync()
+        public async Task ImmortalKingsForgeImageAsync([Remainder] string args = null)
         {
             var name = "Immortal King's Forge(30)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/gauntlets_diablo2_wiki_guide_196px.png";
@@ -4939,10 +4983,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Immortal King's Detail")]
-        public async Task ImmortalKingsDetailImageAsync()
+        public async Task ImmortalKingsDetailImageAsync([Remainder] string args = null)
         {
             var name = "Immortal King's Detail(29)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/plated_belt_armor_diablo2_wiki_guide_196px.png";
@@ -4973,10 +5017,10 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
         [Command("Immortal King's Pillar")]
-        public async Task ImmortalKingsPillarImageAsync()
+        public async Task ImmortalKingsPillarImageAsync([Remainder] string args = null)
         {
             var name = "Immortal King's Pillar(31)";
             var imageLink = "https://diablo2.wiki.fextralife.com/file/Diablo-2/plate_boots_diablo2_wiki_guide_196px.png";
@@ -5006,7 +5050,7 @@ namespace Template.Modules
             var setPieces = ParseSetPieces(name, setName);
             setBonuses.AddRange(GetSetPieces(setName).Item2);
 
-            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink);
+            await CreateSetImage(affixes, setBonuses, name, requirements, setPieces, imageLink, args);
         }
     }
 }

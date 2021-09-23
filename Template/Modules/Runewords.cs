@@ -7,6 +7,7 @@ using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using Template.Utilities;
+using Template.Modules;
 
 namespace Template.Modules
 {
@@ -17,20 +18,152 @@ namespace Template.Modules
         private readonly ILogger<Runewords> _logger;
         private readonly Images _images;
         private readonly ServerHelper _serverHelper;
+        private readonly Uniques _uniques;
 
-        public Runewords(ILogger<Runewords> logger, Images images, ServerHelper serverHelper)
+        public Runewords(ILogger<Runewords> logger, ILogger<Uniques> uniqueLogger, Images images, ServerHelper serverHelper)
         {
             _logger = logger;
             _images = images;
             _serverHelper = serverHelper;
+            _uniques = new Uniques(uniqueLogger, images, serverHelper);
         }
 
-        private async Task CreateRunewordImage(List<Tuple<string, int,int>> affixes, string name, string slots, string runes )
+        private async Task CreateRunewordImage(List<Tuple<string, int, int>> affixes, string name, string slots, string runes)
         {
             string path = await _images.CreateRunewordImageAsync(affixes, name, slots, runes);
             await Context.Channel.SendFileAsync(path);
             File.Delete(path);
         }
+
+        [Command("Runewords")]
+        [Alias("Runeword", "RW")]
+        public async Task RunewordList([Remainder] string args = null)
+        {
+            if(args != null && (args.ToLower().Contains("crescent moon") || args.ToLower().Contains("cm")))
+            {
+                await CrescentMoonImageAsync();
+                return;
+            }
+
+            string message = "";
+
+            // D2R Non-Ladder Runewords
+            {
+                message += "Ancient's Pledge\n";
+
+                message += "Beast\n";
+                message += "Black\n";
+                message += "Bone\n";
+                message += "Bramble\n";
+                message += "Breath of the Dying\n";
+
+                message += "Call to Arms\n";
+                message += "Chains of Honor\n";
+                message += "Chaos\n";
+                message += "Crescent Moon\n";
+
+                message += "Delirium\n";
+                message += "Doom\n";
+                message += "Duress\n";
+
+                message += "Enigma\n";
+                message += "Enlightenment\n";
+                message += "Eternity\n";
+                message += "Exile\n";
+
+                message += "Famine\n";
+                message += "Fury\n";
+
+                message += "Gloom\n";
+
+                message += "Hand of Justice\n";
+                message += "Heart of the Oak\n";
+                message += "Holy Thunder\n";
+                message += "Honor\n";
+
+                message += "King's Grace\n";
+                message += "Kingslayer\n";
+
+                message += "Leaf\n";
+                message += "Lionheart\n";
+                message += "Lore\n";
+
+                message += "Malice\n";
+                message += "Melody\n";
+                message += "Memory\n";
+                message += "Myth\n";
+
+                message += "Nadir\n";
+
+                message += "Passion\n";
+                message += "Peace\n";
+                message += "Principle\n";
+                message += "Prudence\n";
+
+                message += "Radiance\n";
+                message += "Rain\n";
+                message += "Rhyme\n";
+
+                message += "Sanctuary\n";
+                message += "Silence\n";
+                message += "Smoke\n";
+                message += "Splendor\n";
+                message += "Stealth\n";
+                message += "Steel\n";
+                message += "Strength\n";
+                message += "Stone\n";
+
+                message += "Treachery\n";
+
+                message += "Venom\n";
+
+                message += "Wealth\n";
+                message += "White\n";
+                message += "Wind\n";
+
+                message += "Zephyr\n";
+
+                message += "Brand\n";
+
+                message += "Death\n";
+                message += "Destruction\n";
+                message += "Dragon\n";
+                message += "Dream\n";
+
+                message += "Edge\n";
+
+                message += "Faith\n";
+                message += "Fortitude\n";
+
+                message += "Grief\n";
+
+                message += "Harmony\n";
+
+                message += "Ice\n";
+                message += "Infinity\n";
+                message += "Insight\n";
+
+                message += "Last Wish\n";
+                message += "Lawbringer\n";
+
+                message += "Oath\n";
+                message += "Obedience\n";
+
+                message += "Phoenix\n";
+                message += "Pride\n";
+
+                message += "Rift\n";
+
+                message += "Spirit\n";
+
+                message += "Voice of Reason\n";
+
+                message += "Wrath\n";
+            }
+
+            await Context.Channel.SendMessageAsync(message);
+        }
+
         /*
         [Command("runeword name")]
         public async Task ImageAsync()
@@ -201,7 +334,7 @@ namespace Template.Modules
         {
             var name = "Breath of the Dying(69)";
             var slots = "All Weapons";
-            var runes = "Vex, Hel, El, Eld, Zod, Eth";
+            var runes = "Vex + Hel + El + Eld + Zod + Eth";
             
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("% Chance To Cast Level 20 Poison Nova When You Kill An Enemy", 50, 0));
@@ -289,15 +422,13 @@ namespace Template.Modules
 
             await CreateRunewordImage(affixes, name, slots, runes);
         }
-        
-        [Command("Crescent Moon")]
-        [Alias("CM")]
+
         public async Task CrescentMoonImageAsync()
         {
             var name = "Crescent Moon(47)";
             var slots = "Axe, Polearm, Sword";
             var runes = "Shael + Um + Tir";
-            
+
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("% Chance To Cast Level 17 Chain Lightning On Striking", 10, 0));
             affixes.Add(Tuple.Create("% Chance To Cast Level 13 Static Field On Striking", 7, 0));
@@ -524,7 +655,7 @@ namespace Template.Modules
         public async Task EdgeImageAsync()
         {
             var name = "Edge(25)";
-            var slots = "Javelin";
+            var slots = "Missile Weapons";
             var runes = "Tir + Tal + Amn";
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -587,7 +718,7 @@ namespace Template.Modules
         public async Task EternityImageAsync()
         {
             var name = "Eternity(63)";
-            var slots = "All Melee Weapons";
+            var slots = "Melee Weapons";
             var runes = "Amn + Ber + Ist + Sol + Sur";
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -705,7 +836,7 @@ namespace Template.Modules
         public async Task FuryImageAsync()
         {
             var name = "Fury(65)";
-            var slots = "All Melee Weapons";
+            var slots = "Melee Weapons";
             var runes = "Jah + Gul + Eth";
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -868,7 +999,7 @@ namespace Template.Modules
         public async Task HonorImageAsync()
         {
             var name = "Honor(27)";
-            var slots = "All Melee Weapons";
+            var slots = "Melee Weapons";
             var runes = "Amn + El + Ith + Tir + Sol";
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -1109,7 +1240,7 @@ namespace Template.Modules
         public async Task MaliceImageAsync()
         {
             var name = "Malice(15)";
-            var slots = "All Melee Weapons";
+            var slots = "Melee Weapons";
             var runes = "Ith + El + Eth";
             
             var affixes = new List<Tuple<string, int, int>>();
@@ -1303,7 +1434,7 @@ namespace Template.Modules
         {
             var name = "Phoenix(65)";
             var slots = "Weapon, Shield";
-            var runes = "";
+            var runes = "Vex + Vex + Lo + Jah";
             
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("% Chance To Cast level 40 Blaze When You Level-up", 100, 0));
