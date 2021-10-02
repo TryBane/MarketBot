@@ -1,4 +1,6 @@
-﻿using Discord.Commands;
+﻿using Discord;
+using Discord.Commands;
+using Discord.WebSocket;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -26,6 +28,9 @@ namespace Template.Modules
         {
             string path = await _images.CreateUniqueImageAsync(affixes, name, requirements, imageLink);
             await Context.Channel.SendFileAsync(path);
+            var _client = new DiscordSocketClient();
+            var chnl = _client.GetChannel(123) as IMessageChannel;
+            
             File.Delete(path);
         }
         /*

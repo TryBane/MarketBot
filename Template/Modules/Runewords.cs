@@ -39,7 +39,7 @@ namespace Template.Modules
         [Alias("Runeword", "RW")]
         public async Task RunewordList([Remainder] string args = null)
         {
-            if(args != null && (args.ToLower().Contains("crescent moon") || args.ToLower().Contains("cm")))
+            if(!string.IsNullOrWhiteSpace(args) && (args.ToLower().Contains("crescent moon") || args.ToLower().Contains("cm")))
             {
                 await CrescentMoonImageAsync();
                 return;

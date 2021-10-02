@@ -16,9 +16,10 @@ namespace Template.Modules
         private readonly Servers _servers;
         private readonly ServerHelper _serverHelper;
 
-        public Configuration(Servers servers)
+        public Configuration(Servers servers, ServerHelper serverHelper)
         {
             _servers = servers;
+            _serverHelper = serverHelper;
         }
 
         [Command("prefix", RunMode = RunMode.Async)]
