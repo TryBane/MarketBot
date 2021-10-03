@@ -2990,7 +2990,7 @@ namespace Template.Modules
 
             var affixes = new List<Tuple<string, int, int>>();
             affixes.Add(Tuple.Create("% Enhanced Defense", 120, 150));
-            affixes.Add(Tuple.Create("% To Warcries (Barbarian Only)", 2, 3));
+            affixes.Add(Tuple.Create(" To Warcries (Barbarian Only)", 2, 3));
             affixes.Add(Tuple.Create(" To Feral Rage", 3, 6));
             affixes.Add(Tuple.Create(" To Lycanthropy", 3, 6));
             affixes.Add(Tuple.Create(" To Werewolf", 3, 6));
